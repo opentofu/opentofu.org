@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+}
+
+.heading {
+  font-size: 26px;
+  margin-top: -38px;
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.button {
+  border-radius: 26px;
+  padding: 12px 24px;
+  color: #fff;
+  border: 0;
+  font-size: 18px;
+}
+
+.button:hover {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.9;
+}
+
+.buttonPrimary {
+  background: #923dfe;
+}
+
+.buttonSecondary {
+  box-shadow: inset 0 0 0 2px #923dfe;
+}
