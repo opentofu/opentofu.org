@@ -1,14 +1,16 @@
 import React from "react";
 import Layout from "@theme/Layout";
 
-import Pattern from "../components/Pattern";
-import HomePage from "../components/HomePage";
+import Hero from "../components/Hero";
+import Goals from "../components/Goals";
+import Supporters from "../components/Supporters";
 
 export default function Home() {
   return (
     <Layout>
-      <Pattern />
-      <HomePage />
+      <Hero />
+      <Goals />
+      <Supporters />
     </Layout>
   );
 }
