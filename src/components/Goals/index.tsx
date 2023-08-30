@@ -15,7 +15,7 @@ export default function Goals() {
       <h3 className="text-center text-3xl md:text-5xl font-bold mb-6 md:mb-12">
         Our Goals
       </h3>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <Goal
           title="Truly open-source"
           description="under a well-known and widely-accepted license that companies can trus, that won’t suddenly change in the future, and isn’t subhect to the whims of a singe vendor."
