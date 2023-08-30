@@ -3,12 +3,12 @@ import Link from "@docusaurus/Link";
 
 export default function Hero() {
   return (
-    <header className="flex flex-col items-center pt-16 pb-20 mx-auto">
+    <header className="flex flex-col items-center pt-8 md:pt-16 pb-10 md:pb-20 px-6 md:px-16 mx-auto">
       <div
-        className="absolute top-0 left-0 w-full h-[600px] -z-10 overflow-hidden"
+        className="absolute top-0 left-0 w-full h-[350px] md:h-[600px] -z-10 overflow-hidden"
         aria-hidden
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-dark1" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-dark1 " />
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -20,7 +20,7 @@ export default function Hero() {
           </g>
         </svg>
       </div>
-      <h1 className="text-6xl font-bold leading-normal tracking-wider max-w-4xl text-center">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-normal lg:leading-normal tracking-wider sm:max-w-2xl md:max-w-3xl lg:max-w-4xl text-center">
         Ensure Terraform<sup>TM</sup> remains truly open-source. Always.
       </h1>
       <div className="flex gap-4 pt-6">
