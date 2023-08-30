@@ -6,8 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  id-token: write
+  deployments: write
 
 jobs:
   deploy:
@@ -24,6 +23,7 @@ jobs:
       - name: Build website
         run: npm run build
       - name: Publish to Cloudflare Pages
+        id: deployment
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -31,3 +31,9 @@ jobs:
           projectName: opentf-website
           directory: ./build
           wranglerVersion: 2
+      - uses: chrnorm/deployment-action@v2
+        name: Create GitHub deployment
+        with:
+          token: ${{ github.token }}
+          environment-url: ${{ steps.deployment.outputs.url }}
+          environment: production
