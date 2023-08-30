@@ -95,8 +95,19 @@ const config = {
             position: "left",
           },
           {
-            // TODO: Make sure this is final
-            href: "https://github.com/opentffoundation/opentf",
+            type: 'dropdown',
+            label: 'Community',
+            position: 'right',
+            items: [
+                {
+                    label: 'GitHub Discussions',
+                    href: 'https://github.com/orgs/opentffoundation/discussions',
+                },
+            ],
+          },
+          {
+            // TODO: replace with opentf repo once it's public
+            href: "https://github.com/opentffoundation/manifesto",
             position: "right",
             className: "header-github-link",
           },
