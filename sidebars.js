@@ -1,6 +1,8 @@
 // @ts-check
 const stripHtml = require("striptags");
 
+const fs = require("fs");
+
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {};
 
@@ -15,6 +17,19 @@ function processNavItems(navItems) {
 
 function processTitle(value) {
   return stripHtml(value);
+}
+
+function documentExists(docId) {
+  // check if a file without its extension exists in the document folder
+  const dirName = docId.substring(0, docId.lastIndexOf("/"));
+  const fileName = docId.substring(docId.lastIndexOf("/") + 1);
+
+  const exists =
+    fs
+      .readdirSync(`${__dirname}/docs/${dirName}`)
+      .find((f) => f.split(".")[0] === fileName) !== undefined;
+
+  return exists;
 }
 
 function processNavItem(navItem) {
@@ -45,6 +60,11 @@ function processNavItem(navItem) {
   }
 
   if (navItem.path) {
+    // check if the document exists, if it doesn't then we can ignore this for now
+    // TODO: In the long run, ensure that this doesn't happen
+    if (!documentExists(navItem.path)) {
+      return null;
+    }
     return {
       type: "doc",
       id: navItem.path,
