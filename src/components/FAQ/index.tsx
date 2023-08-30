@@ -4,7 +4,7 @@ import AccordionItem from "../Accordion/Item";
 
 export default function FAQ() {
   return (
-    <section className="text-[#0C192B] flex flex-col justify-center w-full bg-light2 py-20 px-6">
+    <section className="text-[#0C192B] flex flex-col justify-center w-full bg-light2 py-10 md:py-20 px-6">
       <div className="w-full max-w-4xl mx-auto">
         <h3 className="text-center text-3xl md:text-5xl font-bold mb-6 md:mb-12">
           Frequently Asked Questions
