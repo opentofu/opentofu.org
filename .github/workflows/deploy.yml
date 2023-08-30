@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  contents: read
   deployments: write
 
 jobs:
@@ -36,4 +37,3 @@ jobs:
         with:
           token: ${{ github.token }}
           environment-url: ${{ steps.deployment.outputs.url }}
-          environment: production
