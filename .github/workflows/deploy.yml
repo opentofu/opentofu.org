@@ -30,3 +30,4 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}}
           projectName: opentfdocstest
           directory: ./build
+          wranglerVersion: 2
