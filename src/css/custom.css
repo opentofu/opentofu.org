@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html[data-theme="dark"] {
   --ifm-color-primary: #b173ff;
   --ifm-color-primary-dark: #9c4eff;
