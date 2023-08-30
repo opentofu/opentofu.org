@@ -68,48 +68,71 @@ const config = {
         },
       },
       navbar: {
-        title: "OpenTF",
         logo: {
           alt: "OpenTF",
-          src: "img/logo.svg",
+          src: "img/nav-logo.svg",
         },
         items: [
           {
-            to: "/intro",
-            label: "Introduction",
+            to: "/manifesto",
+            label: "Manifesto",
             position: "left",
           },
           {
-            to: "/cli",
-            label: "CLI",
+            to: "/supporters",
+            label: "Supporters",
             position: "left",
           },
           {
-            to: "/internals",
-            label: "Internals",
+            to: "/faq",
+            label: "FAQs",
             position: "left",
           },
           {
-            to: "/language",
-            label: "Language",
+            to: "/blog",
+            label: "Blog",
             position: "left",
           },
           {
-            type: 'dropdown',
-            label: 'Community',
-            position: 'right',
-            items: [
-                {
-                    label: 'GitHub Discussions',
-                    href: 'https://github.com/orgs/opentffoundation/discussions',
-                },
-            ],
+            to: "/doc",
+            label: "Docs",
+            position: "left",
           },
+          // TODO: This link is important but there's no design for it yet
+          // {
+          //   type: "dropdown",
+          //   label: "Community",
+          //   position: "right",
+          //   items: [
+          //     {
+          //       label: "GitHub Discussions",
+          //       href: "https://github.com/orgs/opentffoundation/discussions",
+          //     },
+          //   ],
+          // },
           {
-            // TODO: replace with opentf repo once it's public
+            // TODO: replace href with opentf repo once it's public
+            // TODO: replace icon github-button
             href: "https://github.com/opentffoundation/manifesto",
             position: "right",
             className: "header-github-link",
+          },
+          {
+            href: "https://twitter.com/opentforg",
+            position: "right",
+            className: "header-twitter-link",
+          },
+          {
+            // TODO: add actual slack link
+            href: "https://slack.com/",
+            position: "right",
+            className: "header-slack-link",
+          },
+          {
+            label: "Support Us",
+            to: "https://github.com/opentffoundation/manifesto",
+            className: "bg-brand px-6 py-3 mx-3 hover:text-white",
+            position: "right",
           },
         ],
       },
