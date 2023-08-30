@@ -11,9 +11,11 @@ const config = {
 
   baseUrl: "/",
 
+  // TODO: Provide final values
   organizationName: "opentf",
   projectName: "docs",
 
+  // TODO: Once we clean up links we can switch to "throw"
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
 
@@ -41,6 +43,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // TODO: Do we want to support light mode?
       colorMode: {
         defaultMode: "dark",
         disableSwitch: true,
@@ -86,7 +89,6 @@ const config = {
           },
         ],
       },
-
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
