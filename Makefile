@@ -6,21 +6,19 @@ SOURCE_DIR := website
 BRANCH := main
 
 # Default target to execute when 'make' is called without arguments
-all: clone copy
+all: clean clone copy
 
+clean :
+	rm -rf $(CLONE_DIR)
+	
 # Clone the repo
-clone:
-	# If the directory doesn't exist, perform a shallow clone and checkout the specified branch
-	@if [ ! -d "$(CLONE_DIR)" ]; then \
-		git clone --depth 1 -b $(BRANCH) $(REPO_URL) $(CLONE_DIR); \
-	else \
-		cd $(CLONE_DIR) && git checkout $(BRANCH) && git pull --depth 1; \
-	fi
+clone: clean
+	git clone --depth 1 -b $(BRANCH) $(REPO_URL) $(CLONE_DIR); \
 
 # Ensure the destination directory exists
 prepare-dest:
-	@mkdir -p $(DEST_DIR)/docs
-	@mkdir -p $(DEST_DIR)/data
+	mkdir -p $(DEST_DIR)/docs
+	mkdir -p $(DEST_DIR)/data
 
 # Copy the entire folder
 copy: clone prepare-dest
