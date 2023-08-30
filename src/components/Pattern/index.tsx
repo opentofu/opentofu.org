@@ -18,7 +18,7 @@ export default function Pattern() {
         </pattern>
       </defs>
 
-      <rect width="100%" height="100%" stroke-width="0" fill="url(#grid)" />
+      <rect width="100%" height="100%" strokeWidth="0" fill="url(#grid)" />
     </svg>
   );
 }
