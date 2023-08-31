@@ -12,8 +12,13 @@ html[data-theme="dark"] {
   --ifm-color-primary-light: #c698ff;
   --ifm-color-primary-lighter: #d0aaff;
   --ifm-color-primary-lightest: #efe2ff;
-  --ifm-background-color: #21252b;
-  --ifm-navbar-background-color: #2c3036;
+  --ifm-background-color: theme("colors.dark1");
+  --ifm-navbar-background-color: transparent;
+  --ifm-heading-font-family: theme("fontFamily.sans");
+}
+
+.list-none::-webkit-details-marker {
+  display: none;
 }
 
 .navbar {
@@ -22,7 +27,8 @@ html[data-theme="dark"] {
 }
 
 .navbar__logo {
-  height: 42px;
+  width: 123px;
+  height: 48px;
 }
 
 .header-github-link::before {

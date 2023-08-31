@@ -3,6 +3,7 @@ import Layout from "@theme/Layout";
 import FAQ from "../components/FAQ";
 import HowToSupport from "../components/HowToSupport";
 import HowToContribute from "../components/HowToContribute";
+import LatestNews from "../components/LatestNews";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <FAQ />
       <HowToSupport />
       <HowToContribute />
+      <LatestNews />
     </Layout>
   );
 }

@@ -25,7 +25,7 @@ const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
     >
       <summary
         onClick={handleItemClick}
-        className="py-6 px-6 group-open:pb-0 text-xl flex cursor-pointer flex-row items-center justify-between  font-medium marker:[font-size:0px]"
+        className="list-none py-6 px-6 group-open:pb-0 text-xl flex cursor-pointer flex-row items-center justify-between  font-medium marker:[font-size:0px]"
       >
         {summary}
         <svg
