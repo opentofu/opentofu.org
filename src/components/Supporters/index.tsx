@@ -39,10 +39,27 @@ function ToggleButton({
 function groupSupportersByType(supporters) {
   const groupedSupporters = {};
   for (const supporter of supporters) {
-    if (!groupedSupporters[supporter.type]) {
-      groupedSupporters[supporter.type] = [];
+    let { type } = supporter;
+
+    switch (true) {
+      case type.includes("Individual"):
+        type = "Individuals";
+        break;
+      case type === "Company":
+        type = "Companies";
+        break;
+      case type === "Project":
+        type = "Projects";
+        break;
+      case type === "Foundation":
+        type = "Foundations";
+        break;
     }
-    groupedSupporters[supporter.type].push(supporter);
+
+    if (!groupedSupporters[type]) {
+      groupedSupporters[type] = [];
+    }
+    groupedSupporters[type].push(supporter);
   }
   return groupedSupporters;
 }
