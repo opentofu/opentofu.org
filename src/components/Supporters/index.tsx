@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import supporters from "../../../supporters.json";
 import Link from "@docusaurus/Link";
+import Button from "../Button";
 
 type SupporterTypeProps = {
   children: React.ReactNode;
@@ -53,7 +54,6 @@ function groupSupportersByType(supporters) {
 
 export default function Supporters() {
   const { siteConfig } = useDocusaurusContext();
-  const [showAll, setShowAll] = useState(false);
   const groupedSupporters = groupSupportersByType(supporters);
   const types = Object.keys(groupedSupporters);
 
@@ -104,19 +104,12 @@ export default function Supporters() {
         </tbody>
       </table>
       <div className="flex gap-6 justify-center">
-        <button
-          type="button"
-          className="border text-white h-12 px-6 flex items-center hover:no-underline border-white/20"
-          onClick={() => setShowAll((value) => !value)}
-        >
-          {showAll ? "Show Less" : "Show More"}
-        </button>
-        <Link
-          href="/support"
-          className="bg-brand text-white h-12 px-6 flex items-center hover:no-underline hover:text-white hover:bg-brand/80 transition-colors"
-        >
+        <Button variant="secondary" href="/supporters">
+          Show More
+        </Button>
+        <Button variant="primary" href="/support">
           Support Us
-        </Link>
+        </Button>
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "./big-logo.svg";
+import Button from "../Button";
 
 export default function LatestNews() {
   return (
@@ -12,7 +13,7 @@ export default function LatestNews() {
           <div className="bg-dark2 w-full flex justify-center py-20 px-16">
             <Logo />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col items-start">
             <span className="text-[#A965FF] font-bold">Aug 25, 2023</span>
             <h4 className="text-3xl font-bold text-[#E7E9EC] leading-snug mt-2">
               OpenTF Announces Fork of Terraform
@@ -22,12 +23,9 @@ export default function LatestNews() {
               to all their core products, including Terraform, to the Business
               Source License (BSL).
             </p>
-            <a
-              className="text-center border border-[#505661] md:self-start font-bold text-white h-12 px-6 flex items-center hover:no-underline"
-              href="https://opentf.org/announcement"
-            >
+            <Button variant="secondary" href="https://opentf.org/announcement">
               Read More
-            </a>
+            </Button>
           </div>
         </div>
       </div>
