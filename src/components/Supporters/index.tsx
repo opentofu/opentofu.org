@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import supporters from "../../../supporters.json";
 import Link from "@docusaurus/Link";
@@ -54,7 +54,6 @@ function groupSupportersByType(supporters) {
 
 export default function Supporters() {
   const { siteConfig } = useDocusaurusContext();
-  const [showAll, setShowAll] = useState(false);
   const groupedSupporters = groupSupportersByType(supporters);
   const types = Object.keys(groupedSupporters);
 
@@ -106,7 +105,7 @@ export default function Supporters() {
       </table>
       <div className="flex gap-6 justify-center">
         <Button variant="secondary" href="/supporters">
-          {showAll ? "Show Less" : "Show More"}
+          Show More
         </Button>
         <Button variant="primary" href="/support">
           Support Us
