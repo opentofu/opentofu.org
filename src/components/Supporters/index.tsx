@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import clsx from "clsx";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import supporters from "../../../supporters.json";
+import Link from "@docusaurus/Link";
 
 type ToggleButtonProps = {
   children: React.ReactNode;
@@ -33,39 +36,79 @@ function ToggleButton({
   );
 }
 
+function groupSupportersByType(supporters) {
+  const groupedSupporters = {};
+  for (const supporter of supporters) {
+    if (!groupedSupporters[supporter.type]) {
+      groupedSupporters[supporter.type] = [];
+    }
+    groupedSupporters[supporter.type].push(supporter);
+  }
+  return groupedSupporters;
+}
+
 export default function Supporters() {
-  const [activeTab, setActiveTab] = React.useState("all");
+  const { siteConfig } = useDocusaurusContext();
+  const [activeTab, setActiveTab] = useState<string | null>(null);
+  const [showAll, setShowAll] = useState(false);
+  const groupedSupporters = groupSupportersByType(supporters);
+  const types = Object.keys(groupedSupporters);
+
+  const tempSupporters = activeTab ? groupedSupporters[activeTab] : supporters;
+
+  const filteredSupporters = showAll
+    ? tempSupporters
+    : tempSupporters.slice(0, 5);
+
   return (
     <section className="py-12 mx-auto container">
       <h3 className="text-center text-5xl font-bold mb-7">Supporters</h3>
       <div className="flex gap-6 justify-center">
         <ToggleButton
-          isActive={activeTab === "all"}
-          onClick={() => setActiveTab("all")}
+          isActive={activeTab === null}
+          onClick={() => setActiveTab(null)}
         >
           All
         </ToggleButton>
-        <ToggleButton
-          isActive={activeTab === "companies"}
-          onClick={() => setActiveTab("companies")}
-          count={12}
+        {types.map((type) => (
+          <ToggleButton
+            key={type}
+            isActive={activeTab === type}
+            onClick={() => setActiveTab(type)}
+            count={groupedSupporters[type].length}
+          >
+            {type}
+          </ToggleButton>
+        ))}
+      </div>
+      <table className="w-full mt-12 mb-6 border-0 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto table">
+        <tbody>
+          {filteredSupporters.map((supporter) => (
+            <tr
+              className="even:bg-transparent border-t-0 border-b border-white/20 w-full"
+              key={supporter.name}
+            >
+              <td className="py-4 border-0 w-1/5">{supporter.name}</td>
+              <td className="py-4 border-0 w-1/5">{supporter.type}</td>
+              <td className="py-4 border-0 w-3/5">{supporter.pledge}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <div className="flex gap-6 justify-center">
+        <button
+          type="button"
+          className="border text-white h-12 px-6 flex items-center hover:no-underline border-white/20"
+          onClick={() => setShowAll((value) => !value)}
         >
-          Companies
-        </ToggleButton>
-        <ToggleButton
-          isActive={activeTab === "individuals"}
-          onClick={() => setActiveTab("individuals")}
-          count={34}
+          {showAll ? "Show Less" : "Show More"}
+        </button>
+        <Link
+          href="/support"
+          className="bg-brand text-white h-12 px-6 flex items-center hover:no-underline hover:text-white hover:bg-brand/80 transition-colors"
         >
-          Individuals
-        </ToggleButton>
-        <ToggleButton
-          isActive={activeTab === "projects"}
-          onClick={() => setActiveTab("projects")}
-          count={56}
-        >
-          Projects
-        </ToggleButton>
+          Support Us
+        </Link>
       </div>
     </section>
   );
