@@ -1,38 +1,25 @@
-import React, { useMemo, useState } from "react";
-import clsx from "clsx";
+import React, { useState } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import supporters from "../../../supporters.json";
 import Link from "@docusaurus/Link";
 
-type ToggleButtonProps = {
+type SupporterTypeProps = {
   children: React.ReactNode;
-  isActive: boolean;
-  onClick: () => void;
   count?: number;
+  withSeparator?: boolean;
 };
 
-function ToggleButton({
-  children,
-  isActive,
-  count,
-  ...rest
-}: ToggleButtonProps) {
+function SupporterType({ children, withSeparator, count }: SupporterTypeProps) {
   return (
-    <button
-      type="button"
-      className={clsx(
-        "border text-white h-12 px-6 flex items-center hover:no-underline",
-        isActive ? "border-white" : "border-white/20"
-      )}
-      {...rest}
-    >
+    <li className=" text-white h-12 flex items-center">
       {children}
       {count && (
-        <sup className="ml-2 mt-2 text-brandLight text-base font-bold">
+        <sup className="ml-1 mt-2 text-brandLight text-base font-bold">
           {count}
         </sup>
       )}
-    </button>
+      {withSeparator && <span className="mx-4 text-white/50">•</span>}
+    </li>
   );
 }
 
@@ -66,41 +53,29 @@ function groupSupportersByType(supporters) {
 
 export default function Supporters() {
   const { siteConfig } = useDocusaurusContext();
-  const [activeTab, setActiveTab] = useState<string | null>(null);
   const [showAll, setShowAll] = useState(false);
   const groupedSupporters = groupSupportersByType(supporters);
   const types = Object.keys(groupedSupporters);
 
-  const tempSupporters = activeTab ? groupedSupporters[activeTab] : supporters;
-
-  const filteredSupporters = showAll
-    ? tempSupporters
-    : tempSupporters.slice(0, 5);
+  const truncatedSupporters = showAll ? supporters : supporters.slice(0, 5);
 
   return (
-    <section className="py-12 mx-auto container">
-      <h3 className="text-center text-5xl font-bold mb-7">Supporters</h3>
-      <div className="flex flex-wrap gap-6 justify-center">
-        <ToggleButton
-          isActive={activeTab === null}
-          onClick={() => setActiveTab(null)}
-        >
-          All
-        </ToggleButton>
-        {types.map((type) => (
-          <ToggleButton
+    <section className="py-12 mx-auto container items-center flex flex-col">
+      <h3 className="text-5xl font-bold mb-7">Supporters</h3>
+      <ol className="inline-flex" role="list">
+        {types.map((type, index) => (
+          <SupporterType
             key={type}
-            isActive={activeTab === type}
-            onClick={() => setActiveTab(type)}
             count={groupedSupporters[type].length}
+            withSeparator={index < types.length - 1}
           >
             {type}
-          </ToggleButton>
+          </SupporterType>
         ))}
-      </div>
-      <table className="w-full mt-12 mb-6 border-0 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto table">
+      </ol>
+      <table className="w-full mt-12 mb-6 border-0 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl table">
         <tbody>
-          {filteredSupporters.map((supporter) => (
+          {truncatedSupporters.map((supporter) => (
             <tr
               className="even:bg-transparent border-t-0 border-b border-white/20 w-full"
               key={supporter.name}
