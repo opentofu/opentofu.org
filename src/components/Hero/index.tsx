@@ -1,5 +1,5 @@
 import React from "react";
-import Link from "@docusaurus/Link";
+import Button from "../Button";
 
 export default function Hero() {
   return (
@@ -33,18 +33,12 @@ export default function Hero() {
         will be managed by an independent Foundation.
       </p>
       <div className="flex gap-4 pt-6">
-        <Link
-          href="/manifesto"
-          className="border border-white/20 font-semibold text-white h-12 px-6 flex items-center hover:no-underline hover:border-brand transition-colors"
-        >
+        <Button variant="secondary" href="/manifesto">
           Read Manifesto
-        </Link>
-        <Link
-          href="/support"
-          className="bg-brand  font-semibold text-white h-12 px-6 flex items-center hover:no-underline hover:text-white hover:bg-brand/80 transition-colors"
-        >
+        </Button>
+        <Button variant="primary" href="/support">
           Support Us
-        </Link>
+        </Button>
       </div>
     </header>
   );

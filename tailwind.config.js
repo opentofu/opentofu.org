@@ -4,6 +4,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        primary: {
+          base: "#933EFF",
+          hover: "#7732D0",
+        },
+        gray: {
+          700: "#505661",
+        },
         brand: "#933EFF",
         brandMuted: "#AA4EE7",
         brandLight: "#AA67FF",

@@ -157,9 +157,9 @@ const config = {
             className: "header-slack-link",
           },
           {
+            type: "custom-button-navbar-item",
             label: "Support Us",
-            to: "https://github.com/opentffoundation/manifesto",
-            className: "bg-brand px-6 py-3 hover:text-white",
+            href: "https://github.com/opentffoundation/manifesto",
             position: "right",
           },
         ],
