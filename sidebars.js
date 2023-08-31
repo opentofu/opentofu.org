@@ -1,8 +1,6 @@
 // @ts-check
 const stripHtml = require("striptags");
 
-const fs = require("fs");
-
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {};
 
