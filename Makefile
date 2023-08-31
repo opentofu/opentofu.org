@@ -22,7 +22,6 @@ prepare-dest:
 
 # Copy the entire folder
 copy: clone prepare-dest
-# echo what we're copying
 	cp -v -r $(CLONE_DIR)/$(SOURCE_DIR)/docs/ $(DEST_DIR)/docs
 	cp -v -r $(CLONE_DIR)/$(SOURCE_DIR)/data/ $(DEST_DIR)/data
 
