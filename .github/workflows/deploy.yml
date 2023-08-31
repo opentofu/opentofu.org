@@ -19,12 +19,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
-      - uses: chrnorm/deployment-action@v2
-        id: deployment
-        name: Create GitHub deployment
-        with:
-          token: ${{ github.token }}
-          environment: ${{ github.ref == 'refs/heads/main' && 'production' || 'preview' }}
       - name: Install dependencies
         run: npm ci
       - name: Build website
@@ -37,20 +31,5 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: opentf-website
           directory: ./build
-          wranglerVersion: 2
-      - name: Update deployment status (success)
-        if: success()
-        uses: chrnorm/deployment-status@v2
-        with:
-          token: ${{ github.token }}
-          environment-url: ${{ steps.publish.outputs.url }}
-          deployment-id: ${{ steps.deployment.outputs.deployment_id }}
-          state: "success"
-
-      - name: Update deployment status (failure)
-        if: failure()
-        uses: chrnorm/deployment-status@v2
-        with:
-          token: ${{ github.token }}
-          deployment-id: ${{ steps.deployment.outputs.deployment_id }}
-          state: "failure"
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: 3
