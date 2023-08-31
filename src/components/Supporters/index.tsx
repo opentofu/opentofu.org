@@ -61,7 +61,9 @@ export default function Supporters() {
 
   return (
     <section className="py-12 mx-auto container items-center flex flex-col">
-      <h3 className="text-5xl font-bold mb-7">Supporters</h3>
+      <h3 className="text-center text-3xl md:text-5xl font-bold mb-4 md:mb-7">
+        Supporters
+      </h3>
       <ol className="inline-flex" role="list">
         {types.map((type, index) => (
           <SupporterType
@@ -73,26 +75,30 @@ export default function Supporters() {
           </SupporterType>
         ))}
       </ol>
-      <table className="w-full mt-12 mb-6 border-0 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl table">
+      <table className="w-full mt-6 md:mt-12 mb-6 border-0 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl table">
         <tbody>
           {siteConfig.customFields.companiesWithLogos.map((supporter) => (
             <tr
               className="even:bg-transparent border-t-0 border-b border-white/20 w-full"
               key={supporter.name}
             >
-              <td className="py-6 border-0 w-1/6 px-6">
+              <td className="py-3 md:py-6 border-0 w-2/6 md:w-1/6 px-6">
                 <Link
                   href={supporter.url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={supporter.logo} alt={supporter.name} />
+                  <img
+                    src={supporter.logo}
+                    alt={supporter.name}
+                    className="min-w-[100px]"
+                  />
                 </Link>
               </td>
-              <td className="py-6 border-0 w-2/6 text-center text-[#9DA6B5]">
+              <td className="py-3 md:py-6 border-0 w-2/6 text-center text-[#9DA6B5]">
                 Company
               </td>
-              <td className="py-6 border-0 w-3/6 text-right text-[#9DA6B5] px-6">
+              <td className="py-3 md:py-6 border-0 w-2/6 md:w-3/6 text-right text-[#9DA6B5] px-6">
                 {supporter.pledge}
               </td>
             </tr>
