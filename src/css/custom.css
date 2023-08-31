@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,13 +12,22 @@ html[data-theme="dark"] {
   --ifm-color-primary-light: #c698ff;
   --ifm-color-primary-lighter: #d0aaff;
   --ifm-color-primary-lightest: #efe2ff;
-  --ifm-background-color: #21252b;
-  --ifm-navbar-background-color: #2c3036;
+  --ifm-background-color: theme("colors.dark1");
+  --ifm-navbar-background-color: transparent;
+  --ifm-heading-font-family: theme("fontFamily.sans");
 }
 
 .navbar {
   height: 96px;
-  border-top: 2px solid #923dfe;
+  padding: 0;
+}
+
+.navbar__inner {
+  @apply px-6 md:px-0 container mx-auto;
+}
+
+.navbar--fixed-top {
+  position: static;
 }
 
 .navbar__logo {

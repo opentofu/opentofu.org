@@ -43,6 +43,9 @@
     ]
   },
   "engines": {
-    "node": ">=16.14"
+    "node": ">=18.17.1"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.12"
   }
 }

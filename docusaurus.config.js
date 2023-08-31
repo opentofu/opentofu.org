@@ -41,7 +41,7 @@ const config = {
   ],
 
   plugins: [
-    async function tailwindPlugin() {
+    function tailwindPlugin() {
       return {
         name: "tailwindcss",
         configurePostCss(postcssOptions) {
@@ -142,6 +142,35 @@ const config = {
         additionalLanguages: ["hcl"],
       },
     }),
+  customFields: {
+    companiesWithLogos: [
+      {
+        name: "Gruntwork",
+        logo: "/logos/gruntwork.png",
+        pledge: "Development; open-source community efforts",
+      },
+      {
+        name: "Spacelift",
+        logo: "/logos/spacelift.svg",
+        pledge: "Cover the cost of 5 FTEs for at least 5 years",
+      },
+      {
+        name: "env0",
+        logo: "/logos/env0.svg",
+        pledge: "Cover the cost of 5 FTEs for at least 5 years",
+      },
+      {
+        name: "Scalr",
+        logo: "/logos/scalr.svg",
+        pledge: "Cover the cost of 3 FTEs for at least 5 years",
+      },
+      {
+        name: "Harness",
+        logo: "/logos/harness.svg",
+        pledge: "Cover the cost of 5 FTEs for at least 5 years",
+      },
+    ],
+  },
 };
 
 module.exports = config;
