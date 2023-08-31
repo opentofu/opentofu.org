@@ -80,7 +80,7 @@ export default function Supporters() {
   return (
     <section className="py-12 mx-auto container">
       <h3 className="text-center text-5xl font-bold mb-7">Supporters</h3>
-      <div className="flex gap-6 justify-center">
+      <div className="flex flex-wrap gap-6 justify-center">
         <ToggleButton
           isActive={activeTab === null}
           onClick={() => setActiveTab(null)}
