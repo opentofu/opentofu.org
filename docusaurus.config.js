@@ -67,6 +67,34 @@ const config = {
           autoCollapseCategories: true,
         },
       },
+      footer: {
+        logo: {
+          alt: "OpenTF",
+          src: "img/nav-logo.svg",
+        },
+        links: [
+          {
+            label: "Manifesto",
+            href: "#",
+          },
+          {
+            label: "Supporters",
+            href: "#",
+          },
+          {
+            label: "FAQs",
+            href: "#",
+          },
+          {
+            label: "Blog",
+            href: "#",
+          },
+          {
+            label: "Docs",
+            href: "#",
+          },
+        ],
+      },
       navbar: {
         logo: {
           alt: "OpenTF",

@@ -19,7 +19,6 @@ export default function Home() {
       <HowToSupport />
       <HowToContribute />
       <LatestNews />
-      <Footer />
     </Layout>
   );
 }
