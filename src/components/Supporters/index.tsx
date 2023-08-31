@@ -57,14 +57,12 @@ export default function Supporters() {
   const groupedSupporters = groupSupportersByType(supporters);
   const types = Object.keys(groupedSupporters);
 
-  const truncatedSupporters = showAll ? supporters : supporters.slice(0, 5);
-
   return (
     <section className="py-12 mx-auto container items-center flex flex-col">
       <h3 className="text-center text-3xl md:text-5xl font-bold mb-4 md:mb-7">
         Supporters
       </h3>
-      <ol className="inline-flex" role="list">
+      <ol className="inline-flex flex-wrap justify-center" role="list">
         {types.map((type, index) => (
           <SupporterType
             key={type}

@@ -110,12 +110,12 @@ const config = {
           //     },
           //   ],
           // },
+          // TODO: replace href with opentf repo once it's public
           {
-            // TODO: replace href with opentf repo once it's public
-            // TODO: replace icon github-button
-            href: "https://github.com/opentffoundation/manifesto",
+            type: "custom-github-stars-navbar-item",
             position: "right",
-            className: "header-github-link",
+            ghRepoUrl: "https://github.com/opentffoundation/manifesto",
+            buttonLabel: "Star",
           },
           {
             href: "https://twitter.com/opentforg",
@@ -131,7 +131,7 @@ const config = {
           {
             label: "Support Us",
             to: "https://github.com/opentffoundation/manifesto",
-            className: "bg-brand px-6 py-3 mx-3 hover:text-white",
+            className: "bg-brand px-6 py-3 hover:text-white",
             position: "right",
           },
         ],
