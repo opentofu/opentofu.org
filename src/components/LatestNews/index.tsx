@@ -12,12 +12,12 @@ export default function LatestNews() {
           <div className="bg-dark2 w-full flex justify-center py-20 px-16">
             <Logo />
           </div>
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col">
             <span className="text-[#A965FF] font-bold">Aug 25, 2023</span>
-            <h4 className="text-3xl font-bold text-[#E7E9EC]">
+            <h4 className="text-3xl font-bold text-[#E7E9EC] leading-snug mt-2">
               OpenTF Announces Fork of Terraform
             </h4>
-            <p className="text-[#8590A2]">
+            <p className="text-[#8590A2] line-clamp-3 mt-2 mb-4">
               Two weeks ago, HashiCorp announced they are changing the license
               to all their core products, including Terraform, to the Business
               Source License (BSL).
