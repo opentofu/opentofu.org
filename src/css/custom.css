@@ -26,6 +26,10 @@ html[data-theme="dark"] {
   @apply px-6 md:px-0 container mx-auto;
 }
 
+.navbar--fixed-top {
+  position: static;
+}
+
 .navbar__logo {
   height: 42px;
 }
