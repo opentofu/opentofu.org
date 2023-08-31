@@ -25,5 +25,5 @@ module.exports = {
       sans: ['"DM Sans"', "system-ui"],
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };

@@ -51,6 +51,17 @@ const config = {
         },
       };
     },
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        redirects: [
+          {
+            to: "/blog/opentf-announces-fork-of-terraform",
+            from: "/announcement",
+          },
+        ],
+      },
+    ],
   ],
 
   themeConfig:
