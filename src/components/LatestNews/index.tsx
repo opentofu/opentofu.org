@@ -23,7 +23,7 @@ export default function LatestNews() {
               Source License (BSL).
             </p>
             <a
-              className="border border-[#505661] md:self-start font-bold text-white h-12 px-6 flex items-center hover:no-underline"
+              className="text-center border border-[#505661] md:self-start font-bold text-white h-12 px-6 flex items-center hover:no-underline"
               href="https://opentf.org/announcement"
             >
               Read More
