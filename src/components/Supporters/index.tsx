@@ -105,7 +105,15 @@ export default function Supporters() {
               className="even:bg-transparent border-t-0 border-b border-white/20 w-full"
               key={supporter.name}
             >
-              <td className="py-4 border-0 w-1/5">{supporter.name}</td>
+              <td className="py-4 border-0 w-1/5">
+                <Link
+                  href={supporter.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {supporter.name}
+                </Link>
+              </td>
               <td className="py-4 border-0 w-1/5">{supporter.type}</td>
               <td className="py-4 border-0 w-3/5">{supporter.pledge}</td>
             </tr>
