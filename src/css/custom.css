@@ -17,6 +17,10 @@ html[data-theme="dark"] {
   --ifm-heading-font-family: theme("fontFamily.sans");
 }
 
+.list-none::-webkit-details-marker {
+  display: none;
+}
+
 .navbar {
   height: 96px;
   padding: 0;
@@ -31,7 +35,8 @@ html[data-theme="dark"] {
 }
 
 .navbar__logo {
-  height: 42px;
+  width: 123px;
+  height: 48px;
 }
 
 .header-github-link::before {
