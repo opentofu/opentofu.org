@@ -75,22 +75,26 @@ export default function Supporters() {
       </ol>
       <table className="w-full mt-12 mb-6 border-0 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl table">
         <tbody>
-          {truncatedSupporters.map((supporter) => (
+          {siteConfig.customFields.companiesWithLogos.map((supporter) => (
             <tr
               className="even:bg-transparent border-t-0 border-b border-white/20 w-full"
               key={supporter.name}
             >
-              <td className="py-4 border-0 w-1/5">
+              <td className="py-6 border-0 w-1/6 px-6">
                 <Link
                   href={supporter.url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {supporter.name}
+                  <img src={supporter.logo} alt={supporter.name} />
                 </Link>
               </td>
-              <td className="py-4 border-0 w-1/5">{supporter.type}</td>
-              <td className="py-4 border-0 w-3/5">{supporter.pledge}</td>
+              <td className="py-6 border-0 w-2/6 text-center text-[#9DA6B5]">
+                Company
+              </td>
+              <td className="py-6 border-0 w-3/6 text-right text-[#9DA6B5] px-6">
+                {supporter.pledge}
+              </td>
             </tr>
           ))}
         </tbody>
