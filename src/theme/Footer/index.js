@@ -8,7 +8,7 @@ function Footer() {
   if (!footer) {
     return null;
   }
-  return <FooterComponent logo={footer.logo} links={footer.links} />;
+  return <FooterComponent links={footer.links} />;
 }
 
 export default React.memo(Footer);
