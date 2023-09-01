@@ -20,6 +20,7 @@ jobs:
         with:
           repository: opentffoundation/opentf
           path: opentf-repo
+          ref: main
       - name: Process documentation
         run: make copy
       - name: Setup Node
