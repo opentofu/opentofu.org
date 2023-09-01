@@ -82,7 +82,7 @@ const config = {
         links: [
           {
             label: "Manifesto",
-            href: "#",
+            href: "/manifesto",
           },
           {
             label: "Supporters",
@@ -94,7 +94,7 @@ const config = {
           },
           {
             label: "Blog",
-            href: "#",
+            href: "/blog",
           },
           {
             label: "Docs",
