@@ -15,8 +15,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Fetch documentation
-        run: make
+      - name: Fetch main repo
+        uses: actions/checkout@v3
+        with:
+          repository: opentffoundation/opentf
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: opentf-repo
+      - name: Process documentation
+        run: make copy
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
