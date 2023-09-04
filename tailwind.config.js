@@ -9,7 +9,12 @@ module.exports = {
           hover: "#7732D0",
         },
         gray: {
+          900: "#1B1D20",
           700: "#505661",
+          600: "#6A7382",
+          150: "#DADEE3",
+          100: "#E7E9EC",
+          50: "#F9F9F9",
         },
         brand: "#933EFF",
         brandMuted: "#AA4EE7",
