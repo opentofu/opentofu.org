@@ -15,28 +15,28 @@ export default function FAQ() {
             Under a well-known and widely-accepted license that companies can
             trus, that won’t suddenly change in the future, and isn’t subhect to
             the whims of a singe vendor. Under a well-known and widely-accepted
-            license that companies can trus, that won’t suddenly change in the
+            license that companies can trust, that won’t suddenly change in the
             future, and isn’t subhect to the whims of a singe vendor.
           </AccordionItem>
           <AccordionItem summary="Why was OpenTF created?">
             Under a well-known and widely-accepted license that companies can
             trus, that won’t suddenly change in the future, and isn’t subhect to
             the whims of a singe vendor. Under a well-known and widely-accepted
-            license that companies can trus, that won’t suddenly change in the
+            license that companies can trust, that won’t suddenly change in the
             future, and isn’t subhect to the whims of a singe vendor.
           </AccordionItem>
           <AccordionItem summary="Can I use OpenTF as a drop-in replacement for Terraform?">
             Under a well-known and widely-accepted license that companies can
             trus, that won’t suddenly change in the future, and isn’t subhect to
             the whims of a singe vendor. Under a well-known and widely-accepted
-            license that companies can trus, that won’t suddenly change in the
+            license that companies can trust, that won’t suddenly change in the
             future, and isn’t subhect to the whims of a singe vendor.
           </AccordionItem>
           <AccordionItem summary="What are the differences between OpenTF and Terraform?">
             Under a well-known and widely-accepted license that companies can
             trus, that won’t suddenly change in the future, and isn’t subhect to
             the whims of a singe vendor. Under a well-known and widely-accepted
-            license that companies can trus, that won’t suddenly change in the
+            license that companies can trust, that won’t suddenly change in the
             future, and isn’t subhect to the whims of a singe vendor.
           </AccordionItem>
         </Accordion>
