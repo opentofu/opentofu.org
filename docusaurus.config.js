@@ -162,8 +162,7 @@ const config = {
             className: "header-twitter-link",
           },
           {
-            // TODO: add actual slack link
-            href: "https://slack.com/",
+            href: "https://join.slack.com/t/slack-9uv6202/shared_invite/zt-22ifsm1t2-AF6cL0cOdzivP8E~4deDJA",
             position: "right",
             className: "header-slack-link",
           },
