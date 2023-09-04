@@ -23,7 +23,7 @@ export default function SupportersList({ list }: SupportersListProps) {
             className="even:bg-transparent border-t-0 border-b border-white/20 [.light_&]:border-gray-150 w-full"
             key={supporter.name}
           >
-            <td className="py-3 md:py-6 border-0 w-2/6 md:w-1/6 px-6">
+            <td className="py-3 md:py-6 border-0 w-2/6 md:w-1/6 pl-6">
               <Link
                 href={supporter.url}
                 target="_blank"
@@ -33,17 +33,18 @@ export default function SupportersList({ list }: SupportersListProps) {
                   <img
                     src={logos[supporter.name]}
                     alt={supporter.name}
-                    className="min-w-[100px]"
+                    className="w-[100px]"
                   />
                 ) : (
                   supporter.name
                 )}
               </Link>
+              <p className="flex md:hidden mt-2 text-xs">{supporter.type}</p>
             </td>
-            <td className="py-3 md:py-6 border-0 w-2/6 text-center text-[#9DA6B5]">
+            <td className="py-3 md:py-6 border-0 hidden md:table-cell md:w-2/6 text-center">
               {supporter.type}
             </td>
-            <td className="py-3 md:py-6 border-0 w-2/6 md:w-3/6 text-right text-[#9DA6B5] px-6">
+            <td className="py-3 md:py-6 border-0 w-4/6 text-right pr-6">
               {supporter.pledge}
             </td>
           </tr>

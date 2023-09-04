@@ -32,7 +32,7 @@ export default function SupportersPage() {
       </Jumbotron>
       <div className="bg-white flex-1 text-gray-600">
         <div className="container mx-auto pt-6 pb-10">
-          <div className="flex gap-6 justify-center bg-white sticky top-0 py-4">
+          <div className="flex flex-wrap gap-6 justify-center bg-white sticky top-0 py-4">
             {types.map(([type, supporters]) => (
               <Button
                 key={type}
