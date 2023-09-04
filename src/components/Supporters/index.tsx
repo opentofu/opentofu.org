@@ -104,7 +104,7 @@ export default function Supporters() {
         </tbody>
       </table>
       <div className="flex gap-6 justify-center">
-        <Button variant="secondary" href="/supporters">
+        <Button variant="secondaryOnDark" href="/supporters">
           Show More
         </Button>
         <Button variant="primary" href="/support">

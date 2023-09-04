@@ -23,7 +23,10 @@ export default function LatestNews() {
               to all their core products, including Terraform, to the Business
               Source License (BSL).
             </p>
-            <Button variant="secondary" href="https://opentf.org/announcement">
+            <Button
+              variant="secondaryOnDark"
+              href="https://opentf.org/announcement"
+            >
               Read More
             </Button>
           </div>
