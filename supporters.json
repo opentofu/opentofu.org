@@ -816,6 +816,12 @@
     "pledge": "Development; open-source community efforts"
   },
   {
+    "name": "Safespring",
+    "url": "https://www.safespring.com/en/",
+    "type": "Company",
+    "pledge": "Open-source community efforts"
+  },
+  {
     "name": "OTF",
     "url": "https://github.com/leg100/otf",
     "type": "Project",
@@ -3595,6 +3601,7 @@
   },
   {
     "name": "Sungjin Kang",
+    "url": "https://github.com/ujuc",
     "type": "Individual",
     "pledge": "Development; DevOps; Documentation; i18n,l10n; open-source community efforts"
   },
@@ -4881,6 +4888,48 @@
     "url": "https://github.com/AlphaLink4",
     "type": "Individual",
     "pledge": "IT Infrastructure; open-source community efforts"
+  },
+  {
+    "name": "Dhanush Shetty",
+    "url": "https://github.com/dhanushcodie",
+    "type": "Individual",
+    "pledge": "Development; open-source community efforts"
+  },
+  {
+    "name": "Fernando Soster",
+    "url": "https://github.com/fernandososter",
+    "type": "Individual",
+    "pledge": "Development; open-source community efforts"
+  },
+  {
+    "name": "Ilya Toropchenko",
+    "url": "https://github.com/eliastor",
+    "type": "Individual",
+    "pledge": "Development; Platform Engineering; Architecting; open-source community efforts"
+  },
+  {
+    "name": "Aleksa Siriški",
+    "url": "https://aleksasiriski.dev",
+    "type": "Individual",
+    "pledge": "Development; open-source community efforts"
+  },
+  {
+    "name": "Md Ashad",
+    "url": "https://ashxd.me/",
+    "type": "Individual",
+    "pledge": "Development; open-source community efforts"
+  },
+  {
+    "name": "Aditya Raval",
+    "url": "https://github.com/adityaraval",
+    "type": "Individual",
+    "pledge": "Development; open-source community efforts"
+  },
+  {
+    "name": "Sara Carvalho",
+    "url": "https://github.com/SaraSSC",
+    "type": "Individual",
+    "pledge": "Python programmer; Cybersecurity certified; open-source community efforts"
   },
   {
     "name": "mdsanima",
