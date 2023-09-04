@@ -29,7 +29,7 @@ export default function HowToContribute() {
               <ContentLink href="https://placeholderplaceholder.com">
                 The fork
               </ContentLink>{" "}
-              will be available shorty. Right now it is just pending foundation
+              will be available shortly. Right now it is just pending foundation
               details.
             </p>
             <p className="max-md:text-center">
@@ -37,8 +37,8 @@ export default function HowToContribute() {
               <ContentLink href="https://placeholderplaceholder.com">
                 here
               </ContentLink>
-              . Contribution guide will be defined soon, but in the meantime,
-              you can check out{" "}
+              . The contribution guide will be defined soon, but in the
+              meantime, you can check out{" "}
               <ContentLink href="https://github.com/opentffoundation/roadmap">
                 our public roadmap
               </ContentLink>
