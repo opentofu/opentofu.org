@@ -4,10 +4,10 @@ const stripHtml = require("striptags");
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {};
 
-// const cliNavData = require("./data/cli-nav-data.json");
-// const internalsNavData = require("./data/internals-nav-data.json");
-// const introNavData = require("./data/intro-nav-data.json");
-// const languageNavData = require("./data/language-nav-data.json");
+const cliNavData = require("./data/cli-nav-data.json");
+const internalsNavData = require("./data/internals-nav-data.json");
+const introNavData = require("./data/intro-nav-data.json");
+const languageNavData = require("./data/language-nav-data.json");
 
 function processNavItems(navItems) {
   return navItems.map(processNavItem).filter(Boolean);
@@ -59,9 +59,9 @@ function processNavItem(navItem) {
   };
 }
 
-// sidebars.cli = processNavItems(cliNavData);
-// sidebars.internals = processNavItems(internalsNavData);
-// sidebars.intro = processNavItems(introNavData);
-// sidebars.language = processNavItems(languageNavData);
+sidebars.cli = processNavItems(cliNavData);
+sidebars.internals = processNavItems(internalsNavData);
+sidebars.intro = processNavItems(introNavData);
+sidebars.language = processNavItems(languageNavData);
 
 module.exports = sidebars;
