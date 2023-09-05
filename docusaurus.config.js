@@ -102,7 +102,7 @@ const config = {
           },
           {
             label: "Docs",
-            href: "#",
+            href: "/docs",
           },
         ],
       },
@@ -133,7 +133,7 @@ const config = {
             position: "left",
           },
           {
-            to: "/doc",
+            to: "/docs",
             label: "Docs",
             position: "left",
           },
