@@ -24,7 +24,7 @@ jobs:
           sparse-checkout: docs
       - run: ls opentf-repo
       - name: Copy docs
-        run: mv opentf-repo/docs .
+        run: mv opentf-repo/docs ${{ github.workspace }}
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
