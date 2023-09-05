@@ -22,7 +22,7 @@ prepare-dest:
 
 # Copy the entire folder
 copy: clone prepare-dest
-	cp -v -r $(CLONE_DIR)/$(SOURCE_DIR)/docs/ $(DEST_DIR)/docs/
-	cp -v -r $(CLONE_DIR)/$(SOURCE_DIR)/data/ $(DEST_DIR)/data/
+	cp -v -r $(CLONE_DIR)/$(SOURCE_DIR)/docs/. $(DEST_DIR)/docs/
+	cp -v -r $(CLONE_DIR)/$(SOURCE_DIR)/data/. $(DEST_DIR)/data/
 
 .PHONY: all clone copy prepare-dest
