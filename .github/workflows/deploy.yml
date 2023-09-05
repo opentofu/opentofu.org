@@ -22,6 +22,7 @@ jobs:
           path: opentf-repo
           ref: main
           sparse-checkout: docs
+      - run: ls opentf-repo
       - name: Copy docs
         run: mv opentf-repo/docs .
       - name: Setup Node
