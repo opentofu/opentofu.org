@@ -15,13 +15,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Fetch main repo
+      - name: Fetch core repo
         uses: actions/checkout@v3
         with:
           repository: opentffoundation/opentf
           path: opentf-repo
           ref: main
           sparse-checkout: docs
+      - name: Copy docs
+        run: mv opentf-repo/docs .
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
