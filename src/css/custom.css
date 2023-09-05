@@ -16,6 +16,21 @@ html[data-theme="dark"] {
   --ifm-navbar-background-color: transparent;
   --ifm-heading-font-family: theme("fontFamily.sans");
   --ifm-navbar-item-padding-horizontal: 0;
+  --ifm-navbar-height: theme("height.24");
+  --ifm-toc-border-color: transparent;
+}
+
+body {
+  @apply antialiased;
+}
+
+.theme-doc-sidebar-menu {
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding-right: 20px;
+}
+
+.table-of-contents {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .navbar__items {
@@ -27,7 +42,6 @@ html[data-theme="dark"] {
 }
 
 .navbar {
-  height: 96px;
   padding: 0;
 }
 
