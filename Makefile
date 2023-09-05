@@ -1,5 +1,5 @@
 # Variables
-REPO_URL := git@github.com:opentffoundation/opentf.git
+REPO_URL := https://github.com/opentffoundation/opentf.git
 CLONE_DIR := ./opentf-repo
 DEST_DIR := .
 SOURCE_DIR := website
