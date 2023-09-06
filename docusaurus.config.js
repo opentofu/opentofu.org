@@ -79,14 +79,10 @@ const config = {
         },
       },
       footer: {
-        logo: {
-          alt: "OpenTF",
-          src: "img/nav-logo.svg",
-        },
         links: [
           {
             label: "Manifesto",
-            href: "#",
+            href: "/manifesto",
           },
           {
             label: "Supporters",
@@ -98,7 +94,7 @@ const config = {
           },
           {
             label: "Blog",
-            href: "#",
+            href: "/blog",
           },
           {
             label: "Docs",
@@ -107,10 +103,6 @@ const config = {
         ],
       },
       navbar: {
-        logo: {
-          alt: "OpenTF",
-          src: "img/nav-logo.svg",
-        },
         items: [
           {
             to: "/manifesto",
@@ -180,15 +172,16 @@ const config = {
             buttonLabel: "Star",
           },
           {
+            type: "custom-social-icon-link-navbar-item",
             href: "https://twitter.com/opentforg",
             position: "right",
-            className: "header-twitter-link",
+            name: "twitter",
           },
           {
-            // TODO: add actual slack link
-            href: "https://slack.com/",
+            type: "custom-social-icon-link-navbar-item",
+            href: "https://join.slack.com/t/slack-9uv6202/shared_invite/zt-22ifsm1t2-AF6cL0cOdzivP8E~4deDJA",
             position: "right",
-            className: "header-slack-link",
+            name: "slack",
           },
           {
             type: "custom-button-navbar-item",

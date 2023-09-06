@@ -4,6 +4,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        fontSize: {
+          "5xl": "2.5rem",
+        },
         primary: {
           base: "#933EFF",
           hover: "#7732D0",
