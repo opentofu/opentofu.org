@@ -33,12 +33,12 @@ export default function SupportersList({ list }: SupportersListProps) {
                 <img
                   src={logos[supporter.name].light}
                   alt={supporter.name}
-                  className="w-24 hidden [.light_&]:block"
+                  className="w-28 hidden [.light_&]:block"
                 />
                 <img
                   src={logos[supporter.name].dark}
                   alt={supporter.name}
-                  className="w-24 [.light_&]:hidden"
+                  className="w-28 [.light_&]:hidden"
                 />
               </>
             ) : (
