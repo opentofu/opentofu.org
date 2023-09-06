@@ -37,10 +37,6 @@ body {
   @apply antialiased;
 }
 
-body {
-  @apply antialiased;
-}
-
 .navbar__items {
   @apply gap-6;
 }
