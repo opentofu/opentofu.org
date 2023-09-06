@@ -1,6 +1,6 @@
 ---
 title: OpenTF Announces Fork of Terraform
-slug: opentf-announces-fork-of-terraform
+slug: opentf-announces-fork-of-terraform10
 image_url: /img/blog/opentf.png
 ---
 
