@@ -5,7 +5,7 @@ type AccordionProps = {
 };
 
 const Accordion = ({ children }: AccordionProps) => {
-  return <section className="grid grid-cols-1 divide-y">{children}</section>;
+  return <section className="flex flex-col">{children}</section>;
 };
 
 export default Accordion;

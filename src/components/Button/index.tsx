@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Link, { Props } from "@docusaurus/Link";
 
 type ButtonProps = Props & {
-  variant: "primary" | "secondary";
+  variant: "primary" | "secondaryOnDark" | "secondaryOnLight";
 };
 
 export default function Button({ children, variant, ...rest }: ButtonProps) {
@@ -11,11 +11,13 @@ export default function Button({ children, variant, ...rest }: ButtonProps) {
     <Link
       {...rest}
       className={clsx(
-        "border font-semibold text-white h-12 px-6 flex items-center hover:no-underline transition-colors",
+        "border font-semibold h-12 px-6 flex items-center hover:no-underline transition-colors",
         variant === "primary" &&
-          "bg-primary-base hover:bg-primary-hover border-primary-base hover:border-primary-hover hover:text-white",
-        variant === "secondary" &&
-          "border-gray-700 bg-transparent hover:border-white hover:text-white"
+          "bg-primary-base text-white hover:bg-primary-hover border-primary-base hover:border-primary-hover hover:text-white",
+        variant === "secondaryOnDark" &&
+          "border-gray-700 text-gray-100 bg-transparent hover:border-white hover:text-gray-100",
+        variant === "secondaryOnLight" &&
+          "border-gray-150 text-gray-900 bg-transparent hover:border-gray-900 hover:text-gray-900"
       )}
     >
       {children}

@@ -1,10 +1,11 @@
 import React from "react";
 import Accordion from "../Accordion";
 import AccordionItem from "../Accordion/Item";
+import Button from "../Button";
 
 export default function FAQ() {
   return (
-    <section className="text-[#0C192B] flex flex-col justify-center w-full bg-light2 py-10 md:py-20 px-6">
+    <section className="text-gray-900 flex flex-col justify-center w-full bg-gray-50 py-10 md:py-20 px-6">
       <div className="w-full max-w-4xl mx-auto">
         <h3 className="text-center text-3xl md:text-5xl font-bold mb-6 md:mb-12">
           Frequently Asked Questions
@@ -40,6 +41,12 @@ export default function FAQ() {
             future, and isn’t subhect to the whims of a singe vendor.
           </AccordionItem>
         </Accordion>
+
+        <div className="flex justify-center mt-6">
+          <Button variant="secondaryOnLight" href="/faqs">
+            Show More
+          </Button>
+        </div>
       </div>
     </section>
   );
