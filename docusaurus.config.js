@@ -199,11 +199,20 @@ const config = {
     }),
   customFields: {
     logos: {
-      Gruntwork: "/logos/gruntwork.png",
-      Spacelift: "/logos/spacelift.svg",
-      env0: "/logos/env0.svg",
-      Scalr: "/logos/scalr.svg",
-      Harness: "/logos/harness.svg",
+      Gruntwork: {
+        dark: "/logos/gruntwork.png",
+        light: "/logos/gruntwork-light.svg",
+      },
+      Spacelift: {
+        dark: "/logos/spacelift.svg",
+        light: "/logos/spacelift-light.svg",
+      },
+      env0: { dark: "/logos/env0.svg", light: "/logos/env0-light.svg" },
+      Scalr: { dark: "/logos/scalr.svg", light: "/logos/scalr-light.png" },
+      Harness: {
+        dark: "/logos/harness.svg",
+        light: "/logos/harness-light.png",
+      },
     },
   },
 };

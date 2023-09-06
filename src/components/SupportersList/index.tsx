@@ -30,11 +30,18 @@ export default function SupportersList({ list }: SupportersListProps) {
                 rel="noopener noreferrer"
               >
                 {logos[supporter.name] ? (
-                  <img
-                    src={logos[supporter.name]}
-                    alt={supporter.name}
-                    className="w-[100px]"
-                  />
+                  <>
+                    <img
+                      src={logos[supporter.name].light}
+                      alt={supporter.name}
+                      className="w-[100px] hidden [.light_&]:block"
+                    />
+                    <img
+                      src={logos[supporter.name].dark}
+                      alt={supporter.name}
+                      className="w-[100px] [.light_&]:hidden"
+                    />
+                  </>
                 ) : (
                   supporter.name
                 )}
