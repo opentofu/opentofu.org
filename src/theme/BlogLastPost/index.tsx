@@ -23,7 +23,7 @@ export default function BlogLastPost({ item }) {
                 {item.content.metadata.description}
               </p>
               <Button
-                variant="secondary"
+                variant="secondaryOnDark"
                 href={item.content.metadata.permalink}
               >
                 Read more

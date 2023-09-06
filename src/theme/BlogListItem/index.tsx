@@ -17,10 +17,13 @@ export default function BlogListItem({ item }) {
             {item.content.metadata.title}
           </h3>
         </Link>
-        <p className="text-gray-400 mb-4 line-clamp-3">
+        <p className="text-gray-600 mb-4 line-clamp-3">
           {item.content.metadata.description}
         </p>
-        <Button variant="secondary" href={item.content.metadata.permalink}>
+        <Button
+          variant="secondaryOnLight"
+          href={item.content.metadata.permalink}
+        >
           Read more
         </Button>
       </div>
