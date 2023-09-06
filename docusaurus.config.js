@@ -34,7 +34,7 @@ const config = {
         },
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          routeBasePath: "/",
+          routeBasePath: "/docs",
         },
       }),
     ],
@@ -102,7 +102,7 @@ const config = {
           },
           {
             label: "Docs",
-            href: "#",
+            href: "/docs",
           },
         ],
       },
@@ -133,9 +133,32 @@ const config = {
             position: "left",
           },
           {
-            to: "/doc",
+            type: "dropdown",
+            to: "/docs",
             label: "Docs",
             position: "left",
+            items: [
+              {
+                type: "doc",
+                label: "Introduction",
+                docId: "intro/index",
+              },
+              {
+                type: "doc",
+                label: "CLI",
+                docId: "cli/index",
+              },
+              {
+                type: "doc",
+                label: "Language",
+                docId: "language/index",
+              },
+              {
+                type: "doc",
+                label: "Internals",
+                docId: "internals/index",
+              },
+            ],
           },
           // TODO: This link is important but there's no design for it yet
           // {
