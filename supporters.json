@@ -822,6 +822,12 @@
     "pledge": "Open-source community efforts"
   },
   {
+    "name": "Mantle",
+    "url": "https://mantle.systems",
+    "type": "Company",
+    "pledge": "Development; DevOps; open-source community efforts"
+  },
+  {
     "name": "OTF",
     "url": "https://github.com/leg100/otf",
     "type": "Project",
