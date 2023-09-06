@@ -49,7 +49,10 @@ export default function Footer({ links }: FooterProps) {
             href="https://github.com/opentffoundation/manifesto"
           />
           <SocialIconLink name="twitter" href="https://twitter.com/opentforg" />
-          <SocialIconLink name="slack" href="https://slack.com/" />
+          <SocialIconLink
+            name="slack"
+            href="https://join.slack.com/t/slack-9uv6202/shared_invite/zt-22ifsm1t2-AF6cL0cOdzivP8E~4deDJA"
+          />
         </div>
       </div>
     </footer>

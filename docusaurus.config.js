@@ -178,9 +178,8 @@ const config = {
             name: "twitter",
           },
           {
-            // TODO: add actual slack link
             type: "custom-social-icon-link-navbar-item",
-            href: "https://slack.com/",
+            href: "https://join.slack.com/t/slack-9uv6202/shared_invite/zt-22ifsm1t2-AF6cL0cOdzivP8E~4deDJA",
             position: "right",
             name: "slack",
           },
