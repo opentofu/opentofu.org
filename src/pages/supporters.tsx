@@ -5,11 +5,9 @@ import { groupSupportersByType } from "../utils/groupSupportersByType";
 import supporters from "../../supporters.json";
 import Jumbotron from "../components/Jumbotron";
 import Button from "../components/Button";
-import Supporters from "../components/Supporters";
 import SupportersList from "../components/SupportersList";
 
 export default function SupportersPage() {
-  const { siteConfig } = useDocusaurusContext();
   const groupedSupporters = groupSupportersByType(supporters);
   const types = Object.entries(groupedSupporters);
   const [selectedType, setSelectedType] = React.useState("Companies");
