@@ -7,8 +7,9 @@ type ButtonProps = Props & {
 };
 
 export default function Button({ children, variant, ...rest }: ButtonProps) {
+  const Tag = "href" in rest ? Link : "button";
   return (
-    <Link
+    <Tag
       {...rest}
       className={clsx(
         "border font-semibold h-12 px-6 flex items-center hover:no-underline transition-colors",
@@ -21,6 +22,6 @@ export default function Button({ children, variant, ...rest }: ButtonProps) {
       )}
     >
       {children}
-    </Link>
+    </Tag>
   );
 }

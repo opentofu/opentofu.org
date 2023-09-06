@@ -92,7 +92,10 @@ export default function Manifesto() {
             ))}
           </Accordion>
           <div className="flex justify-center mt-6">
-            <Button onClick={() => setShowAll((v) => !v)} variant="secondary">
+            <Button
+              onClick={() => setShowAll((v) => !v)}
+              variant="secondaryOnLight"
+            >
               {showAll ? "Show Less" : "Show More"}
             </Button>
           </div>
