@@ -6,7 +6,12 @@ export default function BlogListItem({ item }) {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex-1">
-        <img src={item.content.frontMatter.image_url} />
+        <Link to={item.content.metadata.permalink}>
+          <img
+            src={item.content.frontMatter.image_url}
+            alt={item.content.metadata.title}
+          />
+        </Link>
       </div>
       <div className="flex-1 flex flex-col justify-center items-start">
         <p className="text-purple-400 uppercase font-bold">
