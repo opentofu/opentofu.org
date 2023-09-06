@@ -16,47 +16,39 @@ export default function SupportersList({ list }: SupportersListProps) {
   const { logos } = siteConfig.customFields;
 
   return (
-    <table className="w-full mt-6 md:mt-12 mb-6 border-0 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto table">
-      <tbody>
-        {list.map((supporter) => (
-          <tr
-            className="even:bg-transparent border-t-0 border-b border-white/20 [.light_&]:border-gray-150 w-full"
-            key={supporter.name}
+    <div className="mt-6 md:mt-12 mb-6 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto">
+      {list.map((supporter) => (
+        <div
+          className="py-3 md:py-6 border-b border-white/20 [.light_&]:border-gray-150 flex gap-4 justify-between items-center"
+          key={supporter.name}
+        >
+          <Link
+            href={supporter.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-1/3"
           >
-            <td className="py-3 md:py-6 border-0 w-2/6 md:w-1/6 pl-6">
-              <Link
-                href={supporter.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {logos[supporter.name] ? (
-                  <>
-                    <img
-                      src={logos[supporter.name].light}
-                      alt={supporter.name}
-                      className="w-[100px] hidden [.light_&]:block"
-                    />
-                    <img
-                      src={logos[supporter.name].dark}
-                      alt={supporter.name}
-                      className="w-[100px] [.light_&]:hidden"
-                    />
-                  </>
-                ) : (
-                  supporter.name
-                )}
-              </Link>
-              <p className="flex md:hidden mt-2 text-xs">{supporter.type}</p>
-            </td>
-            <td className="py-3 md:py-6 border-0 hidden md:table-cell md:w-2/6 text-center">
-              {supporter.type}
-            </td>
-            <td className="py-3 md:py-6 border-0 w-4/6 text-right pr-6">
-              {supporter.pledge}
-            </td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+            {logos[supporter.name] ? (
+              <>
+                <img
+                  src={logos[supporter.name].light}
+                  alt={supporter.name}
+                  className="w-24 hidden [.light_&]:block"
+                />
+                <img
+                  src={logos[supporter.name].dark}
+                  alt={supporter.name}
+                  className="w-24 [.light_&]:hidden"
+                />
+              </>
+            ) : (
+              supporter.name
+            )}
+          </Link>
+
+          <p className="w-2/3 text-right">{supporter.pledge}</p>
+        </div>
+      ))}
+    </div>
   );
 }

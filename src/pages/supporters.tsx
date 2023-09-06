@@ -26,13 +26,13 @@ export default function SupportersPage() {
   return (
     <Layout wrapperClassName="light">
       <Jumbotron>
-        <h1 className="text-7xl font-bold text-white text-center">
+        <h1 className="text-5xl md:text-7xl font-bold text-white text-center leading-tight md:leading-snug">
           Supporters
         </h1>
       </Jumbotron>
       <div className="bg-white flex-1 text-gray-600">
-        <div className="container mx-auto pt-6 pb-10">
-          <div className="flex flex-wrap gap-6 justify-center bg-white sticky top-0 py-4">
+        <div className="container mx-auto md:pt-6 pb-10">
+          <div className="flex flex-wrap gap-3 md:gap-6 justify-center bg-white sticky top-0 py-4">
             {types.map(([type, supporters]) => (
               <Button
                 key={type}
