@@ -7,12 +7,12 @@ export default function BlogListPaginator(props) {
   return (
     <nav className="bg-white flex gap-6 justify-center py-10">
       {previousPage && (
-        <Button variant="secondary" href={previousPage}>
+        <Button variant="secondaryOnLight" href={previousPage}>
           Previous Page
         </Button>
       )}
       {nextPage && (
-        <Button variant="secondary" href={nextPage}>
+        <Button variant="secondaryOnLight" href={nextPage}>
           Next Page
         </Button>
       )}

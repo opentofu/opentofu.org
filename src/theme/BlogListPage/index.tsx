@@ -4,7 +4,7 @@ import { PageMetadata } from "@docusaurus/theme-common";
 import BlogLayout from "@theme/BlogLayout";
 import BlogListPaginator from "@theme/BlogListPaginator";
 import SearchMetadata from "@theme/SearchMetadata";
-import BlogPostItems from "@theme/BlogPostItems";
+import BlogListItems from "@theme/BlogListItems";
 import BlogLastPost from "@theme/BlogLastPost";
 
 export default function BlogListPage(props) {
@@ -18,7 +18,7 @@ export default function BlogListPage(props) {
       <SearchMetadata tag="blog_posts_list" />
       <BlogLayout wrapperClassName="light">
         <BlogLastPost item={items[0]} />
-        <BlogPostItems items={items} />
+        <BlogListItems items={items} />
         <BlogListPaginator metadata={metadata} />
       </BlogLayout>
     </>
