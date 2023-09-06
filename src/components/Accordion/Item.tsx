@@ -4,6 +4,7 @@ type AccordionItemProps = {
   children: React.ReactNode;
   summary: string;
   open?: boolean;
+  highlight?: boolean;
 };
 
 const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
