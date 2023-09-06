@@ -44,9 +44,9 @@ const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
           />
         </svg>
       </summary>
-      <p className="pb-6 px-6 leading-6 mt-2 text-base text-gray-600 font-normal">
+      <div className="pb-6 px-6 leading-6 mt-2 text-base flex flex-col flex-wrap gap-4 text-gray-600 font-normal">
         {children}
-      </p>
+      </div>
     </details>
   );
 };

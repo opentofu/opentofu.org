@@ -1,10 +1,11 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import Jumbotron from "../components/Jumbotron";
-import TextContent from "../components/TextContent";
 import Accordion from "../components/Accordion";
 import AccordionItem from "../components/Accordion/Item";
-import Button from "../components/Button";
+import Faq from "../../faq.mdx";
+import { MDXProvider } from "@mdx-js/react";
+import Link from "@docusaurus/Link";
 
 const faqs = [
   {
@@ -66,10 +67,6 @@ export default function Manifesto() {
     })),
   };
 
-  const [showAll, setShowAll] = React.useState(false);
-
-  const truncatedFaqs = showAll ? faqs : faqs.slice(0, 3);
-
   return (
     <Layout wrapperClassName="light">
       <script
@@ -78,27 +75,30 @@ export default function Manifesto() {
       />
 
       <Jumbotron>
-        <h1 className="text-7xl font-bold text-white text-center">
+        <h1 className="text-5xl md:text-7xl font-bold text-white text-center leading-tight md:leading-snug">
           Frequently Asked Questions
         </h1>
       </Jumbotron>
       <div className="bg-white flex-1 text-gray-900">
         <div className="container mx-auto pt-6 pb-10">
           <Accordion>
-            {truncatedFaqs.map((faq) => (
-              <AccordionItem summary={faq.question} key={faq.question}>
-                {faq.answer}
-              </AccordionItem>
-            ))}
-          </Accordion>
-          <div className="flex justify-center mt-6">
-            <Button
-              onClick={() => setShowAll((v) => !v)}
-              variant="secondaryOnLight"
+            <MDXProvider
+              components={{
+                AccordionItem,
+                a: (props) => (
+                  <Link className="text-inherit underline" {...props} />
+                ),
+                blockquote: (props) => (
+                  <blockquote
+                    className="border-l-4 border-gray-300 text-inherit pl-4"
+                    {...props}
+                  />
+                ),
+              }}
             >
-              {showAll ? "Show Less" : "Show More"}
-            </Button>
-          </div>
+              <Faq />
+            </MDXProvider>
+          </Accordion>
         </div>
       </div>
     </Layout>
