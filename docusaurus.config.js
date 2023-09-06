@@ -198,33 +198,22 @@ const config = {
       },
     }),
   customFields: {
-    companiesWithLogos: [
-      {
-        name: "Gruntwork",
-        logo: "/logos/gruntwork.png",
-        pledge: "Development; open-source community efforts",
+    logos: {
+      Gruntwork: {
+        dark: "/logos/gruntwork.png",
+        light: "/logos/gruntwork-light.svg",
       },
-      {
-        name: "Spacelift",
-        logo: "/logos/spacelift.svg",
-        pledge: "Cover the cost of 5 FTEs for at least 5 years",
+      Spacelift: {
+        dark: "/logos/spacelift.svg",
+        light: "/logos/spacelift-light.svg",
       },
-      {
-        name: "env0",
-        logo: "/logos/env0.svg",
-        pledge: "Cover the cost of 5 FTEs for at least 5 years",
+      env0: { dark: "/logos/env0.svg", light: "/logos/env0-light.svg" },
+      Scalr: { dark: "/logos/scalr.svg", light: "/logos/scalr-light.png" },
+      Harness: {
+        dark: "/logos/harness.svg",
+        light: "/logos/harness-light.png",
       },
-      {
-        name: "Scalr",
-        logo: "/logos/scalr.svg",
-        pledge: "Cover the cost of 3 FTEs for at least 5 years",
-      },
-      {
-        name: "Harness",
-        logo: "/logos/harness.svg",
-        pledge: "Cover the cost of 5 FTEs for at least 5 years",
-      },
-    ],
+    },
   },
 };
 

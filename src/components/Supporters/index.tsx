@@ -1,8 +1,10 @@
 import React from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import supporters from "../../../supporters.json";
-import Link from "@docusaurus/Link";
+
 import Button from "../Button";
+import { groupSupportersByType } from "../../utils/groupSupportersByType";
+import SupportersList from "../SupportersList";
 
 type SupporterTypeProps = {
   children: React.ReactNode;
@@ -24,38 +26,12 @@ function SupporterType({ children, withSeparator, count }: SupporterTypeProps) {
   );
 }
 
-function groupSupportersByType(supporters) {
-  const groupedSupporters = {};
-  for (const supporter of supporters) {
-    let { type } = supporter;
-
-    switch (true) {
-      case type.includes("Individual"):
-        type = "Individuals";
-        break;
-      case type === "Company":
-        type = "Companies";
-        break;
-      case type === "Project":
-        type = "Projects";
-        break;
-      case type === "Foundation":
-        type = "Foundations";
-        break;
-    }
-
-    if (!groupedSupporters[type]) {
-      groupedSupporters[type] = [];
-    }
-    groupedSupporters[type].push(supporter);
-  }
-  return groupedSupporters;
-}
-
 export default function Supporters() {
   const { siteConfig } = useDocusaurusContext();
   const groupedSupporters = groupSupportersByType(supporters);
-  const types = Object.keys(groupedSupporters);
+  const types = Object.entries(groupedSupporters);
+  const { logos } = siteConfig.customFields;
+  const list = supporters.filter((supporter) => logos[supporter.name]);
 
   return (
     <section className="py-12 mx-auto container items-center flex flex-col">
@@ -63,46 +39,17 @@ export default function Supporters() {
         Supporters
       </h3>
       <ol className="inline-flex flex-wrap justify-center" role="list">
-        {types.map((type, index) => (
+        {types.map(([type, supporters], index) => (
           <SupporterType
             key={type}
-            count={groupedSupporters[type].length}
+            count={supporters.length}
             withSeparator={index < types.length - 1}
           >
             {type}
           </SupporterType>
         ))}
       </ol>
-      <table className="w-full mt-6 md:mt-12 mb-6 border-0 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl table">
-        <tbody>
-          {siteConfig.customFields.companiesWithLogos.map((supporter) => (
-            <tr
-              className="even:bg-transparent border-t-0 border-b border-white/20 w-full"
-              key={supporter.name}
-            >
-              <td className="py-3 md:py-6 border-0 w-2/6 md:w-1/6 px-6">
-                <Link
-                  href={supporter.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={supporter.logo}
-                    alt={supporter.name}
-                    className="min-w-[100px]"
-                  />
-                </Link>
-              </td>
-              <td className="py-3 md:py-6 border-0 w-2/6 text-center text-[#9DA6B5]">
-                Company
-              </td>
-              <td className="py-3 md:py-6 border-0 w-2/6 md:w-3/6 text-right text-[#9DA6B5] px-6">
-                {supporter.pledge}
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <SupportersList list={list} />
       <div className="flex gap-6 justify-center">
         <Button variant="secondaryOnDark" href="/supporters">
           Show More
