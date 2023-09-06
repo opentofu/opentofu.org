@@ -11,6 +11,9 @@ module.exports = {
           base: "#933EFF",
           hover: "#7732D0",
         },
+        purple: {
+          400: "#A965FF",
+        },
         gray: {
           900: "#1B1D20",
           700: "#505661",

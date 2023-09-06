@@ -3,6 +3,10 @@
   "compilerOptions": {
     "baseUrl": ".",
     "resolveJsonModule": true,
-    "moduleResolution": "Node"
+    "moduleResolution": "Node",
+    "paths": {
+      "@theme/*": ["src/theme/*"],
+      "@site/*": ["*"]
+    }
   }
 }
