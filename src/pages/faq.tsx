@@ -82,7 +82,7 @@ export default function Manifesto() {
           Frequently Asked Questions
         </h1>
       </Jumbotron>
-      <div className="bg-white flex-1 text-gray-600">
+      <div className="bg-white flex-1 text-gray-900">
         <div className="container mx-auto pt-6 pb-10">
           <Accordion>
             {truncatedFaqs.map((faq) => (
