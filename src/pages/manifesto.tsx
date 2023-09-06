@@ -7,7 +7,7 @@ export default function Manifesto() {
   return (
     <Layout wrapperClassName="light">
       <Jumbotron>
-        <h1 className="text-7xl font-bold text-white text-center leading-snug max-w-2xl">
+        <h1 className="text-5xl md:text-7xl font-bold text-white text-center leading-tight md:leading-snug max-w-2xl">
           The OpenTF Manifesto
         </h1>
       </Jumbotron>
@@ -17,13 +17,15 @@ export default function Manifesto() {
           (v2.0) (the “MPL”). Over the next ~9 years, it built up a community
           that included thousands of users, contributors, customers, certified
           practitioners, vendors, and an ecosystem of open-source modules,
-          plugins, libraries, and extensions. Then, on August 10th, 2023, with
-          little or no advance notice or chance for much, if not all, of the
-          community to have any input, HashiCorp switched the license for
-          Terraform from the MPL to the Business Source License (v1.1) (the
-          “BUSL”), a non-open source license. In our opinion, this change
-          threatens the entire community and ecosystem that's built up around
-          Terraform over the last 9 years.
+          plugins, libraries, and extensions.
+        </p>
+        <p>
+          Then, on August 10th, 2023, with little or no advance notice or chance
+          for much, if not all, of the community to have any input, HashiCorp
+          switched the license for Terraform from the MPL to the Business Source
+          License (v1.1) (the “BUSL”), a non-open source license. In our
+          opinion, this change threatens the entire community and ecosystem
+          that's built up around Terraform over the last 9 years.
         </p>
 
         <h3>Our concern: the BUSL license is a poison pill for Terraform.</h3>
