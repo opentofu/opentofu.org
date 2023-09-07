@@ -24,25 +24,28 @@ const config = {
     locales: ["en"],
   },
 
-  presets: [
-    [
-      "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        theme: {
-          customCss: [require.resolve("./src/css/custom.css")],
+  themes: [
+    function customTheme() {
+      return {
+        name: "custom-theme",
+        getClientModules() {
+          return [require.resolve("./src/css/custom.css")];
         },
-        docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          routeBasePath: "/docs",
-        },
-        blog: false,
-      }),
-    ],
+      };
+    },
   ],
 
   plugins: [
     "./plugins/blog-plugin",
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        sidebarPath: require.resolve("./sidebars.js"),
+        routeBasePath: "/docs",
+      },
+    ],
+    // "@docusaurus/plugin-content-blog",
+    "@docusaurus/plugin-content-pages",
     function tailwindPlugin() {
       return {
         name: "tailwindcss",
@@ -72,7 +75,6 @@ const config = {
       // TODO: Do we want to support light mode?
       colorMode: {
         defaultMode: "dark",
-        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       docs: {
@@ -178,12 +180,14 @@ const config = {
             href: "https://twitter.com/opentforg",
             position: "right",
             name: "twitter",
+            label: "Follow us on Twitter",
           },
           {
             type: "custom-social-icon-link-navbar-item",
             href: "https://join.slack.com/t/slack-9uv6202/shared_invite/zt-22ifsm1t2-AF6cL0cOdzivP8E~4deDJA",
             position: "right",
             name: "slack",
+            label: "Join us on Slack",
           },
           {
             type: "custom-button-navbar-item",

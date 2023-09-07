@@ -34,7 +34,7 @@ export default function Supporters() {
   const list = supporters.filter((supporter) => logos[supporter.name]);
 
   return (
-    <section className="py-12 mx-auto container items-center flex flex-col">
+    <section className="py-12 mx-auto container items-center flex flex-col text-white">
       <h3 className="text-center text-3xl md:text-5xl font-bold mb-4 md:mb-7">
         Supporters
       </h3>

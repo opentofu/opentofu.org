@@ -4,73 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
-html[data-theme="dark"] {
-  --ifm-color-primary: #b173ff;
-  --ifm-color-primary-dark: #9c4eff;
-  --ifm-color-primary-darker: #923cff;
-  --ifm-color-primary-darkest: #7304ff;
-  --ifm-color-primary-light: #c698ff;
-  --ifm-color-primary-lighter: #d0aaff;
-  --ifm-color-primary-lightest: #efe2ff;
-  --ifm-background-color: theme("colors.dark1");
-  --ifm-navbar-background-color: transparent;
-  --ifm-heading-font-family: theme("fontFamily.sans");
-  --ifm-navbar-item-padding-horizontal: 0;
-  --ifm-navbar-height: theme("height.24");
-  --ifm-toc-border-color: transparent;
-  --ifm-navbar-search-input-background-color: theme("colors.gray.600");
-  --search-local-hit-background: theme("colors.dark2");
-  --ifm-navbar-search-input-icon: url('data:image/svg+xml;utf8,<svg fill="%23E5E6E6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="16px" width="16px"><path d="M6.02945,10.20327a4.17382,4.17382,0,1,1,4.17382-4.17382A4.15609,4.15609,0,0,1,6.02945,10.20327Zm9.69195,4.2199L10.8989,9.59979A5.88021,5.88021,0,0,0,12.058,6.02856,6.00467,6.00467,0,1,0,9.59979,10.8989l4.82338,4.82338a.89729.89729,0,0,0,1.29912,0,.89749.89749,0,0,0-.00087-1.29909Z" /></svg>');
+html {
+  background-color: theme("colors.dark1");
 }
 
 body {
   @apply antialiased;
-}
-
-.theme-doc-sidebar-menu {
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  padding-right: 20px;
-}
-
-.table-of-contents {
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-body {
-  @apply antialiased;
-}
-
-.navbar__items {
-  @apply gap-6;
 }
 
 .list-none::-webkit-details-marker {
   display: none;
-}
-
-.navbar {
-  padding: 0;
-}
-
-.navbar__inner {
-  @apply px-6 md:px-0 container mx-auto;
-}
-
-.navbar__logo,
-.navbar__brand {
-  margin: 0;
-}
-
-.navbar--fixed-top {
-  position: static;
-}
-
-.navbar__logo {
-  width: 123px;
-  height: 48px;
-}
-
-.navbar__search-input,
-input[type="search"] {
-  outline-color: var(--ifm-color-primary-dark);
 }
