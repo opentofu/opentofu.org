@@ -26,19 +26,19 @@ export default function SupportersList({ list }: SupportersListProps) {
             href={supporter.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-1/3"
+            className="w-1/3 text-inherit"
           >
             {logos[supporter.name] ? (
               <>
                 <img
                   src={logos[supporter.name].light}
                   alt={supporter.name}
-                  className="w-28 hidden [.light_&]:block"
+                  className="w-28 dark:hidden block"
                 />
                 <img
                   src={logos[supporter.name].dark}
                   alt={supporter.name}
-                  className="w-28 [.light_&]:hidden"
+                  className="w-28 dark:block hidden"
                 />
               </>
             ) : (
