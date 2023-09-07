@@ -29,7 +29,7 @@ function DropdownNavbarItemDesktop({
         role="button"
         href={props.to ? undefined : "#"}
         className={clsx(
-          "peer font-bold text-gray-900 dark:text-gray-50 group-hover:text-purple-500 group-hover:underline",
+          "peer font-bold text-gray-900 dark:text-gray-50 group-hover:text-purple-500 dark:group-hover:text-gray-50 group-hover:underline",
           className
         )}
         {...props}
