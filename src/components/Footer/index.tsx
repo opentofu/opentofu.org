@@ -35,23 +35,25 @@ type FooterProps = {
 
 export default function Footer({ links }: FooterProps) {
   return (
-    <footer className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6 py-6 px-4">
-      <Logo />
-      <div className="flex gap-6 align-center flex-wrap justify-center">
-        {links.map((link) => (
-          <LinkItem key={link.href ?? link.to} item={link} />
-        ))}
-      </div>
-      <div className="flex gap-6">
-        <SocialIconLink
-          name="github"
-          href="https://github.com/opentffoundation/manifesto"
-        />
-        <SocialIconLink name="twitter" href="https://twitter.com/opentforg" />
-        <SocialIconLink
-          name="slack"
-          href="https://join.slack.com/t/slack-9uv6202/shared_invite/zt-22ifsm1t2-AF6cL0cOdzivP8E~4deDJA"
-        />
+    <footer className="dark:text-light2">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6 py-6">
+        <Logo />
+        <div className="flex flex-row gap-6 align-center">
+          {links.map((link) => (
+            <LinkItem key={link.href ?? link.to} item={link} />
+          ))}
+        </div>
+        <div className="flex flex-row gap-6">
+          <SocialIconLink
+            name="github"
+            href="https://github.com/opentffoundation/manifesto"
+          />
+          <SocialIconLink name="twitter" href="https://twitter.com/opentforg" />
+          <SocialIconLink
+            name="slack"
+            href="https://join.slack.com/t/slack-9uv6202/shared_invite/zt-22ifsm1t2-AF6cL0cOdzivP8E~4deDJA"
+          />
+        </div>
       </div>
     </footer>
   );
