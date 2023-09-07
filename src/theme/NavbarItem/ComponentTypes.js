@@ -1,5 +1,4 @@
 import ComponentTypes from "@theme-original/NavbarItem/ComponentTypes";
-
 import GitHubStarsNavbarItem from "@site/src/components/GitHubStarsNavbarItem";
 import ButtonNavbarItem from "@site/src/components/ButtonNavbarItem";
 import SocialIconLink from "@site/src/components/SocialIconLink";
