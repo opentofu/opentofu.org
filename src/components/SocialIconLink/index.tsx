@@ -1,5 +1,4 @@
 import Link from "@docusaurus/Link";
-import clsx from "clsx";
 import React from "react";
 
 const iconMap = {
@@ -15,14 +14,12 @@ type SocialIconLinkProps = {
   name: keyof typeof iconMap;
   href: string;
   label: string;
-  mobile?: boolean;
 };
 
 export default function SocialIconLink({
   href,
   name,
   label,
-  mobile,
 }: SocialIconLinkProps) {
   return (
     <Link
