@@ -45,6 +45,7 @@ body {
   display: none;
 }
 
+/* TODO: Replace with Algolia search icon */
 .navbar__search-input {
   @apply w-48 h-10;
 }
