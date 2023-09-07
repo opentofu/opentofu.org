@@ -21,7 +21,7 @@ const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
   return (
     <details
       ref={detailsRef}
-      className="accordion-item group text-lg border-b dark:border-gray-800 border-gray-200"
+      className="accordion-item group text-lg border-b dark:border-gray-700 border-gray-150"
       open={open}
     >
       <summary
