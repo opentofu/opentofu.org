@@ -3,10 +3,26 @@ import {
   useLockBodyScroll,
   useNavbarMobileSidebar,
 } from "@docusaurus/theme-common/internal";
-
+import NavbarColorModeToggle from "@theme/Navbar/ColorModeToggle";
+import IconClose from "@theme/Icon/Close";
+import NavbarLogo from "@theme/Navbar/Logo";
 import NavbarMobileSidebarPrimaryMenu from "@theme/Navbar/MobileSidebar/PrimaryMenu";
 import NavbarMobileSidebarSecondaryMenu from "@theme/Navbar/MobileSidebar/SecondaryMenu";
 import clsx from "clsx";
+
+function CloseButton() {
+  const mobileSidebar = useNavbarMobileSidebar();
+  return (
+    <button
+      type="button"
+      aria-label="Close navigation bar"
+      className="absolute top-6 right-6 p-4"
+      onClick={() => mobileSidebar.toggle()}
+    >
+      <IconClose />
+    </button>
+  );
+}
 
 export default function NavbarMobileSidebar() {
   const mobileSidebar = useNavbarMobileSidebar();
@@ -26,6 +42,9 @@ export default function NavbarMobileSidebar() {
           : "invisible -translate-x-full"
       )}
     >
+      <NavbarLogo />
+      <NavbarColorModeToggle className="my-6" />
+      <CloseButton />
       <NavbarMobileSidebarPrimaryMenu />
 
       <NavbarMobileSidebarSecondaryMenu />

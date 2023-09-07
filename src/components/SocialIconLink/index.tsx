@@ -1,4 +1,5 @@
 import Link from "@docusaurus/Link";
+import clsx from "clsx";
 import React from "react";
 
 const iconMap = {
@@ -14,15 +15,23 @@ type SocialIconLinkProps = {
   name: keyof typeof iconMap;
   href: string;
   label: string;
+  mobile?: boolean;
 };
 
 export default function SocialIconLink({
   href,
   name,
   label,
+  mobile,
 }: SocialIconLinkProps) {
   return (
-    <Link href={href} className="flex items-center gap-3">
+    <Link
+      href={href}
+      className={clsx(
+        "flex items-center gap-3",
+        mobile ? "text-gray-50" : "text-gray-900 dark:text-gray-50"
+      )}
+    >
       <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +39,7 @@ export default function SocialIconLink({
       >
         <path fill="currentColor" d={iconMap[name]} />
       </svg>
-      <span className="inline-flex sm:hidden">{label}</span>
+      <span className="inline-flex xl:hidden">{label}</span>
     </Link>
   );
 }

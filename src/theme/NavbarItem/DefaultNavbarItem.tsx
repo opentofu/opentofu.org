@@ -4,6 +4,7 @@ import type {
   DesktopOrMobileNavBarItemProps,
   Props,
 } from "@theme/NavbarItem/DefaultNavbarItem";
+import clsx from "clsx";
 
 function DefaultNavbarItemDesktop({
   className,
@@ -12,7 +13,7 @@ function DefaultNavbarItemDesktop({
 }: DesktopOrMobileNavBarItemProps) {
   const element = (
     <NavbarNavLink
-      className={className}
+      className={clsx("font-bold text-gray-900 dark:text-gray-50", className)}
       isDropdownLink={isDropdownItem}
       {...props}
     />

@@ -28,7 +28,10 @@ function DropdownNavbarItemDesktop({
         aria-expanded={showDropdown}
         role="button"
         href={props.to ? undefined : "#"}
-        className={clsx("peer", className)}
+        className={clsx(
+          "peer font-bold text-gray-900 dark:text-gray-50 group-hover:text-purple-500 group-hover:underline",
+          className
+        )}
         {...props}
         onClick={props.to ? undefined : (e) => e.preventDefault()}
         onKeyDown={(e) => {
@@ -40,7 +43,7 @@ function DropdownNavbarItemDesktop({
       >
         {props.children ?? props.label}
       </NavbarNavLink>
-      <div className="absolute bg-gray-700 p-3 gap-3 hidden group-hover:flex peer-aria-expanded:flex flex-col rounded-md w-36">
+      <div className="absolute shadow-2xl bg-gray-150 dark:bg-gray-700 p-3 gap-3 hidden group-hover:flex peer-aria-expanded:flex flex-col w-36">
         {items.map((childItemProps, i) => (
           <NavbarItem isDropdownItem {...childItemProps} key={i} />
         ))}
