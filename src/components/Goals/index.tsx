@@ -7,7 +7,7 @@ import HumidityIcon from "../../icons/humidity.svg";
 
 function Goal({ icon: Icon, title, description }) {
   return (
-    <div className="bg-gray-100 dark:bg-dark2 p-6">
+    <div className="bg-white dark:bg-dark2 p-6">
       <Icon className="w-12 mb-4" />
       <h4 className="text-xl mb-2">{title}</h4>
       <p className="text-gray-600 dark:text-gray-500">{description}</p>
