@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class", '[data-theme="dark"]'],
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./docusaurus.config.js"],
   theme: {
     extend: {

@@ -14,7 +14,7 @@ type SupporterTypeProps = {
 
 function SupporterType({ children, withSeparator, count }: SupporterTypeProps) {
   return (
-    <li className=" text-white h-12 flex items-center">
+    <li className="text-black dark:text-white h-12 flex items-center">
       {children}
       {count && (
         <sup className="ml-1 mt-2 text-brandLight text-base font-bold">
