@@ -92,7 +92,7 @@ const config = {
           },
           {
             label: "FAQs",
-            href: "#",
+            href: "/faq",
           },
           {
             label: "Blog",

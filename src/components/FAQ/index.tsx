@@ -2,6 +2,9 @@ import React from "react";
 import Accordion from "../Accordion";
 import AccordionItem from "../Accordion/Item";
 import Button from "../Button";
+import Faq from "../../../faq.mdx";
+import { MDXProvider } from "@mdx-js/react";
+import Link from "@docusaurus/Link";
 
 export default function FAQ() {
   return (
@@ -12,38 +15,27 @@ export default function FAQ() {
         </h3>
 
         <Accordion>
-          <AccordionItem summary="What is OpenTF?" open>
-            Under a well-known and widely-accepted license that companies can
-            trus, that won’t suddenly change in the future, and isn’t subhect to
-            the whims of a singe vendor. Under a well-known and widely-accepted
-            license that companies can trust, that won’t suddenly change in the
-            future, and isn’t subhect to the whims of a singe vendor.
-          </AccordionItem>
-          <AccordionItem summary="Why was OpenTF created?">
-            Under a well-known and widely-accepted license that companies can
-            trus, that won’t suddenly change in the future, and isn’t subhect to
-            the whims of a singe vendor. Under a well-known and widely-accepted
-            license that companies can trust, that won’t suddenly change in the
-            future, and isn’t subhect to the whims of a singe vendor.
-          </AccordionItem>
-          <AccordionItem summary="Can I use OpenTF as a drop-in replacement for Terraform?">
-            Under a well-known and widely-accepted license that companies can
-            trus, that won’t suddenly change in the future, and isn’t subhect to
-            the whims of a singe vendor. Under a well-known and widely-accepted
-            license that companies can trust, that won’t suddenly change in the
-            future, and isn’t subhect to the whims of a singe vendor.
-          </AccordionItem>
-          <AccordionItem summary="What are the differences between OpenTF and Terraform?">
-            Under a well-known and widely-accepted license that companies can
-            trus, that won’t suddenly change in the future, and isn’t subhect to
-            the whims of a singe vendor. Under a well-known and widely-accepted
-            license that companies can trust, that won’t suddenly change in the
-            future, and isn’t subhect to the whims of a singe vendor.
-          </AccordionItem>
+          <MDXProvider
+            components={{
+              AccordionItem: (props) =>
+                props.highlight ? <AccordionItem {...props} /> : null,
+              a: (props) => (
+                <Link className="text-inherit underline" {...props} />
+              ),
+              blockquote: (props) => (
+                <blockquote
+                  className="border-l-4 border-gray-300 text-inherit pl-4"
+                  {...props}
+                />
+              ),
+            }}
+          >
+            <Faq />
+          </MDXProvider>
         </Accordion>
 
         <div className="flex justify-center mt-6">
-          <Button variant="secondaryOnLight" href="/faqs">
+          <Button variant="secondaryOnLight" href="/faq">
             Show More
           </Button>
         </div>
