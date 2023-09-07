@@ -22,7 +22,9 @@ export default function LatestNews({ recentPosts }) {
           </Link>
           <div className="flex flex-col items-start">
             <span className="text-purple-400 font-bold">{formattedDate}</span>
-            <h4 className="text-3xl font-bold leading-snug mt-2">{title}</h4>
+            <h4 className="text-3xl font-bold leading-snug mt-2">
+              <Link href={permalink}>{title}</Link>
+            </h4>
 
             <div className="prose dark:prose-invert line-clamp-3 mt-2 mb-4 text-gray-600 dark:text-gray-500">
               <Preview />
