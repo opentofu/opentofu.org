@@ -24,28 +24,25 @@ const config = {
     locales: ["en"],
   },
 
-  themes: [
-    function customTheme() {
-      return {
-        name: "custom-theme",
-        getClientModules() {
-          return [require.resolve("./src/css/custom.css")];
+  presets: [
+    [
+      "classic",
+      /** @type {import('@docusaurus/preset-classic').Options} */
+      ({
+        theme: {
+          customCss: [require.resolve("./src/css/custom.css")],
         },
-      };
-    },
+        docs: {
+          sidebarPath: require.resolve("./sidebars.js"),
+          routeBasePath: "/docs",
+        },
+        blog: false,
+      }),
+    ],
   ],
 
   plugins: [
     "./plugins/blog-plugin",
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        sidebarPath: require.resolve("./sidebars.js"),
-        routeBasePath: "/docs",
-      },
-    ],
-    // "@docusaurus/plugin-content-blog",
-    "@docusaurus/plugin-content-pages",
     function tailwindPlugin() {
       return {
         name: "tailwindcss",

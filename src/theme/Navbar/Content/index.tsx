@@ -32,7 +32,7 @@ export default function NavbarContent() {
   const searchBarItem = items.find((item) => item.type === "search");
 
   return (
-    <div className="flex text-white justify-between container mx-auto p-4 sm:p-0">
+    <div className="flex text-white justify-between container mx-auto p-4 sm:p-0 navbar">
       <div className="flex items-center gap-6">
         <NavbarMobileSidebarToggle />
         <NavbarLogo />
