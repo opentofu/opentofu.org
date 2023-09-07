@@ -14,7 +14,7 @@ export default function Hero() {
         will be managed by an independent Foundation.
       </p>
       <div className="flex gap-4 pt-6">
-        <Button variant="secondaryOnDark" href="/manifesto">
+        <Button variant="secondary" href="/manifesto">
           Read Manifesto
         </Button>
         <Button variant="primary" href="/support">

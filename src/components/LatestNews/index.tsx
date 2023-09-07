@@ -29,7 +29,7 @@ export default function LatestNews({ recentPosts }) {
             <div className="prose dark:prose-invert line-clamp-3 mt-2 mb-4">
               <Preview />
             </div>
-            <Button variant="secondaryOnDark" href={permalink}>
+            <Button variant="secondary" href={permalink}>
               Read More
             </Button>
           </div>

@@ -51,7 +51,7 @@ export default function Supporters() {
       </ol>
       <SupportersList list={list} />
       <div className="flex gap-6 justify-center">
-        <Button variant="secondaryOnDark" href="/supporters">
+        <Button variant="secondary" href="/supporters">
           Show More
         </Button>
         <Button variant="primary" href="/support">

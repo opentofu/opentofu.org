@@ -34,7 +34,7 @@ export default function SupportersPage() {
             {types.map(([type, supporters]) => (
               <Button
                 key={type}
-                variant="secondaryOnLight"
+                variant="secondary"
                 aria-selected={type === selectedType}
                 onClick={() => setSelectedType(type)}
               >
@@ -48,10 +48,7 @@ export default function SupportersPage() {
           <SupportersList list={truncatedSupporters} />
           <div className="flex gap-6 justify-center">
             {hasMore && (
-              <Button
-                variant="secondaryOnLight"
-                onClick={() => setShowAll((v) => !v)}
-              >
+              <Button variant="secondary" onClick={() => setShowAll((v) => !v)}>
                 {showAll ? "Show Less" : "Show More"}
               </Button>
             )}
