@@ -29,8 +29,9 @@ jobs:
       - name: Check for changes
         id: git-check
         run: |
-          git diff --exit-code || echo "step.git-check.outputs.changes=yes" >> $GITHUB_ENV
-        continue-on-error: true
+          if ! git diff --quiet; then
+            echo "HAS_CHANGES=yes" >> $GITHUB_ENV
+          fi
 
       - name: Check for existing PR branch
         id: existing-pr
@@ -39,9 +40,11 @@ jobs:
           if [[ "$EXISTING_PR_BRANCH" == "sync-action/update-supporters" ]]; then
             echo "EXISTING_PR_BRANCH=sync-action/update-supporters" >> $GITHUB_ENV
           fi
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Commit changes
-        if: env.step.git-check.outputs.changes == 'yes'
+        if: env.HAS_CHANGES == 'yes'
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
