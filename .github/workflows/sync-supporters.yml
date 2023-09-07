@@ -33,3 +33,4 @@ jobs:
           commit-message: Update supporters
           title: "[Auto PR] Update supporters"
           branch: github-action/update-supporters
+          delete-branch: true
