@@ -1,5 +1,4 @@
 import React from "react";
-import clsx from "clsx";
 import NavbarNavLink from "@theme/NavbarItem/NavbarNavLink";
 import type {
   DesktopOrMobileNavBarItemProps,
@@ -13,10 +12,7 @@ function DefaultNavbarItemDesktop({
 }: DesktopOrMobileNavBarItemProps) {
   const element = (
     <NavbarNavLink
-      className={clsx(
-        isDropdownItem ? "dropdown__link" : "navbar__item navbar__link",
-        className
-      )}
+      className={className}
       isDropdownLink={isDropdownItem}
       {...props}
     />
@@ -30,22 +26,14 @@ function DefaultNavbarItemMobile({
   isDropdownItem,
   ...props
 }: DesktopOrMobileNavBarItemProps) {
-  return <NavbarNavLink className={clsx("menu__link", className)} {...props} />;
+  return <NavbarNavLink className={className} {...props} />;
 }
 
 export default function DefaultNavbarItem({
   mobile = false,
-  position, // Need to destructure position from props so that it doesn't get passed on.
+  position,
   ...props
 }: Props) {
   const Comp = mobile ? DefaultNavbarItemMobile : DefaultNavbarItemDesktop;
-  return (
-    <Comp
-      {...props}
-      activeClassName={
-        props.activeClassName ??
-        (mobile ? "menu__link--active" : "navbar__link--active")
-      }
-    />
-  );
+  return <Comp {...props} activeClassName={props.activeClassName} />;
 }

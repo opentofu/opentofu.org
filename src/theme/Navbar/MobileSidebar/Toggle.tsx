@@ -7,7 +7,7 @@ export default function MobileSidebarToggle() {
     <button
       onClick={toggle}
       aria-expanded={shown}
-      className="flex lg:hidden"
+      className="flex xl:hidden"
       type="button"
     >
       <svg
