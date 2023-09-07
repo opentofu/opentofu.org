@@ -22,15 +22,15 @@ export default function SupportersPage() {
   const hasMore = filteredSupporters.length > truncatedSupporters.length;
 
   return (
-    <Layout wrapperClassName="light">
+    <Layout>
       <Jumbotron>
-        <h1 className="text-5xl md:text-7xl font-bold text-white text-center leading-tight md:leading-snug">
+        <h1 className="text-5xl md:text-7xl font-bold text-center leading-tight md:leading-snug">
           Supporters
         </h1>
       </Jumbotron>
-      <div className="bg-white flex-1 text-gray-600">
+      <div className="flex-1 text-gray-600">
         <div className="container mx-auto md:pt-6 pb-10">
-          <div className="flex flex-wrap gap-3 md:gap-6 justify-center bg-white sticky top-0 py-4">
+          <div className="flex flex-wrap gap-3 md:gap-6 justify-center py-4">
             {types.map(([type, supporters]) => (
               <Button
                 key={type}

@@ -5,9 +5,9 @@ import TextContent from "../components/TextContent";
 
 export default function Manifesto() {
   return (
-    <Layout wrapperClassName="light">
+    <Layout>
       <Jumbotron>
-        <h1 className="text-5xl md:text-7xl font-bold text-white text-center leading-tight md:leading-snug max-w-2xl">
+        <h1 className="text-5xl md:text-7xl font-bold text-center leading-tight md:leading-snug max-w-2xl">
           The OpenTF Manifesto
         </h1>
       </Jumbotron>
