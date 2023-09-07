@@ -27,34 +27,33 @@ export default function SupportersPage() {
           Supporters
         </h1>
       </Jumbotron>
-      <div className="flex-1">
-        <div className="container mx-auto md:pt-6 pb-10">
-          <div className="flex flex-wrap gap-3 md:gap-6 justify-center py-4">
-            {types.map(([type, supporters]) => (
-              <Button
-                key={type}
-                variant="secondary"
-                aria-selected={type === selectedType}
-                onClick={() => setSelectedType(type)}
-              >
-                {type}
-                <sup className="text-brandLight font-bold text-base ml-2 mt-2">
-                  {supporters.length}
-                </sup>
-              </Button>
-            ))}
-          </div>
-          <SupportersList list={truncatedSupporters} />
-          <div className="flex gap-6 justify-center">
-            {hasMore && (
-              <Button variant="secondary" onClick={() => setShowAll((v) => !v)}>
-                {showAll ? "Show Less" : "Show More"}
-              </Button>
-            )}
-            <Button variant="primary" href="/support">
-              Support Us
+
+      <div className="container mx-auto md:pt-6 pb-10">
+        <div className="flex flex-wrap gap-3 md:gap-6 justify-center py-4">
+          {types.map(([type, supporters]) => (
+            <Button
+              key={type}
+              variant="secondary"
+              aria-selected={type === selectedType}
+              onClick={() => setSelectedType(type)}
+            >
+              {type}
+              <sup className="text-brandLight font-bold text-base ml-2 mt-2">
+                {supporters.length}
+              </sup>
             </Button>
-          </div>
+          ))}
+        </div>
+        <SupportersList list={truncatedSupporters} />
+        <div className="flex gap-6 justify-center">
+          {hasMore && (
+            <Button variant="secondary" onClick={() => setShowAll((v) => !v)}>
+              {showAll ? "Show Less" : "Show More"}
+            </Button>
+          )}
+          <Button variant="primary" href="/support">
+            Support Us
+          </Button>
         </div>
       </div>
     </Layout>
