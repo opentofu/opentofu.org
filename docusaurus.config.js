@@ -36,11 +36,13 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/docs",
         },
+        blog: false,
       }),
     ],
   ],
 
   plugins: [
+    "./plugins/blog-plugin",
     function tailwindPlugin() {
       return {
         name: "tailwindcss",
