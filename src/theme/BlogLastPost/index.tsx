@@ -27,7 +27,7 @@ export default function BlogLastPost({ item }) {
                   {item.content.metadata.title}
                 </h3>
               </Link>
-              <p className="text-gray-400 mb-4 line-clamp-3">
+              <p className="text-gray-600 dark:text-gray-500 mb-4 line-clamp-3">
                 {item.content.metadata.description}
               </p>
               <Button

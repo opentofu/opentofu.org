@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "@theme/Layout";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { groupSupportersByType } from "../utils/groupSupportersByType";
 import supporters from "../../supporters.json";
 import Jumbotron from "../components/Jumbotron";
@@ -28,7 +27,7 @@ export default function SupportersPage() {
           Supporters
         </h1>
       </Jumbotron>
-      <div className="flex-1 text-gray-600">
+      <div className="flex-1">
         <div className="container mx-auto md:pt-6 pb-10">
           <div className="flex flex-wrap gap-3 md:gap-6 justify-center py-4">
             {types.map(([type, supporters]) => (
