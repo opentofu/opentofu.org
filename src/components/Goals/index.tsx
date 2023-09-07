@@ -9,7 +9,7 @@ function Goal({ icon: Icon, title, description }) {
   return (
     <div className="bg-dark2 p-6">
       <Icon className="w-12 mb-4" />
-      <h4 className="text-xl mb-2 text-white">{title}</h4>
+      <h4 className="text-xl mb-2">{title}</h4>
       <p className="text-[#818995]">{description}</p>
     </div>
   );
@@ -18,7 +18,7 @@ function Goal({ icon: Icon, title, description }) {
 export default function Goals() {
   return (
     <section className="py-6 md:py-12 mx-auto container">
-      <h3 className="text-center text-3xl md:text-5xl font-bold mb-6 md:mb-12 text-white">
+      <h3 className="text-center text-3xl md:text-5xl font-bold mb-6 md:mb-12">
         Our Goals
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

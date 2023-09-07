@@ -23,7 +23,7 @@ export default function BlogLastPost({ item }) {
                 {item.content.metadata.formattedDate}
               </p>
               <Link to={item.content.metadata.permalink}>
-                <h3 className="leading-snug text-3xl font-bold my-2 line-clamp-5 text-white hover:underline">
+                <h3 className="leading-snug text-3xl font-bold my-2 line-clamp-5">
                   {item.content.metadata.title}
                 </h3>
               </Link>
