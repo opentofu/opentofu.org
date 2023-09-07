@@ -35,7 +35,7 @@ type FooterProps = {
 
 export default function Footer({ links }: FooterProps) {
   return (
-    <footer className="dark:text-light2">
+    <footer className="dark:text-gray-50">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6 py-6">
         <Logo />
         <div className="flex flex-row gap-6 align-center">
