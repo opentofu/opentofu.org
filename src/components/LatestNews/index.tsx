@@ -4,7 +4,6 @@ import Button from "../Button";
 import Link from "@docusaurus/Link";
 
 export default function LatestNews({ recentPosts }) {
-  console.log(recentPosts[0]);
   const {
     metadata: { title, formattedDate, frontMatter, permalink },
     Preview,
