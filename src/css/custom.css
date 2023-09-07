@@ -50,6 +50,21 @@ body {
   @apply antialiased;
 }
 
+html[data-theme="light"] {
+  --ifm-color-primary: #b173ff;
+  --ifm-color-primary-dark: #9c4eff;
+  --ifm-color-primary-darker: #923cff;
+  --ifm-color-primary-darkest: #7304ff;
+  --ifm-color-primary-light: #c698ff;
+  --ifm-color-primary-lighter: #d0aaff;
+  --ifm-color-primary-lightest: #efe2ff;
+  --ifm-background-color: theme("colors.gray.50");
+}
+
+body {
+  @apply antialiased;
+}
+
 .theme-doc-sidebar-menu {
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   padding-right: 20px;
