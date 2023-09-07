@@ -1,0 +1,64 @@
+name: Sync supporters
+
+on:
+  push:
+  # schedule:
+  #   - cron: "0 0 * * *" # Runs daily at midnight
+
+jobs:
+  updateSupporters:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        # with:
+        #   ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run npm script
+        run: npm run sync-supporters
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code || echo "step.git-check.outputs.changes=yes" >> $GITHUB_ENV
+        continue-on-error: true
+
+      - name: Check for existing PR branch
+        id: existing-pr
+        run: |
+          EXISTING_PR_BRANCH=$(gh pr list --base main --state open --json headRefName,title --author @me | jq -r '.[] | select(.title == "[Auto PR] Update supporters") | .headRefName')
+          if [[ "$EXISTING_PR_BRANCH" == "sync-action/update-supporters" ]]; then
+            echo "EXISTING_PR_BRANCH=sync-action/update-supporters" >> $GITHUB_ENV
+          fi
+
+      - name: Commit changes
+        if: env.step.git-check.outputs.changes == 'yes'
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add .
+          git commit -m "Update supporters"
+          if [[ "$EXISTING_PR_BRANCH" == "sync-action/update-supporters" ]]; then
+            git push origin HEAD:sync-action/update-supporters
+          else
+            git checkout -b sync-action/update-supporters
+            git push origin sync-action/update-supporters
+          fi
+
+      - name: Create Pull Request
+        if: env.step.git-check.outputs.changes == 'yes' && env.EXISTING_PR_BRANCH != 'sync-action/update-supporters'
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Update supporters
+          title: "[Auto PR] Update supporters"
+          branch: sync-action/update-supporters
