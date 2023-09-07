@@ -16,7 +16,7 @@ function CloseButton() {
     <button
       type="button"
       aria-label="Close navigation bar"
-      className="absolute top-6 right-6 p-4"
+      className="absolute top-6 right-6 p-4 text-gray-900 dark:text-gray-50"
       onClick={() => mobileSidebar.toggle()}
     >
       <IconClose />
@@ -36,7 +36,7 @@ export default function NavbarMobileSidebar() {
   return (
     <div
       className={clsx(
-        "fixed top-0 left-0 bottom-0 w-4/5 sm:w-3/5 md:w-2/5 p-6 transition-all flex flex-col bg-gray-850 z-10 text-white",
+        "fixed top-0 left-0 bottom-0 w-4/5 sm:w-3/5 md:w-2/5 p-6 transition-all flex flex-col bg-gray-150 dark:bg-gray-850 z-10 text-white",
         mobileSidebar.shown
           ? "visible translate-x-0"
           : "invisible -translate-x-full"

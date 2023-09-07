@@ -27,7 +27,12 @@ function DefaultNavbarItemMobile({
   isDropdownItem,
   ...props
 }: DesktopOrMobileNavBarItemProps) {
-  return <NavbarNavLink className={className} {...props} />;
+  return (
+    <NavbarNavLink
+      className={clsx("font-bold text-gray-900 dark:text-gray-50", className)}
+      {...props}
+    />
+  );
 }
 
 export default function DefaultNavbarItem({

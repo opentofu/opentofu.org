@@ -61,7 +61,11 @@ function DropdownNavbarItemMobile({
 }: DesktopOrMobileNavBarItemProps) {
   return (
     <>
-      <NavbarNavLink role="button" className={className} {...props}>
+      <NavbarNavLink
+        role="button"
+        className={clsx("font-bold text-gray-900 dark:text-gray-50", className)}
+        {...props}
+      >
         {props.children ?? props.label}
       </NavbarNavLink>
 
