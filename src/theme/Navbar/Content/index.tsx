@@ -36,7 +36,9 @@ export default function NavbarContent() {
       <div className="flex items-center gap-6">
         <NavbarMobileSidebarToggle />
         <NavbarLogo />
-        <NavbarItems items={leftItems} />
+        <div className="hidden md:flex items-center gap-6">
+          <NavbarItems items={leftItems} />
+        </div>
       </div>
       <div className="hidden lg:flex items-center gap-6">
         <NavbarItems items={rightItems} />
