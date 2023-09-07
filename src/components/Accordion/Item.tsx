@@ -21,7 +21,7 @@ const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
   return (
     <details
       ref={detailsRef}
-      className="accordion-item group text-lg border-b dark:border-gray-700 border-gray-150"
+      className="accordion-item group text-lg border-b dark:border-gray-800 border-gray-200"
       open={open}
     >
       <summary
@@ -37,15 +37,15 @@ const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
         >
           <path
             d="M11.8 2a.8.8 0 0 1 .8.8V11h8.2a.8.8 0 0 1 0 1.6h-8.2v8.2a.8.8 0 0 1-1.6 0v-8.2H2.8a.8.8 0 0 1 0-1.6H11V2.8a.8.8 0 0 1 .8-.8Z"
-            className="block group-open:hidden fill-gray-900"
+            className="block group-open:hidden fill-current"
           />
           <path
             d="M20.8 11a.8.8 0 0 1 0 1.6h-18a.8.8 0 0 1 0-1.6h18Z"
-            className="hidden group-open:block fill-gray-900"
+            className="hidden group-open:block fill-current"
           />
         </svg>
       </summary>
-      <div className="pb-6 px-6 leading-6 mt-2 text-base flex flex-col flex-wrap gap-4 text-gray-600 font-normal">
+      <div className="pb-6 px-6 leading-6 mt-2 text-base flex flex-col flex-wrap gap-4 text-gray-600 dark:text-gray-500 font-normal">
         {children}
       </div>
     </details>

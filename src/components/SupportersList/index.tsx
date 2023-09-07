@@ -19,7 +19,7 @@ export default function SupportersList({ list }: SupportersListProps) {
     <div className="mt-6 md:mt-12 mb-6 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto w-full">
       {list.map((supporter) => (
         <div
-          className="py-3 md:py-6 border-b dark:border-white/20 border-gray-150 flex gap-4 justify-between items-center"
+          className="py-3 md:py-6 border-b dark:border-gray-800 border-gray-200 flex gap-4 justify-between items-center"
           key={supporter.name}
         >
           <Link

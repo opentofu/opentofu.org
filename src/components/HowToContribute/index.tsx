@@ -5,7 +5,7 @@ function ContentLink(props: Props) {
   return (
     <Link
       {...props}
-      className="text-[#1B1D20] dark:text-white hover:text-primary-base underline transition-colors"
+      className="text-gray-900 dark:text-gray-50 hover:text-purple-500 underline transition-colors"
     />
   );
 }
@@ -23,7 +23,7 @@ export default function HowToContribute() {
           OpenTF?
         </h3>
         <div className="grid grid-cols-1 lg:col-start-6 lg:col-span-8 items-center">
-          <div className="flex flex-col gap-6 text-[#6A7382] dark:text-gray-400 text-xl">
+          <div className="flex flex-col gap-6 text-gray-600 dark:text-gray-500 text-xl">
             <p className="text-left max-md:text-center">
               How to use and Contribute to OpenTF?{" "}
               <ContentLink href="https://placeholderplaceholder.com">

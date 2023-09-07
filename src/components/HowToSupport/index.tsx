@@ -22,7 +22,7 @@ export default function HowToSupport() {
         <h3 className="text-center text-3xl md:text-5xl mb-3 md:mb-6 font-bold">
           How to support OpenTF in pledging?
         </h3>
-        <p className="text-gray-600 text-center text-base md:text-xl mb-6 md:mb-12">
+        <p className="text-gray-600 dark:text-gray-500 text-center text-base md:text-xl mb-6 md:mb-12">
           Pledging to the OpenTF manifesto can be done by:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
