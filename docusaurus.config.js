@@ -87,7 +87,7 @@ const config = {
           },
           {
             label: "Supporters",
-            href: "#",
+            href: "/supporters",
           },
           {
             label: "FAQs",
