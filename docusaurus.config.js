@@ -178,12 +178,14 @@ const config = {
             href: "https://twitter.com/opentforg",
             position: "right",
             name: "twitter",
+            label: "Follow us on Twitter",
           },
           {
             type: "custom-social-icon-link-navbar-item",
             href: "https://join.slack.com/t/slack-9uv6202/shared_invite/zt-22ifsm1t2-AF6cL0cOdzivP8E~4deDJA",
             position: "right",
             name: "slack",
+            label: "Join us on Slack",
           },
           {
             type: "custom-button-navbar-item",

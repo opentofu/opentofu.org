@@ -13,11 +13,16 @@ const iconMap = {
 type SocialIconLinkProps = {
   name: keyof typeof iconMap;
   href: string;
+  label: string;
 };
 
-export default function SocialIconLink({ href, name }: SocialIconLinkProps) {
+export default function SocialIconLink({
+  href,
+  name,
+  label,
+}: SocialIconLinkProps) {
   return (
-    <Link href={href}>
+    <Link href={href} className="flex items-center gap-3">
       <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -25,6 +30,7 @@ export default function SocialIconLink({ href, name }: SocialIconLinkProps) {
       >
         <path fill="currentColor" d={iconMap[name]} />
       </svg>
+      <span className="inline-flex sm:hidden">{label}</span>
     </Link>
   );
 }
