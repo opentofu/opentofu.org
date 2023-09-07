@@ -13,6 +13,8 @@ function DropdownNavbarItemDesktop({
   position,
   className,
   onClick,
+  label,
+  children,
   ...props
 }: DesktopOrMobileNavBarItemProps) {
   const callback = useCallback(() => setShowDropdown(false), []);
@@ -29,7 +31,7 @@ function DropdownNavbarItemDesktop({
         role="button"
         href={props.to ? undefined : "#"}
         className={clsx(
-          "peer font-bold text-gray-900 dark:text-gray-50 group-hover:text-purple-500 dark:group-hover:text-gray-50 group-hover:underline",
+          "peer flex items-center font-bold text-gray-900 dark:text-gray-50 group-hover:text-purple-500 dark:group-hover:text-gray-50 group-hover:underline",
           className
         )}
         {...props}
@@ -40,9 +42,19 @@ function DropdownNavbarItemDesktop({
             setShowDropdown(!showDropdown);
           }
         }}
-      >
-        {props.children ?? props.label}
-      </NavbarNavLink>
+        label={
+          <>
+            {children ?? label}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-6 h-6"
+            >
+              <path d="M7,10L12,15L17,10H7Z" className="fill-current" />
+            </svg>
+          </>
+        }
+      />
       <div className="absolute shadow-2xl bg-gray-150 dark:bg-gray-700 p-3 gap-3 hidden group-hover:flex peer-aria-expanded:flex flex-col w-36">
         {items.map((childItemProps, i) => (
           <NavbarItem isDropdownItem {...childItemProps} key={i} />
