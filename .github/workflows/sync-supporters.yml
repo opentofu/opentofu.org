@@ -26,42 +26,10 @@ jobs:
       - name: Run npm script
         run: npm run sync-supporters
 
-      - name: Check for changes
-        id: git-check
-        run: |
-          if ! git diff --quiet; then
-            echo "HAS_CHANGES=yes" >> $GITHUB_ENV
-          fi
-
-      - name: Check for existing PR branch
-        id: existing-pr
-        run: |
-          EXISTING_PR_BRANCH=$(gh pr list --base main --state open --json headRefName,title --author @me | jq -r '.[] | select(.title == "[Auto PR] Update supporters") | .headRefName')
-          if [[ "$EXISTING_PR_BRANCH" == "sync-action/update-supporters" ]]; then
-            echo "EXISTING_PR_BRANCH=sync-action/update-supporters" >> $GITHUB_ENV
-          fi
-        env:
-          GH_TOKEN: ${{ github.token }}
-
-      - name: Commit changes
-        if: env.HAS_CHANGES == 'yes'
-        run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
-          git add .
-          git commit -m "Update supporters"
-          if [[ "$EXISTING_PR_BRANCH" == "sync-action/update-supporters" ]]; then
-            git push origin HEAD:sync-action/update-supporters
-          else
-            git checkout -b sync-action/update-supporters
-            git push origin sync-action/update-supporters
-          fi
-
-      - name: Create Pull Request
-        if: env.step.git-check.outputs.changes == 'yes' && env.EXISTING_PR_BRANCH != 'sync-action/update-supporters'
+      - name: Create/Update Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Update supporters
           title: "[Auto PR] Update supporters"
-          branch: sync-action/update-supporters
+          branch: github-action/update-supporters
