@@ -72,6 +72,7 @@ const config = {
       // TODO: Do we want to support light mode?
       colorMode: {
         defaultMode: "dark",
+        disableSwitch: false,
         respectPrefersColorScheme: false,
       },
       docs: {

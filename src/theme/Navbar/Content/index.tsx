@@ -36,6 +36,7 @@ export default function NavbarContent() {
         <div className="hidden md:flex items-center gap-6">
           <NavbarItems items={leftItems} />
         </div>
+        <NavbarColorModeToggle />
       </div>
 
       <div className="flex items-center gap-6">
@@ -43,7 +44,6 @@ export default function NavbarContent() {
 
         <div className="items-center gap-6 hidden xl:flex">
           <NavbarItems items={rightItems} />
-          <NavbarColorModeToggle />
         </div>
       </div>
     </div>
