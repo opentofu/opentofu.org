@@ -46,17 +46,19 @@ jobs:
       - name: Commit changes
         if: env.HAS_CHANGES == 'yes'
         run: |
+          if [[ "$EXISTING_PR_BRANCH" == "sync-action/update-supporters" ]]; then
+            git checkout sync-action/update-supporters
+          else
+            git checkout -b sync-action/update-supporters
+          fi
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git add .
           git commit -m "Update supporters"
-          if [[ "$EXISTING_PR_BRANCH" == "sync-action/update-supporters" ]]; then
-            git push origin HEAD:sync-action/update-supporters
-          else
-            git checkout -b sync-action/update-supporters
-            git push origin sync-action/update-supporters
-          fi
-
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ env.TOKEN }}
       - name: Create Pull Request
         if: env.step.git-check.outputs.changes == 'yes' && env.EXISTING_PR_BRANCH != 'sync-action/update-supporters'
         uses: peter-evans/create-pull-request@v3
