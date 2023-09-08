@@ -5,7 +5,7 @@ import Link from "@docusaurus/Link";
 
 export default function LatestNews({ recentPosts }) {
   const {
-    metadata: { title, formattedDate, frontMatter, permalink },
+    metadata: { title, formattedDate, date, frontMatter, permalink },
     Preview,
   } = recentPosts[0];
 
@@ -20,7 +20,13 @@ export default function LatestNews({ recentPosts }) {
             <img src={frontMatter.image_url} alt={title} />
           </Link>
           <div className="flex flex-col items-start">
-            <span className="text-purple-400 font-bold">{formattedDate}</span>
+            <time
+              dateTime={date}
+              itemProp="datePublished"
+              className="text-purple-400 font-bold uppercase"
+            >
+              {formattedDate}
+            </time>
             <h4 className="text-3xl font-bold leading-snug mt-2">
               <Link href={permalink}>{title}</Link>
             </h4>

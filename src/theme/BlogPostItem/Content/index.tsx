@@ -7,7 +7,7 @@ export default function BlogPostItemContent({ children }) {
   const { isBlogPostPage } = useBlogPost();
   return (
     <div
-      className="prose lg:prose-xl dark:prose-invert"
+      className="prose lg:prose-xl dark:prose-invert mx-auto my-10"
       id={isBlogPostPage ? blogPostContainerID : undefined}
       itemProp="articleBody"
     >

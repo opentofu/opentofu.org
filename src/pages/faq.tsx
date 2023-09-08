@@ -6,14 +6,13 @@ import AccordionItem from "../components/Accordion/Item";
 import Faq from "../../faq.mdx";
 import { MDXProvider } from "@mdx-js/react";
 import Link from "@docusaurus/Link";
+import Headline from "../components/Headline";
 
 export default function Manifesto() {
   return (
     <Layout>
       <Jumbotron>
-        <h1 className="text-5xl md:text-7xl font-bold text-center leading-tight md:leading-snug">
-          Frequently Asked Questions
-        </h1>
+        <Headline>Frequently Asked Questions</Headline>
       </Jumbotron>
 
       <div className="container mx-auto pt-6 pb-10 px-4">

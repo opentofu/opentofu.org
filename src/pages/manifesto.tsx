@@ -2,14 +2,13 @@ import React from "react";
 import Layout from "@theme/Layout";
 import Jumbotron from "../components/Jumbotron";
 import TextContent from "../components/TextContent";
+import Headline from "../components/Headline";
 
 export default function Manifesto() {
   return (
     <Layout>
       <Jumbotron>
-        <h1 className="text-5xl md:text-7xl font-bold text-center leading-tight md:leading-snug max-w-2xl">
-          The OpenTF Manifesto
-        </h1>
+        <Headline className="max-w-2xl">The OpenTF Manifesto</Headline>
       </Jumbotron>
       <TextContent className="max-w-2xl">
         <p>
