@@ -5,6 +5,7 @@ import supporters from "../../supporters.json";
 import Jumbotron from "../components/Jumbotron";
 import Button from "../components/Button";
 import SupportersList from "../components/SupportersList";
+import Headline from "../components/Headline";
 
 export default function SupportersPage() {
   const groupedSupporters = groupSupportersByType(supporters);
@@ -23,9 +24,7 @@ export default function SupportersPage() {
   return (
     <Layout>
       <Jumbotron>
-        <h1 className="text-5xl md:text-7xl font-bold text-center leading-tight md:leading-snug">
-          Supporters
-        </h1>
+        <Headline>Supporters</Headline>
       </Jumbotron>
 
       <div className="container mx-auto md:pt-6 pb-10 px-4">

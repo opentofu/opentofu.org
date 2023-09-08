@@ -29,10 +29,6 @@ export default function NavbarMobileSidebar() {
 
   useLockBodyScroll(mobileSidebar.shown);
 
-  if (!mobileSidebar.shouldRender) {
-    return null;
-  }
-
   return (
     <div
       className={clsx(
