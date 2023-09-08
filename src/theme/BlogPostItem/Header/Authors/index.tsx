@@ -13,7 +13,7 @@ export default function BlogPostItemHeaderAuthors() {
   }
 
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-6 mt-6 px-4 flex-wrap justify-center">
       {authors.map((author, idx) => (
         <BlogPostItemHeaderAuthor
           key={idx}

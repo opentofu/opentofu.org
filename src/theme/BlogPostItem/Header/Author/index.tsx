@@ -14,7 +14,7 @@ export default function BlogPostItemHeaderAuthor({ author }: Props) {
   const { name, title, url, imageURL, email } = author;
   const link = url || (email && `mailto:${email}`) || undefined;
   return (
-    <div className="flex gap-4 items-center">
+    <div className="flex gap-4 items-center shrink-0">
       {imageURL && (
         <MaybeLink href={link}>
           <img src={imageURL} alt={name} className="w-14 h-14 rounded-full" />
