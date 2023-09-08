@@ -5,7 +5,12 @@ import type { Props } from "@theme/TOC";
 
 export default function TOC({ className, ...props }: Props) {
   return (
-    <div className={clsx("sticky top-0 p-4", className)}>
+    <div
+      className={clsx(
+        "sticky top-0 p-2 xl:p-4 text-sm xl:text-base",
+        className
+      )}
+    >
       <TOCItems
         {...props}
         className="[&_ul]:pl-4"
