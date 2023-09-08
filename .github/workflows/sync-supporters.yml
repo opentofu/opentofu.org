@@ -31,8 +31,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Update supporters
-          committer: GitHub <noreply@github.com>
-          author: GitHub <noreply@github.com>
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
           title: "[Auto PR] Update supporters"
           body: "Supporters list has been updated."
           branch: github-action/update-supporters
