@@ -26,14 +26,14 @@ const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
     >
       <summary
         onClick={handleItemClick}
-        className="list-none py-6 px-6 group-open:pb-0 text-xl flex cursor-pointer flex-row items-center justify-between font-medium marker:[font-size:0px]"
+        className="list-none py-6 px-6 group-open:pb-0 text-xl flex gap-2 cursor-pointer flex-row items-center justify-between font-medium marker:[font-size:0px]"
       >
         {summary}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="none"
-          className="h-6 w-6"
+          className="h-6 w-6 shrink-0"
         >
           <path
             d="M11.8 2a.8.8 0 0 1 .8.8V11h8.2a.8.8 0 0 1 0 1.6h-8.2v8.2a.8.8 0 0 1-1.6 0v-8.2H2.8a.8.8 0 0 1 0-1.6H11V2.8a.8.8 0 0 1 .8-.8Z"
