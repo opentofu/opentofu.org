@@ -17,7 +17,7 @@ function Goal({ icon: Icon, title, description }) {
 
 export default function Goals() {
   return (
-    <section className="py-6 md:py-12 mx-auto container">
+    <section className="py-6 md:py-12 mx-auto container px-4">
       <h3 className="text-center text-3xl md:text-5xl font-bold mb-6 md:mb-12">
         Our Goals
       </h3>

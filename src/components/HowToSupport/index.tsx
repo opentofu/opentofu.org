@@ -17,7 +17,7 @@ function Step({ icon, children }: StepProps) {
 
 export default function HowToSupport() {
   return (
-    <section className="flex flex-col justify-center w-full py-5 md:py-10 px-6">
+    <section className="flex flex-col justify-center w-full py-5 md:py-10 px-4">
       <div className="w-full max-w-7xl mx-auto">
         <h3 className="text-center text-3xl md:text-5xl mb-3 md:mb-6 font-bold">
           How to support OpenTF in pledging?

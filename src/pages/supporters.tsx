@@ -28,7 +28,7 @@ export default function SupportersPage() {
         </h1>
       </Jumbotron>
 
-      <div className="container mx-auto md:pt-6 pb-10">
+      <div className="container mx-auto md:pt-6 pb-10 px-4">
         <div className="flex flex-wrap gap-3 md:gap-6 justify-center py-4">
           {types.map(([type, supporters]) => (
             <Button

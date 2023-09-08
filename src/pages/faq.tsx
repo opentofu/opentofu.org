@@ -16,7 +16,7 @@ export default function Manifesto() {
         </h1>
       </Jumbotron>
 
-      <div className="container mx-auto pt-6 pb-10">
+      <div className="container mx-auto pt-6 pb-10 px-4">
         <Accordion>
           <MDXProvider
             components={{

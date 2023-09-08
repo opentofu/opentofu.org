@@ -13,7 +13,7 @@ function ContentLink(props: Props) {
 // TODO enter final links once ready
 export default function HowToContribute() {
   return (
-    <section className="flex flex-col justify-center w-full py-10 md:py-20 px-6">
+    <section className="flex flex-col justify-center w-full py-10 md:py-20 px-4">
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
         <h3 className="text-center md:text-left text-3xl md:text-5xl font-bold leading-snug md:leading-snug lg:col-span-4 whitespace-nowrap">
           How to use
