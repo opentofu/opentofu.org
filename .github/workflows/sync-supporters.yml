@@ -2,8 +2,8 @@ name: Sync supporters
 
 on:
   push:
-  # schedule:
-  #   - cron: "0 0 * * *" # Runs daily at midnight
+  schedule:
+    - cron: "0 7 * * *" # Runs daily at 7:00 UTC
 
 jobs:
   updateSupporters:
@@ -12,8 +12,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        # with:
-        #   ref: main
+        with:
+          ref: main
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
