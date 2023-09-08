@@ -38,7 +38,7 @@ export default function DocItemLayout({ children }: Props) {
         </div>
       </div>
       {canRenderTOC && (
-        <div className="hidden lg:flex lg:w-3/12">
+        <div className="hidden lg:flex lg:w-3/12 items-start">
           <DocItemTOCDesktop />
         </div>
       )}

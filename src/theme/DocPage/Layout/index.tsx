@@ -15,7 +15,7 @@ export default function DocPageLayout({ children }: Props) {
         {sidebar && (
           <DocPageLayoutSidebar
             sidebar={sidebar.items}
-            className="hidden lg:flex lg:w-1/5"
+            className="hidden lg:flex lg:w-1/5 items-start"
           />
         )}
         <main className="w-full lg:w-4/5">{children}</main>
