@@ -1,7 +1,6 @@
 name: Sync supporters
 
 on:
-  push:
   schedule:
     - cron: "0 7 * * *" # Runs daily at 7:00 UTC
 
