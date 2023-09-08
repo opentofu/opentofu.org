@@ -9,7 +9,7 @@ import Link from "@docusaurus/Link";
 
 export default function Manifesto() {
   return (
-    <Layout wrapperClassName="light">
+    <Layout>
       <Jumbotron>
         <h1 className="text-5xl md:text-7xl font-bold text-center leading-tight md:leading-snug">
           Frequently Asked Questions

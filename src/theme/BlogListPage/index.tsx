@@ -16,7 +16,7 @@ export default function BlogListPage(props) {
     <>
       <PageMetadata title={blogTitle} description={blogDescription} />
       <SearchMetadata tag="blog_posts_list" />
-      <BlogLayout wrapperClassName="light">
+      <BlogLayout>
         <BlogLastPost item={items[0]} />
         <BlogListItems items={items} />
         <BlogListPaginator metadata={metadata} />
