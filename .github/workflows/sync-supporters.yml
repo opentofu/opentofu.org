@@ -27,12 +27,10 @@ jobs:
         run: npm run sync-supporters
 
       - name: Create/Update Pull Request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: Update supporters
-          committer: GitHub <noreply@github.com>
-          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           title: "[Auto PR] Update supporters"
           body: "Supporters list has been updated."
           branch: github-action/update-supporters
