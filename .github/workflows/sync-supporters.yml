@@ -1,0 +1,38 @@
+name: Sync supporters
+
+on:
+  schedule:
+    - cron: "0 7 * * *" # Runs daily at 7:00 UTC
+
+jobs:
+  updateSupporters:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: main
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run npm script
+        run: npm run sync-supporters
+
+      - name: Create/Update Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: Update supporters
+          author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          title: "[Auto PR] Update supporters"
+          body: "Supporters list has been updated."
+          branch: github-action/update-supporters
+          delete-branch: true
