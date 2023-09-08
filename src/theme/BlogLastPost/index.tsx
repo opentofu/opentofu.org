@@ -7,7 +7,7 @@ export default function BlogLastPost({ item }) {
   return (
     <div className="pt-8 pb-12 md:pt-12 md:pb-20 flex items-center justify-center">
       <PatternBg />
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4">
         <article>
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex-1">
