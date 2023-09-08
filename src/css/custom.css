@@ -10,9 +10,8 @@ html[data-theme="light"] {
   --ifm-navbar-background-color: transparent;
   --ifm-heading-font-family: theme("fontFamily.sans");
   --ifm-navbar-item-padding-horizontal: 0;
-  --ifm-navbar-height: theme("height.24");
+  --ifm-navbar-height: 0;
   --ifm-navbar-shadow: none;
-  --ifm-toc-border-color: transparent;
 }
 
 html[data-theme="dark"] {
@@ -48,15 +47,6 @@ html[data-theme="light"] {
 
 body {
   @apply antialiased;
-}
-
-.theme-doc-sidebar-menu {
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  padding-right: 20px;
-}
-
-.table-of-contents {
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .list-none::-webkit-details-marker {
