@@ -5,14 +5,14 @@ export default function BlogListPaginator(props) {
   const { metadata } = props;
   const { previousPage, nextPage } = metadata;
   return (
-    <nav className="bg-white flex gap-6 justify-center py-10">
+    <nav className="flex gap-6 justify-center py-10">
       {previousPage && (
-        <Button variant="secondaryOnLight" href={previousPage}>
+        <Button variant="secondary" href={previousPage}>
           Previous Page
         </Button>
       )}
       {nextPage && (
-        <Button variant="secondaryOnLight" href={nextPage}>
+        <Button variant="secondary" href={nextPage}>
           Next Page
         </Button>
       )}

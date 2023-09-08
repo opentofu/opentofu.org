@@ -22,7 +22,10 @@ export default function SocialIconLink({
   label,
 }: SocialIconLinkProps) {
   return (
-    <Link href={href} className="flex items-center gap-3">
+    <Link
+      href={href}
+      className="flex items-center gap-3 text-gray-900 dark:text-gray-50"
+    >
       <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +33,7 @@ export default function SocialIconLink({
       >
         <path fill="currentColor" d={iconMap[name]} />
       </svg>
-      <span className="inline-flex sm:hidden">{label}</span>
+      <span className="inline-flex xl:hidden">{label}</span>
     </Link>
   );
 }

@@ -7,7 +7,7 @@ export default function MobileSidebarToggle() {
     <button
       onClick={toggle}
       aria-expanded={shown}
-      className="flex xl:hidden"
+      className="flex xl:hidden text-gray-900 dark:text-gray-50"
       type="button"
     >
       <svg
@@ -17,7 +17,7 @@ export default function MobileSidebarToggle() {
       >
         <path
           d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
-          className="fill-white"
+          className="fill-current"
         />
       </svg>
     </button>

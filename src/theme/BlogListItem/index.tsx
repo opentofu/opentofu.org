@@ -18,17 +18,14 @@ export default function BlogListItem({ item }) {
           {item.content.metadata.formattedDate}
         </p>
         <Link to={item.content.metadata.permalink}>
-          <h3 className="leading-snug text-xl font-bold my-2 line-clamp-3 text-gray-900">
+          <h3 className="leading-snug text-xl font-bold my-2 line-clamp-3">
             {item.content.metadata.title}
           </h3>
         </Link>
-        <p className="text-gray-600 mb-4 line-clamp-3">
+        <p className="text-gray-600 dark:text-gray-500 mb-4 line-clamp-3">
           {item.content.metadata.description}
         </p>
-        <Button
-          variant="secondaryOnLight"
-          href={item.content.metadata.permalink}
-        >
+        <Button variant="secondary" href={item.content.metadata.permalink}>
           Read more
         </Button>
       </div>

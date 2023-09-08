@@ -29,7 +29,7 @@ export default function NavbarContent() {
   const [leftItems, rightItems] = splitNavbarItems(items);
 
   return (
-    <div className="flex text-white justify-between container mx-auto p-4 sm:p-0 navbar">
+    <div className="flex text-white justify-between container mx-auto p-4 navbar">
       <div className="flex items-center gap-6">
         <NavbarMobileSidebarToggle />
         <NavbarLogo />

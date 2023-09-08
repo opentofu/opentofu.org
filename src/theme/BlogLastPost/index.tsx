@@ -7,7 +7,7 @@ export default function BlogLastPost({ item }) {
   return (
     <div className="pt-8 pb-12 md:pt-12 md:pb-20 flex items-center justify-center">
       <PatternBg />
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4">
         <article>
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex-1">
@@ -27,11 +27,11 @@ export default function BlogLastPost({ item }) {
                   {item.content.metadata.title}
                 </h3>
               </Link>
-              <p className="text-gray-400 mb-4 line-clamp-3">
+              <p className="text-gray-600 dark:text-gray-500 mb-4 line-clamp-3">
                 {item.content.metadata.description}
               </p>
               <Button
-                variant="secondaryOnDark"
+                variant="secondary"
                 href={item.content.metadata.permalink}
               >
                 Read more

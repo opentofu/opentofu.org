@@ -1,5 +1,6 @@
 import React from "react";
 import GitHubButton from "react-github-btn";
+import { useColorMode } from "@docusaurus/theme-common";
 
 type GitHubStartNavbarItemProps = {
   ghRepoUrl: string;
@@ -10,11 +11,14 @@ export default function GitHubStartNavbarItem({
   ghRepoUrl,
   buttonLabel,
 }: GitHubStartNavbarItemProps) {
+  const { colorMode } = useColorMode();
   return (
     <div className="flex items-center [&_span]:flex">
       <GitHubButton
         href={ghRepoUrl}
-        data-color-scheme="no-preference: dark_high_contrast; light: light; dark: dark_high_contrast;"
+        data-color-scheme={
+          colorMode === "dark" ? "dark_high_contrast" : "light"
+        }
         data-size="large"
         data-show-count="true"
         aria-label="Star opentffoundation/manifesto on GitHub"

@@ -1,6 +1,5 @@
 import React from "react";
 import Layout from "@theme/Layout";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import { groupSupportersByType } from "../utils/groupSupportersByType";
 import supporters from "../../supporters.json";
 import Jumbotron from "../components/Jumbotron";
@@ -22,43 +21,39 @@ export default function SupportersPage() {
   const hasMore = filteredSupporters.length > truncatedSupporters.length;
 
   return (
-    <Layout wrapperClassName="light">
+    <Layout>
       <Jumbotron>
-        <h1 className="text-5xl md:text-7xl font-bold text-white text-center leading-tight md:leading-snug">
+        <h1 className="text-5xl md:text-7xl font-bold text-center leading-tight md:leading-snug">
           Supporters
         </h1>
       </Jumbotron>
-      <div className="bg-white flex-1 text-gray-600">
-        <div className="container mx-auto md:pt-6 pb-10">
-          <div className="flex flex-wrap gap-3 md:gap-6 justify-center bg-white sticky top-0 py-4">
-            {types.map(([type, supporters]) => (
-              <Button
-                key={type}
-                variant="secondaryOnLight"
-                aria-selected={type === selectedType}
-                onClick={() => setSelectedType(type)}
-              >
-                {type}
-                <sup className="text-brandLight font-bold text-base ml-2 mt-2">
-                  {supporters.length}
-                </sup>
-              </Button>
-            ))}
-          </div>
-          <SupportersList list={truncatedSupporters} />
-          <div className="flex gap-6 justify-center">
-            {hasMore && (
-              <Button
-                variant="secondaryOnLight"
-                onClick={() => setShowAll((v) => !v)}
-              >
-                {showAll ? "Show Less" : "Show More"}
-              </Button>
-            )}
-            <Button variant="primary" href="/support">
-              Support Us
+
+      <div className="container mx-auto md:pt-6 pb-10 px-4">
+        <div className="flex flex-wrap gap-3 md:gap-6 justify-center py-4">
+          {types.map(([type, supporters]) => (
+            <Button
+              key={type}
+              variant="secondary"
+              aria-selected={type === selectedType}
+              onClick={() => setSelectedType(type)}
+            >
+              {type}
+              <sup className="text-brandLight font-bold text-base ml-2 mt-2">
+                {supporters.length}
+              </sup>
             </Button>
-          </div>
+          ))}
+        </div>
+        <SupportersList list={truncatedSupporters} />
+        <div className="flex gap-6 justify-center">
+          {hasMore && (
+            <Button variant="secondary" onClick={() => setShowAll((v) => !v)}>
+              {showAll ? "Show Less" : "Show More"}
+            </Button>
+          )}
+          <Button variant="primary" href="/support">
+            Support Us
+          </Button>
         </div>
       </div>
     </Layout>

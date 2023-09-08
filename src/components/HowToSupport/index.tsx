@@ -8,7 +8,7 @@ type StepProps = {
 
 function Step({ icon, children }: StepProps) {
   return (
-    <div className="bg-white p-6">
+    <div className="bg-white dark:bg-dark2 p-6">
       {icon}
       <p className="text-xl mt-4 mb-2 pl-2">{children}</p>
     </div>
@@ -17,12 +17,12 @@ function Step({ icon, children }: StepProps) {
 
 export default function HowToSupport() {
   return (
-    <section className="text-gray-900 flex flex-col justify-center w-full bg-gray-50 py-5 md:py-10 px-6">
+    <section className="flex flex-col justify-center w-full py-5 md:py-10 px-4">
       <div className="w-full max-w-7xl mx-auto">
         <h3 className="text-center text-3xl md:text-5xl mb-3 md:mb-6 font-bold">
           How to support OpenTF in pledging?
         </h3>
-        <p className="text-gray-600 text-center text-base md:text-xl mb-6 md:mb-12">
+        <p className="text-gray-600 dark:text-gray-500 text-center text-base md:text-xl mb-6 md:mb-12">
           Pledging to the OpenTF manifesto can be done by:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

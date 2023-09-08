@@ -12,7 +12,7 @@ export default function Logo() {
   const logoLink = useBaseUrl("/");
 
   return (
-    <Link to={logoLink}>
+    <Link to={logoLink} className="text-gray-900 dark:text-gray-50">
       <LogoSvg aria-label={title} />
     </Link>
   );

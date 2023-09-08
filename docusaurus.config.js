@@ -72,7 +72,6 @@ const config = {
       // TODO: Do we want to support light mode?
       colorMode: {
         defaultMode: "dark",
-        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       docs: {
@@ -88,7 +87,7 @@ const config = {
           },
           {
             label: "Supporters",
-            href: "#",
+            href: "/supporters",
           },
           {
             label: "FAQs",

@@ -13,6 +13,8 @@ function DropdownNavbarItemDesktop({
   position,
   className,
   onClick,
+  label,
+  children,
   ...props
 }: DesktopOrMobileNavBarItemProps) {
   const callback = useCallback(() => setShowDropdown(false), []);
@@ -28,7 +30,10 @@ function DropdownNavbarItemDesktop({
         aria-expanded={showDropdown}
         role="button"
         href={props.to ? undefined : "#"}
-        className={clsx("peer", className)}
+        className={clsx(
+          "peer flex items-center font-bold text-gray-900 dark:text-gray-50 group-hover:text-purple-500 dark:group-hover:text-gray-50 group-hover:underline",
+          className
+        )}
         {...props}
         onClick={props.to ? undefined : (e) => e.preventDefault()}
         onKeyDown={(e) => {
@@ -37,10 +42,20 @@ function DropdownNavbarItemDesktop({
             setShowDropdown(!showDropdown);
           }
         }}
-      >
-        {props.children ?? props.label}
-      </NavbarNavLink>
-      <div className="absolute bg-gray-700 p-3 gap-3 hidden group-hover:flex peer-aria-expanded:flex flex-col rounded-md w-36">
+        label={
+          <>
+            {children ?? label}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              className="w-6 h-6"
+            >
+              <path d="M7,10L12,15L17,10H7Z" className="fill-current" />
+            </svg>
+          </>
+        }
+      />
+      <div className="absolute shadow-2xl bg-gray-150 dark:bg-gray-700 p-3 gap-3 hidden group-hover:flex peer-aria-expanded:flex flex-col w-36">
         {items.map((childItemProps, i) => (
           <NavbarItem isDropdownItem {...childItemProps} key={i} />
         ))}
@@ -58,7 +73,11 @@ function DropdownNavbarItemMobile({
 }: DesktopOrMobileNavBarItemProps) {
   return (
     <>
-      <NavbarNavLink role="button" className={className} {...props}>
+      <NavbarNavLink
+        role="button"
+        className={clsx("font-bold text-gray-900 dark:text-gray-50", className)}
+        {...props}
+      >
         {props.children ?? props.label}
       </NavbarNavLink>
 
