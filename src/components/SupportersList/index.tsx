@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import ThemedImage from "@theme/ThemedImage";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 type SupportersListProps = {
   list: {
@@ -29,18 +31,14 @@ export default function SupportersList({ list }: SupportersListProps) {
             className="w-1/3 text-inherit"
           >
             {logos[supporter.name] ? (
-              <>
-                <img
-                  src={logos[supporter.name].light}
-                  alt={supporter.name}
-                  className="w-28 dark:hidden block"
-                />
-                <img
-                  src={logos[supporter.name].dark}
-                  alt={supporter.name}
-                  className="w-28 dark:block hidden"
-                />
-              </>
+              <ThemedImage
+                alt={supporter.name}
+                sources={{
+                  light: useBaseUrl(logos[supporter.name].light),
+                  dark: useBaseUrl(logos[supporter.name].dark),
+                }}
+                className="w-28"
+              />
             ) : (
               supporter.name
             )}
