@@ -828,6 +828,36 @@
     "pledge": "Development; DevOps; open-source community efforts"
   },
   {
+    "name": "SREDevOps.org",
+    "url": "https://sredevops.org",
+    "type": "Company",
+    "pledge": "SRE, DevOps and Platform Engineering Community"
+  },
+  {
+    "name": "Kineo.ai",
+    "url": "https://kineo.ai/",
+    "type": "Company",
+    "pledge": "Open-source community efforts"
+  },
+  {
+    "name": "The New York Public Library",
+    "url": "https://nypl.org",
+    "type": "Company",
+    "pledge": "Development; open-source community efforts"
+  },
+  {
+    "name": "Mantle",
+    "url": "https://strike.sh",
+    "type": "Company",
+    "pledge": "Cibesecurity; open-source community efforts"
+  },
+  {
+    "name": "Refactor",
+    "url": "https://github.com/refactorau",
+    "type": "Company",
+    "pledge": "Development; open-source community efforts"
+  },
+  {
     "name": "OTF",
     "url": "https://github.com/leg100/otf",
     "type": "Project",
@@ -4984,5 +5014,233 @@
     "url": "https://github.com/fouad-j",
     "type": "Individual",
     "pledge": "Development; Infrastructure; open-source community efforts"
+  },
+  {
+    "name": "Nicolas Georger",
+    "url": "https://github.com/ngeorger",
+    "type": "Individual",
+    "pledge": "SRE, DevOps and Platform Engineering Community"
+  },
+  {
+    "name": "Miguel Carneiro",
+    "url": "https://github.com/mig4ng",
+    "type": "Individual",
+    "pledge": "Development; Infrastructure; open-source community efforts"
+  },
+  {
+    "name": "Yuri Socher Bichibichi",
+    "url": "https://github.com/socherbyc",
+    "type": "Individual",
+    "pledge": "Development; open-source community efforts"
+  },
+  {
+    "name": "Kevin Fu",
+    "url": "https://github.com/mulspace",
+    "type": "Individual",
+    "pledge": "Development; open-source community efforts"
+  },
+  {
+    "name": "Konrad Rozycki",
+    "url": "https://github.com/krdian",
+    "type": "Individual",
+    "pledge": "SRE; DevOps; Platform Engineer"
+  },
+  {
+    "name": "Raunak Gupta",
+    "url": "https://github.com/finallyRaunak/",
+    "type": "Individual",
+    "pledge": "DevOps; Cloud; Help teams adopt scalable Open Source IaC tools"
+  },
+  {
+    "name": "Avijeet Singh Mandloi",
+    "url": "https://avijeet.in",
+    "type": "Individual",
+    "pledge": "Development; Infrastructure; open-source community efforts"
+  },
+  {
+    "name": "Arthur Roda",
+    "url": "https://github.com/colmac-thomasops",
+    "type": "Individual",
+    "pledge": "DevOps; Cloud Architect; open-source community efforts"
+  },
+  {
+    "name": "Katia Esposito",
+    "url": "https://github.com/katlol",
+    "type": "Individual",
+    "pledge": "SRE; Development; open-source community efforts"
+  },
+  {
+    "name": "Adriano Sela Aviles",
+    "url": "https://github.com/adrianosela",
+    "type": "Individual",
+    "pledge": "Development; open-source community efforts"
+  },
+  {
+    "name": "Renjith Ravindranathan",
+    "url": "https://github.com/mysticrenji",
+    "type": "Individual",
+    "pledge": "Plaform Engineering; DevOps; IaC; CICD; Dev Experience; Cloud Native"
+  },
+  {
+    "name": "Rajeev Kumar",
+    "url": "https://github.com/drupler",
+    "type": "Individual",
+    "pledge": "Drupal Developer; DevOps; Open-Source Evangelist; "
+  },
+  {
+    "name": "Benji Peng",
+    "url": "https://github.com/benjipeng",
+    "type": "Individual",
+    "pledge": "Development; STEM Research; open-source community efforts"
+  },
+  {
+    "name": "HyeonSu Im (임현수)",
+    "url": "https://github.com/imhyeons",
+    "type": "Individual",
+    "pledge": "DevOps; Cloud Architect; open-source community efforts"
+  },
+  {
+    "name": "Shimon Elbaz",
+    "url": "https://github.com/shimonelbaz",
+    "type": "Individual",
+    "pledge": "Development; Infrastructure; open-source community efforts"
+  },
+  {
+    "name": "Adam Gold",
+    "url": "https://github.com/Adam-Gold/",
+    "type": "Individual",
+    "pledge": "DevOps Engineer; open-source community efforts"
+  },
+  {
+    "name": "Mert Kaan",
+    "url": "https://github.com/mertronics",
+    "type": "Individual",
+    "pledge": "Development;DevOps; open-source community efforts"
+  },
+  {
+    "name": "Santiago Hernandez",
+    "url": "https://github.com/SantiEich",
+    "type": "Individual",
+    "pledge": "Cloud Architect; DevOps; SRE; Cybersecurity; open-source community efforts"
+  },
+  {
+    "name": "Joshua C. Adkisson",
+    "url": "https://github.com/ragincajunbanjo",
+    "type": "Individual",
+    "pledge": "Development; open-source community efforts"
+  },
+  {
+    "name": "Avichay Eyal",
+    "url": "https://github.com/eavichay",
+    "type": "Individual",
+    "pledge": "Development; Infrastructure; Tooling; open-source community efforts"
+  },
+  {
+    "name": "Matt Paine",
+    "url": "https://github.com/mattsoftware",
+    "type": "Individual",
+    "pledge": "Development; open-source community efforts"
+  },
+  {
+    "name": "Stephan Lindauer",
+    "url": "https://github.com/stephanlindauer",
+    "type": "Individual",
+    "pledge": "Platform Engineering; Platform Architecture; open-source community efforts"
+  },
+  {
+    "name": "Marcelo Ferreira Cândido",
+    "url": "https://github.com/MarceloFCandido",
+    "type": "Individual",
+    "pledge": "Development; DevOps; SRE; Platform Engineering"
+  },
+  {
+    "name": "Diogo \"Iwaslazkis\" Iwasaki",
+    "url": "https://github.com/Iwaslazkis",
+    "type": "Individual",
+    "pledge": "Development; Documentation; Educating; Open-source community efforts"
+  },
+  {
+    "name": "Mark van Holsteijn",
+    "url": "https://github.com/mvanholsteijn",
+    "type": "Individual",
+    "pledge": "Development; open-source community efforts"
+  },
+  {
+    "name": "Zaid Afaneh",
+    "url": "https://github.com/ZaidAfane3",
+    "type": "Individual",
+    "pledge": "DevOps Engineer; Cyber Security; Jordan Open Source Association (JOSA); open-source community"
+  },
+  {
+    "name": "Fuad Ahmed",
+    "url": "https://github.com/fuad-ahmed",
+    "type": "Individual",
+    "pledge": "Development; DevOps; SRE; Platform Engineering"
+  },
+  {
+    "name": "Amine MATOUK",
+    "url": "https://github.com/ineam",
+    "type": "Individual",
+    "pledge": "Development; Documentation; Educating; Open-source community efforts; Infrastructure;"
+  },
+  {
+    "name": "Russell de Pina",
+    "url": "https://github.com/russd2357",
+    "type": "Individual",
+    "pledge": "Development; Documentation; Educating; Open-source community efforts"
+  },
+  {
+    "name": "Nick Cicchetti",
+    "url": "https://github.com/NickSpaghetti",
+    "type": "Individual",
+    "pledge": "Platform Engineering; Platform Architecture; open-source community efforts"
+  },
+  {
+    "name": "Satish Gaikwad",
+    "url": "https://github.com/satishweb/",
+    "type": "Individual",
+    "pledge": "Development; open-source community efforts; Helping teams adopt scalable Open Source IaC tools"
+  },
+  {
+    "name": "Jack Harter",
+    "url": "https://github.com/jharter1",
+    "type": "Individual",
+    "pledge": "DevOps; SRE; Platform Engineering; open-source Practices and Evangelism"
+  },
+  {
+    "name": "Syasusu",
+    "url": "https://github.com/Ericwww",
+    "type": "Individual",
+    "pledge": "DevOps; IaC; Cloud Native; Open-source community efforts"
+  },
+  {
+    "name": "Eugene Kryukov",
+    "url": "https://github.com/ignoraunt",
+    "type": "Individual",
+    "pledge": "Development; open-source community efforts"
+  },
+  {
+    "name": "Ronald A DeMena III",
+    "url": "https://github.com/rondemena",
+    "type": "Individual",
+    "pledge": "Engineering, Security, Open-Source Community Efforts"
+  },
+  {
+    "name": "Jacek Nikiel",
+    "url": "https://github.com/jacek-28",
+    "type": "Individual",
+    "pledge": "Open-source enthusiast"
+  },
+  {
+    "name": "Gary Greene",
+    "url": "https://github.com/greeneg",
+    "type": "Individual",
+    "pledge": "Full Stack Engineer; DevOps; Infrastructure Engineering"
+  },
+  {
+    "name": "John Homer Alvero",
+    "url": "https://github.com/johnalvero",
+    "type": "Individual",
+    "pledge": "Platform Engineering; DevOps"
   }
 ]
