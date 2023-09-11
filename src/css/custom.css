@@ -6,7 +6,6 @@
 
 html[data-theme="dark"],
 html[data-theme="light"] {
-  --ifm-spacing-horizontal: 0;
   --ifm-navbar-background-color: transparent;
   --ifm-heading-font-family: theme("fontFamily.sans");
   --ifm-navbar-item-padding-horizontal: 0;

@@ -7,7 +7,10 @@ export default function DocSidebarItemHtml({ item, index }: Props) {
   const { value, className } = item;
   return (
     <li
-      className={clsx("text-gray-600 dark:text-gray-500", className)}
+      className={clsx(
+        "font-normal text-gray-600 dark:text-gray-500",
+        className
+      )}
       key={index}
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: value }}

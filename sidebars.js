@@ -25,7 +25,7 @@ function processNavItem(navItem) {
   if (navItem.heading) {
     return {
       type: "html",
-      value: `<strong>${navItem.heading}</strong>`,
+      value: navItem.heading,
     };
   }
 

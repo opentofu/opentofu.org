@@ -20,7 +20,7 @@ export default function DocSidebarItemLink({
   return (
     <li className={className} key={label}>
       <Link
-        className={clsx("flex py-1 px-2", {
+        className={clsx("flex py-2 px-4", {
           "bg-purple-50 dark:bg-purple-800 text-purple-500 dark:text-purple-300":
             isActive,
         })}
