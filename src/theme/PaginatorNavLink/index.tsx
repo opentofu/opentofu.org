@@ -14,7 +14,7 @@ export default function PaginatorNavLink(props: Props) {
       to={permalink}
     >
       {subLabel && (
-        <div className="text-sm text-gray-600 dark:text-gray-500">
+        <div className="text-sm text-gray-600 dark:text-gray-500 inline-flex">
           {subLabel}
         </div>
       )}
