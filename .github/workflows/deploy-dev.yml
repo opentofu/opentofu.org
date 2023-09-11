@@ -37,3 +37,11 @@ jobs:
           directory: ./build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           wranglerVersion: 3
+
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v10
+        with:
+          urls: |
+            ${{ steps.publish.outputs.url }}
+            ${{ steps.publish.outputs.url }}/blog
+          uploadArtifacts: true
