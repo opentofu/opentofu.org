@@ -11,7 +11,7 @@ export default function DocPageLayout({ children }: Props) {
   return (
     <Layout wrapperClassName="border-t border-b border-gray-200 dark:border-gray-800">
       <BackToTopButton />
-      <div className="container mx-auto flex lg:divide-x divide-gray-200 dark:divide-gray-800">
+      <div className="container mx-auto flex flex-1 lg:divide-x divide-gray-200 dark:divide-gray-800">
         {sidebar && (
           <DocPageLayoutSidebar
             sidebar={sidebar.items}

@@ -23,7 +23,7 @@ export default function DocItemLayout({ children }: Props) {
   const canRenderTOC = useDocTOC();
 
   return (
-    <div className="flex lg:divide-x divide-gray-200 dark:divide-gray-800">
+    <div className="flex h-full lg:divide-x divide-gray-200 dark:divide-gray-800">
       <div className="w-full lg:w-9/12 p-4">
         <DocVersionBanner />
         <div>
