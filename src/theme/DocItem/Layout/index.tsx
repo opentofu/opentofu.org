@@ -26,16 +26,15 @@ export default function DocItemLayout({ children }: Props) {
     <div className="flex h-full lg:divide-x divide-gray-200 dark:divide-gray-800">
       <div className="w-full lg:w-9/12 p-4">
         <DocVersionBanner />
-        <div>
-          <article>
-            <DocBreadcrumbs />
-            <DocVersionBadge />
-            {canRenderTOC && <DocItemTOCMobile />}
-            <DocItemContent>{children}</DocItemContent>
-            <DocItemFooter />
-          </article>
-          <DocItemPaginator />
-        </div>
+
+        <article className="flex flex-col gap-4 mb-10">
+          <DocBreadcrumbs />
+          <DocVersionBadge />
+          {canRenderTOC && <DocItemTOCMobile />}
+          <DocItemContent>{children}</DocItemContent>
+          <DocItemFooter />
+        </article>
+        <DocItemPaginator />
       </div>
       {canRenderTOC && (
         <div className="hidden lg:flex lg:w-3/12 items-start">

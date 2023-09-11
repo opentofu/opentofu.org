@@ -5,7 +5,7 @@ import type { Props } from "@theme/DocPaginator";
 export default function DocPaginator(props: Props) {
   const { previous, next } = props;
   return (
-    <nav className="grid grid-cols-2 gap-3 mt-6" aria-label="Docs pages">
+    <nav className="grid grid-cols-2 gap-3" aria-label="Docs pages">
       {previous && <PaginatorNavLink {...previous} subLabel="Previous" />}
       {next && (
         <PaginatorNavLink
