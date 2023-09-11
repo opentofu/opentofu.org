@@ -41,7 +41,4 @@ jobs:
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v10
         with:
-          urls: |
-            ${{ steps.publish.outputs.url }}
-            ${{ steps.publish.outputs.url }}/blog
-          uploadArtifacts: true
+          configPath: "./lighthouserc.json"
