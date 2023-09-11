@@ -7,7 +7,14 @@ export default function DocPaginator(props: Props) {
   return (
     <nav className="grid grid-cols-2 gap-3 mt-6" aria-label="Docs pages">
       {previous && <PaginatorNavLink {...previous} subLabel="Previous" />}
-      {next && <PaginatorNavLink {...next} subLabel="Next" isNext />}
+      {next && (
+        <PaginatorNavLink
+          {...next}
+          subLabel="Next"
+          isNext
+          className="col-start-2"
+        />
+      )}
     </nav>
   );
 }
