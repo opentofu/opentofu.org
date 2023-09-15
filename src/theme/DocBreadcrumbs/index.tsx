@@ -15,7 +15,7 @@ function BreadcrumbsItemLink({
   children: ReactNode;
   href: string | undefined;
   isLast: boolean;
-}): JSX.Element {
+}) {
   if (isLast) {
     return (
       <span className="text-gray-600 dark:text-gray-500" itemProp="name">
@@ -24,7 +24,7 @@ function BreadcrumbsItemLink({
     );
   }
   return href ? (
-    <Link className="" href={href} itemProp="item">
+    <Link href={href} itemProp="item">
       <span itemProp="name">{children}</span>
     </Link>
   ) : (

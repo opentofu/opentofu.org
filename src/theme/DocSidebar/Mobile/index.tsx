@@ -1,22 +1,19 @@
 import React from "react";
-import clsx from "clsx";
 import {
   NavbarSecondaryMenuFiller,
   type NavbarSecondaryMenuComponent,
-  ThemeClassNames,
 } from "@docusaurus/theme-common";
 import { useNavbarMobileSidebar } from "@docusaurus/theme-common/internal";
 import DocSidebarItems from "@theme/DocSidebarItems";
 import type { Props } from "@theme/DocSidebar/Mobile";
 
-// eslint-disable-next-line react/function-component-definition
 const DocSidebarMobileSecondaryMenu: NavbarSecondaryMenuComponent<Props> = ({
   sidebar,
   path,
 }) => {
   const mobileSidebar = useNavbarMobileSidebar();
   return (
-    <ul className={clsx(ThemeClassNames.docs.docSidebarMenu, "menu__list")}>
+    <ul>
       <DocSidebarItems
         items={sidebar}
         activePath={path}
