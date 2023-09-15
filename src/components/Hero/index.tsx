@@ -11,8 +11,9 @@ export default function Hero() {
         Ensure Terraform remains truly open-source. Always.
       </Headline>
       <p className="my-6 text-xl sm:max-w-lg md:max-w-xl lg:max-w-2xl text-center text-gray-600 dark:text-gray-500">
-        OpenTF is a fork of Terraform that is open source, community driven, and
-        will be managed by an independent Foundation.
+        Previously named OpenTF, OpenTofu is a fork of Terraform that is
+        open-source, community-driven, and will be managed by the Linux
+        Foundation.
       </p>
       <div className="flex gap-4 pt-6">
         <Button variant="secondary" href="/manifesto">

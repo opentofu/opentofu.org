@@ -14,9 +14,9 @@ export default function Home({ recentPosts }) {
       <Hero />
       <Goals />
       <Supporters />
+      <HowToContribute />
       <FAQ />
       <HowToSupport />
-      <HowToContribute />
       <LatestNews recentPosts={recentPosts} />
     </Layout>
   );
