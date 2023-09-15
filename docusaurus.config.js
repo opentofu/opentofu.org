@@ -4,9 +4,63 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "OpenTF Documentation",
-  favicon: "/img/favicon32.png",
-  url: "https://docs.opentf.org",
+  title: "OpenTofu",
+  url: "https://opentofu.org",
+
+  headTags: [
+    {
+      tagName: "link",
+      attributes: {
+        rel: "apple-touch-icon",
+        type: "image/png",
+        sizes: "180x180",
+        href: "/favicons/apple-touch-icon.png",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: "/favicons/favicon-16x16.png",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/favicons/favicon-32x32.png",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "icon",
+        type: "image/png",
+        sizes: "192x192",
+        href: "/favicons/android-chrome-192x192.png",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "icon",
+        type: "image/png",
+        sizes: "512x512",
+        href: "/favicons/android-chrome-512x512.png",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "manifest",
+        href: "/favicons/site.webmanifest",
+      },
+    },
+  ],
 
   baseUrl: "/",
 
@@ -197,6 +251,7 @@ const config = {
         theme: darkCodeTheme,
         additionalLanguages: ["hcl"],
       },
+      image: "/img/og.png",
     }),
   customFields: {
     logos: {

@@ -22,7 +22,7 @@ export default function SupportersPage() {
   const hasMore = filteredSupporters.length > truncatedSupporters.length;
 
   return (
-    <Layout>
+    <Layout title="OpenTF Supporters">
       <Jumbotron>
         <Headline>Supporters</Headline>
       </Jumbotron>
