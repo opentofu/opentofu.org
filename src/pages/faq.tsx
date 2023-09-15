@@ -8,7 +8,7 @@ import { MDXProvider } from "@mdx-js/react";
 import Link from "@docusaurus/Link";
 import Headline from "../components/Headline";
 
-export default function Manifesto() {
+export default function FAQ() {
   return (
     <Layout title="OpenTofu FAQ">
       <Jumbotron>
