@@ -18,11 +18,9 @@ clone: clean
 # Ensure the destination directory exists
 prepare-dest:
 	mkdir -p $(DEST_DIR)/docs
-	mkdir -p $(DEST_DIR)/data
 
 # Copy the entire folder
 copy: clone prepare-dest
 	cp -v -r $(CLONE_DIR)/$(SOURCE_DIR)/docs/. $(DEST_DIR)/docs/
-	cp -v -r $(CLONE_DIR)/$(SOURCE_DIR)/data/. $(DEST_DIR)/data/
 
 .PHONY: all clone copy prepare-dest
