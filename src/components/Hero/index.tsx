@@ -19,8 +19,8 @@ export default function Hero() {
         <Button variant="secondary" href="/manifesto">
           Read Manifesto
         </Button>
-        <Button variant="primary" href="/support">
-          Support Us
+        <Button variant="primary" href="https://github.com/opentffoundation/opentf/blob/main/CONTRIBUTING.md">
+          Contribute
         </Button>
       </div>
     </header>

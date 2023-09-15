@@ -54,9 +54,6 @@ export default function Supporters() {
         <Button variant="secondary" href="/supporters">
           Show More
         </Button>
-        <Button variant="primary" href="/support">
-          Support Us
-        </Button>
       </div>
     </section>
   );
