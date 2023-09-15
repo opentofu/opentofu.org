@@ -74,7 +74,7 @@ export default function BlogPostItem({ children }: Props) {
       <BlogPostItemHeader />
 
       <div className="max-w-5xl mx-auto flex justify-center">
-        <img src={frontMatter.image_url} alt={title} />
+        <img src={frontMatter.image} alt={title} />
       </div>
       <div className="max-w-5xl mx-auto flex flex-col justify-center relative">
         <div className="lg:sticky top-0">

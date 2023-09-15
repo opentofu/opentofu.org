@@ -1,7 +1,7 @@
 ---
 title: OpenTF Announces Fork of Terraform
-slug: opentf-announces-fork-of-terraform7
-image_url: /img/blog/opentf.png
+slug: opentf-announces-fork-of-terraform
+image: /img/blog/opentf.png
 ---
 
 Two weeks ago, HashiCorp announced they are changing the license to all their core products, including Terraform, to the Business Source License (BSL). In an attempt to keep Terraform open source, we published the [OpenTF manifesto](https://opentf.org/), and the community response was huge! Over 100 companies, 10 projects, and 400 individuals pledged their time and resources to keep Terraform open-source. The [GitHub repository](https://github.com/opentffoundation/manifesto) for the manifesto already has over 4k stars, and the number is growing quickly!
