@@ -20,4 +20,5 @@ yarn-debug.log*
 yarn-error.log*
 
 /opentf-repo
-/docs
+/docs/**
+!/docs/index.mdx
