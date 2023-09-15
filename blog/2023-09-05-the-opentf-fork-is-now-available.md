@@ -1,7 +1,7 @@
 ---
 title: The OpenTF fork is now available!
 slug: the-opentf-fork-is-now-available
-image_url: /img/blog/opentf.png
+image: /img/blog/opentf.png
 ---
 
 Four weeks ago, HashiCorp switched Terraform from an open source license to the Business Source License (BSL); three weeks ago, we released the [OpenTF manifesto](https://opentf.org/), asking HashiCorp to switch back to an open source license; two weeks ago, with no response from HashiCorp, we [created a private fork of Terraform](https://opentf.org/announcement) and said we'd make it public in 1-2 weeks; and today, as promised, we're happy to announce that **the OpenTF repository is now publicly available at** [github.com/opentffoundation/opentf](https://github.com/opentffoundation/opentf)!
