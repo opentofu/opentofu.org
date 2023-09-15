@@ -68,9 +68,8 @@ const config = {
   organizationName: "opentf",
   projectName: "docs",
 
-  // TODO: Once we clean up links we can switch to "throw"
-  onBrokenLinks: "warn",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "throw",
 
   i18n: {
     defaultLocale: "en",
