@@ -114,6 +114,10 @@ const config = {
             to: "/blog/opentf-announces-fork-of-terraform",
             from: "/announcement",
           },
+          {
+            to: "/blog/the-opentf-fork-is-now-available",
+            from: "/fork",
+          },
         ],
       },
     ],
