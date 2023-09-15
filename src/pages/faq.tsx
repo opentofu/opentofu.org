@@ -10,7 +10,7 @@ import Headline from "../components/Headline";
 
 export default function Manifesto() {
   return (
-    <Layout>
+    <Layout title="OpenTofu FAQ">
       <Jumbotron>
         <Headline>Frequently Asked Questions</Headline>
       </Jumbotron>
