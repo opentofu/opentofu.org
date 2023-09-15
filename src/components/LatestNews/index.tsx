@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "./big-logo.svg";
 import Button from "../Button";
 import Link from "@docusaurus/Link";
 
@@ -17,7 +16,7 @@ export default function LatestNews({ recentPosts }) {
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Link to={permalink}>
-            <img src={frontMatter.image_url} alt={title} />
+            <img src={frontMatter.image} alt={title} />
           </Link>
           <div className="flex flex-col items-start">
             <time
