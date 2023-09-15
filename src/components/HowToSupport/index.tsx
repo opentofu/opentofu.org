@@ -8,7 +8,7 @@ type StepProps = {
 
 function Step({ icon, children }: StepProps) {
   return (
-    <div className="bg-white dark:bg-dark2 p-6">
+    <div className="bg-white dark:bg-blue-900 p-6">
       {icon}
       <p className="text-xl mt-4 mb-2 pl-2">{children}</p>
     </div>

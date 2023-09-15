@@ -13,7 +13,7 @@ export default function BlogPostItemHeader() {
       <time
         dateTime={date}
         itemProp="datePublished"
-        className="text-purple-400 uppercase font-bold"
+        className="text-yellow-700 dark:text-yellow-500 uppercase font-bold"
       >
         {formattedDate}
       </time>

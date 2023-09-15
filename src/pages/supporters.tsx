@@ -37,7 +37,7 @@ export default function SupportersPage() {
               onClick={() => setSelectedType(type)}
             >
               {type}
-              <sup className="text-brandLight font-bold text-base ml-2 mt-2">
+              <sup className="text-yellow-700 dark:text-yellow-600 font-bold text-base ml-2 mt-2">
                 {supporters.length}
               </sup>
             </Button>
