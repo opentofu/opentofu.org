@@ -24,7 +24,7 @@ export default function SocialIconLink({
   return (
     <Link
       href={href}
-      className="flex items-center gap-3 text-gray-900 dark:text-gray-50"
+      className="flex items-center gap-3 text-gray-900 dark:text-gray-50 hover:text-gray-500 hover:dark:text-gray-500"
     >
       <svg
         viewBox="0 0 24 24"

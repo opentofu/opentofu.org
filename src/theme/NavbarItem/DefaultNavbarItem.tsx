@@ -13,7 +13,10 @@ function DefaultNavbarItemDesktop({
 }: DesktopOrMobileNavBarItemProps) {
   const element = (
     <NavbarNavLink
-      className={clsx("font-bold text-gray-900 dark:text-gray-50", className)}
+      className={clsx(
+        "font-bold text-gray-900 dark:text-gray-50 hover:text-gray-900 hover:dark:text-gray-50",
+        className
+      )}
       isDropdownLink={isDropdownItem}
       {...props}
     />
@@ -29,7 +32,10 @@ function DefaultNavbarItemMobile({
 }: DesktopOrMobileNavBarItemProps) {
   return (
     <NavbarNavLink
-      className={clsx("font-bold text-gray-900 dark:text-gray-50", className)}
+      className={clsx(
+        "font-bold text-gray-900 dark:text-gray-50 hover:text-gray-900 hover:dark:text-gray-50",
+        className
+      )}
       {...props}
     />
   );

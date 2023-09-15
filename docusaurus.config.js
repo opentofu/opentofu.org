@@ -174,11 +174,6 @@ const config = {
             position: "left",
           },
           {
-            to: "/blog",
-            label: "Blog",
-            position: "left",
-          },
-          {
             type: "dropdown",
             to: "/docs",
             label: "Docs",
@@ -238,12 +233,6 @@ const config = {
             position: "right",
             name: "slack",
             label: "Join us on Slack",
-          },
-          {
-            type: "custom-button-navbar-item",
-            label: "Support Us",
-            href: "https://github.com/opentffoundation/manifesto",
-            position: "right",
           },
         ],
       },

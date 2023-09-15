@@ -17,7 +17,7 @@ function SupporterType({ children, withSeparator, count }: SupporterTypeProps) {
     <li className="h-12 flex items-center font-medium">
       {children}
       {count && (
-        <sup className="ml-1 mt-2 text-purple-400 text-base font-bold">
+        <sup className="ml-1 mt-2 text-yellow-700 dark:text-yellow-600 text-base font-bold">
           {count}
         </sup>
       )}
@@ -53,9 +53,6 @@ export default function Supporters() {
       <div className="flex gap-6 justify-center">
         <Button variant="secondary" href="/supporters">
           Show More
-        </Button>
-        <Button variant="primary" href="/support">
-          Support Us
         </Button>
       </div>
     </section>

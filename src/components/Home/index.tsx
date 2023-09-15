@@ -13,10 +13,10 @@ export default function Home({ recentPosts }) {
     <Layout description="Ensure Terraform remains truly open-source.">
       <Hero />
       <Goals />
-      <Supporters />
-      <FAQ />
-      <HowToSupport />
       <HowToContribute />
+      <FAQ />
+      <Supporters />
+      <HowToSupport />
       <LatestNews recentPosts={recentPosts} />
     </Layout>
   );

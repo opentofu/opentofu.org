@@ -37,7 +37,7 @@ export default function SupportersPage() {
               onClick={() => setSelectedType(type)}
             >
               {type}
-              <sup className="text-brandLight font-bold text-base ml-2 mt-2">
+              <sup className="text-yellow-700 dark:text-yellow-600 font-bold text-base ml-2 mt-2">
                 {supporters.length}
               </sup>
             </Button>
@@ -50,8 +50,8 @@ export default function SupportersPage() {
               {showAll ? "Show Less" : "Show More"}
             </Button>
           )}
-          <Button variant="primary" href="/support">
-            Support Us
+          <Button variant="primary" href="https://github.com/opentffoundation/opentf/blob/main/CONTRIBUTING.md">
+          Contribute
           </Button>
         </div>
       </div>
