@@ -4,5 +4,5 @@ import { useNavbarSecondaryMenu } from "@docusaurus/theme-common/internal";
 
 export default function NavbarMobileSidebarSecondaryMenu() {
   const secondaryMenu = useNavbarSecondaryMenu();
-  return <>{secondaryMenu.content}</>;
+  return <div className="mt-6 text-lg">{secondaryMenu.content}</div>;
 }

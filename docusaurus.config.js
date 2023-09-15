@@ -1,7 +1,34 @@
 // @ts-check
 
-const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+
+const visit = require("unist-util-visit");
+
+/**
+ * Rewrite the URL in a Markdown node.
+ * Taken from https://github.com/rjanjic/remark-link-rewrite and simplified to our use case.
+ * @param options
+ * @returns {function(*): Promise<*>}
+ */
+function RemarkLinkRewrite({ replacer }) {
+  return (tree) => {
+    visit(tree, (node) => {
+      if (node.type === "link") {
+        node.url = replacer(node.url);
+      }
+      if (node.type === "jsx" || node.type === "html") {
+        if (/<a.*>/.test(node.value)) {
+          node.value = node.value.replace(
+            /href="(.*?)"/g,
+            (_, url) => `href="${replacer(url)}"`
+          );
+        }
+      }
+    });
+
+    return tree;
+  };
+}
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -35,6 +62,19 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/docs",
+          remarkPlugins: [
+            [
+              RemarkLinkRewrite,
+              {
+                replacer: (url) => {
+                  if (url.startsWith("/opentf/")) {
+                    return url.replace("/opentf/", "/docs/");
+                  }
+                  return url;
+                },
+              },
+            ],
+          ],
         },
         blog: false,
       }),
@@ -195,8 +235,7 @@ const config = {
         ],
       },
       prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
+        theme: darkCodeTheme,
         additionalLanguages: ["hcl"],
       },
     }),
