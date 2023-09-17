@@ -21,7 +21,11 @@ function SupporterType({ children, withSeparator, count }: SupporterTypeProps) {
           {count}
         </sup>
       )}
-      {withSeparator && <span className="mx-4 text-gray-400">•</span>}
+      {withSeparator && (
+        <span className="mx-4 text-gray-400" aria-hidden>
+          •
+        </span>
+      )}
     </li>
   );
 }
