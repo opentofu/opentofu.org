@@ -1,10 +1,9 @@
 {
-  "extends": "@tsconfig/docusaurus/tsconfig.json",
+  "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
     "lib": ["ES2022", "DOM"],
     "baseUrl": ".",
     "resolveJsonModule": true,
-    "moduleResolution": "NodeNext",
     "paths": {
       "@theme/*": ["src/theme/*"],
       "@site/*": ["*"]
