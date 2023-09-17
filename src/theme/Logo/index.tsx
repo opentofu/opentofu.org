@@ -12,8 +12,12 @@ export default function Logo() {
   const logoLink = useBaseUrl("/");
 
   return (
-    <Link to={logoLink} className="text-gray-900 dark:text-gray-50">
-      <LogoSvg aria-label={title} className="h-12 mb-3" />
+    <Link
+      to={logoLink}
+      className="text-gray-900 dark:text-gray-50"
+      aria-label={title}
+    >
+      <LogoSvg aria-hidden className="h-12 mb-3" />
     </Link>
   );
 }

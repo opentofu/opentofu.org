@@ -28,16 +28,24 @@ export default function SupportersPage() {
       </Jumbotron>
 
       <div className="container mx-auto md:pt-6 pb-10 px-4">
-        <div className="flex flex-wrap gap-3 md:gap-6 justify-center py-4">
+        <div
+          className="flex flex-wrap gap-3 md:gap-6 justify-center py-4"
+          role="group"
+          aria-label="Supporter types"
+        >
           {types.map(([type, supporters]) => (
             <Button
               key={type}
               variant="secondary"
               aria-selected={type === selectedType}
               onClick={() => setSelectedType(type)}
+              aria-label={`Show ${type} (${supporters.length} total)`}
             >
               {type}
-              <sup className="text-yellow-700 dark:text-yellow-600 font-bold text-base ml-2 mt-2">
+              <sup
+                className="text-yellow-700 dark:text-yellow-600 font-bold text-base ml-2 mt-2"
+                aria-hidden
+              >
                 {supporters.length}
               </sup>
             </Button>
