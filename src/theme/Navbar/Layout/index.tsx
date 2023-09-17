@@ -24,7 +24,7 @@ export default function NavbarLayout({ children }: Props) {
   const mobileSidebar = useNavbarMobileSidebar();
 
   return (
-    <nav className="h-16 sm:h-24 flex items-center">
+    <nav className="h-16 sm:h-24 flex items-center" role="navigation">
       {children}
       <NavbarBackdrop onClick={mobileSidebar.toggle} />
       <NavbarMobileSidebar />

@@ -53,11 +53,18 @@ export default function SupportersPage() {
         </div>
         <SupportersList list={truncatedSupporters} />
         <div className="flex gap-6 justify-center">
-          {hasMore && (
-            <Button variant="secondary" onClick={() => setShowAll((v) => !v)}>
-              {showAll ? "Show Less" : "Show More"}
-            </Button>
-          )}
+          <Button
+            variant="secondary"
+            onClick={() => setShowAll((v) => !v)}
+            aria-controls="supporters-list"
+          >
+            <span aria-hidden>{showAll ? "Show Less" : "Show More"}</span>
+            <span className="sr-only">
+              {showAll
+                ? "Collapse the list of supporters"
+                : "Expand the list of supporters"}
+            </span>
+          </Button>
         </div>
       </div>
     </Layout>

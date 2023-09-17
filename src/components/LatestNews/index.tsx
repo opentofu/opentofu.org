@@ -15,7 +15,7 @@ export default function LatestNews({ recentPosts }) {
           Latest News
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Link to={permalink}>
+          <Link to={permalink} aria-label={`Read more about: ${title}`}>
             <img src={frontMatter.image} alt={title} />
           </Link>
           <div className="flex flex-col items-start">
@@ -35,7 +35,7 @@ export default function LatestNews({ recentPosts }) {
             </div>
             <Button variant="secondary" href={permalink}>
               <span aria-hidden>Read More</span>
-              <span className="sr-only">Read more about: ${title}</span>
+              <span className="sr-only">Read more about: {title}</span>
             </Button>
           </div>
         </div>

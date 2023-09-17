@@ -36,7 +36,8 @@ export default function FAQ() {
 
         <div className="flex justify-center mt-6">
           <Button variant="secondary" href="/faq">
-            Show More
+            <span aria-hidden>Show More</span>
+            <span className="sr-only">Go to the FAQ page</span>
           </Button>
         </div>
       </div>

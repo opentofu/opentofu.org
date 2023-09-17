@@ -22,6 +22,7 @@ function DropdownNavbarItemDesktop({
   const dropdownRef = useClickOutside<HTMLDivElement>(callback);
 
   const [showDropdown, setShowDropdown] = useState(false);
+  const id = `navbar-item-${props.to.replace(/[^\w]/g, "")}`;
 
   return (
     <div ref={dropdownRef} className="group">
@@ -42,6 +43,7 @@ function DropdownNavbarItemDesktop({
             setShowDropdown(!showDropdown);
           }
         }}
+        id={id}
         label={
           <>
             {children ?? label}
@@ -56,11 +58,15 @@ function DropdownNavbarItemDesktop({
           </>
         }
       />
-      <div className="absolute shadow-2xl bg-gray-150 dark:bg-gray-700 p-3 gap-3 hidden group-hover:flex peer-aria-expanded:flex flex-col w-36">
+      <nav
+        className="absolute shadow-2xl bg-gray-150 dark:bg-gray-700 p-3 gap-3 hidden group-hover:flex peer-aria-expanded:flex flex-col w-36"
+        role="navigation"
+        aria-labelledby={id}
+      >
         {items.map((childItemProps, i) => (
           <NavbarItem isDropdownItem {...childItemProps} key={i} />
         ))}
-      </div>
+      </nav>
     </div>
   );
 }

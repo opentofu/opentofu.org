@@ -61,7 +61,8 @@ export default function Supporters() {
       <SupportersList list={list} />
       <div className="flex gap-6 justify-center">
         <Button variant="secondary" href="/supporters">
-          Show More
+          <span aria-hidden>Show More</span>
+          <span className="sr-only">Go to the Supporters page</span>
         </Button>
       </div>
     </section>
