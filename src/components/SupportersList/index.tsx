@@ -18,9 +18,9 @@ export default function SupportersList({ list }: SupportersListProps) {
   const { logos } = siteConfig.customFields;
 
   return (
-    <div className="mt-6 md:mt-12 mb-6 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto w-full text-gray-600 dark:text-gray-500">
+    <ul className="mt-6 md:mt-12 mb-6 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto w-full text-gray-600 dark:text-gray-500">
       {list.map((supporter, index) => (
-        <div
+        <li
           className="py-3 md:py-6 border-b dark:border-gray-800 border-gray-200 flex gap-4 justify-between items-center"
           key={index}
         >
@@ -45,8 +45,8 @@ export default function SupportersList({ list }: SupportersListProps) {
           </Link>
 
           <p className="w-2/3 text-right">{supporter.pledge}</p>
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
