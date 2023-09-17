@@ -35,9 +35,9 @@ export default function Supporters() {
 
   return (
     <section className="py-12 mx-auto container items-center flex flex-col px-4">
-      <h3 className="text-center text-3xl md:text-5xl font-bold mb-4 md:mb-7">
+      <h2 className="text-center text-3xl md:text-5xl font-bold mb-4 md:mb-7">
         Supporters
-      </h3>
+      </h2>
       <ol className="inline-flex flex-wrap justify-center" role="list">
         {types.map(([type, supporters], index) => (
           <SupporterType

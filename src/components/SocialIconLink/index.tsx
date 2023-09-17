@@ -25,11 +25,13 @@ export default function SocialIconLink({
     <Link
       href={href}
       className="flex items-center gap-3 text-gray-900 dark:text-gray-50 hover:text-gray-500 hover:dark:text-gray-500"
+      aria-label={name}
     >
       <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
         className="w-6 h-6"
+        aria-hidden
       >
         <path fill="currentColor" d={iconMap[name]} />
       </svg>

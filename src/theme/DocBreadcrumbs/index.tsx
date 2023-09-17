@@ -55,6 +55,7 @@ function BreadcrumbsItem({
         fill="none"
         viewBox="0 0 16 16"
         className="w-4 text-gray-300 dark:text-gray-700"
+        aria-hidden
       >
         <path
           className="fill-current"

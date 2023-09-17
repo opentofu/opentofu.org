@@ -10,9 +10,9 @@ export default function FAQ() {
   return (
     <section className="flex flex-col justify-center w-full py-10 md:py-20 px-4 bg-gradient-to-b from-white dark:from-blue-900 to-transparent">
       <div className="w-full max-w-4xl mx-auto">
-        <h3 className="text-center text-3xl md:text-5xl font-bold mb-6 md:mb-12">
+        <h2 className="text-center text-3xl md:text-5xl font-bold mb-6 md:mb-12">
           Frequently Asked Questions
-        </h3>
+        </h2>
 
         <Accordion>
           <MDXProvider
