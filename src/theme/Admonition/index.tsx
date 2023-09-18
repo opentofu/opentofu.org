@@ -56,7 +56,7 @@ const AdmonitionConfigs: Record<string, AdmonitionConfig> = {
   },
   warning: {
     className:
-      "bg-orange-100 border-orange-300 text-orange-700 dark:bg-orange-950 dark:border-orange-700 dark:text-orange-200",
+      "bg-yellow-100 border-yellow-500 text-yellow-700 dark:bg-yellow-950 dark:border-yellow-700 dark:text-yellow-200",
     iconComponent: CautionIcon,
     label: "Warning",
   },
