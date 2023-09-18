@@ -7,6 +7,7 @@ type AccordionItemProps = {
   summary: string;
   open?: boolean;
   highlight?: boolean;
+  id: string;
 };
 
 const classNames = [
@@ -31,10 +32,10 @@ const classNames = [
   "font-normal",
 ];
 
-const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
+const AccordionItem = ({ summary, open, children, id }: AccordionItemProps) => {
   const detailsRef = useRef(null);
   const location = useLocation();
-
+  const hashEnabled = location.pathname === "/faq";
   const handleItemClick = () => {
     document.querySelectorAll("details.accordion-item").forEach((item) => {
       if (item !== detailsRef.current) {
@@ -42,16 +43,20 @@ const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
       }
     });
 
+    if (!hashEnabled) {
+      return;
+    }
+
     if (decodeURI(location.hash) === `#${summary}`) {
       // Hash at the end disables ability to open automaticaly first FAQ item
       window.location.replace(`${location.pathname}#`);
     } else {
-      window.location.replace(`${location.pathname}#${encodeURI(summary)}`);
+      window.location.replace(`${location.pathname}#${encodeURI(id)}`);
     }
   };
 
   useEffect(() => {
-    if (decodeURI(location.hash) === `#${summary}`) {
+    if (decodeURI(location.hash) === `#${id}` && hashEnabled) {
       document.querySelectorAll("details.accordion-item").forEach((item) => {
         if (item !== detailsRef.current) {
           item.removeAttribute("open");
