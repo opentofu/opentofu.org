@@ -1,5 +1,6 @@
 import Link from "@docusaurus/Link";
 import React from "react";
+import clsx from "clsx";
 
 const iconMap = {
   twitter:
@@ -14,12 +15,14 @@ type SocialIconLinkProps = {
   name: keyof typeof iconMap;
   href: string;
   label: string;
+  hiddenLabel?: boolean;
 };
 
 export default function SocialIconLink({
   href,
   name,
   label,
+  hiddenLabel = false,
 }: SocialIconLinkProps) {
   return (
     <Link
@@ -35,7 +38,7 @@ export default function SocialIconLink({
       >
         <path fill="currentColor" d={iconMap[name]} />
       </svg>
-      <span className="inline-flex xl:hidden" aria-hidden>
+      <span className={clsx("inline-flex xl:hidden", hiddenLabel && "hidden")} aria-hidden>
         {label}
       </span>
     </Link>
