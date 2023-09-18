@@ -47,9 +47,8 @@ export default function SupportersList({ list }: SupportersListProps) {
                   "--dark-img": `url('${useBaseUrl(
                     logos[supporter.name].dark
                   )}')`,
-                  height: `calc(${logos[supporter.name].textRatio} * 18px)`,
                 }}
-                className="w-28 [background-image:--light-img] dark:[background-image:--dark-img] bg-no-repeat bg-center"
+                className="w-28 h-10 [background-image:--light-img] dark:[background-image:--dark-img] bg-no-repeat bg-contain bg-left"
               />
             ) : (
               supporter.name

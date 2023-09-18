@@ -249,29 +249,24 @@ const config = {
   customFields: {
     logos: {
       Gruntwork: {
-        dark: "/logos/gruntwork-dark.svg",
-        light: "/logos/gruntwork-light.svg",
-        textRatio: 1,
+        dark: "/logos/gruntwork-dark.png",
+        light: "/logos/gruntwork-light.png",
       },
       Spacelift: {
-        dark: "/logos/spacelift-dark.svg",
-        light: "/logos/spacelift-light.svg",
-        textRatio: 2.1,
+        dark: "/logos/spacelift-dark.png",
+        light: "/logos/spacelift-light.png",
       },
       env0: {
-        dark: "/logos/env0-dark.svg",
-        light: "/logos/env0-light.svg",
-        textRatio: 0.9,
+        dark: "/logos/env0-dark.png",
+        light: "/logos/env0-light.png",
       },
       Scalr: {
-        dark: "/logos/scalr-dark.svg",
-        light: "/logos/scalr-light.svg",
-        textRatio: 1.1,
+        dark: "/logos/scalr-dark.png",
+        light: "/logos/scalr-light.png",
       },
       Harness: {
-        dark: "/logos/harness-dark.svg",
-        light: "/logos/harness-light.svg",
-        textRatio: 1.1,
+        dark: "/logos/harness-dark.png",
+        light: "/logos/harness-light.png",
       },
     },
   },
