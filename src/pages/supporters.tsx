@@ -50,9 +50,6 @@ export default function SupportersPage() {
               {showAll ? "Show Less" : "Show More"}
             </Button>
           )}
-          <Button variant="primary" href="https://github.com/opentffoundation/opentf/blob/main/CONTRIBUTING.md">
-          Contribute
-          </Button>
         </div>
       </div>
     </Layout>
