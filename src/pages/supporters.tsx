@@ -21,7 +21,7 @@ export default function SupportersPage() {
     ? filteredSupporters
     : filteredSupporters.slice(0, INITIAL_LIST_COUNT);
 
-  const hasMoreButtonVisible = filteredSupporters.length > INITIAL_LIST_COUNT;
+  const isMoreButtonVisible = filteredSupporters.length > INITIAL_LIST_COUNT;
 
   return (
     <Layout title="OpenTF Supporters">
@@ -55,7 +55,7 @@ export default function SupportersPage() {
         </div>
         <SupportersList list={truncatedSupporters} />
         <div className="flex gap-6 justify-center">
-          {hasMoreButtonVisible && (
+          {isMoreButtonVisible && (
             <Button
               variant="secondary"
               onClick={() => setShowAll((v) => !v)}
