@@ -47,7 +47,7 @@ export default function Footer({ links }: FooterProps) {
         <SocialIconLink
           name="github"
           href="https://github.com/opentffoundation/manifesto"
-          label="Go to the OpenTF's manifesto GitHub repository"
+          label="Go to the OpenTofu's manifesto GitHub repository"
           hiddenLabel
         />
         <SocialIconLink

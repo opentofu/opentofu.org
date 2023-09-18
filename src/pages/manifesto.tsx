@@ -7,7 +7,7 @@ import Headline from "../components/Headline";
 export default function Manifesto() {
   return (
     <Layout
-      title="The OpenTF Manifesto"
+      title="The OpenTofu Manifesto"
       description="Terraform was open-sourced in 2014 under the Mozilla Public License
     (v2.0) (the “MPL”). Over the next ~9 years, it built up a community
     that included thousands of users, contributors, customers, certified
@@ -15,7 +15,7 @@ export default function Manifesto() {
     plugins, libraries, and extensions."
     >
       <Jumbotron>
-        <Headline className="max-w-2xl">The OpenTF Manifesto</Headline>
+        <Headline className="max-w-2xl">The OpenTofu Manifesto</Headline>
       </Jumbotron>
       <TextContent className="max-w-2xl">
         <p>
