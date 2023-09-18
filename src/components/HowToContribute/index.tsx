@@ -7,7 +7,7 @@ export default function HowToContribute() {
     <section className="flex flex-col justify-center w-full py-5 md:py-10 px-4">
       <div className="w-full max-w-4xl mx-auto leading-snug">
         <h2 className="text-center text-3xl md:text-5xl mb-3 md:mb-6 font-bold">
-          How to use and contribute to OpenTF?
+          How to use and contribute to OpenTofu?
         </h2>
         <p className="text-gray-600 dark:text-gray-500 text-center text-base md:text-xl mb-6 md:mb-12 md:leading-relaxed">
           The best way to show practical support for the OpenTofu initiative is
@@ -18,7 +18,7 @@ export default function HowToContribute() {
           >
             contribution guide
           </Link>{" "}
-          explains OpenTF contribution recommended practices, including how to
+          explains OpenTofu contribution recommended practices, including how to
           submit issues, how to get involved in the discussion, how to work on
           the code, and how to contribute code changes.
         </p>
