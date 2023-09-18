@@ -7,6 +7,8 @@ import Button from "../components/Button";
 import SupportersList from "../components/SupportersList";
 import Headline from "../components/Headline";
 
+const INITIAL_LIST_COUNT = 20;
+
 export default function SupportersPage() {
   const groupedSupporters = groupSupportersByType(supporters);
   const types = Object.entries(groupedSupporters);
@@ -17,9 +19,9 @@ export default function SupportersPage() {
 
   const truncatedSupporters = showAll
     ? filteredSupporters
-    : filteredSupporters.slice(0, 20);
+    : filteredSupporters.slice(0, INITIAL_LIST_COUNT);
 
-  const hasMore = filteredSupporters.length > truncatedSupporters.length;
+  const hasMoreButtonVisible = filteredSupporters.length > INITIAL_LIST_COUNT;
 
   return (
     <Layout title="OpenTF Supporters">
@@ -53,18 +55,20 @@ export default function SupportersPage() {
         </div>
         <SupportersList list={truncatedSupporters} />
         <div className="flex gap-6 justify-center">
-          <Button
-            variant="secondary"
-            onClick={() => setShowAll((v) => !v)}
-            aria-controls="supporters-list"
-          >
-            <span aria-hidden>{showAll ? "Show Less" : "Show More"}</span>
-            <span className="sr-only">
-              {showAll
-                ? "Collapse the list of supporters"
-                : "Expand the list of supporters"}
-            </span>
-          </Button>
+          {hasMoreButtonVisible && (
+            <Button
+              variant="secondary"
+              onClick={() => setShowAll((v) => !v)}
+              aria-controls="supporters-list"
+            >
+              <span aria-hidden>{showAll ? "Show Less" : "Show More"}</span>
+              <span className="sr-only">
+                {showAll
+                  ? "Collapse the list of supporters"
+                  : "Expand the list of supporters"}
+              </span>
+            </Button>
+          )}
         </div>
       </div>
     </Layout>
