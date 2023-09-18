@@ -31,9 +31,9 @@ const classNames = [
 
   // <a>
   "prose-a:text-current",
-  "hover:prose-a:text-black",
+  "hover:prose-a:text-black/50",
   "dark:prose-a:text-current",
-  "dark:hover:prose-a:text-white",
+  "dark:hover:prose-a:text-white/50",
 
   // <strong>
   "prose-strong:text-current",
