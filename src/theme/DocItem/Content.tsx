@@ -5,8 +5,8 @@ import MDXContent from "@theme/MDXContent";
 const classNames = [
   "prose",
   "lg:prose-lg",
-  "text-gray-800",
-  "dark:text-gray-200",
+  "text-gray-900",
+  "dark:text-gray-50",
   "dark:prose-invert",
   "marker:text-gray-600",
   "dark:marker:text-gray-400",
@@ -23,21 +23,21 @@ const classNames = [
 
   // <code>
   "prose-code:px-1.5",
-  "prose-code:text-gray-800",
-  "dark:prose-code:text-gray-200",
+  "prose-code:text-current",
+  "dark:prose-code:text-current",
   "dark:prose-code:border-gray-600",
   "prose-code:before:content-none",
   "prose-code:after:content-none",
 
   // <a>
-  "prose-a:text-gray-800",
+  "prose-a:text-current",
   "hover:prose-a:text-black",
-  "dark:prose-a:text-gray-200",
+  "dark:prose-a:text-current",
   "dark:hover:prose-a:text-white",
 
   // <strong>
-  "prose-strong:text-gray-800",
-  "dark:prose-strong:text-gray-200",
+  "prose-strong:text-current",
+  "dark:prose-strong:text-current",
 
   // <h1>, <h2>, <h3>
   "prose-h1:text-4xl",
