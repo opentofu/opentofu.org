@@ -17,7 +17,7 @@ export default function BlogListItem({ item }) {
         <time
           dateTime={date}
           itemProp="datePublished"
-          className="text-yellow-700 dark:text-yellow-500 uppercase font-bold"
+          className="text-brand-700 dark:text-brand-500 uppercase font-bold"
         >
           {formattedDate}
         </time>

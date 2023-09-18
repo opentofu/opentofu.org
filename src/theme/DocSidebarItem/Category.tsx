@@ -114,9 +114,9 @@ export default function DocSidebarItemCategory({
     <li>
       <Link
         className={clsx(
-          "flex justify-between items-center py-2 px-4 hover:text-gray-900 hover:dark:text-yellow-600",
+          "flex justify-between items-center py-2 px-4 hover:text-gray-900 hover:dark:text-brand-600",
           {
-            "bg-yellow-500 dark:bg-yellow-800 text-gray-900  dark:text-yellow-600":
+            "bg-brand-500 dark:bg-brand-800 text-gray-900  dark:text-brand-600":
               isActive,
           }
         )}
