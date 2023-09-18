@@ -43,6 +43,9 @@ const classNames = [
   "prose-h1:text-4xl",
   "prose-h2:text-3xl",
   "prose-h3:text-2xl",
+
+  "prose-th:px-3",
+  "prose-td:px-3",
 ];
 
 export default function DocItemContent({ children }) {
