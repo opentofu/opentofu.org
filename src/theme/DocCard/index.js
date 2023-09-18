@@ -14,7 +14,7 @@ function CardContainer({ href, children }) {
       href={href}
       className={clsx(
         "card padding--lg",
-        "text-gray-800 dark:text-gray-100 hover:text-gray-900 hover:dark:text-gray-50",
+        "rounded-none text-gray-800 dark:text-gray-100 hover:text-gray-900 hover:dark:text-gray-50",
         styles.cardContainer
       )}
     >
@@ -29,7 +29,7 @@ function CardLayout({ href, icon, title, description }) {
         className={clsx("text--truncate", styles.cardTitle, "mb-4")}
         title={title}
       >
-        {icon} {title}
+        {title}
       </h2>
       {description && (
         <p
