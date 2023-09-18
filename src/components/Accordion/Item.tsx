@@ -1,5 +1,6 @@
 import clsx from "clsx";
-import React, { useRef } from "react";
+import { useLocation } from "@docusaurus/router";
+import React, { useEffect, useRef } from "react";
 
 type AccordionItemProps = {
   children: React.ReactNode;
@@ -32,6 +33,7 @@ const classNames = [
 
 const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
   const detailsRef = useRef(null);
+  const location = useLocation();
 
   const handleItemClick = () => {
     document.querySelectorAll("details.accordion-item").forEach((item) => {
@@ -39,7 +41,21 @@ const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
         item.removeAttribute("open");
       }
     });
+
+    window.location.replace(`${location.pathname}#${encodeURI(summary)}`);
   };
+
+  useEffect(() => {
+    if (decodeURI(location.hash) === `#${summary}`) {
+      document.querySelectorAll("details.accordion-item").forEach((item) => {
+        if (item !== detailsRef.current) {
+          item.removeAttribute("open");
+        } else {
+          item.setAttribute("open", "true");
+        }
+      });
+    }
+  }, []);
 
   return (
     <details
