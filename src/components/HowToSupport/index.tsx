@@ -19,9 +19,9 @@ export default function HowToSupport() {
   return (
     <section className="flex flex-col justify-center w-full py-5 md:py-10 px-4">
       <div className="w-full max-w-7xl mx-auto">
-        <h3 className="text-center text-3xl md:text-5xl mb-3 md:mb-6 font-bold">
+        <h2 className="text-center text-3xl md:text-5xl mb-3 md:mb-6 font-bold">
           How to support OpenTofu in pledging?
-        </h3>
+        </h2>
         <p className="text-gray-600 dark:text-gray-500 text-center text-base md:text-xl mb-6 md:mb-12">
           Pledging to the OpenTofu manifesto can be done by:
         </p>
@@ -33,6 +33,7 @@ export default function HowToSupport() {
                 viewBox="0 0 48 48"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                aria-hidden
               >
                 <g className="fill-yellow-600">
                   <path d="M36 8.152H14.667c-2.206 0-4 1.795-4 4v23.334a4.672 4.672 0 0 0 4.666 4.666H36c.737 0 1.333-.597 1.333-1.333V9.485c0-.736-.596-1.333-1.333-1.333ZM17.333 14.82h13.334v9.333H17.333V14.82Zm17.334 22.666H15.333c-1.102 0-2-.897-2-2 0-1.102.898-2 2-2h19.334v4Z" />
@@ -62,6 +63,7 @@ export default function HowToSupport() {
                 fill="none"
                 viewBox="0 0 48 48"
                 className="w-12"
+                aria-hidden
               >
                 <g stroke-miterlimit="10" stroke-width="3.2">
                   <path
@@ -103,6 +105,7 @@ export default function HowToSupport() {
                 fill="none"
                 viewBox="0 0 48 48"
                 className="w-12"
+                aria-hidden
               >
                 <path
                   className="fill-yellow-600"
@@ -124,6 +127,7 @@ export default function HowToSupport() {
                 fill="none"
                 viewBox="0 0 48 48"
                 className="w-12"
+                aria-hidden
               >
                 <path
                   className="fill-yellow-600"
@@ -145,6 +149,7 @@ export default function HowToSupport() {
                 fill="none"
                 viewBox="0 0 48 48"
                 className="w-12"
+                aria-hidden
               >
                 <path
                   className="fill-yellow-600"
@@ -172,6 +177,7 @@ export default function HowToSupport() {
                 height="49"
                 viewBox="0 0 48 49"
                 fill="none"
+                aria-hidden
               >
                 <path
                   className="fill-yellow-600"

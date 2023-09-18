@@ -9,7 +9,7 @@ export default function HomeBreadcrumbItem() {
   return (
     <li>
       <Link aria-label="Home page" href={homeHref}>
-        <IconHome className="w-6" />
+        <IconHome className="w-6" aria-hidden />
       </Link>
     </li>
   );

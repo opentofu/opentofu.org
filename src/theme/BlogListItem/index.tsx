@@ -30,7 +30,8 @@ export default function BlogListItem({ item }) {
           {description}
         </p>
         <Button variant="secondary" href={permalink}>
-          Read more
+          <span aria-hidden>Read More</span>
+          <span className="sr-only">Read more about: ${title}</span>
         </Button>
       </div>
     </div>

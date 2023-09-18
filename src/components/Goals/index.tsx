@@ -8,8 +8,8 @@ import HumidityIcon from "../../icons/humidity.svg";
 function Goal({ icon: Icon, title, description }) {
   return (
     <div className="bg-white dark:bg-blue-900 p-6">
-      <Icon className="w-12 mb-4" />
-      <h4 className="text-xl mb-2">{title}</h4>
+      <Icon className="w-12 mb-4" aria-hidden />
+      <h3 className="text-xl mb-2">{title}</h3>
       <p className="text-gray-600 dark:text-gray-500">{description}</p>
     </div>
   );
@@ -18,9 +18,9 @@ function Goal({ icon: Icon, title, description }) {
 export default function Goals() {
   return (
     <section className="py-6 md:py-12 mx-auto container px-4">
-      <h3 className="text-center text-3xl md:text-5xl font-bold mb-6 md:mb-12">
+      <h2 className="text-center text-3xl md:text-5xl font-bold mb-6 md:mb-12">
         Our Goals
-      </h3>
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <Goal
           icon={ExpandIcon}

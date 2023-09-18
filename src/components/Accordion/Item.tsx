@@ -34,6 +34,7 @@ const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
           viewBox="0 0 24 24"
           fill="none"
           className="h-6 w-6 shrink-0"
+          aria-hidden
         >
           <path
             d="M11.8 2a.8.8 0 0 1 .8.8V11h8.2a.8.8 0 0 1 0 1.6h-8.2v8.2a.8.8 0 0 1-1.6 0v-8.2H2.8a.8.8 0 0 1 0-1.6H11V2.8a.8.8 0 0 1 .8-.8Z"

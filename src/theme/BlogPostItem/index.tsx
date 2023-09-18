@@ -51,8 +51,9 @@ function ShareButton({ platform, title, url }) {
       target="_blank"
       rel="noopener"
       className="rounded-md bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-300 p-2 hover:bg-gray-150 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-150 transition-colors"
+      aria-label={`Share on ${platform.name}`}
     >
-      <div aria-hidden="true" className="w-6">
+      <div aria-hidden className="w-6">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path d={platform.iconPath} className="fill-current" />
         </svg>
