@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import ThemedImage from "@theme/ThemedImage";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
 type SupportersListProps = {
@@ -35,13 +34,17 @@ export default function SupportersList({ list }: SupportersListProps) {
             aria-label={`Go to ${supporter.name} website`}
           >
             {logos[supporter.name] ? (
-              <ThemedImage
-                alt={supporter.name}
-                sources={{
-                  light: useBaseUrl(logos[supporter.name].light),
-                  dark: useBaseUrl(logos[supporter.name].dark),
+              <div
+                aria-hidden
+                style={{
+                  "--light-img": `url('${useBaseUrl(
+                    logos[supporter.name].light
+                  )}')`,
+                  "--dark-img": `url('${useBaseUrl(
+                    logos[supporter.name].dark
+                  )}')`,
                 }}
-                className="w-28"
+                className="w-28 h-8 [background-image:--light-img] dark:[background-image:--dark-img] bg-no-repeat bg-center"
               />
             ) : (
               supporter.name
