@@ -2,6 +2,7 @@ import React from "react";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
+import clsx from "clsx";
 
 type SupportersListProps = {
   list: {
@@ -23,7 +24,10 @@ export default function SupportersList({ list }: SupportersListProps) {
     >
       {list.map((supporter, index) => (
         <li
-          className="py-3 md:py-6 border-b dark:border-gray-800 border-gray-200 flex gap-4 justify-between items-center"
+          className={clsx(
+            "border-b dark:border-gray-800 border-gray-200 flex gap-4 justify-between items-center",
+            logos[supporter.name] ? "py-2 md:py-4" : "py-3 md:py-6"
+          )}
           key={index}
         >
           <Link
@@ -43,8 +47,9 @@ export default function SupportersList({ list }: SupportersListProps) {
                   "--dark-img": `url('${useBaseUrl(
                     logos[supporter.name].dark
                   )}')`,
+                  height: `calc(${logos[supporter.name].textRatio} * 18px)`,
                 }}
-                className="w-28 h-8 [background-image:--light-img] dark:[background-image:--dark-img] bg-no-repeat bg-center"
+                className="w-28 [background-image:--light-img] dark:[background-image:--dark-img] bg-no-repeat bg-center"
               />
             ) : (
               supporter.name

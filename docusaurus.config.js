@@ -251,16 +251,27 @@ const config = {
       Gruntwork: {
         dark: "/logos/gruntwork-dark.svg",
         light: "/logos/gruntwork-light.svg",
+        textRatio: 1,
       },
       Spacelift: {
         dark: "/logos/spacelift-dark.svg",
         light: "/logos/spacelift-light.svg",
+        textRatio: 2.1,
       },
-      env0: { dark: "/logos/env0-dark.svg", light: "/logos/env0-light.svg" },
-      Scalr: { dark: "/logos/scalr-dark.svg", light: "/logos/scalr-light.svg" },
+      env0: {
+        dark: "/logos/env0-dark.svg",
+        light: "/logos/env0-light.svg",
+        textRatio: 0.9,
+      },
+      Scalr: {
+        dark: "/logos/scalr-dark.svg",
+        light: "/logos/scalr-light.svg",
+        textRatio: 1.1,
+      },
       Harness: {
         dark: "/logos/harness-dark.svg",
         light: "/logos/harness-light.svg",
+        textRatio: 1.1,
       },
     },
   },
