@@ -23,6 +23,7 @@ html[data-theme="dark"] {
   --ifm-font-color-base: theme("colors.gray.50");
   --ifm-navbar-search-input-placeholder-color: theme("colors.gray.500");
   --ifm-card-background-color: theme("colors.blue.900");
+  --docsearch-primary-color: theme("colors.blue.900");
 }
 
 html[data-theme="light"] {

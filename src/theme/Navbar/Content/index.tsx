@@ -1,4 +1,6 @@
 import React from "react";
+import clsx from "clsx";
+
 import { useThemeConfig, ErrorCauseBoundary } from "@docusaurus/theme-common";
 import { splitNavbarItems } from "@docusaurus/theme-common/internal";
 import NavbarItem, { type Props as NavbarItemConfig } from "@theme/NavbarItem";
@@ -6,6 +8,8 @@ import NavbarColorModeToggle from "@theme/Navbar/ColorModeToggle";
 import SearchBar from "@theme/SearchBar";
 import NavbarMobileSidebarToggle from "@theme/Navbar/MobileSidebar/Toggle";
 import NavbarLogo from "@theme/Navbar/Logo";
+
+import styles from "./styles.module.css";
 
 function NavbarItems({ items }: { items: NavbarItemConfig[] }) {
   return (
@@ -38,7 +42,7 @@ export default function NavbarContent() {
         </div>
       </div>
 
-      <div className="flex items-center gap-6">
+      <div className={clsx(styles.navbarContent, "flex", "items-center", "gap-6")}>
         <SearchBar />
 
         <div className="items-center gap-6 hidden xl:flex">
