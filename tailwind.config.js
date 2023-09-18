@@ -8,7 +8,7 @@ module.exports = {
         fontSize: {
           "5xl": "2.5rem",
         },
-        yellow: {
+        brand: {
           900: "#332c05",
           850: "#4d4107",
           800: "#66570a",
