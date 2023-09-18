@@ -6,7 +6,7 @@ const classNames = [
   "prose",
   "lg:prose-lg",
   "text-gray-900",
-  "dark:text-gray-50",
+  "dark:text-gray-100",
   "dark:prose-invert",
   "marker:text-gray-600",
   "dark:marker:text-gray-400",
