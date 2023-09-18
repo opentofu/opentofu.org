@@ -42,7 +42,12 @@ const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
       }
     });
 
-    window.location.replace(`${location.pathname}#${encodeURI(summary)}`);
+    if (decodeURI(location.hash) === `#${summary}`) {
+      // Hash at the end disables ability to open automaticaly first FAQ item
+      window.location.replace(`${location.pathname}#`);
+    } else {
+      window.location.replace(`${location.pathname}#${encodeURI(summary)}`);
+    }
   };
 
   useEffect(() => {
