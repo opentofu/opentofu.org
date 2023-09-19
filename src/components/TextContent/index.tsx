@@ -25,7 +25,9 @@ const classNames = [
 
   // <code>
   "prose-code:px-1.5",
+  "prose-code:font-medium",
   "prose-code:text-inherit",
+  "prose-code:prose-a:font-bold",
   "dark:prose-code:text-inherit",
   "dark:prose-code:border-gray-600",
   "prose-code:before:content-none",
