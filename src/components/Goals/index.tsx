@@ -44,7 +44,7 @@ export default function Goals() {
         />
         <Goal
           icon={HumidityIcon}
-          title="Backwards-compatibile"
+          title="Backwards-compatible"
           description="so that the existing code can drive value for years to come."
         />
       </div>
