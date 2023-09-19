@@ -161,6 +161,7 @@ const config = {
         ],
       },
       navbar: {
+        hideOnScroll: true,
         items: [
           {
             to: "/manifesto",
