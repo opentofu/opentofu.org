@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   darkMode: ["class", '[data-theme="dark"]'],
   content: ["./src/**/*.{js,jsx,ts,tsx,svg}", "./docusaurus.config.js"],
@@ -41,6 +42,9 @@ module.exports = {
           950: "#0c192b",
           900: "#14253D",
         },
+      },
+      screens: {
+        xs: { max: "576px" },
       },
     },
     fontFamily: {
