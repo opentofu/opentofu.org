@@ -38,7 +38,7 @@ export default function NavbarContent() {
         </div>
       </div>
 
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-6 [--ifm-color-primary:theme(colors.brand.700)]">
         <SearchBar />
 
         <div className="items-center gap-6 hidden xl:flex">
