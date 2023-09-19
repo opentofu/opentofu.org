@@ -8,7 +8,7 @@ export default function Hero() {
     <header className="flex flex-col items-center py-10 md:py-20 px-6 md:px-16 mx-auto">
       <PatternBg />
       <Headline className="sm:max-w-2xl md:max-w-3xl lg:max-w-4xl">
-        Ensure Terraform remains truly open-source. Always.
+        Ensure OpenTofu remains truly open-source. Always.
       </Headline>
       <p className="my-6 text-xl sm:max-w-lg md:max-w-xl lg:max-w-2xl text-center text-gray-600 dark:text-gray-500">
         Previously named OpenTF, OpenTofu is a fork of Terraform that is
