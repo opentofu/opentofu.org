@@ -97,7 +97,7 @@ const AccordionItem = ({
     >
       <summary
         onClick={handleItemClick}
-        className="list-none py-6 px-6 group-open:pb-0 text-xl flex gap-2 cursor-pointer flex-row items-center justify-between font-medium marker:[font-size:0px]"
+        className="list-none py-6 px-6 group-open:pb-0 text-xl flex gap-2 cursor-pointer flex-row items-center justify-between font-bold marker:[font-size:0px]"
       >
         {summary}
         <svg
