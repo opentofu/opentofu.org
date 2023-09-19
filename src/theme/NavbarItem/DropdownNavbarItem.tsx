@@ -104,8 +104,11 @@ function DropdownNavbarItemMobile({
 
 export default function DropdownNavbarItem({
   mobile = false,
+  activeClassName,
   ...props
 }: Props) {
   const Comp = mobile ? DropdownNavbarItemMobile : DropdownNavbarItemDesktop;
-  return <Comp {...props} />;
+  return (
+    <Comp {...props} activeClassName={clsx(activeClassName, "underline")} />
+  );
 }

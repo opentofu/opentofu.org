@@ -43,9 +43,11 @@ function DefaultNavbarItemMobile({
 
 export default function DefaultNavbarItem({
   mobile = false,
-  position,
+  activeClassName,
   ...props
 }: Props) {
   const Comp = mobile ? DefaultNavbarItemMobile : DefaultNavbarItemDesktop;
-  return <Comp {...props} activeClassName={props.activeClassName} />;
+  return (
+    <Comp {...props} activeClassName={clsx(activeClassName, "underline")} />
+  );
 }
