@@ -55,11 +55,15 @@ const AccordionItem = ({
       return;
     }
 
-    if (decodeURI(location.hash) === `#${id}`) {
-      window.history.replaceState({}, "", location.pathname);
+    if (window.location.hash === `#${id}`) {
+      window.history.replaceState(
+        { hash: undefined },
+        "",
+        `${location.pathname}#`
+      );
     } else {
       window.history.replaceState(
-        {},
+        { hash: id },
         "",
         `${location.pathname}#${encodeURI(id)}`
       );
