@@ -1,10 +1,10 @@
 ---
 title: The OpenTofu fork is now available!
-slug: the-opentf-fork-is-now-available
-image: /img/blog/opentofu.png
+slug: the-opentofu-fork-is-now-available
+image: /img/blog/fork-release.png
 ---
 
-Four weeks ago, HashiCorp switched Terraform from an open source license to the Business Source License (BSL); three weeks ago, we released the [OpenTofu manifesto](https://opentf.org/), asking HashiCorp to switch back to an open source license; two weeks ago, with no response from HashiCorp, we [created a private fork of Terraform](https://opentf.org/announcement) and said we'd make it public in 1-2 weeks; and today, as promised, we're happy to announce that **the OpenTofu repository is now publicly available at** [github.com/opentffoundation/opentf](https://github.com/opentffoundation/opentf)!
+Four weeks ago, HashiCorp switched Terraform from an open source license to the Business Source License (BSL); three weeks ago, we released the [OpenTofu manifesto](/manifesto), asking HashiCorp to switch back to an open source license; two weeks ago, with no response from HashiCorp, we [created a private fork of Terraform](/blog/opentofu-announces-fork-of-terraform) and said we'd make it public in 1-2 weeks; and today, as promised, we're happy to announce that **the OpenTofu repository is now publicly available at** [github.com/opentffoundation/opentf](https://github.com/opentffoundation/opentf)!
 
 <!--truncate-->
 
@@ -24,7 +24,7 @@ A key part of working in the open is making our roadmap open. So here's a quick 
 
 #### ✅ What we already got done
 
-- **Publish the OpenTofu manifesto**. We published the OpenTofu manifesto at [opentf.org](https://opentf.org/).
+- **Publish the OpenTofu manifesto**. We published the OpenTofu manifesto at [opentofu.org](/manifesto).
 - **Wait on HashiCorp's response**. We reached out to HashiCorp publicly and privately and requested a response by August 25th.
 - **Start working on the OpenTofu fork**. With no response from HashiCorp, we created the OpenTofu fork, and started working on it in private.
 - **Apply to join the Linux Foundation**. We want OpenTofu to be part of an impartial, community-driven foundation, so we submitted all the paperwork to join the Linux Foundation.
@@ -45,7 +45,7 @@ A key part of working in the open is making our roadmap open. So here's a quick 
 
 ### Join the OpenTofu community
 
-The response from the community so far has been incredible. In just a few weeks, more than 130 companies and 680 individuals have pledged support to the [OpenTofu manifesto](https://opentf.org/), and the [OpenTofu manifesto repo](https://github.com/opentffoundation/manifesto) has gotten more than 33,000 stars! By comparison, the Terraform repo took nearly 10 years to reach 38,000 stars:
+The response from the community so far has been incredible. In just a few weeks, more than 130 companies and 680 individuals have pledged support to the [OpenTofu manifesto](/manifesto), and the [OpenTofu manifesto repo](https://github.com/opentffoundation/manifesto) has gotten more than 33,000 stars! By comparison, the Terraform repo took nearly 10 years to reach 38,000 stars:
 
 ![OpenTofu has gotten over 33,000 stars in GitHub in just a few weeks](/img/blog/star-history-202395.png)
 
