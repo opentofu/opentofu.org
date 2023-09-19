@@ -25,7 +25,7 @@ export default function Goals() {
         <Goal
           icon={ExpandIcon}
           title="Truly open-source"
-          description="under a well-known and widely-accepted license that companies can trust, that won’t suddenly change in the future, and isn’t subject to the whims of a singe vendor."
+          description="under a well-known and widely-accepted license that companies can trust, that won’t suddenly change in the future, and isn’t subject to the whims of a single vendor."
         />
         <Goal
           icon={DotsIcon}
