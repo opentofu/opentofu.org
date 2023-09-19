@@ -111,11 +111,11 @@ const config = {
       {
         redirects: [
           {
-            to: "/blog/opentf-announces-fork-of-terraform",
+            to: "/blog/opentofu-announces-fork-of-terraform",
             from: "/announcement",
           },
           {
-            to: "/blog/the-opentf-fork-is-now-available",
+            to: "/blog/the-opentofu-fork-is-now-available",
             from: "/fork",
           },
         ],
