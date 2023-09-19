@@ -50,7 +50,7 @@ function ShareButton({ platform, title, url }) {
       href={href}
       target="_blank"
       rel="noopener"
-      className="rounded-md bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-300 p-2 hover:bg-gray-150 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-gray-150 transition-colors"
+      className="rounded-md bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-300 p-2 hover:bg-brand-700 dark:hover:bg-brand-500 hover:text-gray-50 dark:hover:text-gray-900 transition-colors"
       aria-label={`Share on ${platform.name}`}
     >
       <div aria-hidden className="w-6">
