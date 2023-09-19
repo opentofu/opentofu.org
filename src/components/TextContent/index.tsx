@@ -3,19 +3,41 @@ import clsx from "clsx";
 
 type TextContentProps = HTMLProps<HTMLDivElement>;
 
+const classNames = [
+  "prose",
+  "lg:prose-lg",
+  "text-gray-900",
+  "dark:text-gray-100",
+  "mx-auto",
+  "mb-10",
+  "px-4",
+  "md:px-0",
+
+  // <h2>
+  "prose-h2:text-gray-900",
+  "dark:prose-h2:text-gray-50",
+  "prose-h2:text-2xl",
+  "prose-h2:leading-snug",
+  "md:prose-h2:text-4xl",
+  "md:prose-h2:leading-normal",
+
+  // <li>
+  "prose-li:marker:text-inherit",
+
+  // <a>
+  "prose-a:text-inherit",
+
+  // <strong>
+  "prose-strong:text-inherit",
+];
+
 export default function TextContent({
   children,
   className,
   ...rest
 }: TextContentProps) {
   return (
-    <div
-      className={clsx(
-        "prose lg:prose-lg mx-auto prose-h3:text-gray-900 dark:prose-h3:text-gray-50 prose-h3:text-2xl prose-h3:leading-snug md:prose-h3:text-5xl md:prose-h3:leading-normal prose-li:marker:text-inherit prose-a:text-inherit px-4 md:px-0 text-gray-600 dark:text-gray-500 mb-10 prose-strong:text-inherit",
-        className
-      )}
-      {...rest}
-    >
+    <div className={clsx(classNames, className)} {...rest}>
       {children}
     </div>
   );

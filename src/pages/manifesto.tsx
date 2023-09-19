@@ -35,7 +35,7 @@ export default function Manifesto() {
           that's built up around Terraform over the last 9 years.
         </p>
 
-        <h3>Our concern: the BUSL license is a poison pill for Terraform.</h3>
+        <h2>Our concern: the BUSL license is a poison pill for Terraform.</h2>
 
         <p>
           Overnight, tens of thousands of businesses, ranging from one-person
@@ -84,7 +84,7 @@ export default function Manifesto() {
           top of solid and predictable underpinnings.
         </p>
 
-        <h3>Our goal: ensure Terraform remains truly open source—always.</h3>
+        <h2>Our goal: ensure Terraform remains truly open source—always.</h2>
 
         <p>
           Our aim with this manifesto is to return Terraform to a fully
@@ -96,7 +96,7 @@ export default function Manifesto() {
           license change putting everything at risk.
         </p>
 
-        <h3>Why we forked Terraform.</h3>
+        <h2>Why we forked Terraform.</h2>
 
         <p>
           After HashiCorp switched Terraform from an open-source license to a
@@ -117,7 +117,7 @@ export default function Manifesto() {
           .
         </p>
 
-        <h3>Why the Linux Foundation will maintain the fork.</h3>
+        <h2>Why the Linux Foundation will maintain the fork.</h2>
 
         <p>
           Forking the legacy MPL-licensed Terraform and maintaining the fork in
