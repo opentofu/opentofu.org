@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import defaultTheme from "tailwindcss/defaultTheme";
+
 module.exports = {
   darkMode: ["class", '[data-theme="dark"]'],
   content: ["./src/**/*.{js,jsx,ts,tsx,svg}", "./docusaurus.config.js"],
@@ -45,6 +47,10 @@ module.exports = {
     },
     fontFamily: {
       sans: ['"DM Sans"', "system-ui"],
+    },
+    screens: {
+      "xs": { max: "576px" },
+      ...defaultTheme.screens,
     },
   },
   plugins: [require("@tailwindcss/typography")],
