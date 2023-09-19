@@ -18,7 +18,7 @@ export default function Manifesto() {
       <Jumbotron>
         <Headline className="max-w-2xl">The OpenTofu Manifesto</Headline>
       </Jumbotron>
-      <TextContent className="max-w-2xl">
+      <TextContent className="mb-4 md:mb-10 mx-auto">
         <p>
           Terraform was open-sourced in 2014 under the Mozilla Public License
           (v2.0) (the “MPL”). Over the next ~9 years, it built up a community
