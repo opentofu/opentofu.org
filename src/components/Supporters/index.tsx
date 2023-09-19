@@ -1,5 +1,4 @@
 import React from "react";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import supporters from "../../../supporters.json";
 
 import Button from "../Button";
@@ -36,12 +35,12 @@ function SupporterType({ type, withSeparator, count }: SupporterTypeProps) {
   );
 }
 
+const MAX_LIST_COUNT = 5;
+
 export default function Supporters() {
-  const { siteConfig } = useDocusaurusContext();
   const groupedSupporters = groupSupportersByType(supporters);
   const types = Object.entries(groupedSupporters);
-  const { logos } = siteConfig.customFields;
-  const list = supporters.filter((supporter) => logos[supporter.name]);
+  const list = supporters.slice(0, MAX_LIST_COUNT);
 
   return (
     <section className="py-12 mx-auto container items-center flex flex-col px-4">
