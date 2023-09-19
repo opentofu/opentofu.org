@@ -30,11 +30,11 @@ export default function Hero() {
         />
       </svg>
       <Headline className="sm:max-w-2xl md:max-w-3xl lg:max-w-4xl">
-        Ensure OpenTofu remains truly open-source. Always.
+        The open source infrastructure as code tool.
       </Headline>
       <p className="my-6 text-xl sm:max-w-lg md:max-w-xl lg:max-w-2xl text-center text-gray-600 dark:text-gray-500">
         Previously named OpenTF, OpenTofu is a fork of Terraform that is
-        open-source, community-driven, and will be managed by the Linux
+        open-source, community-driven, and managed by the Linux
         Foundation.
       </p>
 
