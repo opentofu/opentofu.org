@@ -45,7 +45,7 @@ body {
 
 /* TODO: Replace with Algolia search icon */
 .navbar__search-input {
-  @apply w-32 lg:w-48 h-10;
+  @apply w-32 lg:w-48 h-10 text-base;
 }
 
 div[class^="searchHintContainer"] {
