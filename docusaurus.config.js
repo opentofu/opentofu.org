@@ -90,6 +90,9 @@ const config = {
           routeBasePath: "/docs",
         },
         blog: false,
+        gtag: {
+          trackingID: "G-NKLFR0FNQZ",
+        },
       }),
     ],
   ],
