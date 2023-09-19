@@ -1,45 +1,28 @@
 import React from "react";
-import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import {
   findFirstCategoryLink,
   useDocById,
 } from "@docusaurus/theme-common/internal";
-import isInternalUrl from "@docusaurus/isInternalUrl";
-import { translate } from "@docusaurus/Translate";
-import styles from "./styles.module.css";
-function CardContainer({ href, children }) {
+
+function CardLayout({ href, title, description }) {
   return (
-    <Link
-      href={href}
-      className={clsx(
-        "card padding--lg",
-        "rounded-none text-gray-800 dark:text-gray-100 hover:text-gray-900 hover:dark:text-gray-50",
-        styles.cardContainer
-      )}
-    >
-      {children}
-    </Link>
-  );
-}
-function CardLayout({ href, icon, title, description }) {
-  return (
-    <CardContainer href={href}>
-      <h2
-        className={clsx("text--truncate", styles.cardTitle, "mb-4")}
-        title={title}
-      >
-        {title}
+    <div className="not-prose relative group flex flex-col gap-2 border border-gray-900 dark:border-gray-50 rounded-md p-4">
+      <h2>
+        <Link
+          href={href}
+          className="text-gray-900 dark:text-gray-50 hover:text-brand-700 dark:hover:text-brand-500 font-bold"
+        >
+          <span aria-hidden class="absolute inset-0"></span>
+          {title}
+        </Link>
       </h2>
       {description && (
-        <p
-          className={clsx(styles.cardDescription, "line-clamp-2")}
-          title={description}
-        >
+        <p className="text-gray-700 dark:text-gray-300 text-base">
           {description}
         </p>
       )}
-    </CardContainer>
+    </div>
   );
 }
 function CardCategory({ item }) {
@@ -49,32 +32,14 @@ function CardCategory({ item }) {
     return null;
   }
   return (
-    <CardLayout
-      href={href}
-      icon="🗃️"
-      title={item.label}
-      description={
-        item.description ??
-        translate(
-          {
-            message: "{count} items",
-            id: "theme.docs.DocCard.categoryDescription",
-            description:
-              "The default description for a category card in the generated index about how many items this category includes",
-          },
-          { count: item.items.length }
-        )
-      }
-    />
+    <CardLayout href={href} title={item.label} description={item.description} />
   );
 }
 function CardLink({ item }) {
-  const icon = isInternalUrl(item.href) ? "📄️" : "🔗";
   const doc = useDocById(item.docId ?? undefined);
   return (
     <CardLayout
       href={item.href}
-      icon={icon}
       title={item.label}
       description={item.description ?? doc?.description}
     />

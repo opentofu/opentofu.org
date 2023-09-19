@@ -22,7 +22,7 @@ function LinkItem({ item }: LinkItemProps) {
         : {
             to: toUrl,
           })}
-      className="hover:text-gray-900 hover:dark:text-gray-50"
+      className="text-gray-900 dark:text-gray-50 hover:text-brand-700 dark:hover:text-brand-500"
       {...props}
     >
       {label}

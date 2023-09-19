@@ -5,30 +5,52 @@ type TextContentProps = HTMLProps<HTMLDivElement>;
 
 const classNames = [
   "prose",
+  "dark:prose-invert",
   "lg:prose-lg",
+
   "text-gray-900",
   "dark:text-gray-100",
-  "mx-auto",
-  "mb-10",
-  "px-4",
-  "md:px-0",
 
-  // <h2>
-  "prose-h2:text-gray-900",
-  "dark:prose-h2:text-gray-50",
-  "prose-h2:text-2xl",
-  "prose-h2:leading-snug",
-  "md:prose-h2:text-4xl",
-  "md:prose-h2:leading-normal",
+  "marker:text-gray-600",
+  "dark:marker:text-gray-400",
 
-  // <li>
-  "prose-li:marker:text-inherit",
+  // <hr>
+  "prose-hr:my-6",
+  "prose-hr:border-gray-200",
+  "prose-hr:border-solid",
+  "dark:prose-hr:border-gray-800",
+
+  // <pre>
+  "prose-pre:bg-blue-900",
+
+  // <code>
+  "prose-code:px-1.5",
+  "prose-code:text-inherit",
+  "dark:prose-code:text-inherit",
+  "dark:prose-code:border-gray-600",
+  "prose-code:before:content-none",
+  "prose-code:after:content-none",
 
   // <a>
   "prose-a:text-inherit",
+  "hover:prose-a:text-brand-700",
+  "dark:prose-a:text-inherit",
+  "dark:hover:prose-a:text-brand-500",
 
   // <strong>
-  "prose-strong:text-inherit",
+  "prose-strong:text-current",
+  "dark:prose-strong:text-current",
+
+  // <h1>, <h2>, <h3>
+  "prose-h1:text-3xl",
+  "prose-h2:text-2xl",
+  "prose-h3:text-xl",
+  "prose-headings:text-gray-900",
+  "dark:prose-headings:text-gray-50",
+
+  // <th>, <td>
+  "prose-th:px-3",
+  "prose-td:px-3",
 ];
 
 export default function TextContent({

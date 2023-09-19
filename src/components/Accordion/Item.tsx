@@ -32,6 +32,11 @@ const classNames = [
   "flex-col",
   "flex-wrap",
   "font-normal",
+
+  "prose-a:text-inherit",
+  "hover:prose-a:text-brand-700",
+  "dark:prose-a:text-inherit",
+  "dark:hover:prose-a:text-brand-500",
 ];
 
 const AccordionItem = ({

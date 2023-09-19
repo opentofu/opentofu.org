@@ -27,7 +27,7 @@ export default function SocialIconLink({
   return (
     <Link
       href={href}
-      className="flex items-center gap-3 text-gray-900 dark:text-gray-50 hover:text-gray-500 hover:dark:text-gray-500"
+      className="flex items-center gap-3 text-gray-900 hover:text-brand-700 dark:text-gray-50 dark:hover:text-brand-500"
       aria-label={label}
     >
       <svg
@@ -38,7 +38,10 @@ export default function SocialIconLink({
       >
         <path fill="currentColor" d={iconMap[name]} />
       </svg>
-      <span className={clsx("inline-flex xl:hidden", hiddenLabel && "hidden")} aria-hidden>
+      <span
+        className={clsx("inline-flex xl:hidden", hiddenLabel && "hidden")}
+        aria-hidden
+      >
         {label}
       </span>
     </Link>

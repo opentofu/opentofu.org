@@ -113,13 +113,11 @@ export default function DocSidebarItemCategory({
   return (
     <li>
       <Link
-        className={clsx(
-          "flex justify-between items-center py-2 px-4 hover:text-gray-900 hover:dark:text-brand-600",
-          {
-            "bg-brand-500 dark:bg-brand-800 text-gray-900  dark:text-brand-600":
-              isActive,
-          }
-        )}
+        className={clsx("flex justify-between items-center py-2 px-4", {
+          "bg-brand-500 dark:bg-brand-800 text-gray-900 hover:text-gray-900 dark:text-brand-600 dark:hover:text-brand-600":
+            isActive,
+          "hover:text-brand-700 dark:hover:text-brand-600": !isActive,
+        })}
         onClick={
           collapsible
             ? (e) => {

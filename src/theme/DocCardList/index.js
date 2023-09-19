@@ -23,9 +23,7 @@ export default function DocCardList(props) {
       )}
     >
       {filteredItems.map((item, index) => (
-        <article key={index} className="not-prose">
-          <DocCard item={item} />
-        </article>
+        <DocCard item={item} key={index} />
       ))}
     </section>
   );

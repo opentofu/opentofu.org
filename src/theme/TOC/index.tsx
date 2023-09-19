@@ -14,7 +14,7 @@ export default function TOC({ className, ...props }: Props) {
       <TOCItems
         {...props}
         className="[&_ul]:pl-4"
-        linkClassName="py-2 px-4 block hover:text-gray-900 hover:dark:text-brand-600 [&.active]:bg-brand-500 [&.active]:dark:bg-brand-800 [&.active]:text-gray-900 [&.active]:dark:text-brand-600"
+        linkClassName="py-2 px-4 block hover:text-brand-700 dark:hover:text-brand-600 [&.active]:bg-brand-500 [&.active]:dark:bg-brand-800 [&.active]:text-gray-900 [&.active]:dark:text-brand-600"
         linkActiveClassName="active"
       />
     </div>

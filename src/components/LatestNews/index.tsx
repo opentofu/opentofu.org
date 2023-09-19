@@ -27,7 +27,12 @@ export default function LatestNews({ recentPosts }) {
               {formattedDate}
             </time>
             <h3 className="text-3xl font-bold leading-snug mt-2">
-              <Link href={permalink}>{title}</Link>
+              <Link
+                href={permalink}
+                className="text-gray-900 dark:text-gray-50 hover:text-brand-700 dark:hover:text-brand-500"
+              >
+                {title}
+              </Link>
             </h3>
 
             <div className="prose dark:prose-invert line-clamp-3 mt-2 mb-4 text-gray-600 dark:text-gray-500">

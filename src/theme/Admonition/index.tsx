@@ -44,19 +44,19 @@ type AdmonitionConfig = {
 const AdmonitionConfigs: Record<string, AdmonitionConfig> = {
   note: {
     className:
-      "bg-sky-100 border-sky-300 text-sky-700 dark:bg-sky-950 dark:border-sky-700 dark:text-sky-200",
+      "bg-sky-100 border-sky-300 text-sky-800 dark:bg-sky-950 dark:border-sky-700 dark:text-sky-100",
     iconComponent: NoteIcon,
     label: "Note",
   },
   danger: {
     className:
-      "bg-red-100 border-red-300 text-red-700 dark:bg-red-950 dark:border-red-700 dark:text-red-200",
+      "bg-red-100 border-red-300 text-red-800 dark:bg-red-950 dark:border-red-700 dark:text-red-100",
     iconComponent: DangerIcon,
     label: "Danger",
   },
   warning: {
     className:
-      "bg-yellow-100 border-yellow-500 text-yellow-700 dark:bg-yellow-950 dark:border-yellow-700 dark:text-yellow-200",
+      "bg-yellow-100 border-yellow-500 text-yellow-800 dark:bg-yellow-950 dark:border-yellow-700 dark:text-yellow-100",
     iconComponent: CautionIcon,
     label: "Warning",
   },
@@ -120,7 +120,7 @@ export default function Admonition(props: Props) {
   return (
     <div
       className={clsx(
-        "flex flex-col py-2 px-3 not-prose border [&+&]:mt-3",
+        "flex flex-col py-2 px-3 not-prose border gap-1 [&+&]:mt-3 [&_a:hover]:text-gray-900 dark:[&_a:hover]:text-gray-50",
         typeConfig.className
       )}
       role="alert"
@@ -131,7 +131,7 @@ export default function Admonition(props: Props) {
         </span>
         {titleLabel}
       </div>
-      <div>{children}</div>
+      <div className="leading-relaxed">{children}</div>
     </div>
   );
 }
