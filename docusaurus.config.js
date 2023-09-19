@@ -226,7 +226,7 @@ const config = {
           },
           {
             type: "custom-social-icon-link-navbar-item",
-            href: "https://twitter.com/opentforg",
+            href: "https://twitter.com/opentofuorg",
             position: "right",
             name: "twitter",
             label: "Follow us on Twitter",
