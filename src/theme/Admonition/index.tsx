@@ -44,19 +44,19 @@ type AdmonitionConfig = {
 const AdmonitionConfigs: Record<string, AdmonitionConfig> = {
   note: {
     className:
-      "bg-sky-100 border-sky-300 text-sky-700 dark:bg-sky-950 dark:border-sky-700 dark:text-sky-100",
+      "bg-sky-100 border-sky-300 text-sky-800 dark:bg-sky-950 dark:border-sky-700 dark:text-sky-100",
     iconComponent: NoteIcon,
     label: "Note",
   },
   danger: {
     className:
-      "bg-red-100 border-red-300 text-red-700 dark:bg-red-950 dark:border-red-700 dark:text-red-100",
+      "bg-red-100 border-red-300 text-red-800 dark:bg-red-950 dark:border-red-700 dark:text-red-100",
     iconComponent: DangerIcon,
     label: "Danger",
   },
   warning: {
     className:
-      "bg-yellow-100 border-yellow-500 text-yellow-700 dark:bg-yellow-950 dark:border-yellow-700 dark:text-yellow-100",
+      "bg-yellow-100 border-yellow-500 text-yellow-800 dark:bg-yellow-950 dark:border-yellow-700 dark:text-yellow-100",
     iconComponent: CautionIcon,
     label: "Warning",
   },
