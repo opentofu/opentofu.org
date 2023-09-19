@@ -24,7 +24,7 @@ export default function SupportersPage() {
   const isMoreButtonVisible = filteredSupporters.length > INITIAL_LIST_COUNT;
 
   return (
-    <Layout title="OpenTofu Supporters">
+    <Layout title="Supporters">
       <Jumbotron>
         <Headline>Supporters</Headline>
       </Jumbotron>

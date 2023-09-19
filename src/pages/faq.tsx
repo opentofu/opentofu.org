@@ -10,7 +10,7 @@ import Headline from "../components/Headline";
 
 export default function FAQ() {
   return (
-    <Layout title="OpenTofu FAQ">
+    <Layout title="FAQ">
       <Jumbotron>
         <Headline>Frequently Asked Questions</Headline>
       </Jumbotron>
