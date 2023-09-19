@@ -36,6 +36,12 @@
     "pledge": "Development; open-source community efforts"
   },
   {
+    "name": "Massdriver",
+    "url": "https://massdriver.cloud",
+    "type": "Company",
+    "pledge": "Compute; Development; open-source community efforts"
+  },
+  {
     "name": "Doppler",
     "url": "https://doppler.com",
     "type": "Company",
@@ -44,12 +50,6 @@
   {
     "name": "Gem Agile",
     "url": "https://gemagile.com",
-    "type": "Company",
-    "pledge": "Development; open-source community efforts"
-  },
-  {
-    "name": "Massdriver",
-    "url": "https://massdriver.cloud",
     "type": "Company",
     "pledge": "Development; open-source community efforts"
   },
@@ -858,6 +858,18 @@
     "pledge": "Development; open-source community efforts"
   },
   {
+    "name": "Duonyx",
+    "url": "https://www.duonyx.com",
+    "type": "Company",
+    "pledge": "Promoting and teaching Terraform for years when it comes to Infra-as-Code"
+  },
+  {
+    "name": "TheGarageBandOfIT",
+    "url": "https://github.com/thegaragebandofit/",
+    "type": "Company",
+    "pledge": "Promoting and teaching Terraform for years when it comes to Infra-as-Code"
+  },
+  {
     "name": "OTF",
     "url": "https://github.com/leg100/otf",
     "type": "Project",
@@ -922,6 +934,12 @@
     "url": "https://www.recube.it/",
     "type": "Company",
     "pledge": "Testing and Development; Cloud-native engineering; open-source community efforts"
+  },
+  {
+    "name": "Payly Soluções de Pagamentos",
+    "url": "https://payly.com.br/",
+    "type": "Company",
+    "pledge": "Financial Services"
   },
   {
     "name": "Lost Newbs",
@@ -5242,5 +5260,95 @@
     "url": "https://github.com/johnalvero",
     "type": "Individual",
     "pledge": "Platform Engineering; DevOps"
+  },
+  {
+    "name": "Michelle Lee",
+    "url": "https://github.com/mdaeunlee",
+    "type": "Individual",
+    "pledge": "DevOps; Cloud Architect;"
+  },
+  {
+    "name": "ChiSong Yu",
+    "url": "https://github.com/jayden-csyu",
+    "type": "Individual",
+    "pledge": "DevOps; Cloud Architect; open-source community efforts"
+  },
+  {
+    "name": "Anthony Wong",
+    "url": "https://github.com/a-Chai",
+    "type": "Individual",
+    "pledge": "Platform Engineering; DevOps; SRE; Full Stack Engineer;"
+  },
+  {
+    "name": "Andrei Romanov",
+    "url": "https://github.com/ansromanov",
+    "type": "Individual",
+    "pledge": "Cloud Engineering; DevOps; Open-source community efforts "
+  },
+  {
+    "name": "Andrew Bondarenko",
+    "url": "https://github.com/wobondar",
+    "type": "Individual",
+    "pledge": "SRE; DevOps; Development; Architecture; open-source community efforts"
+  },
+  {
+    "name": "Tran Dinh Dong",
+    "url": "https://github.com/vanvuvuong",
+    "type": "Individual",
+    "pledge": "Cloud Architect; DevOps"
+  },
+  {
+    "name": "Matt Abrams",
+    "url": "https://github.com/zuchka",
+    "type": "Individual",
+    "pledge": "Cloud Architect; DevOps"
+  },
+  {
+    "name": "Stefan Aichholzer",
+    "url": "https://github.com/aichholzer",
+    "type": "Individual",
+    "pledge": "Solution architect; Full stack engineer; Platform engineer; DevOps"
+  },
+  {
+    "name": "Armando Serrano",
+    "url": "https://github.com/xerra",
+    "type": "Individual",
+    "pledge": "DevOps; SRE; Platform Engineering; Cloud Architect"
+  },
+  {
+    "name": "Ludovic Piot",
+    "url": "https://github.com/lpiot",
+    "type": "Individual",
+    "pledge": "DevOps for 20 years, Cloud architect/engineer for 13 years"
+  },
+  {
+    "name": "Diego Alves Dias",
+    "url": "https://github.com/ddias00",
+    "type": "Individual",
+    "pledge": "Platform Engineering; Infrastructure Specialist; DevOps; SRE"
+  },
+  {
+    "name": "Pablo Oliveira",
+    "url": "https://github.com/Pablo-Oliveira",
+    "type": "Individual",
+    "pledge": "Documentation; Educating"
+  },
+  {
+    "name": "Saba Sakvarelidze",
+    "url": "https://www.linkedin.com/in/sakvarelidze/",
+    "type": "Individual",
+    "pledge": "DevOps; CloudOps; Platform Engineering; Development "
+  },
+  {
+    "name": "Gedalyah Reback",
+    "url": "https://github.com/gedalyahreback",
+    "type": "Individual",
+    "pledge": "Development; Open-Source Community Efforts, Documentation, Evangelism"
+  },
+  {
+    "name": "John Norton",
+    "url": "https://github.com/johnnorton",
+    "type": "Individual",
+    "pledge": "Development; open-source community efforts"
   }
 ]
