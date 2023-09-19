@@ -26,11 +26,15 @@ export default function BlogLastPost({ item }) {
               >
                 {formattedDate}
               </time>
-              <Link to={permalink}>
-                <h3 className="leading-snug text-3xl font-bold my-2 line-clamp-5">
+
+              <h3 className="leading-snug text-3xl font-bold my-2 line-clamp-5">
+                <Link
+                  to={permalink}
+                  className="text-gray-900 dark:text-gray-50 hover:text-brand-700 dark:hover:text-brand-500"
+                >
                   {title}
-                </h3>
-              </Link>
+                </Link>
+              </h3>
               <p className="text-gray-600 dark:text-gray-500 mb-4 line-clamp-3">
                 {description}
               </p>
