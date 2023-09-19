@@ -30,7 +30,7 @@ export default function NavbarContent() {
 
   return (
     <div className="flex text-white justify-between container mx-auto p-4 navbar">
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-4 sm:gap-6">
         <NavbarMobileSidebarToggle />
         <NavbarLogo />
         <div className="hidden md:flex items-center gap-6">

@@ -16,7 +16,7 @@ function CloseButton() {
     <button
       type="button"
       aria-label="Close navigation bar"
-      className="absolute top-6 right-6 p-4 text-gray-900 hover:text-brand-700 dark:text-gray-50 dark:hover:text-brand-500 transition-colors"
+      className="absolute top-6 right-6 p-3 sm:p-4 text-gray-900 hover:text-brand-700 dark:text-gray-50 dark:hover:text-brand-500 transition-colors"
       onClick={() => mobileSidebar.toggle()}
     >
       <IconClose />
