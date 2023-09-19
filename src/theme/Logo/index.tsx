@@ -9,7 +9,7 @@ export default function Logo() {
   return (
     <Link
       to={logoLink}
-      className="text-gray-900 dark:text-gray-50"
+      className="text-gray-900 hover:text-brand-700 dark:text-gray-50 dark:hover:text-brand-500"
       aria-label="Go to homepage"
     >
       <LogoSvg aria-hidden className="h-12 mb-3" />
