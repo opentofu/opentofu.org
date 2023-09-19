@@ -59,7 +59,10 @@ const AccordionItem = ({
     if (!detailsRef.current.hasAttribute("open")) {
       // Push to end of queue to read updated position and scroll to it
       setTimeout(() => {
-        detailsRef.current.scrollIntoView({ behavior: "smooth" });
+        detailsRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+        });
       });
     }
 
