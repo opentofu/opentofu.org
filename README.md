@@ -1,1 +1,1 @@
-# opentf.org
+# opentofu.org

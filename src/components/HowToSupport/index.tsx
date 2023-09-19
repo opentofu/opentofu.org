@@ -48,7 +48,7 @@ export default function HowToSupport() {
           >
             1. Going to the{" "}
             <Link
-              href="https://github.com/opentffoundation/manifesto"
+              href="https://github.com/opentofu/manifesto"
               className="underline"
             >
               manifesto repository

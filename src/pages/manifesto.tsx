@@ -104,14 +104,11 @@ export default function Manifesto() {
           open-source license to ensure a single, impartial, reliable home for
           Terraform where the whole community could unite to keep building this
           amazing ecosystem. With no response from Hashicorp by August 25, we{" "}
-          <Link
-            href="https://github.com/opentffoundation/opentf"
-            target="_blank"
-          >
+          <Link href="https://github.com/opentofu/opentofu" target="_blank">
             created a fork of Terraform
           </Link>
           , which is now public. You can read more about the fork announcement{" "}
-          <Link href="https://opentf.org/fork" target="_blank">
+          <Link href="https://opentofu.org/fork" target="_blank">
             here
           </Link>
           .
