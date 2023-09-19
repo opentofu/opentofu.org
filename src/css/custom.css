@@ -54,17 +54,19 @@ html[data-theme="dark"] .navbar__search {
 /* TODO: Replace with Algolia search icon */
 .navbar__search-input {
   @apply w-32 lg:w-48 h-10 text-base xs:pl-8;
+}
 
-  &:focus {
-    @apply xs:pl-9;
-  }
+.navbar__search-input:focus {
+  @apply xs:pl-9;
+}
 
-  &:not(:placeholder-shown) {
-    @apply xs:pl-9 pr-8;
+.navbar__search-input:not(:placeholder-shown) {
+  @apply xs:pl-9 pr-8;
+}
 
-    @media (max-width: 576px) {
-      width: 8rem !important;
-    }
+@media (max-width: 576px) {
+  .navbar__search-input:not(:placeholder-shown) {
+    width: 8rem !important;
   }
 }
 
