@@ -120,7 +120,7 @@ export default function Admonition(props: Props) {
   return (
     <div
       className={clsx(
-        "flex flex-col py-2 px-3 not-prose border [&+&]:mt-3",
+        "flex flex-col py-2 px-3 not-prose border [&+&]:mt-3 [&_a:hover]:text-gray-900 dark:[&_a:hover]:text-gray-50",
         typeConfig.className
       )}
       role="alert"
