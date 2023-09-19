@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import defaultTheme from "tailwindcss/defaultTheme";
 
 module.exports = {
   darkMode: ["class", '[data-theme="dark"]'],
@@ -44,13 +43,12 @@ module.exports = {
           900: "#14253D",
         },
       },
+      screens: {
+        xs: { max: "576px" },
+      },
     },
     fontFamily: {
       sans: ['"DM Sans"', "system-ui"],
-    },
-    screens: {
-      "xs": { max: "576px" },
-      ...defaultTheme.screens,
     },
   },
   plugins: [require("@tailwindcss/typography")],
