@@ -19,7 +19,9 @@ export default function FAQ() {
         <Accordion>
           <MDXProvider
             components={{
-              AccordionItem,
+              AccordionItem: (props) => (
+                <AccordionItem isHashEnabled {...props} />
+              ),
               a: (props) => (
                 <Link className="text-inherit underline" {...props} />
               ),

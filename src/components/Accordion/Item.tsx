@@ -1,11 +1,15 @@
 import clsx from "clsx";
-import React, { useRef } from "react";
+import { useLocation } from "@docusaurus/router";
+
+import React, { useEffect, useRef } from "react";
 
 type AccordionItemProps = {
   children: React.ReactNode;
   summary: string;
   open?: boolean;
   highlight?: boolean;
+  id: string;
+  isHashEnabled?: boolean;
 };
 
 const classNames = [
@@ -30,8 +34,15 @@ const classNames = [
   "font-normal",
 ];
 
-const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
+const AccordionItem = ({
+  summary,
+  open,
+  children,
+  id,
+  isHashEnabled,
+}: AccordionItemProps) => {
   const detailsRef = useRef(null);
+  const location = useLocation();
 
   const handleItemClick = () => {
     document.querySelectorAll("details.accordion-item").forEach((item) => {
@@ -39,7 +50,44 @@ const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
         item.removeAttribute("open");
       }
     });
+
+    if (!detailsRef.current.hasAttribute("open")) {
+      // Push to end of queue to read updated position and scroll to it
+      setTimeout(() => {
+        detailsRef.current.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+
+    if (!isHashEnabled) {
+      return;
+    }
+
+    if (detailsRef.current.hasAttribute("open")) {
+      window.history.replaceState({ hash: undefined }, "", location.pathname);
+    } else {
+      window.history.replaceState(
+        { hash: id },
+        "",
+        `${location.pathname}#${encodeURI(id)}`
+      );
+    }
   };
+
+  useEffect(() => {
+    if (decodeURI(location.hash) === `#${id}` && isHashEnabled) {
+      document.querySelectorAll("details.accordion-item").forEach((item) => {
+        if (item !== detailsRef.current) {
+          item.removeAttribute("open");
+        } else {
+          window.scrollTo({
+            top: detailsRef.current.offsetTop,
+            behavior: "smooth",
+          });
+          item.setAttribute("open", "true");
+        }
+      });
+    }
+  }, []);
 
   return (
     <details
