@@ -72,6 +72,10 @@ const AccordionItem = ({
         if (item !== detailsRef.current) {
           item.removeAttribute("open");
         } else {
+          window.scrollTo({
+            top: detailsRef.current.offsetTop,
+            behavior: "smooth",
+          });
           item.setAttribute("open", "true");
         }
       });
