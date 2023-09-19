@@ -95,60 +95,60 @@ export default function Manifesto() {
           license change putting everything at risk.
         </p>
 
-        <h3>
-          Our request to HashiCorp: switch Terraform back to an open-source
-          license.
-        </h3>
+        <h3>Why we forked Terraform.</h3>
 
         <p>
-          We ask HashiCorp to do the right thing by the community: instead of
-          going forward with the BUSL license change, switch Terraform back to a
-          truly open source license and commit to keeping it that way forever
-          going forward. That way, instead of fracturing the community, we end
-          up with a single, impartial, reliable home for Terraform where the
-          whole community can unite to keep building this amazing ecosystem.
+          After HashiCorp switched Terraform from an open-source license to a
+          Business Source License (BSL), we asked HashiCorp to switch back to an
+          open-source license to ensure a single, impartial, reliable home for
+          Terraform where the whole community could unite to keep building this
+          amazing ecosystem. With no response from Hashicorp by August 25, we
+          [created a fork of
+          Terraform](https://github.com/opentffoundation/opentf), which is now
+          public. You can read more about the fork announcement
+          [here](https://opentf.org/fork).
         </p>
 
-        <h3>Our fallback plan: fork Terraform into a foundation.</h3>
+        <h3>Why the Linux Foundation will maintain the fork.</h3>
 
         <p>
-          If HashiCorp is unwilling to switch Terraform back to an open-source
-          license, we propose to fork the legacy MPL-licensed Terraform and
-          maintain the fork in the foundation. This is similar to how Linux and
-          Kubernetes are managed by foundations (the Linux Foundation and the
-          Cloud Native Computing Foundation, respectively), which are run by
-          multiple companies, ensuring the tool stays truly open source and
+          Forking the legacy MPL-licensed Terraform and maintaining the fork in
+          the Linux Foundation under the name OpenTofu is similar to the way
+          Linux is managed by the Linux Foundation under the stewardship of
+          multiple companies. This ensures the tool stays truly open source and
           neutral and not at the whim of any one company.
         </p>
 
         <p>
-          In particular, we want to create a foundation for Terraform that is:
+          Now that we are part of the Linux Foundation, we can guarantee that
+          OpenTofu will remain:
         </p>
 
         <ul>
           <li>
-            Truly open source - under a well-known and widely-accepted license
-            that companies can trust, that won't suddenly change in the future
-            and isn't subject to the whims of a single vendor
+            <strong>Truly open source</strong> - under a well-known and
+            widely-accepted license that companies can trust, that won't
+            suddenly change in the future, and isn't subject to the whims of a
+            single vendor
           </li>
           <li>
-            Community-driven - so that the community governs the project for the
-            community, where pull requests are regularly reviewed and accepted
-            on their merit
+            <strong>Community-driven</strong> - so that the community governs
+            the project for the community, where pull requests are regularly
+            reviewed and accepted on their merit
           </li>
           <li>
-            Impartial - so that valuable features and fixes are accepted based
-            on their value to the community, regardless of their impact on any
-            particular vendor
+            <strong>Impartial</strong> - so that valuable features and fixes are
+            accepted based on their value to the community, regardless of their
+            impact on any particular vendor
           </li>
           <li>
-            Layered and modular - with a programmer-friendly project structure
-            to encourage building on top, enabling a new vibrant ecosystem of
-            tools and integrations
+            <strong>Layered and modular</strong> - with a programmer-friendly
+            project structure to encourage building on top, enabling a new
+            vibrant ecosystem of tools and integrations
           </li>
           <li>
-            Backwards-compatible - so that the existing code can drive value for
-            years to come
+            <strong>Backwards-compatible</strong> - so that the existing code
+            can drive value for years to come
           </li>
         </ul>
       </TextContent>
