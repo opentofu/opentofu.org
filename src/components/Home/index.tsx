@@ -10,7 +10,7 @@ import LatestNews from "../LatestNews";
 
 export default function Home({ recentPosts }) {
   return (
-    <Layout description="Ensure Terraform remains truly open-source.">
+    <Layout description="Ensure OpenTofu remains truly open-source.">
       <Hero />
       <Goals />
       <HowToContribute />
