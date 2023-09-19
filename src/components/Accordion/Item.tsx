@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { useLocation } from "@docusaurus/router";
+
 import React, { useEffect, useRef } from "react";
 
 type AccordionItemProps = {
@@ -55,10 +56,13 @@ const AccordionItem = ({
     }
 
     if (decodeURI(location.hash) === `#${id}`) {
-      // Hash at the end disables ability to open automaticaly first FAQ item
-      window.location.replace(`${location.pathname}#`);
+      window.history.replaceState({}, "", location.pathname);
     } else {
-      window.location.replace(`${location.pathname}#${encodeURI(id)}`);
+      window.history.replaceState(
+        {},
+        "",
+        `${location.pathname}#${encodeURI(id)}`
+      );
     }
   };
 
