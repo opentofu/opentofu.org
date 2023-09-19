@@ -213,7 +213,7 @@ const config = {
           //   items: [
           //     {
           //       label: "GitHub Discussions",
-          //       href: "https://github.com/orgs/opentffoundation/discussions",
+          //       href: "https://github.com/orgs/opentofu/discussions",
           //     },
           //   ],
           // },
