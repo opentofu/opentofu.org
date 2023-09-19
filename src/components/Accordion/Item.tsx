@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React, { useRef } from "react";
 
 type AccordionItemProps = {
@@ -6,6 +7,28 @@ type AccordionItemProps = {
   open?: boolean;
   highlight?: boolean;
 };
+
+const classNames = [
+  "prose",
+  "prose-h4:mb-0",
+  "prose-p:my-2",
+  "prose-ul:m-0",
+  "dark:prose-invert",
+  "marker:text-gray-600",
+  "dark:marker:text-gray-400",
+  "max-w-none",
+  "text-gray-900",
+  "dark:text-gray-100",
+  "pb-6",
+  "px-6",
+  "leading-6",
+  "mt-2",
+  "text-base",
+  "flex",
+  "flex-col",
+  "flex-wrap",
+  "font-normal",
+];
 
 const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
   const detailsRef = useRef(null);
@@ -46,9 +69,7 @@ const AccordionItem = ({ summary, open, children }: AccordionItemProps) => {
           />
         </svg>
       </summary>
-      <div className="pb-6 px-6 leading-6 mt-2 text-base flex flex-col flex-wrap gap-4 text-gray-600 dark:text-gray-500 font-normal">
-        {children}
-      </div>
+      <div className={clsx(classNames)}>{children}</div>
     </details>
   );
 };

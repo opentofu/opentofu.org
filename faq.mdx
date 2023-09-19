@@ -1,54 +1,91 @@
-<AccordionItem summary="Is OpenTofu going to be a foundation?" open highlight>
+<AccordionItem summary="What is OpenTofu?" open highlight>
 
-We strongly prefer joining an existing reputable foundation over creating a
-new one. Stay tuned for additional details in the coming week.
-
-</AccordionItem>
-
-<AccordionItem summary="Can anyone pledge?" highlight>
-
-Under a well-known and widely-accepted license that companies can trus, that
-won’t suddenly change in the future, and isn’t subject to the whims of a singe
-vendor. Under a well-known and widely-accepted license that companies can
-trus, that won’t suddenly change in the future, and isn’t subject to the whims
-of a singe vendor.
+OpenTofu is a Terraform fork, created as an initiative of Gruntwork, Spacelift, Harness, Env0, Scalr, and others, in response to HashiCorp’s switch from an open-source license to the BUSL. The initiative has many supporters, all of whom are listed [here](/supporters).
 
 </AccordionItem>
 
-<AccordionItem summary="I'm a regular Terraform user, and I'm not competing with HashiCorp. Why should I care?">
+<AccordionItem summary="Why was OpenTofu created?" highlight>
 
-How do you know you're not competing with HashiCorp?
+The BUSL and the additional use grant outlined by the HashiCorp team are ambiguous, which makes it challenging for companies, vendors, and developers using Terraform to decide whether their actions could be interpreted as being outside the permitted scope of use.
 
-That's not meant to be a redundant or snarky question. The key issue with the BUSL is that the wording is intentionally vague. What does "competing" mean? What does "hosting or embedding" mean? Who decides?
+Hashicorp’s FAQs give some peace of mind to end users and system integrators for now, but the licensing terms’ implications for future usage are unclear. The possibility that the company’s definition of _“competitive”_ or _“embedding”_ could change or the license could be further modified to make it closed source prompts uncertainty for Terraform users.
 
-The answer to all these questions is that, in order to really know if you're a competitor, you have to reach out to HashiCorp. So whether your usage is valid is not controlled by the terms of the license, but is instead entirely at the whim of HashiCorp. They get to decide on a case-by-case basis who is and who isn't a competitor—and they can change their mind at any time.
-
-That is a very shaky footing on which to build anything.
-
-At every company you ever work at in the future, before starting to use Terraform, the CTO will have to think about whether HashiCorp could possibly consider you a competitor, now or at any time in the future. The legal team at that company will have to wonder if they want to take the risk of allowing a BUSL license or if they should ban it due to all the uncertainty. Every developer at that company will have to wonder if they want to contribute back to Terraform, given there's no certainty they'll be able to use their own work at a future job.
-
-In short, the BUSL is a poison pill for the entire Terraform community.
+We firmly believe that Terraform should remain open-source because it is a project many companies use, and many contributors have made Terraform what it is today. Terraform’s success would not have been possible without the community’s work to build many supporting projects around it.
 
 </AccordionItem>
 
-<AccordionItem summary="Doesn't forking hurt the whole community? Why take such a brash action?" highlight>
+<AccordionItem summary="What are the differences between OpenTofu and Terraform?" highlight>
 
-Terraform was under the MPL license for ~9 years. This created an understanding—an implicit contract—that Terraform is open-source and you can use it for just about anything you want. Based on that understanding, tens of thousands of developers adopted the tool and contributed back to it. HashiCorp even had all contributors sign a CLA which explicitly said ([link to the CLA in the Internet Archive as HashiCorp](https://web.archive.org/web/20230610041432/https://www.hashicorp.com/cla) has of course removed this wording):
-
-> HashiCorp is committed to having a true Free and Open Source Software (“FOSS”) license for our non-commercial software. A CLA enables HashiCorp to safely commercialize our products while keeping a standard FOSS license with all the rights that the license grants to users: the ability to use the project in their own projects or businesses, to republish modified source, or to fork the project completely.
-
-The move to BUSL—which is _not_ a free and open source license—broke the implicit contract. That was the brash action!
-
-Terraform would've never gotten the adoption it did, or all the contributions from the community had it not been open-source. Most of us would've never agreed to the CLA to contribute to the project if it was BUSL licensed. Taking all those contributions and all that community trust, and then changing to the BUSL license is a bait and switch.
-
-The OpenTofu manifesto is about _undoing_ those changes! It's about going back to the way Terraform was for the first ~9 years: as a truly open-source tool that we can all trust, contribute to, and use as we wish.
+There will be no differences between Terraform (versions prior to 1.5.x) and OpenTofu. As new versions are released, this will change.
 
 </AccordionItem>
 
-<AccordionItem summary="HashiCorp deserves to earn a return on their investment. What's wrong with that?">
+<AccordionItem summary="Why should you use OpenTofu instead of Terraform?" highlight>
 
-When any company releases their tool as open source, the contract with the community is always the same: Anyone can use this code, but we the creators hold a privileged position of being at the epicenter of the ecosystem. Vendors then compete to offer the best solution, and the creators enjoy a unique competitive advantage.
+#### Personal use
 
-We believe that HashiCorp should earn a return by leveraging its unique position in the Terraform ecosystem to build a better product, not by outright preventing others from competing in the first place.
+Initial impressions suggest you could use either OpenTofu or Terraform for personal use, as the BUSL license has no restrictions for non-commercial use cases. That may change as the Terraform ecosystem becomes increasingly unstable, and a switch to another license may happen. Those familiar with Terraform will have no issues adopting OpenTofu for personal use, so there will be no knowledge gaps, at least at the start.
+
+#### Consultants
+
+A consultant should offer their clients the best possible solution that aligns with their budget. OpenTofu will be on par with Terraform, and one of the project’s central objectives is to listen to the community’s issues, so it makes sense to recommend a project that will always stay open-source. Anyone who has used Terraform in the last eight years has probably come across issues that took some time to be resolved. The large community involved in developing OpenTofu means this will no longer be the case.
+
+#### Companies
+
+Companies will encounter more difficulties with the situation. Switching to a new project carries risks, but staying with a project that changes its license without warning is far riskier. This risk is minimized by giving OpenTofu to the Linux Foundation, and OpenTofu’s aim of maintaining feature parity with Terraform for future releases reduces the technical risks.
+
+</AccordionItem>
+
+<AccordionItem summary="Will OpenTofu be compatible with future Terraform releases?" highlight>
+
+The community will decide what features OpenTofu will have. Some long-awaited Terraform features will be publicly available soon.
+
+Some companies have pledged to pay for full-time engineers to work on OpenTofu. We have 19 such engineers involved already — and many other individuals, companies, projects, and foundations are prepared to contribute.
+
+</AccordionItem>
+
+<AccordionItem summary="Can I use OpenTofu as a drop-in replacement for Terraform?  Is OpenTofu suitable for production use?" highlight>
+
+Initially, OpenTofu will be a drop-in replacement for Terraform, as it will be compatible with Terraform versions 1.5.x. You won’t need to make any changes to your code to ensure compatibility.
+OpenTofu is suitable for production use cases without any exception.
+
+</AccordionItem>
+
+<AccordionItem summary="Will OpenTofu work with my existing state file?">
+
+OpenTofu will work with existing state files up to those created with a version prior to Terraform’s 1.5.x.
+
+</AccordionItem>
+
+<AccordionItem summary="Does OpenTofu work with all the providers Terraform works with?">
+
+OpenTofu will not have its own providers. Terraform providers have not altered their licenses, and the potential for such a change is virtually zero. OpenTofu will work with the current Terraform providers, but it will use a separate registry.
+
+</AccordionItem>
+
+<AccordionItem summary="How are new features, bug fixes, and other development decisions made in OpenTofu?">
+
+The steering committee and the community determine the most important features and bug fixes. The large number of developers pledging their resources to help develop OpenTofu will speed up the development of features and enable faster releases than Terraform managed previously.
+
+</AccordionItem>
+
+<AccordionItem summary="How can I contribute to OpenTofu?">
+
+The best way to show practical support for the OpenTofu initiative is to contribute. We recommend you start by [opening an issue](https://github.com/opentffoundation/opentf/blob/main/CONTRIBUTING.md) for bug reports, broken compatibility reports, feature requests, old issue reposts, and quality RFCs.
+
+All major changes to OpenTofu Core undergo the public RFC process, and we also welcome feedback on existing RFCs. As we're still in the cleanup phase and want to avoid conflicts, please wait until the first alpha release to contribute code.
+
+This [contribution guide](https://github.com/opentffoundation/opentf/blob/main/CONTRIBUTING.md) explains OpenTF contribution recommended practices, including how to submit issues, how to get involved in the discussion, how to work on the code, and how to contribute code changes.
+
+</AccordionItem>
+
+<AccordionItem summary="How can I pledge support?">
+
+The pledge is open to all individuals and companies who care about the future of Terraform. You can also support this initiative by starring the manifesto repository on GitHub and spreading the word via share buttons.
+
+Here are the most important things you can do to show your support:
+
+- Sign the manifesto and pledge your time to help develop this project. This can be done [here](https://github.com/opentffoundation/manifesto), by forking the repository, adding your pledge at the end of the table, and creating a pull request.
+- Follow OpenTofu on [Twitter](https://twitter.com/opentofuorg).
 
 </AccordionItem>
