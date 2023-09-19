@@ -52,7 +52,7 @@ export default function Footer({ links }: FooterProps) {
         />
         <SocialIconLink
           name="twitter"
-          href="https://twitter.com/opentforg"
+          href="https://twitter.com/opentofuorg"
           label="Follow us on Twitter"
           hiddenLabel
         />
