@@ -54,7 +54,7 @@ const AccordionItem = ({
       return;
     }
 
-    if (decodeURI(location.hash) === `#${summary}`) {
+    if (decodeURI(location.hash) === `#${id}`) {
       // Hash at the end disables ability to open automaticaly first FAQ item
       window.location.replace(`${location.pathname}#`);
     } else {
