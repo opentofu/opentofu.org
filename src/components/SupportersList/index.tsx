@@ -25,7 +25,7 @@ export default function SupportersList({ list }: SupportersListProps) {
             href={supporter.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-1/3 text-inherit font-bold text-gray-900 dark:text-gray-100"
+            className="w-1/3 text-inherit font-bold text-gray-900 hover:text-brand-700 dark:text-gray-100 dark:hover:text-brand-500"
             aria-label={`Go to ${supporter.name} website`}
           >
             {supporter.name}
