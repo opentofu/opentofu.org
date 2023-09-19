@@ -225,7 +225,7 @@ const config = {
           {
             type: "custom-github-stars-navbar-item",
             position: "right",
-            ghRepoUrl: "https://github.com/opentffoundation/manifesto",
+            ghRepoUrl: "https://github.com/opentofu/manifesto",
             buttonLabel: "Star",
           },
           {

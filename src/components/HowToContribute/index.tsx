@@ -14,7 +14,7 @@ export default function HowToContribute() {
           The best way to show practical support for the OpenTofu initiative is
           to contribute. This{" "}
           <Link
-            href="https://github.com/opentffoundation/opentf/blob/main/CONTRIBUTING.md"
+            href="https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md"
             className="underline text-gray-900 dark:text-gray-50"
           >
             contribution guide
@@ -23,7 +23,11 @@ export default function HowToContribute() {
           submit issues, how to get involved in the discussion, how to work on
           the code, and how to contribute code changes.
         </p>
-        <Button className="mx-auto max-w-fit" variant="primary" href="https://github.com/opentffoundation/opentf/blob/main/CONTRIBUTING.md">
+        <Button
+          className="mx-auto max-w-fit"
+          variant="primary"
+          href="https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md"
+        >
           Contribute
         </Button>
       </div>

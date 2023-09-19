@@ -44,7 +44,7 @@ export default function Hero() {
         </Button>
         <Button
           variant="primary"
-          href="https://github.com/opentffoundation/opentf/blob/main/CONTRIBUTING.md"
+          href="https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md"
         >
           Contribute
         </Button>
