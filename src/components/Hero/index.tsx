@@ -39,7 +39,7 @@ export default function Hero() {
       </p>
 
       <div className="flex gap-4 pt-6">
-        <Button variant="secondary" href="/manifesto">
+        <Button className="text-center" variant="secondary" href="/manifesto">
           Read Manifesto
         </Button>
         <Button
