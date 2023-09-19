@@ -12,6 +12,7 @@ html[data-theme="light"] {
   --ifm-navbar-item-padding-horizontal: 0;
   --ifm-navbar-height: 0;
   --ifm-navbar-shadow: none;
+  --ifm-alert-padding-horizontal: 16px
 }
 
 html[data-theme="dark"] {
