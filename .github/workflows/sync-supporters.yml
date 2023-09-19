@@ -1,6 +1,7 @@
 name: Sync supporters
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 7 * * *" # Runs daily at 7:00 UTC
 
