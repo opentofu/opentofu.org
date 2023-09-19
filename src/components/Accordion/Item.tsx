@@ -51,6 +51,13 @@ const AccordionItem = ({
       }
     });
 
+    if (!detailsRef.current.hasAttribute("open")) {
+      // Push to end of queue to read updated position and scroll to it
+      setTimeout(() => {
+        detailsRef.current.scrollIntoView({ behavior: "smooth" });
+      });
+    }
+
     if (!isHashEnabled) {
       return;
     }
@@ -58,10 +65,6 @@ const AccordionItem = ({
     if (detailsRef.current.hasAttribute("open")) {
       window.history.replaceState({ hash: undefined }, "", location.pathname);
     } else {
-      // Push to end of queue to read updated position and scroll to it
-      setTimeout(() => {
-        detailsRef.current.scrollIntoView({ behavior: "smooth" });
-      });
       window.history.replaceState(
         { hash: id },
         "",
