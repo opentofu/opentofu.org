@@ -21,7 +21,7 @@ export default function GitHubStartNavbarItem({
         }
         data-size="large"
         data-show-count="true"
-        aria-label="Star opentffoundation/manifesto on GitHub"
+        aria-label="Star OpenTofu on GitHub"
       >
         {buttonLabel}
       </GitHubButton>

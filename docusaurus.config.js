@@ -64,10 +64,6 @@ const config = {
 
   baseUrl: "/",
 
-  // TODO: Provide final values
-  organizationName: "opentf",
-  projectName: "docs",
-
   // TODO: Once we clean up links we can switch to "throw"
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
@@ -221,11 +217,10 @@ const config = {
           //     },
           //   ],
           // },
-          // TODO: replace href with opentf repo once it's public
           {
             type: "custom-github-stars-navbar-item",
             position: "right",
-            ghRepoUrl: "https://github.com/opentofu/manifesto",
+            ghRepoUrl: "https://github.com/opentofu/opentofu",
             buttonLabel: "Star",
           },
           {
