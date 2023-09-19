@@ -55,10 +55,7 @@ const AccordionItem = ({
       return;
     }
 
-    if (
-      detailsRef.current.hasAttribute("open") &&
-      detailsRef.current.getAttribute("open") !== false
-    ) {
+    if (detailsRef.current.hasAttribute("open")) {
       window.history.replaceState({ hash: undefined }, "", location.pathname);
     } else {
       window.history.replaceState(
