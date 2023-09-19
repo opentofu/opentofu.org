@@ -35,10 +35,12 @@ function SupporterType({ type, withSeparator, count }: SupporterTypeProps) {
   );
 }
 
+const MAX_LIST_COUNT = 5;
+
 export default function Supporters() {
   const groupedSupporters = groupSupportersByType(supporters);
   const types = Object.entries(groupedSupporters);
-  const list = supporters.slice(0, 5);
+  const list = supporters.slice(0, MAX_LIST_COUNT);
 
   return (
     <section className="py-12 mx-auto container items-center flex flex-col px-4">
