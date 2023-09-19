@@ -13,7 +13,7 @@ type SupporterTypeProps = {
 
 function SupporterType({ type, withSeparator, count }: SupporterTypeProps) {
   return (
-    <li className="h-12 flex items-center font-medium">
+    <li className="h-12 flex items-center">
       <span aria-hidden>{type}</span>
       <span className="sr-only">
         Supporting {type}: {count}
