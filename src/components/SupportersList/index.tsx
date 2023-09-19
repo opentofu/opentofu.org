@@ -1,8 +1,5 @@
 import React from "react";
 import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import ThemedImage from "@theme/ThemedImage";
-import useBaseUrl from "@docusaurus/useBaseUrl";
 
 type SupportersListProps = {
   list: {
@@ -14,9 +11,6 @@ type SupportersListProps = {
 };
 
 export default function SupportersList({ list }: SupportersListProps) {
-  const { siteConfig } = useDocusaurusContext();
-  const { logos } = siteConfig.customFields;
-
   return (
     <ul
       className="mt-6 md:mt-12 mb-6 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto w-full text-gray-600 dark:text-gray-500"
@@ -31,21 +25,10 @@ export default function SupportersList({ list }: SupportersListProps) {
             href={supporter.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-1/3 text-inherit"
+            className="w-1/3 text-inherit font-bold"
             aria-label={`Go to ${supporter.name} website`}
           >
-            {logos[supporter.name] ? (
-              <ThemedImage
-                alt={supporter.name}
-                sources={{
-                  light: useBaseUrl(logos[supporter.name].light),
-                  dark: useBaseUrl(logos[supporter.name].dark),
-                }}
-                className="w-28"
-              />
-            ) : (
-              supporter.name
-            )}
+            {supporter.name}
           </Link>
 
           <p className="w-2/3 text-right">{supporter.pledge}</p>

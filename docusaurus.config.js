@@ -246,24 +246,6 @@ const config = {
       },
       image: "/img/og.png",
     }),
-  customFields: {
-    logos: {
-      Gruntwork: {
-        dark: "/logos/gruntwork.png",
-        light: "/logos/gruntwork-light.svg",
-      },
-      Spacelift: {
-        dark: "/logos/spacelift.svg",
-        light: "/logos/spacelift-light.svg",
-      },
-      env0: { dark: "/logos/env0.svg", light: "/logos/env0-light.svg" },
-      Scalr: { dark: "/logos/scalr.svg", light: "/logos/scalr-light.png" },
-      Harness: {
-        dark: "/logos/harness.svg",
-        light: "/logos/harness-light.png",
-      },
-    },
-  },
 
   themes: [
     [
