@@ -55,12 +55,11 @@ const AccordionItem = ({
       return;
     }
 
-    if (window.location.hash === `#${id}`) {
-      window.history.replaceState(
-        { hash: undefined },
-        "",
-        `${location.pathname}#`
-      );
+    if (
+      detailsRef.current.hasAttribute("open") &&
+      detailsRef.current.getAttribute("open") !== false
+    ) {
+      window.history.replaceState({ hash: undefined }, "", location.pathname);
     } else {
       window.history.replaceState(
         { hash: id },
