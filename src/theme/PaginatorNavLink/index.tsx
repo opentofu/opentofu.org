@@ -7,8 +7,9 @@ type PaginatorNavLink = Props & {
   className?: string;
 };
 
-export default function PaginatorNavLink(props: Props) {
+export default function PaginatorNavLink(props: PaginatorNavLink) {
   const { permalink, title, subLabel, isNext, className } = props;
+  
   return (
     <Link
       className={clsx(

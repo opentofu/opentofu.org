@@ -2,8 +2,15 @@ import React from "react";
 import PatternBg from "@site/src/components/PatternBg";
 import Button from "@site/src/components/Button";
 import Link from "@docusaurus/Link";
+import { PropBlogPostContent } from "@docusaurus/plugin-content-blog";
 
-export default function BlogLastPost({ item }) {
+type BlogLastPostProps = {
+  item: {
+    content: PropBlogPostContent;
+  };
+};
+
+export default function BlogLastPost({ item }: BlogLastPostProps) {
   const { permalink, title, date, formattedDate, description } =
     item.content.metadata;
 

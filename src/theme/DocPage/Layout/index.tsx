@@ -1,8 +1,8 @@
 import React from "react";
+import DocPageLayoutSidebar from "./Sidebar";
 import { useDocsSidebar } from "@docusaurus/theme-common/internal";
 import Layout from "@theme/Layout";
 import BackToTopButton from "@theme/BackToTopButton";
-import DocPageLayoutSidebar from "@theme/DocPage/Layout/Sidebar";
 import type { Props } from "@theme/DocPage/Layout";
 
 export default function DocPageLayout({ children }: Props) {

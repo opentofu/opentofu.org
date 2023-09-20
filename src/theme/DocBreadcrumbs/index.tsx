@@ -7,15 +7,17 @@ import Link from "@docusaurus/Link";
 
 import HomeBreadcrumbItem from "@theme/DocBreadcrumbs/Items/Home";
 
+type BreadcrumbsItemLinkProps = {
+  children: ReactNode;
+  href: string | undefined;
+  isLast: boolean;
+};
+
 function BreadcrumbsItemLink({
   children,
   href,
   isLast,
-}: {
-  children: ReactNode;
-  href: string | undefined;
-  isLast: boolean;
-}) {
+}: BreadcrumbsItemLinkProps) {
   if (isLast) {
     return (
       <span className="text-gray-600 dark:text-gray-500" itemProp="name">

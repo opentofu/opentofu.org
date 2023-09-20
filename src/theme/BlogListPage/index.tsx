@@ -6,8 +6,9 @@ import BlogListPaginator from "@theme/BlogListPaginator";
 import SearchMetadata from "@theme/SearchMetadata";
 import BlogListItems from "@theme/BlogListItems";
 import BlogLastPost from "@theme/BlogLastPost";
+import { Props } from "@theme/BlogListPage";
 
-export default function BlogListPage(props) {
+export default function BlogListPage(props: Props) {
   const { metadata, items } = props;
 
   const { blogDescription, blogTitle } = metadata;

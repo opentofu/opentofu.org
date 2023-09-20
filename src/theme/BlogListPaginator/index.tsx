@@ -1,7 +1,9 @@
 import React from "react";
 
 import Button from "@site/src/components/Button";
-export default function BlogListPaginator(props) {
+import { Props } from "@theme/BlogListPaginator";
+
+export default function BlogListPaginator(props: Props) {
   const { metadata } = props;
   const { previousPage, nextPage } = metadata;
   return (

@@ -3,8 +3,9 @@ import { blogPostContainerID } from "@docusaurus/utils-common";
 import { useBlogPost } from "@docusaurus/theme-common/internal";
 import MDXContent from "@theme/MDXContent";
 import TextContent from "@site/src/components/TextContent";
+import { Props } from "@theme/BlogPostItem/Content";
 
-export default function BlogPostItemContent({ children }) {
+export default function BlogPostItemContent({ children }: Props) {
   const { isBlogPostPage } = useBlogPost();
   return (
     <TextContent
