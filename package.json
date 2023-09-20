@@ -3,18 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
-    "serve": "docusaurus serve",
-    "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
     "sync-supporters": "node ./sync-supporters.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "eslint --cache \"**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
     "@docusaurus/core": "2.4.1",
@@ -63,6 +59,6 @@
     "eslint-plugin-react-hooks": "^4.6.0"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "**/*": ["prettier --write --ignore-unknown", "npm run lint"]
   }
 }
