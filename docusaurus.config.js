@@ -84,7 +84,15 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/docs",
-          editUrl: "https://github.com/opentofu/opentofu/edit/main/website",
+          editUrl: ({ docPath }) => {
+            // Remove the edit link from the documentation index page
+            // TODO: remove after moving the page to the main OpenTofu repo
+            if (docPath === "index.mdx") {
+              return undefined;
+            }
+
+            return `https://github.com/opentofu/opentofu/edit/main/website/docs/${docPath}`;
+          },
         },
         blog: false,
         gtag: {
