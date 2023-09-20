@@ -232,7 +232,7 @@ const config = {
           },
           {
             type: "custom-social-icon-link-navbar-item",
-            href: "https://join.slack.com/t/slack-9uv6202/shared_invite/zt-22ifsm1t2-AF6cL0cOdzivP8E~4deDJA",
+            href: "https://communityinviter.com/apps/opentfcommunity/opentofu",
             position: "right",
             name: "slack",
             label: "Join us on Slack",
