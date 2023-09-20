@@ -15,7 +15,7 @@ export default function FAQ() {
         <Headline>Frequently Asked Questions</Headline>
       </Jumbotron>
 
-      <div className="container mx-auto pt-6 pb-10 px-4">
+      <div className="container mx-auto pt-6 pb-10">
         <Accordion>
           <MDXProvider
             components={{

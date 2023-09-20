@@ -8,7 +8,7 @@ export default function BlogPostItemContent({ children }) {
   const { isBlogPostPage } = useBlogPost();
   return (
     <TextContent
-      className="my-4 md:my-10 mx-auto"
+      className="my-4 md:my-10 mx-auto px-4"
       id={isBlogPostPage ? blogPostContainerID : undefined}
       itemProp="articleBody"
     >
