@@ -2,7 +2,9 @@ const cheerio = require("cheerio");
 const fs = require("fs");
 
 async function sync() {
-  const res = await fetch("https://opentf.org");
+  const res = await fetch(
+    "https://raw.githubusercontent.com/opentofu/manifesto/main/index.html"
+  );
   const html = await res.text();
   const $ = cheerio.load(html);
 

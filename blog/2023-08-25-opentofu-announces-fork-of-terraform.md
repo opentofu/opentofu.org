@@ -4,7 +4,7 @@ slug: opentofu-announces-fork-of-terraform
 image: /img/blog/fork-announcement.png
 ---
 
-Two weeks ago, HashiCorp announced they are changing the license to all their core products, including Terraform, to the Business Source License (BSL). In an attempt to keep Terraform open source, we published the [OpenTofu manifesto](/manifesto), and the community response was huge! Over 100 companies, 10 projects, and 400 individuals pledged their time and resources to keep Terraform open-source. The [GitHub repository](https://github.com/opentffoundation/manifesto) for the manifesto already has over 4k stars, and the number is growing quickly!
+Two weeks ago, HashiCorp announced they are changing the license to all their core products, including Terraform, to the Business Source License (BSL). In an attempt to keep Terraform open source, we published the [OpenTofu manifesto](/manifesto), and the community response was huge! Over 100 companies, 10 projects, and 400 individuals pledged their time and resources to keep Terraform open-source. The [GitHub repository](https://github.com/opentofu/manifesto) for the manifesto already has over 4k stars, and the number is growing quickly!
 
 <!--truncate-->
 
@@ -43,4 +43,4 @@ As previously outlined, we’ve been working on this fork for several days alrea
 
 **You might wonder why we already started work on this project so early?** It’s quite simple, really. If HashiCorp were to reverse their decision, worst case we’d just lose a week of work. But if, and that is what indeed happened, HashiCorp wasn’t to reverse their decision, we didn’t want to lose any time, so that **we could have a working OpenTofu 1.6.0 release ready for you as soon as possible**. And that’s why we started work on this over a week ago.
 
-In the spirit of being as open as possible, **we’ve created a** [public repository tracking our progress towards important milestones](https://github.com/opentffoundation/roadmap/milestones). You can subscribe to the issues there to be notified as soon as the fork is public. If you have any questions, feel free to create additional issues on that repository - we’ll try to respond as quickly as possible.
+In the spirit of being as open as possible, **we’ve created a** [public repository tracking our progress towards important milestones](https://github.com/opentofu/roadmap/milestones). You can subscribe to the issues there to be notified as soon as the fork is public. If you have any questions, feel free to create additional issues on that repository - we’ll try to respond as quickly as possible.

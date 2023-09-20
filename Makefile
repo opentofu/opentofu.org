@@ -1,6 +1,6 @@
 # Variables (TODO: update this after moving to opentofu org)
-REPO_URL := https://github.com/opentffoundation/opentf.git
-CLONE_DIR := ./opentf-repo
+REPO_URL := https://github.com/opentofu/opentofu.git
+CLONE_DIR := ./opentofu-repo
 DEST_DIR := .
 SOURCE_DIR := website
 BRANCH := main

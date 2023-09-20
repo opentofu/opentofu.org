@@ -19,6 +19,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/opentf-repo
+/opentofu-repo
 /docs/**
 !/docs/index.mdx

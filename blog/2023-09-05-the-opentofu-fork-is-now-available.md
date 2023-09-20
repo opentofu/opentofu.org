@@ -4,7 +4,7 @@ slug: the-opentofu-fork-is-now-available
 image: /img/blog/fork-release.png
 ---
 
-Four weeks ago, HashiCorp switched Terraform from an open source license to the Business Source License (BSL); three weeks ago, we released the [OpenTofu manifesto](/manifesto), asking HashiCorp to switch back to an open source license; two weeks ago, with no response from HashiCorp, we [created a private fork of Terraform](/blog/opentofu-announces-fork-of-terraform) and said we'd make it public in 1-2 weeks; and today, as promised, we're happy to announce that **the OpenTofu repository is now publicly available at** [github.com/opentffoundation/opentf](https://github.com/opentffoundation/opentf)!
+Four weeks ago, HashiCorp switched Terraform from an open source license to the Business Source License (BSL); three weeks ago, we released the [OpenTofu manifesto](/manifesto), asking HashiCorp to switch back to an open source license; two weeks ago, with no response from HashiCorp, we [created a private fork of Terraform](/blog/opentofu-announces-fork-of-terraform) and said we'd make it public in 1-2 weeks; and today, as promised, we're happy to announce that **the OpenTofu repository is now publicly available at** [github.com/opentofu/opentofu](https://github.com/opentofu/opentofu)!
 
 <!--truncate-->
 
@@ -20,7 +20,7 @@ However, a few items are not done yet, and as a result, official OpenTofu releas
 
 ### An open roadmap: the path to stable OpenTofu releases
 
-A key part of working in the open is making our roadmap open. So here's a quick snapshot of what we already got done, what's in progress now, and what's coming up in the future, all with the initial goal of getting to the first stable OpenTofu release (for a more detailed and up-to-date look at the roadmap, see the [milestones and issues in the OpenTofu repo](https://github.com/opentffoundation/opentf/milestones)).
+A key part of working in the open is making our roadmap open. So here's a quick snapshot of what we already got done, what's in progress now, and what's coming up in the future, all with the initial goal of getting to the first stable OpenTofu release (for a more detailed and up-to-date look at the roadmap, see the [milestones and issues in the OpenTofu repo](https://github.com/opentofu/opentofu/milestones)).
 
 #### ✅ What we already got done
 
@@ -29,12 +29,12 @@ A key part of working in the open is making our roadmap open. So here's a quick 
 - **Start working on the OpenTofu fork**. With no response from HashiCorp, we created the OpenTofu fork, and started working on it in private.
 - **Apply to join the Linux Foundation**. We want OpenTofu to be part of an impartial, community-driven foundation, so we submitted all the paperwork to join the Linux Foundation.
 - **Open up community Slack discussions**. We created the [OpenTofu Community Slack](https://join.slack.com/t/slack-9uv6202/shared_invite/zt-22ifsm1t2-AF6cL0cOdzivP8E~4deDJA) to give the community a way to have discussions, provide feedback, ask questions, etc.
-- **Prepare the OpenTofu repo for collaboration**. Rename everything to OpenTofu; pick steering committee members; define [contribution guidelines](https://github.com/opentffoundation/opentf/blob/main/CONTRIBUTING.md); get CI / CD and testing working; etc.
-- **Release the OpenTofu repo**. As per this announcement, we are making the OpenTofu repo public at [github.com/opentffoundation/opentf](https://github.com/opentffoundation/opentf)!
+- **Prepare the OpenTofu repo for collaboration**. Rename everything to OpenTofu; pick steering committee members; define [contribution guidelines](https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md); get CI / CD and testing working; etc.
+- **Release the OpenTofu repo**. As per this announcement, we are making the OpenTofu repo public at [github.com/opentofu/opentofu](https://github.com/opentofu/opentofu)!
 
 #### 🔄 What's currently in progress
 
-- **Create initial OpenTofu Registry**. HashiCorp recently made some (unannounced) [changes](https://github.com/opentffoundation/roadmap/issues/24#issuecomment-1699535216) to the terms of the Terraform Registry, saying it may only be used with Terraform. To unblock the alpha release, we are launching an initial OpenTofu Registry. We'll develop the official OpenTofu Registry solution via an official RFC process later.
+- **Create initial OpenTofu Registry**. HashiCorp recently made some (unannounced) [changes](https://github.com/opentofu/roadmap/issues/24#issuecomment-1699535216) to the terms of the Terraform Registry, saying it may only be used with Terraform. To unblock the alpha release, we are launching an initial OpenTofu Registry. We'll develop the official OpenTofu Registry solution via an official RFC process later.
 - **Release process**. Put in place a process for creating OpenTofu releases.
 - **Alpha release**. Once the above items are done, we will create the first OpenTofu release. This will be an alpha release, meant for testing by the community.
 
@@ -45,19 +45,19 @@ A key part of working in the open is making our roadmap open. So here's a quick 
 
 ### Join the OpenTofu community
 
-The response from the community so far has been incredible. In just a few weeks, more than 130 companies and 680 individuals have pledged support to the [OpenTofu manifesto](/manifesto), and the [OpenTofu manifesto repo](https://github.com/opentffoundation/manifesto) has gotten more than 33,000 stars! By comparison, the Terraform repo took nearly 10 years to reach 38,000 stars:
+The response from the community so far has been incredible. In just a few weeks, more than 130 companies and 680 individuals have pledged support to the [OpenTofu manifesto](/manifesto), and the [OpenTofu manifesto repo](https://github.com/opentofu/manifesto) has gotten more than 33,000 stars! By comparison, the Terraform repo took nearly 10 years to reach 38,000 stars:
 
 ![OpenTofu has gotten over 33,000 stars in GitHub in just a few weeks](/img/blog/star-history-202395.png)
 
 This sort of growth is unprecedented, and we're humbled by all of your support. As per the roadmap in the previous section, we're working hard on getting OpenTofu to the point where we can start doing official releases.
 
-In the meantime, you can follow our progress at [github.com/opentffoundation/opentf](https://github.com/opentffoundation/opentf), contribute to the project by following the [contribution guidelines](https://github.com/opentffoundation/opentf/blob/main/CONTRIBUTING.md), and provide feedback in the [OpenTofu Community Slack](https://join.slack.com/t/slack-9uv6202/shared_invite/zt-22ifsm1t2-AF6cL0cOdzivP8E~4deDJA). We are thrilled to be working with the whole community in making OpenTofu a truly open, community-driven project!
+In the meantime, you can follow our progress at [github.com/opentofu/opentofu](https://github.com/opentofu/opentofu), contribute to the project by following the [contribution guidelines](https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md), and provide feedback in the [OpenTofu Community Slack](https://join.slack.com/t/slack-9uv6202/shared_invite/zt-22ifsm1t2-AF6cL0cOdzivP8E~4deDJA). We are thrilled to be working with the whole community in making OpenTofu a truly open, community-driven project!
 
 ### FAQ
 
 #### Where can I find the OpenTofu repo?
 
-The OpenTofu repo is now available at [github.com/opentffoundation/opentf](https://github.com/opentffoundation/opentf).
+The OpenTofu repo is now available at [github.com/opentofu/opentofu](https://github.com/opentofu/opentofu).
 
 #### Where can I find OpenTofu releases?
 
@@ -85,4 +85,4 @@ The first release will be 1.6.0-alpha, forked from the most recent commit that w
 
 #### How can I contribute to OpenTofu?
 
-Please see the [contribution guidelines](https://github.com/opentffoundation/opentf/blob/main/CONTRIBUTING.md)!
+Please see the [contribution guidelines](https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md)!
