@@ -48,8 +48,4 @@ jobs:
             ${{ steps.publish.outputs.url }}/supporters
             ${{ steps.publish.outputs.url }}/blog
             ${{ steps.publish.outputs.url }}/docs
-            ${{ steps.publish.outputs.url }}/docs/intro
-            ${{ steps.publish.outputs.url }}/docs/internals
-            ${{ steps.publish.outputs.url }}/docs/cli
-            ${{ steps.publish.outputs.url }}/docs/language
           uploadArtifacts: true
