@@ -1,0 +1,39 @@
+name: "💡 Improvement idea"
+description: Create a new ticket for improvement
+title: "💡 [IMPROVEMENT] - <title>"
+labels: [
+  "improvement"
+]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Summary"
+      description: Provide a brief explanation of the improvement
+      placeholder: Describe in a few lines your idea
+    validations:
+      required: true
+  - type: textarea
+    id: basic_example
+    attributes:
+      label: "Basic Example"
+      description: Indicate here some basic examples of your idea.
+      placeholder: A few specific words about your idea.
+    validations:
+      required: true
+  - type: textarea
+    id: drawbacks
+    attributes:
+      label: "Drawbacks"
+      description: What are the drawbacks/impacts of your idea ?
+      placeholder: Identify the drawbacks and impacts while being neutral on your idea
+    validations:
+      required: true
+  - type: textarea
+    id: unresolved_question
+    attributes:
+      label: "Unresolved questions"
+      description: What questions still remain unresolved ?
+      placeholder: Identify any unresolved issues.
+    validations:
+      required: false
