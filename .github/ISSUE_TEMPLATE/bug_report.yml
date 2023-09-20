@@ -48,7 +48,7 @@ body:
     id: browsers
     attributes:
       label: "Browsers"
-      description: What browsers are you seeing the problem on ?
+      description: What browsers are you seeing the problem on?
       multiple: true
       options:
         - Firefox
@@ -62,7 +62,7 @@ body:
     id: os
     attributes:
       label: "OS"
-      description: What is the impacted environment ?
+      description: On which operating system this issue occurs?
       multiple: true
       options:
         - Windows
