@@ -1,4 +1,4 @@
-# Variables (TODO: update this after moving to opentofu org)
+# Variables
 REPO_URL := https://github.com/opentofu/opentofu.git
 CLONE_DIR := ./opentofu-repo
 DEST_DIR := .
