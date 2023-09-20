@@ -3,7 +3,7 @@ import { useLocation } from "@docusaurus/router";
 
 import React, { useEffect, useRef } from "react";
 
-type AccordionItemProps = {
+export type AccordionItemProps = {
   children: React.ReactNode;
   summary: string;
   open?: boolean;
