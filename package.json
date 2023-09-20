@@ -13,6 +13,12 @@
     "lint": "eslint --cache \"**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "eslint": "^8.49.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "@docusaurus/core": "2.4.1",
     "@docusaurus/module-type-aliases": "2.4.1",
     "@docusaurus/plugin-client-redirects": "^2.4.1",
@@ -49,14 +55,8 @@
     "node": ">=18.17.1"
   },
   "devDependencies": {
-    "cheerio": "^1.0.0-rc.12",
     "husky": "^8.0.3",
-    "lint-staged": "^14.0.1",
-    "@typescript-eslint/eslint-plugin": "^6.7.2",
-    "@typescript-eslint/parser": "^6.7.2",
-    "eslint": "^8.49.0",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "lint-staged": "^14.0.1"
   },
   "lint-staged": {
     "**/*": ["prettier --write --ignore-unknown", "npm run lint"]
