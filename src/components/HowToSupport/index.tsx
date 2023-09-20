@@ -65,7 +65,7 @@ export default function HowToSupport() {
                 className="w-12"
                 aria-hidden
               >
-                <g stroke-miterlimit="10" stroke-width="3.2">
+                <g strokeMiterlimit="10" strokeWidth="3.2">
                   <path
                     className="stroke-brand-300"
                     d="m16 24.258 7.04-8.448a3.201 3.201 0 0 1 2.46-1.152H40"
@@ -76,19 +76,19 @@ export default function HowToSupport() {
                   />
                   <path
                     className="stroke-brand-300"
-                    stroke-linecap="round"
+                    strokeLinecap="round"
                     d="M8 24.258h8l2.5-3"
                   />
                   <path
                     className="stroke-brand-300"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="m33.6 8.258 6.4 6.4-6.4 6.4"
                   />
                   <path
                     className="stroke-brand-600"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="m33.6 27.459 6.4 6.4-6.4 6.4"
                   />
                 </g>

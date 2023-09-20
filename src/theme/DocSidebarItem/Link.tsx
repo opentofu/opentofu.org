@@ -10,8 +10,6 @@ export default function DocSidebarItemLink({
   item,
   onItemClick,
   activePath,
-  level,
-  index,
   ...props
 }: Props) {
   const { href, label, className, autoAddBaseUrl } = item;

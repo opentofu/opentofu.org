@@ -45,7 +45,7 @@ export default function Manifesto() {
           HashiCorp team are vague. Now, every company, vendor, and developer
           using Terraform has to wonder whether what they are doing could be
           construed as competitive with HashiCorp's offerings.{" "}
-          <a href="https://www.hashicorp.com/license-faq" target="_blank">
+          <a href="https://www.hashicorp.com/license-faq" target="_blank" rel="noreferrer">
             The FAQ
           </a>{" "}
           provides some solace for end-customers and systems integrators today,
