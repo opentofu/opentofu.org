@@ -1,8 +1,0 @@
-{
-  "ci": {
-    "collect": {
-      "staticDistDir": "./build",
-      "maxAutodiscoverUrls": 15
-    }
-  }
-}
