@@ -85,7 +85,7 @@ function extractMDXAdmonitionTitle(children: ReactNode): {
     (item) =>
       React.isValidElement(item) &&
       (item.props as { mdxType: string } | null)?.mdxType ===
-        "mdxAdmonitionTitle"
+        "mdxAdmonitionTitle",
   );
   const rest = <>{items.filter((item) => item !== mdxAdmonitionTitle)}</>;
   return {
@@ -96,7 +96,7 @@ function extractMDXAdmonitionTitle(children: ReactNode): {
 
 function processAdmonitionProps(props: Props): Props {
   const { mdxAdmonitionTitle, rest } = extractMDXAdmonitionTitle(
-    props.children
+    props.children,
   );
   return {
     ...props,
@@ -121,7 +121,7 @@ export default function Admonition(props: Props) {
     <div
       className={clsx(
         "flex flex-col py-2 px-3 not-prose border gap-1 [&+&]:mt-3 [&_a:hover]:text-gray-900 dark:[&_a:hover]:text-gray-50 [&_a>code]:font-bold [&_code]:text-base [&_code]:px-1.5",
-        typeConfig.className
+        typeConfig.className,
       )}
       role="alert"
     >

@@ -9,7 +9,7 @@ export default function DocSidebarItemHtml({ item, index }: Props) {
     <li
       className={clsx(
         "font-normal text-gray-600 dark:text-gray-500",
-        className
+        className,
       )}
       key={index}
       // eslint-disable-next-line react/no-danger

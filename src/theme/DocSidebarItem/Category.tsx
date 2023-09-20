@@ -46,7 +46,7 @@ function useAutoExpandActiveCategory({
  * see https://github.com/facebook/docusaurus/issues/3030
  */
 function useCategoryHrefWithSSRFallback(
-  item: Props["item"]
+  item: Props["item"],
 ): string | undefined {
   const isBrowser = useIsBrowser();
   return useMemo(() => {
@@ -147,7 +147,7 @@ export default function DocSidebarItemCategory({
             "w-5 h-5 fill-current transition-transform transform",
             {
               " rotate-90": !collapsed,
-            }
+            },
           )}
         >
           <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />

@@ -14,7 +14,9 @@ function NavbarBackdrop(props: ComponentProps<"div">) {
       {...props}
       className={clsx(
         "fixed inset-0 bg-black transition-all z-10",
-        mobileSidebar.shown ? "bg-opacity-75 visible" : "bg-opacity-0 invisible"
+        mobileSidebar.shown
+          ? "bg-opacity-75 visible"
+          : "bg-opacity-0 invisible",
       )}
     />
   );

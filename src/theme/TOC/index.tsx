@@ -8,7 +8,7 @@ export default function TOC({ className, ...props }: Props) {
     <div
       className={clsx(
         "sticky top-0 p-2 xl:p-4 text-sm xl:text-base",
-        className
+        className,
       )}
     >
       <TOCItems

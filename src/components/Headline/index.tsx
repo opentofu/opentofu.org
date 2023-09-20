@@ -11,7 +11,7 @@ export default function Headline({ children, className }: HeadlineProps) {
     <h1
       className={clsx(
         "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-normal lg:leading-normal tracking-wider text-center px-4",
-        className
+        className,
       )}
     >
       {children}

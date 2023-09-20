@@ -23,7 +23,7 @@ async function blogPluginExtended(...pluginArgs) {
           // Inject the metadata you need for each recent blog post
           metadata: await actions.createData(
             `home-page-recent-post-metadata-${index}.json`,
-            JSON.stringify(blogPost.metadata)
+            JSON.stringify(blogPost.metadata),
           ),
 
           // Inject the MDX excerpt as a JSX component prop
@@ -50,7 +50,7 @@ async function blogPluginExtended(...pluginArgs) {
         // These are the props that will be passed to our "Home" page component
         modules: {
           recentPosts: await Promise.all(
-            recentPosts.map(createRecentPostModule)
+            recentPosts.map(createRecentPostModule),
           ),
         },
       });
