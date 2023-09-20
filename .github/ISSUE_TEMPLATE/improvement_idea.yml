@@ -1,5 +1,5 @@
 name: "💡 Improvement idea"
-description: Create a new ticket for a new feature request
+description: Create a new ticket for improvement
 title: "💡 [IMPROVEMENT] - <title>"
 labels: [
   "improvement"
