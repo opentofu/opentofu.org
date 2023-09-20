@@ -18,7 +18,7 @@ export default function Manifesto() {
       <Jumbotron>
         <Headline className="max-w-2xl">The OpenTofu Manifesto</Headline>
       </Jumbotron>
-      <TextContent className="mb-4 md:mb-10 mx-auto">
+      <TextContent className="mb-4 md:mb-10 mx-auto px-4">
         <p>
           Terraform was open-sourced in 2014 under the Mozilla Public License
           (v2.0) (the “MPL”). Over the next ~9 years, it built up a community
@@ -45,7 +45,11 @@ export default function Manifesto() {
           HashiCorp team are vague. Now, every company, vendor, and developer
           using Terraform has to wonder whether what they are doing could be
           construed as competitive with HashiCorp's offerings.{" "}
-          <a href="https://www.hashicorp.com/license-faq" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.hashicorp.com/license-faq"
+            target="_blank"
+            rel="noreferrer"
+          >
             The FAQ
           </a>{" "}
           provides some solace for end-customers and systems integrators today,
