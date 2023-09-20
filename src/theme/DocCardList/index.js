@@ -19,7 +19,7 @@ export default function DocCardList(props) {
     <section
       className={clsx(
         "grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full",
-        className
+        className,
       )}
     >
       {filteredItems.map((item, index) => (

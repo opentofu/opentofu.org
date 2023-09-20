@@ -3,7 +3,7 @@ const fs = require("fs");
 
 async function sync() {
   const res = await fetch(
-    "https://raw.githubusercontent.com/opentofu/manifesto/main/index.html"
+    "https://raw.githubusercontent.com/opentofu/manifesto/main/index.html",
   );
   const html = await res.text();
   const $ = cheerio.load(html);
@@ -23,7 +23,7 @@ async function sync() {
   fs.writeFileSync(
     "./supporters.json",
     JSON.stringify(supporters, null, 2),
-    "utf8"
+    "utf8",
   );
 }
 

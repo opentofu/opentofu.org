@@ -76,7 +76,7 @@ const AccordionItem = ({
       window.history.replaceState(
         { hash: id },
         "",
-        `${location.pathname}#${encodeURI(id)}`
+        `${location.pathname}#${encodeURI(id)}`,
       );
     }
   };
