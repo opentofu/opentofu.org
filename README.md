@@ -1,4 +1,5 @@
-# OpenTofu Website
+<img src="./.github/logo-dark.svg#gh-dark-mode-only" alt="OpenTofu" width="250px" />
+<img src="./.github/logo-light.svg#gh-light-mode-only" alt="OpenTofu" width="250px" />
 
 ## Stack
 
