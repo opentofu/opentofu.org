@@ -1,5 +1,5 @@
 import React from "react";
-import PaginatorNavLink from "@theme/PaginatorNavLink";
+import PaginatorNavLink from "../PaginatorNavLink";
 import type { Props } from "@theme/DocPaginator";
 
 export default function DocPaginator(props: Props) {
