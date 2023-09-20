@@ -144,6 +144,11 @@ const config = {
           autoCollapseCategories: true,
         },
       },
+      algolia: {
+        appId: "0AUNALFPJF",
+        apiKey: "5a83e1af5126db1360bdc84bfefb20b8",
+        indexName: "opentofu",
+      },
       footer: {
         links: [
           {
@@ -254,16 +259,6 @@ const config = {
       },
       image: "/img/og.png",
     }),
-
-  themes: [
-    [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      {
-        // `hashed` is recommended as long-term-cache of index file is possible.
-        hashed: true,
-      },
-    ],
-  ],
 };
 
 module.exports = config;
