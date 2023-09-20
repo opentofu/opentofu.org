@@ -46,8 +46,8 @@ export default function Footer({ links }: FooterProps) {
       <div className="flex gap-6">
         <SocialIconLink
           name="github"
-          href="https://github.com/opentofu/manifesto"
-          label="Go to the OpenTofu's manifesto GitHub repository"
+          href="https://github.com/opentofu/opentofu"
+          label="Go to the OpenTofu's GitHub repository"
           hiddenLabel
         />
         <SocialIconLink
