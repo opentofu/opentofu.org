@@ -1,13 +1,9 @@
 import React from "react";
 import Link from "@docusaurus/Link";
+import { Suporter } from "@site/src/components/SupportersList/types";
 
 type SupportersListProps = {
-  list: {
-    name: string;
-    url: string;
-    pledge: string;
-    type: string;
-  }[];
+  list: Suporter[];
 };
 
 export default function SupportersList({ list }: SupportersListProps) {

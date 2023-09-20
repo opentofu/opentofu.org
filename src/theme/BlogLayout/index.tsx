@@ -1,8 +1,9 @@
 import React from "react";
 
 import Layout from "@theme/Layout";
+import { Props } from "@theme/BlogLayout";
 
-export default function BlogLayout(props) {
+export default function BlogLayout(props: Props) {
   const { children, ...layoutProps } = props;
 
   return (

@@ -1,5 +1,7 @@
-export function groupSupportersByType(supporters) {
-  const groupedSupporters = {};
+import { Suporter } from "../components/SupportersList/types";
+
+export function groupSupportersByType(supporters: Suporter[]) {
+  const groupedSupporters: Record<string, Suporter[]> = {};
   for (const supporter of supporters) {
     let { type } = supporter;
 

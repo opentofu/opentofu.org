@@ -1,4 +1,5 @@
 import React from "react";
+import { Suporter } from "@site/src/components/SupportersList/types";
 import supporters from "../../../supporters.json";
 
 import Button from "../Button";
@@ -51,7 +52,7 @@ export default function Supporters() {
         {types.map(([type, supporters], index) => (
           <SupporterType
             key={type}
-            count={supporters.length}
+            count={(supporters as Suporter[]).length}
             withSeparator={index < types.length - 1}
             type={type}
           />

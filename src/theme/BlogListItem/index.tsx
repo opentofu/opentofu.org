@@ -1,8 +1,15 @@
 import Link from "@docusaurus/Link";
 import Button from "@site/src/components/Button";
 import React from "react";
+import { PropBlogPostContent } from "@docusaurus/plugin-content-blog";
 
-export default function BlogListItem({ item }) {
+type BlogListItemProps = {
+  item: {
+    content: PropBlogPostContent;
+  };
+};
+
+export default function BlogListItem({ item }: BlogListItemProps) {
   const { permalink, title, date, formattedDate, description } =
     item.content.metadata;
 

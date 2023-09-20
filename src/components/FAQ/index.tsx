@@ -1,6 +1,6 @@
 import React from "react";
 import Accordion from "../Accordion";
-import AccordionItem from "../Accordion/Item";
+import AccordionItem, { AccordionItemProps } from "../Accordion/Item";
 import Button from "../Button";
 import Faq from "../../../faq.mdx";
 import { MDXProvider } from "@mdx-js/react";
@@ -17,12 +17,14 @@ export default function FAQ() {
         <Accordion>
           <MDXProvider
             components={{
-              AccordionItem: (props) =>
+              AccordionItem: (props: AccordionItemProps) =>
                 props.highlight ? <AccordionItem {...props} /> : null,
-              a: (props) => (
+              a: (props: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
                 <Link className="text-inherit underline" {...props} />
               ),
-              blockquote: (props) => (
+              blockquote: (
+                props: React.BlockquoteHTMLAttributes<HTMLQuoteElement>
+              ) => (
                 <blockquote
                   className="border-l-4 border-gray-300 text-inherit pl-4"
                   {...props}

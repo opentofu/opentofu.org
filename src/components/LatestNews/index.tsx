@@ -1,8 +1,18 @@
-import React from "react";
+import React, { JSXElementConstructor } from "react";
 import Button from "../Button";
 import Link from "@docusaurus/Link";
+import { PropBlogPostMetadata } from "@docusaurus/plugin-content-blog";
 
-export default function LatestNews({ recentPosts }) {
+export type RecentPost = {
+  metadata: PropBlogPostMetadata;
+  Preview: JSXElementConstructor<unknown>;
+};
+
+type LatestNewsProps = {
+  recentPosts: RecentPost[];
+};
+
+export default function LatestNews({ recentPosts }: LatestNewsProps) {
   const {
     metadata: { title, formattedDate, date, frontMatter, permalink },
     Preview,

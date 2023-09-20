@@ -27,12 +27,16 @@ export default function DocPageLayoutSidebar({
   sidebar,
 }: SidebarProps) {
   const { pathname } = useLocation();
-
   return (
     <aside className={className}>
       <ResetOnSidebarChange>
         <div className="p-2 xl:p-4 text-sm xl:text-base w-full sticky top-0">
-          <DocSidebar sidebar={sidebar} path={pathname} />
+          <DocSidebar
+            sidebar={sidebar}
+            path={pathname}
+            isHidden={false}
+            onCollapse={() => {}}
+          />
         </div>
       </ResetOnSidebarChange>
     </aside>

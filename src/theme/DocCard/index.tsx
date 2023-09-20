@@ -4,8 +4,17 @@ import {
   findFirstCategoryLink,
   useDocById,
 } from "@docusaurus/theme-common/internal";
+import type {
+  PropSidebarItemCategory,
+  PropSidebarItem,
+  PropSidebarItemLink,
+} from "@docusaurus/plugin-content-docs";
 
-function CardLayout({ href, title, description }) {
+type CardLayoutProps =
+  | Pick<PropSidebarItemCategory, "href" | "label" | "description">
+  | Pick<PropSidebarItemLink, "href" | "label" | "description">;
+
+function CardLayout({ href, label, description }: CardLayoutProps) {
   return (
     <div className="not-prose relative group flex flex-col gap-2 border border-gray-900 dark:border-gray-50 rounded-md p-4">
       <h2>
@@ -14,7 +23,7 @@ function CardLayout({ href, title, description }) {
           className="text-gray-900 dark:text-gray-50 hover:text-brand-700 dark:hover:text-brand-500 font-bold"
         >
           <span aria-hidden className="absolute inset-0"></span>
-          {title}
+          {label}
         </Link>
       </h2>
       {description && (
@@ -25,27 +34,40 @@ function CardLayout({ href, title, description }) {
     </div>
   );
 }
-function CardCategory({ item }) {
+
+type CardCategoryProps = {
+  item: PropSidebarItemCategory;
+};
+
+function CardCategory({ item }: CardCategoryProps) {
   const href = findFirstCategoryLink(item);
   // Unexpected: categories that don't have a link have been filtered upfront
   if (!href) {
     return null;
   }
   return (
-    <CardLayout href={href} title={item.label} description={item.description} />
+    <CardLayout href={href} label={item.label} description={item.description} />
   );
 }
-function CardLink({ item }) {
+
+type CardLinkProps = {
+  item: PropSidebarItemLink;
+};
+
+function CardLink({ item }: CardLinkProps) {
   const doc = useDocById(item.docId ?? undefined);
   return (
     <CardLayout
       href={item.href}
-      title={item.label}
+      label={item.label}
       description={item.description ?? doc?.description}
     />
   );
 }
-export default function DocCard({ item }) {
+
+type DocCardProps = { item: PropSidebarItem };
+
+export default function DocCard({ item }: DocCardProps) {
   switch (item.type) {
     case "link":
       return <CardLink item={item} />;
