@@ -84,7 +84,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/docs",
-          editUrl: "https://github.com/opentofu/opentofu/tree/main/website",
+          editUrl: "https://github.com/opentofu/opentofu/edit/main/website",
         },
         blog: false,
         gtag: {
