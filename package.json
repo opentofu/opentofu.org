@@ -59,6 +59,6 @@
     "lint-staged": "^14.0.1"
   },
   "lint-staged": {
-    "**/*": ["prettier --write --ignore-unknown", "npm run lint"]
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
