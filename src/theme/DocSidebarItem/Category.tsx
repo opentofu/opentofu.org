@@ -70,7 +70,7 @@ export default function DocSidebarItemCategory({
   index,
   ...props
 }: Props): JSX.Element {
-  const { items, label, collapsible, className, href } = item;
+  const { items, label, collapsible, href } = item;
   const {
     docs: {
       sidebar: { autoCollapseCategories },

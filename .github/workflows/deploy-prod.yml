@@ -25,14 +25,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Fetch docs
-        run: make
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: "18"
       - name: Install dependencies
         run: npm ci
+      - name: Lint code
+        run: npm run lint
+      - name: Fetch docs
+        run: make
       - name: Build website
         run: npm run build
       - name: Setup Pages

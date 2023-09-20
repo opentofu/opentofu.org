@@ -10,9 +10,7 @@ import { useClickOutside } from "@site/src/utils/useClickOutside";
 
 function DropdownNavbarItemDesktop({
   items,
-  position,
   className,
-  onClick,
   label,
   children,
   ...props
@@ -74,7 +72,6 @@ function DropdownNavbarItemDesktop({
 function DropdownNavbarItemMobile({
   items,
   className,
-  position,
   onClick,
   ...props
 }: DesktopOrMobileNavBarItemProps) {
