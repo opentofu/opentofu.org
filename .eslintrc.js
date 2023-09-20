@@ -17,6 +17,8 @@ module.exports = {
   rules: {
     "react/prop-types": "off",
     "react/no-unescaped-entities": ["error", { forbid: [">", "}"] }],
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
   },
   overrides: [
     {
