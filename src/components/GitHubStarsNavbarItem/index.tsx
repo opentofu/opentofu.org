@@ -1,6 +1,6 @@
 import React from "react";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore should be fixes when upgrating to docusaurus v3
+// @ts-ignore should be fixed when upgrating to docusaurus v3
 import GitHubButton from "react-github-btn";
 import { useColorMode } from "@docusaurus/theme-common";
 
