@@ -42,6 +42,12 @@
     "pledge": "Compute; Development; open-source community efforts"
   },
   {
+    "name": "Terrateam",
+    "url": "https://terrateam.io",
+    "type": "Company",
+    "pledge": "Development; open-source community efforts"
+  },
+  {
     "name": "Doppler",
     "url": "https://doppler.com",
     "type": "Company",
@@ -68,12 +74,6 @@
   {
     "name": "Terramate",
     "url": "https://terramate.io",
-    "type": "Company",
-    "pledge": "Development; open-source community efforts"
-  },
-  {
-    "name": "Terrateam",
-    "url": "https://terrateam.io",
     "type": "Company",
     "pledge": "Development; open-source community efforts"
   },
