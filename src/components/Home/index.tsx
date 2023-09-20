@@ -6,9 +6,13 @@ import Supporters from "../Supporters";
 import FAQ from "../FAQ";
 import HowToSupport from "../HowToSupport";
 import HowToContribute from "../HowToContribute";
-import LatestNews from "../LatestNews";
+import LatestNews, { RecentPost } from "../LatestNews";
 
-export default function Home({ recentPosts }) {
+type HomeProps = {
+  recentPosts: RecentPost[];
+};
+
+export default function Home({ recentPosts }: HomeProps) {
   return (
     <Layout description="The open source infrastructure as code tool.">
       <Hero />

@@ -1,11 +1,17 @@
-import React from "react";
+import React, { ComponentType, SVGProps } from "react";
 import ExpandIcon from "../../icons/expand.svg";
 import DotsIcon from "../../icons/dots.svg";
 import ScaleIcon from "../../icons/scale.svg";
 import LayersIcon from "../../icons/layers.svg";
 import HumidityIcon from "../../icons/humidity.svg";
 
-function Goal({ icon: Icon, title, description }) {
+type GoalProps = {
+  icon: ComponentType<SVGProps<SVGSVGElement>>;
+  title: string;
+  description: string;
+};
+
+function Goal({ icon: Icon, title, description }: GoalProps) {
   return (
     <div className="bg-white dark:bg-blue-900 p-6">
       <Icon className="w-12 mb-4" aria-hidden />
