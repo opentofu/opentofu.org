@@ -14,7 +14,6 @@ export function useComputedStyleForScrollComponent() {
   useEffect(() => {
     let isTimeoutRunning = false;
     let timeout: NodeJS.Timeout;
-
     const scrollHandler = () => {
       const newOpositeheight = getOpositeHeight();
 
@@ -28,16 +27,20 @@ export function useComputedStyleForScrollComponent() {
     };
 
     if (window.innerWidth >= MIN_SCREEN_WIDTH_FOR_VISIBLE_SIDEBAR) {
-      if (window.scrollY > 0) {
-        setOpositeHeight(getOpositeHeight());
-      }
-
       document.addEventListener("scroll", scrollHandler);
 
       return () => {
         document.removeEventListener("scroll", scrollHandler);
         clearTimeout(timeout);
       };
+    }
+  }, [opositeHeight]);
+
+  useEffect(() => {
+    if (window.innerWidth >= MIN_SCREEN_WIDTH_FOR_VISIBLE_SIDEBAR) {
+      if (window.scrollY > 0) {
+        setOpositeHeight(getOpositeHeight());
+      }
     }
   }, []);
 
