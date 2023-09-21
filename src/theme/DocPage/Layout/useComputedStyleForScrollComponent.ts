@@ -37,10 +37,11 @@ export function useComputedStyleForScrollComponent() {
   }, [opositeHeight]);
 
   useEffect(() => {
-    if (window.innerWidth >= MIN_SCREEN_WIDTH_FOR_VISIBLE_SIDEBAR) {
-      if (window.scrollY > 0) {
-        setOpositeHeight(getOpositeHeight());
-      }
+    if (
+      window.innerWidth >= MIN_SCREEN_WIDTH_FOR_VISIBLE_SIDEBAR &&
+      window.scrollY > 0
+    ) {
+      setOpositeHeight(getOpositeHeight());
     }
   }, []);
 
