@@ -4,6 +4,7 @@ import { useLocation } from "@docusaurus/router";
 import DocSidebar from "@theme/DocSidebar";
 
 import type { Props } from "@theme/DocPage/Layout/Sidebar";
+import { useComputedStyleForScrollComponent } from "./useComputedStyleForScrollComponent";
 
 // Reset sidebar state when sidebar changes
 // Use React key to unmount/remount the children
@@ -27,10 +28,16 @@ export default function DocPageLayoutSidebar({
   sidebar,
 }: SidebarProps) {
   const { pathname } = useLocation();
+
+  const computedStyleForScrollComponent = useComputedStyleForScrollComponent();
+
   return (
     <aside className={className}>
       <ResetOnSidebarChange>
-        <div className="p-2 xl:p-4 text-sm xl:text-base w-full sticky top-0 h-screen overflow-y-auto">
+        <div
+          className="p-2 xl:p-4 text-sm xl:text-base w-full sticky top-0 overflow-y-auto"
+          style={computedStyleForScrollComponent}
+        >
           <DocSidebar
             sidebar={sidebar}
             path={pathname}
