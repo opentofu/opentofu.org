@@ -7,7 +7,7 @@ export default function TOC({ className, ...props }: Props) {
   return (
     <div
       className={clsx(
-        "sticky top-0 p-2 xl:p-4 text-sm xl:text-base",
+        "sticky top-0 p-2 xl:p-4 text-sm xl:text-base max-h-screen overflow-y-auto",
         className,
       )}
     >
