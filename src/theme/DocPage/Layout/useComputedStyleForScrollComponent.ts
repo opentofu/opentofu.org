@@ -1,13 +1,22 @@
 import { useEffect, useState } from "react";
 
 const HEADER_HEIGHT = 96;
+const FOOTER_HEIGHT = 108;
 const SCROLL_REFRESH_TIME = 50;
 const MIN_SCREEN_WIDTH_FOR_VISIBLE_SIDEBAR = 1024;
 
 function getOpositeHeight() {
-  return Math.max(0, HEADER_HEIGHT - window.scrollY);
-}
+  const topOpositeheight = Math.max(0, HEADER_HEIGHT - window.scrollY);
+  const bottomOpositeheight = Math.max(
+    0,
+    document.documentElement.offsetHeight -
+      document.documentElement.scrollHeight +
+      window.scrollY +
+      FOOTER_HEIGHT,
+  );
 
+  return Math.max(topOpositeheight, bottomOpositeheight);
+}
 export function useComputedStyleForScrollComponent() {
   const [opositeHeight, setOpositeHeight] = useState(HEADER_HEIGHT);
 
