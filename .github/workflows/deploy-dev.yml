@@ -25,6 +25,8 @@ jobs:
         run: npm run lint
       - name: Fetch docs
         run: make
+      - name: Generate OG images
+        run: npm run generate-og-images
       - name: Build website
         run: npm run build
       - name: Publish to Cloudflare Pages

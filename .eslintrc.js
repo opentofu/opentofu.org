@@ -22,7 +22,12 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["docusaurus.config.js", "sync-supporters.js", "plugins/*.js"],
+      files: [
+        "docusaurus.config.js",
+        "sync-supporters.js",
+        "generate-og-images.js",
+        "plugins/*.js",
+      ],
       rules: {
         "@typescript-eslint/no-var-requires": "off",
       },
