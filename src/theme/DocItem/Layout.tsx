@@ -9,6 +9,8 @@ import DocItemTOCDesktop from "@theme/DocItem/TOC/Desktop";
 import DocItemContent from "@theme/DocItem/Content";
 import DocBreadcrumbs from "@theme/DocBreadcrumbs";
 import type { Props } from "@theme/DocItem/Layout";
+import Head from "@docusaurus/Head";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 
 function useDocTOC() {
   const { frontMatter, toc } = useDoc();
@@ -21,9 +23,17 @@ function useDocTOC() {
 
 export default function DocItemLayout({ children }: Props) {
   const canRenderTOC = useDocTOC();
+  const doc = useDoc();
+  const imageUrl = useBaseUrl(
+    `/cards/${doc.metadata.unversionedId.replaceAll("/", "-")}.png`,
+  );
 
   return (
     <div className="flex h-full lg:divide-x divide-gray-200 dark:divide-gray-800">
+      <Head>
+        <meta property="og:image" content={imageUrl} />
+        <meta property="twitter:image" content={imageUrl} />
+      </Head>
       <div className="w-full lg:w-9/12 p-4">
         <DocVersionBanner />
 
