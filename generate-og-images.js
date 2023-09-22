@@ -2,6 +2,7 @@ const babel = require("@babel/core");
 const satori = require("satori").default;
 const { Resvg } = require("@resvg/resvg-js");
 const { readFile, writeFile } = require("fs/promises");
+const { mkdirSync, existsSync } = require("fs");
 const { theme } = require("./tailwind.config.js");
 const { glob } = require("glob");
 const matter = require("gray-matter");
@@ -15,12 +16,22 @@ async function compileComponentCode() {
   return code;
 }
 
+async function prepareDir() {
+  const dir = "./static/cards";
+  const doesDirExist = existsSync(dir);
+  if (!doesDirExist) {
+    mkdirSync(dir);
+  }
+}
+
 async function main() {
   const [fontDataNormal, fontDataBold, componentCode] = await Promise.all([
     readFile("./static/fonts/DMSans_18pt-Regular.ttf"),
     readFile("./static/fonts/DMSans_18pt-Bold.ttf"),
     compileComponentCode(),
   ]);
+
+  prepareDir();
 
   const card = eval(componentCode.replaceAll("className", "tw"));
 
