@@ -2,15 +2,14 @@ import React from "react";
 
 export default function Card({ section, title, description }) {
   return (
-    <div className="p-10 bg-blue-900 text-white border-t-4 border-brand-500 w-[600px] h-[300px] flex flex-col relative overflow-hidden">
+    <div className="p-10 bg-gray-50 text-white w-[600px] h-[300px] flex flex-col relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-full w-full flex z-[0]">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           width="601"
           height="600"
-          className="object-cover w-[600px]"
-          style={{ opacity: "3%" }}
+          className="object-cover w-[600px] opacity-5"
         >
           <g clipPath="url(#a)">
             <path fill="#fff" d="M.988 0h600v600h-600z" />
@@ -1167,12 +1166,12 @@ export default function Card({ section, title, description }) {
           />
         </svg>
 
-        <span className="bg-brand-500/20 text-brand-500 py-1 px-2 font-bold rounded-3xl shrink-0 mb-3 -ml-2">
+        <span className="bg-brand-500/80 text-brand-800 py-1 px-2 text-sm rounded-3xl shrink-0 mb-3 -ml-2">
           {section}
         </span>
 
-        <h2 className="font-bold text-2xl mb-0 mt-0">{title}</h2>
-        <h3 className="text-lg text-gray-400 mt-1 mb-0 leading-snug font-normal">
+        <h2 className="font-bold text-gray-900 text-2xl mb-0 mt-0">{title}</h2>
+        <h3 className="text-lg text-gray-600 mt-1 mb-0 leading-snug font-normal">
           {description}
         </h3>
       </div>
