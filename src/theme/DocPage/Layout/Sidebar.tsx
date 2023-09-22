@@ -30,7 +30,7 @@ export default function DocPageLayoutSidebar({
   return (
     <aside className={className}>
       <ResetOnSidebarChange>
-        <div className="p-2 xl:p-4 text-sm xl:text-base w-full sticky top-0">
+        <div className="p-2 xl:p-4 text-sm xl:text-base w-full sticky top-0 max-h-screen overflow-y-auto">
           <DocSidebar
             sidebar={sidebar}
             path={pathname}
