@@ -22,7 +22,7 @@ async function sync() {
 
   fs.writeFileSync(
     "./supporters.json",
-    JSON.stringify(supporters, null, 2),
+    JSON.stringify(supporters, null, 2) + "\n",
     "utf8",
   );
 }
