@@ -9,7 +9,7 @@ export default function Card({ section, title, description }) {
           fill="none"
           width="601"
           height="600"
-          className="object-cover w-[600px] opacity-5"
+          className="object-cover w-[600px] opacity-[3%]"
         >
           <g clipPath="url(#a)">
             <path fill="#fff" d="M.988 0h600v600h-600z" />
