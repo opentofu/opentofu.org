@@ -16,7 +16,7 @@ async function compileComponentCode() {
   return code;
 }
 
-async function prepareDir() {
+function prepareDir() {
   const dir = "./static/cards";
   const doesDirExist = existsSync(dir);
   if (!doesDirExist) {
@@ -25,19 +25,17 @@ async function prepareDir() {
 }
 
 async function main() {
-  const [fontDataNormal, fontDataBold, componentCode] = await Promise.all([
-    readFile("./static/fonts/DMSans_18pt-Regular.ttf"),
-    readFile("./static/fonts/DMSans_18pt-Bold.ttf"),
-    compileComponentCode(),
-  ]);
+  const [fontDataNormal, fontDataBold, componentCode, mdxFilePaths] =
+    await Promise.all([
+      readFile("./static/fonts/DMSans_18pt-Regular.ttf"),
+      readFile("./static/fonts/DMSans_18pt-Bold.ttf"),
+      compileComponentCode(),
+      glob("./docs/{cli,internal,intro,language}/**/*.mdx"),
+    ]);
 
   prepareDir();
 
   const card = eval(componentCode.replaceAll("className", "tw"));
-
-  const mdxFilePaths = await glob(
-    "./docs/{cli,internal,intro,language}/**/*.mdx",
-  );
 
   for (const mdxFilePath of mdxFilePaths) {
     const mdx = await readFile(mdxFilePath, "utf-8");
