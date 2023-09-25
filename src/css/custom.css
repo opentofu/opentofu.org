@@ -37,14 +37,28 @@ body {
   --docsearch-text-color: theme("colors.gray.600");
   --docsearch-muted-color: theme("colors.gray.600");
   --docsearch-searchbox-background: theme("colors.gray.150");
+  --docsearch-highlight-color: theme("colors.gray.600");
+  --docsearch-highlight-background-selected: theme("colors.gray.500");
+  --docsearch-highlight-mark-color: theme("colors.brand.700");
 }
 
 [data-theme="dark"] .DocSearch {
   --docsearch-text-color: theme("colors.gray.500");
   --docsearch-muted-color: theme("colors.gray.500");
   --docsearch-searchbox-background: theme("colors.gray.800");
+  --docsearch-highlight-color: theme("colors.gray.500");
+  --docsearch-highlight-background-selected: theme("colors.gray.700");
+  --docsearch-highlight-mark-color: theme("colors.brand.500");
 }
 
 .DocSearch .DocSearch-Button-Key {
   display: none;
+}
+
+.DocSearch .DocSearch-Hit[aria-selected="true"] a {
+  background-color: var(--docsearch-highlight-background-selected);
+}
+
+.DocSearch .DocSearch-Hits mark {
+  color: var(--docsearch-highlight-mark-color);
 }
