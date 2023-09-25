@@ -9,7 +9,6 @@ html[data-theme="light"] {
   --ifm-spacing-horizontal: 0;
   --ifm-navbar-background-color: transparent;
   --ifm-heading-font-family: theme("fontFamily.sans");
-  --ifm-navbar-item-padding-horizontal: 0;
   --ifm-navbar-height: 0;
   --ifm-navbar-shadow: none;
 }
@@ -17,22 +16,13 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
   --ifm-color-primary: theme("colors.brand.500");
   --ifm-background-color: theme("colors.blue.950");
-  --ifm-navbar-search-input-background-color: theme("colors.gray.800");
-  --search-local-hit-background: theme("colors.blue.900");
-  --ifm-navbar-search-input-icon: url('data:image/svg+xml;utf8,<svg fill="%239DA6B5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="16px" width="16px"><path d="M6.02945,10.20327a4.17382,4.17382,0,1,1,4.17382-4.17382A4.15609,4.15609,0,0,1,6.02945,10.20327Zm9.69195,4.2199L10.8989,9.59979A5.88021,5.88021,0,0,0,12.058,6.02856,6.00467,6.00467,0,1,0,9.59979,10.8989l4.82338,4.82338a.89729.89729,0,0,0,1.29912,0,.89749.89749,0,0,0-.00087-1.29909Z" /></svg>');
   --ifm-font-color-base: theme("colors.gray.50");
-  --ifm-navbar-search-input-placeholder-color: theme("colors.gray.500");
-  --ifm-card-background-color: theme("colors.blue.900");
 }
 
 html[data-theme="light"] {
   --ifm-color-primary: theme("colors.brand.700");
   --ifm-background-color: theme("colors.gray.50");
-  --ifm-navbar-search-input-background-color: theme("colors.gray.150");
-  --ifm-navbar-search-input-icon: url('data:image/svg+xml;utf8,<svg fill="%238590A2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="16px" width="16px"><path d="M6.02945,10.20327a4.17382,4.17382,0,1,1,4.17382-4.17382A4.15609,4.15609,0,0,1,6.02945,10.20327Zm9.69195,4.2199L10.8989,9.59979A5.88021,5.88021,0,0,0,12.058,6.02856,6.00467,6.00467,0,1,0,9.59979,10.8989l4.82338,4.82338a.89729.89729,0,0,0,1.29912,0,.89749.89749,0,0,0-.00087-1.29909Z" /></svg>');
   --ifm-font-color-base: theme("colors.gray.900");
-  --ifm-navbar-search-input-placeholder-color: theme("colors.gray.600");
-  --ifm-card-background-color: theme("colors.white");
 }
 
 body {
@@ -43,37 +33,32 @@ body {
   display: none;
 }
 
-html[data-theme="light"] .navbar__search {
-  color: theme("colors.gray.700");
+[data-theme="light"] .DocSearch {
+  --docsearch-text-color: theme("colors.gray.600");
+  --docsearch-muted-color: theme("colors.gray.600");
+  --docsearch-searchbox-background: theme("colors.gray.150");
+  --docsearch-highlight-color: theme("colors.gray.600");
+  --docsearch-highlight-background-selected: theme("colors.gray.500");
+  --docsearch-highlight-mark-color: theme("colors.brand.700");
 }
 
-html[data-theme="dark"] .navbar__search {
-  color: theme("colors.gray.200");
+[data-theme="dark"] .DocSearch {
+  --docsearch-text-color: theme("colors.gray.500");
+  --docsearch-muted-color: theme("colors.gray.500");
+  --docsearch-searchbox-background: theme("colors.gray.800");
+  --docsearch-highlight-color: theme("colors.gray.500");
+  --docsearch-highlight-background-selected: theme("colors.gray.700");
+  --docsearch-highlight-mark-color: theme("colors.brand.500");
 }
 
-/* TODO: Replace with Algolia search icon */
-.navbar__search-input {
-  @apply w-32 lg:w-48 h-10 text-base xs:pl-8;
-}
-
-.navbar__search-input:focus {
-  @apply xs:pl-9;
-}
-
-.navbar__search-input:not(:placeholder-shown) {
-  @apply xs:pl-9 pr-8;
-}
-
-@media (max-width: 576px) {
-  .navbar__search-input:not(:placeholder-shown) {
-    width: 8rem !important;
-  }
-}
-
-button[class^="searchClearButton"] {
-  display: block !important;
-}
-
-div[class^="searchHintContainer"] {
+.DocSearch .DocSearch-Button-Key {
   display: none;
+}
+
+.DocSearch .DocSearch-Hit[aria-selected="true"] a {
+  background-color: var(--docsearch-highlight-background-selected);
+}
+
+.DocSearch .DocSearch-Hits mark {
+  color: var(--docsearch-highlight-mark-color);
 }
