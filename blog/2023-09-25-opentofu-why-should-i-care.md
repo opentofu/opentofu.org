@@ -4,7 +4,7 @@ slug: why-should-i-care-about-opentofu
 image: /img/blog/tofu-insurance.png
 authors:
   - name: Marcin Wyszynski
-    title: Core OpenTofu Contributor, CPO at Spacelift
+    title: OpenTofu steering committee member, CPO at Spacelift
     url: https://github.com/marcinwyszynski
     image_url: https://github.com/marcinwyszynski.png
 ---
