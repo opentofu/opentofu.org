@@ -846,7 +846,7 @@
     "pledge": "Development; open-source community efforts"
   },
   {
-    "name": "Mantle",
+    "name": "Strike",
     "url": "https://strike.sh",
     "type": "Company",
     "pledge": "Cibesecurity; open-source community efforts"
@@ -5350,5 +5350,11 @@
     "url": "https://github.com/johnnorton",
     "type": "Individual",
     "pledge": "Development; open-source community efforts"
+  },
+  {
+    "name": "Kumulus Technologies",
+    "url": "https://kumul.us",
+    "type": "Company",
+    "pledge": "Education; Integration; Open-Source Community Efforts; Documentation"
   }
 ]
