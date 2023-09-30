@@ -198,7 +198,17 @@ export default function HowToSupport() {
               </svg>
             }
           >
-            6. Joining our Slack community & Follow us on Twitter.
+            6. Joining{" "}
+            <Link
+              href="https://communityinviter.com/apps/opentfcommunity/opentofu"
+              className="underline"
+            >
+              our Slack community
+            </Link>{" "}
+            &amp;{" "}
+            <Link href="https://twitter.com/opentofuorg" className="underline">
+              following us on Twitter.
+            </Link>
           </Step>
         </div>
       </div>
