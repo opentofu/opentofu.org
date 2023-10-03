@@ -115,6 +115,15 @@ const config = {
       };
     },
     [
+      "@docusaurus/plugin-content-pages",
+      {
+        id: "manifesto",
+        path: "manifesto",
+        routeBasePath: "manifesto",
+        mdxPageComponent: "@site/src/components/Manifesto/index.tsx",
+      },
+    ],
+    [
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
@@ -177,9 +186,20 @@ const config = {
         hideOnScroll: true,
         items: [
           {
+            type: "dropdown",
             to: "/manifesto",
             label: "Manifesto",
             position: "left",
+            items: [
+              {
+                label: "English",
+                href: "/manifesto",
+              },
+              {
+                label: "Spanish",
+                href: "/manifesto/es",
+              },
+            ],
           },
           {
             to: "/supporters",
