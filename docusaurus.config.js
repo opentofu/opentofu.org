@@ -197,6 +197,11 @@ const config = {
             position: "left",
           },
           {
+            label: "Roadmap",
+            href: "https://github.com/opentofu/opentofu/milestones",
+            position: "left",
+          },
+          {
             type: "dropdown",
             to: "/docs",
             label: "Docs",
