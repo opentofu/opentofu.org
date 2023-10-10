@@ -58,7 +58,7 @@ export default function Footer({ links }: FooterProps) {
         />
         <SocialIconLink
           name="slack"
-          href="https://communityinviter.com/apps/opentfcommunity/opentofu"
+          href="/slack"
           label="Join us on Slack"
           hiddenLabel
         />

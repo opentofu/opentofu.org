@@ -126,6 +126,10 @@ const config = {
             to: "/blog/the-opentofu-fork-is-now-available",
             from: "/fork",
           },
+          {
+            to: "https://join.slack.com/t/opentofucommunity/shared_invite/zt-24ma55j2u-a2DlPHCoMqlJkCEHL5DX_w",
+            from: "/slack",
+          },
         ],
       },
     ],
@@ -256,7 +260,7 @@ const config = {
           },
           {
             type: "custom-social-icon-link-navbar-item",
-            href: "https://communityinviter.com/apps/opentfcommunity/opentofu",
+            href: "/slack",
             position: "right",
             name: "slack",
             label: "Join us on Slack",

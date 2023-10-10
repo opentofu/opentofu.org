@@ -199,10 +199,7 @@ export default function HowToSupport() {
             }
           >
             6. Joining{" "}
-            <Link
-              href="https://communityinviter.com/apps/opentfcommunity/opentofu"
-              className="underline"
-            >
+            <Link href="/slack" className="underline">
               our Slack community
             </Link>{" "}
             &amp;{" "}
