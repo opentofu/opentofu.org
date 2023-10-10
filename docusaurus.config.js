@@ -126,10 +126,11 @@ const config = {
             to: "/blog/the-opentofu-fork-is-now-available",
             from: "/fork",
           },
-          {
-            to: "https://join.slack.com/t/opentofucommunity/shared_invite/zt-24ma55j2u-a2DlPHCoMqlJkCEHL5DX_w",
-            from: "/slack",
-          },
+          // TODO: This will be possible after upgrading to Docusaurus 3
+          // {
+          //   to: "https://join.slack.com/t/opentofucommunity/shared_invite/zt-24ma55j2u-a2DlPHCoMqlJkCEHL5DX_w",
+          //   from: "/slack",
+          // },
         ],
       },
     ],
