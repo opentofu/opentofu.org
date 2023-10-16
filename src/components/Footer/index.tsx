@@ -58,7 +58,7 @@ export default function Footer({ links }: FooterProps) {
         />
         <SocialIconLink
           name="slack"
-          href="/slack"
+          href="/slack/"
           label="Join us on Slack"
           hiddenLabel
         />

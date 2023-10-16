@@ -199,7 +199,7 @@ export default function HowToSupport() {
             }
           >
             6. Joining{" "}
-            <Link href="/slack" className="underline">
+            <Link href="/slack/" className="underline">
               our Slack community
             </Link>{" "}
             &amp;{" "}
