@@ -50,6 +50,7 @@ export default function HowToSupport() {
             <Link
               href="https://github.com/opentofu/manifesto"
               className="underline"
+              target="_blank"
             >
               manifesto repository
             </Link>
@@ -199,11 +200,15 @@ export default function HowToSupport() {
             }
           >
             6. Joining{" "}
-            <Link href="/slack" className="underline">
+            <Link href="/slack" className="underline" target="_blank">
               our Slack community
             </Link>{" "}
             &amp;{" "}
-            <Link href="https://twitter.com/opentofuorg" className="underline">
+            <Link
+              href="https://twitter.com/opentofuorg"
+              className="underline"
+              target="_blank"
+            >
               following us on Twitter.
             </Link>
           </Step>
