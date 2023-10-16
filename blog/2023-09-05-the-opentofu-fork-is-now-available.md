@@ -28,7 +28,7 @@ A key part of working in the open is making our roadmap open. So here's a quick 
 - **Wait on HashiCorp's response**. We reached out to HashiCorp publicly and privately and requested a response by August 25th.
 - **Start working on the OpenTofu fork**. With no response from HashiCorp, we created the OpenTofu fork, and started working on it in private.
 - **Apply to join the Linux Foundation**. We want OpenTofu to be part of an impartial, community-driven foundation, so we submitted all the paperwork to join the Linux Foundation.
-- **Open up community Slack discussions**. We created the [OpenTofu Community Slack](/slack) to give the community a way to have discussions, provide feedback, ask questions, etc.
+- **Open up community Slack discussions**. We created the [OpenTofu Community Slack](https://opentofu.org/slack) to give the community a way to have discussions, provide feedback, ask questions, etc.
 - **Prepare the OpenTofu repo for collaboration**. Rename everything to OpenTofu; pick steering committee members; define [contribution guidelines](https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md); get CI / CD and testing working; etc.
 - **Release the OpenTofu repo**. As per this announcement, we are making the OpenTofu repo public at [github.com/opentofu/opentofu](https://github.com/opentofu/opentofu)!
 
@@ -51,7 +51,7 @@ The response from the community so far has been incredible. In just a few weeks,
 
 This sort of growth is unprecedented, and we're humbled by all of your support. As per the roadmap in the previous section, we're working hard on getting OpenTofu to the point where we can start doing official releases.
 
-In the meantime, you can follow our progress at [github.com/opentofu/opentofu](https://github.com/opentofu/opentofu), contribute to the project by following the [contribution guidelines](https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md), and provide feedback in the [OpenTofu Community Slack](/slack). We are thrilled to be working with the whole community in making OpenTofu a truly open, community-driven project!
+In the meantime, you can follow our progress at [github.com/opentofu/opentofu](https://github.com/opentofu/opentofu), contribute to the project by following the [contribution guidelines](https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md), and provide feedback in the [OpenTofu Community Slack](https://opentofu.org/slack). We are thrilled to be working with the whole community in making OpenTofu a truly open, community-driven project!
 
 ### FAQ
 
