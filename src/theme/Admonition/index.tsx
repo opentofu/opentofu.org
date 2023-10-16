@@ -126,7 +126,7 @@ export default function Admonition(props: Props) {
       role="alert"
     >
       <div className="flex gap-3 font-bold">
-        <span className="flex w-4 fill-current" aria-hidden>
+        <span className="flex w-4 fill-current [&>svg]:w-full" aria-hidden>
           {icon}
         </span>
         {titleLabel}
