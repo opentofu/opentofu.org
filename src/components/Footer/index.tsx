@@ -23,6 +23,7 @@ function LinkItem({ item }: LinkItemProps) {
             to: toUrl,
           })}
       className="text-gray-900 dark:text-gray-50 hover:text-brand-700 dark:hover:text-brand-500"
+      target="_blank"
       {...props}
     >
       {label}
@@ -58,7 +59,7 @@ export default function Footer({ links }: FooterProps) {
         />
         <SocialIconLink
           name="slack"
-          href="/slack/"
+          href="/slack"
           label="Join us on Slack"
           hiddenLabel
         />

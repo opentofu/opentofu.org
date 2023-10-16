@@ -261,7 +261,7 @@ const config = {
           },
           {
             type: "custom-social-icon-link-navbar-item",
-            href: "/slack/",
+            href: "/slack",
             position: "right",
             name: "slack",
             label: "Join us on Slack",
