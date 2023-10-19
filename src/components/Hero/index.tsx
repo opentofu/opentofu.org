@@ -41,10 +41,7 @@ export default function Hero() {
         <Button className="text-center" variant="secondary" href="/manifesto">
           Read Manifesto
         </Button>
-        <Button
-          variant="primary"
-          href="https://github.com/opentofu/opentofu/releases/latest"
-        >
+        <Button variant="primary" href="/docs/intro/install">
           Try it out
         </Button>
       </div>
