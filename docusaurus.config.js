@@ -21,6 +21,14 @@ const config = {
       tagName: "link",
       attributes: {
         rel: "icon",
+        type: "image/svg+xml",
+        href: "/favicons/favicon.svg",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "icon",
         type: "image/png",
         sizes: "16x16",
         href: "/favicons/favicon-16x16.png",
@@ -33,6 +41,15 @@ const config = {
         type: "image/png",
         sizes: "32x32",
         href: "/favicons/favicon-32x32.png",
+      },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "icon",
+        type: "image/png",
+        sizes: "48x48",
+        href: "/favicons/favicon-48x48.png",
       },
     },
     {
