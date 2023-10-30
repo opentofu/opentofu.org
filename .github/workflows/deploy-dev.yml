@@ -1,7 +1,8 @@
 name: Deploy to Cloudflare Pages
 
 on:
-  push:
+  pull_request:
+    types: [opened, reopened]
 
   workflow_dispatch:
 
