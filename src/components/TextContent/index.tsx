@@ -8,7 +8,7 @@ const classNames = [
   "dark:prose-invert",
   "lg:prose-lg",
 
-  "max-w-full",
+  "max-w-full md:max-w-prose",
 
   "text-gray-900",
   "dark:text-gray-100",
