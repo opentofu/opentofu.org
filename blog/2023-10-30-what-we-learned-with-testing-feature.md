@@ -15,6 +15,8 @@ authors:
 
 Jumping into a newly forked project can be a difficult task, maybe even frightening! Now, think about jumping into a production-ready project with nine years of legacy code base there. On top of that, you have the task of taking one of the project’s new features from experimental to production-ready.
 
+<!--truncate-->
+
 This is our journey with the OpenTofu testing feature.
 
 It’s an interesting introduction to what’s going on behind the scenes at OpenTofu, as we work on our own pipelines. In this case, we are taking raw, experimental code and turning it into something that keeps up with (and possibly outperforms) Terraform v1.6.0 with the drop-in replacement, OpenTofu v1.6.alpha.
