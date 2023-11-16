@@ -25,7 +25,8 @@ npm i
 3. Fetch the documentation
 
 ```bash
-make
+git submodule init
+git submodule update
 ```
 
 4. Start the development server
