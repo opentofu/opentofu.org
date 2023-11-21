@@ -143,6 +143,14 @@ const config = {
             to: "/blog/the-opentofu-fork-is-now-available",
             from: "/fork",
           },
+          {
+            from: "/docs/cli/install/apt",
+            to: "/docs/intro/install/apt",
+          },
+          {
+            from: "/docs/cli/install/yum",
+            to: "/docs/intro/install/yum",
+          },
           // TODO: This will be possible after upgrading to Docusaurus 3
           // {
           //   to: "https://join.slack.com/t/opentofucommunity/shared_invite/zt-24ma55j2u-a2DlPHCoMqlJkCEHL5DX_w",
