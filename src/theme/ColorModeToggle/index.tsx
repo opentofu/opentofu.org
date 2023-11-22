@@ -1,5 +1,4 @@
 import React from "react";
-import clsx from "clsx";
 import useIsBrowser from "@docusaurus/useIsBrowser";
 
 import IconLightMode from "@theme/Icon/LightMode";
