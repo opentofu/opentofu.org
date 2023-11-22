@@ -36,6 +36,7 @@ export default function NavbarContent() {
         <div className="hidden lg:flex items-center gap-6">
           <NavbarItems items={leftItems} />
         </div>
+        <NavbarColorModeToggle />
       </div>
 
       <div className="flex items-center gap-6 [--ifm-color-primary:theme(colors.brand.700)]">
@@ -43,7 +44,6 @@ export default function NavbarContent() {
 
         <div className="items-center gap-6 hidden xl:flex">
           <NavbarItems items={rightItems} />
-          <NavbarColorModeToggle />
         </div>
       </div>
     </div>
