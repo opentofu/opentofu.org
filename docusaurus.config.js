@@ -287,7 +287,7 @@ const config = {
       },
       prism: {
         theme: darkCodeTheme,
-        additionalLanguages: ["hcl"],
+        additionalLanguages: ["hcl", "powershell"],
       },
       image: "/img/og.png",
     }),
