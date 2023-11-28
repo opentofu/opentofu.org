@@ -8,29 +8,48 @@
 - TypeScript
 - Tailwind CSS
 
-## Getting Started
+## Working with this repository
 
-1. Clone the repository
+### Cloning the repository
+
+This repository uses git submodules to pull in the [main OpenTofu repository](https://github.com/opentofu/opentofu).
+You can clone it using the following two steps:
+
+1. Clone the repository:
 
 ```bash
 git clone git@github.com:opentofu/opentofu.org.git
 ```
 
-2. Install dependencies
-
-```bash
-npm i
-```
-
-3. Fetch the documentation
+2. Fetch the documentation:
 
 ```bash
 git submodule init
 git submodule update
 ```
 
-4. Start the development server
+### Running the dev server locally
+
+You can run the dev server if you have a local NodeJS/npm environment installed:
+
+1. Install dependencies:
+
+```bash
+npm i
+```
+
+2. Start the development server:
 
 ```bash
 npm run start
+```
+
+You can now access the site locally at http://localhost:3000/
+
+### Running the dev server in a container
+
+You can also run the dev server in a container with the following command:
+
+```bash
+docker compose up --build
 ```
