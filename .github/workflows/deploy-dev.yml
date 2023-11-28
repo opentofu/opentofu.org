@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          submodules: 'true'
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
@@ -24,8 +26,6 @@ jobs:
         run: npm ci
       - name: Lint code
         run: npm run lint
-      - name: Fetch docs
-        run: make
       - name: Build website
         run: npm run build
       - name: Publish to Cloudflare Pages
