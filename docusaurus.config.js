@@ -152,6 +152,19 @@ const config = {
         ],
       },
     ],
+    function() {
+      return {
+        name: "follow-symlinks",
+        configureWebpack() {
+          return {
+            resolve: {
+              // Yes, leave this on false to support symlinks.
+              symlinks: false
+            },
+          };
+        }
+      };
+    },
   ],
 
   themeConfig:
