@@ -146,11 +146,11 @@ const config = {
           },
           {
             from: "/docs/cli/install/apt",
-            to: "/docs/intro/install/apt",
+            to: "/docs/intro/install/deb",
           },
           {
             from: "/docs/cli/install/yum",
-            to: "/docs/intro/install/yum",
+            to: "/docs/intro/install/rpm",
           },
           // TODO: This will be possible after upgrading to Docusaurus 3
           // {
