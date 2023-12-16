@@ -53,8 +53,8 @@ const classNames = [
   "dark:prose-headings:text-gray-50",
 
   // <th>, <td>
-  "prose-th:px-3",
-  "prose-td:px-3",
+  "prose-th:!px-3",
+  "prose-td:!px-3",
 ];
 
 export default function TextContent({
