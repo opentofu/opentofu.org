@@ -24,6 +24,7 @@ git clone git@github.com:opentofu/opentofu.org.git
 2. Fetch the documentation:
 
 ```bash
+cd opentofu.org
 git submodule init
 git submodule update
 ```
