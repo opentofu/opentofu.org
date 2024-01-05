@@ -286,6 +286,13 @@ const config = {
           //   ],
           // },
           {
+            type: "custom-social-icon-link-navbar-item",
+            href: "https://www.youtube.com/channel/UCgIzfj9QuWL9HHXIXq2A0Ig",
+            position: "right",
+            name: "youtube",
+            label: "Go to the OpenTofu's Youtube page",
+          },
+          {
             type: "custom-github-stars-navbar-item",
             position: "right",
             ghRepoUrl: "https://github.com/opentofu/opentofu",
