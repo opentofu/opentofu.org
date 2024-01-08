@@ -9,7 +9,7 @@ authors:
     image_url: https://github.com/cube2222.png
 ---
 
-Today is a big day for OpenTofu! After 4 months of work, we're releasing the [**first stable release of OpenTofu**](https://github.com/opentofu/opentofu/releases/tag/v1.6.0), a community-driven open source fork of Terraform. OpenTofu, a Linux Foundation project, is now production-ready. It’s a drop-in replacement for Terraform, and you can easily migrate to it by following our [migration guide](https://opentofu.org/docs/intro/migration).
+Today is a big day for OpenTofu! After four months of work, we're releasing the [**first stable release of OpenTofu**](https://github.com/opentofu/opentofu/releases/tag/v1.6.0), a community-driven open source fork of Terraform. OpenTofu, a Linux Foundation project, is now production-ready. It’s a drop-in replacement for Terraform, and you can easily migrate to it by following our [migration guide](https://opentofu.org/docs/intro/migration).
 
 Roni Frantchi wrote a [great article](https://opentofu.org/blog/opentofu-release-candidate-is-out) prior to the holidays, describing our road so far and up to the release candidate. It’s an excellent resource to learn more about how we got to where we are now.
 
@@ -17,15 +17,15 @@ I’ll be focusing on the now, and what we are up to in the near future.
 
 ## New Features
 
-Starting with the release itself, OpenTofu 1.6 comes with a bunch of new stuff
+Starting with the release itself, OpenTofu 1.6 comes with a bunch of new stuff:
 
 - The testing feature lets you test your OpenTofu configurations and lets module authors test those modules. It’s a great stability improvement and is now fully integrated with the core of OpenTofu.
-- The S3 state backend got updated and includes many new authentication methods. Crucially, it’s still compatible with S3-compatible object storage.
+- The S3 state backend was updated and includes many new authentication methods. Crucially, it still works with S3-compatible object storage.
 - We have a new provider and module registry, which follows a Homebrew-like architecture and is fully based on a git repository. Hosted on CloudFlare R2, it’s snappy and highly-available. Publishing a new provider or module is now just a pull request away!
 
 And many many more! Minor improvements, bug fixes, performance improvements, the changelog is huge! Just [check it out](https://github.com/opentofu/opentofu/blob/v1.6/CHANGELOG.md), if you want all the details!
 
-## The Value of Open-Source
+## The Value of Open Source
 
 OpenTofu would be far from where it is without its community support. The [OpenTofu Slack community](https://opentofu.org/slack) is growing and thriving. We’ve had almost 60 contributors help make OpenTofu great over the past few months.
 
