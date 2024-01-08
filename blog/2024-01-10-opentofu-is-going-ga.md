@@ -17,7 +17,7 @@ I’ll be focusing on the now, and what we are up to in the near future.
 
 ## New Features
 
-Starting with the release itself, OpenTofu 1.6 comes with a bunch of new stuff:
+Starting with the release itself, OpenTofu 1.6.0 comes with a bunch of new stuff:
 
 - The testing feature lets you test your OpenTofu configurations and lets module authors test those modules. It’s a great stability improvement and is now fully integrated with the core of OpenTofu.
 - The S3 state backend was updated and includes many new authentication methods. Crucially, it still works with S3-compatible object storage.
