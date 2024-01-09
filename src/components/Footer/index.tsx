@@ -46,6 +46,12 @@ export default function Footer({ links }: FooterProps) {
       </div>
       <div className="flex gap-6">
         <SocialIconLink
+          name="youtube"
+          href="https://www.youtube.com/channel/UCgIzfj9QuWL9HHXIXq2A0Ig"
+          label="Go to the OpenTofu's Youtube page"
+          hiddenLabel
+        />
+        <SocialIconLink
           name="github"
           href="https://github.com/opentofu/opentofu"
           label="Go to the OpenTofu's GitHub repository"
