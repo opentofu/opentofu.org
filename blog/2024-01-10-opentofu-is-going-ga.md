@@ -1,7 +1,7 @@
 ---
 title: OpenTofu is going GA
 slug: opentofu-is-going-ga
-image: /img/blog/opentofu-release-candidate-is-out.png
+image: /img/blog/opentofu-is-going-ga.png
 authors:
   - name: Kuba Martin
     title: Interim Technical Lead of OpenTofu, Engineering Manager at Spacelift
