@@ -31,7 +31,7 @@ OpenTofu would be far from where it is without its community support. The [OpenT
 
 Open-source is all about collaboration without borders, across the community, to the benefit of all.
 
-Just to name an example, an [RFC for client-side state encryption](https://github.com/opentofu/opentofu/issues/874), a headline feature we wanted to have in OpenTofu, has been submitted by a community member - the same one who was trying to bring it to Terraform for years. Over the span of **multiple months** they worked to polish the PoC and RFC, involving many community members in the discussions. This RFC has recently been accepted and we’ll be collaborating with the RFC author to get it into OpenTofu 1.7. Thank you!
+Just to name an example, an [RFC for client-side state encryption](https://github.com/opentofu/opentofu/issues/874), a headline feature we wanted to have in OpenTofu, has been submitted by a community member - the same one who was trying to bring it to Terraform for years. Over the span of **multiple months** they worked to polish the PoC and RFC, involving many community members in the discussions. This RFC has recently been accepted and we’re collaborating with the RFC author to get it into OpenTofu 1.7. Thank you!
 
 When we were working on the registry, we had multiple RFCs submitted. We consulted numerous people all over the industry, including authors of previous similar registries like Homebrew, so that we could get the registry right on the first attempt. So far it has indeed been a success - it’s fast to `tofu init`, community members have already successfully submitted providers, and the whole thing is very cheap to run.
 
@@ -41,7 +41,7 @@ This, and all the other discussions, issues, proposals, contributions - you name
 
 ## What’s Next?
 
-It took us a while to come out with this initial release. There has been a lot of one-time work that needed to be done to get this project set up for success. But that work is now done, and we’re ready to dive right into new development, with big new features that will set OpenTofu apart even more!
+It took us a while to come out with this initial release. There has been a lot of one-time work that needed to be done to get this project set up for success. But that work is now done, and we’re ready to dive right into new development, with big new features ahead!
 
 First, and we know that this is important to many, we’re aiming to maintain a reasonable amount of compatibility with Terraform where it makes sense. We’re not going to be pushing for big DSL changes, we’re not going to be pushing for provider protocol changes, nothing of the sort. We’ll keep the migration path both ways easy for the foreseeable future.
 
