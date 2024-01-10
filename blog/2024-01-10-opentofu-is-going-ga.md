@@ -27,7 +27,7 @@ And many many more! Minor improvements, bug fixes, performance improvements, the
 
 ## The Value of Open Source
 
-OpenTofu would be far from where it is without its community support. The [OpenTofu Slack community](https://opentofu.org/slack) is growing and thriving. We’ve had almost 60 contributors help make OpenTofu great over the past few months.
+OpenTofu would be far from where it is without its active community support. The [OpenTofu Slack community](https://opentofu.org/slack) is growing and thriving. We’ve had almost 60 contributors help make OpenTofu great over the past few months.
 
 Open-source is all about collaboration without borders, across the community, to the benefit of all.
 
