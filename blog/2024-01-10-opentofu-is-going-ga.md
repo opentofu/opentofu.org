@@ -45,7 +45,7 @@ It took us a while to come out with this initial release. There has been a lot o
 
 First, and we know that this is important to many, we’re aiming to maintain a reasonable amount of compatibility with Terraform where it makes sense. We’re not going to be pushing for big DSL changes, we’re not going to be pushing for provider protocol changes, nothing of the sort. We’ll keep the migration path both ways easy for the foreseeable future.
 
-**The biggest change coming soon**, slated for 1.7, is the client-side state encryption. Asked for by many and for a long time now, it will let you encrypt both your state files and plan files end to end. This is valuable to projects working in a regulated environment, and ones going for maximum security. You can find the tracking issue here (todo: link).
+**The biggest change coming soon**, slated for 1.7, is the client-side state encryption. Asked for by many and for a long time now, it will let you encrypt both your state files and plan files end to end. This is valuable to projects working in a regulated environment, and ones going for maximum security. You can find the tracking issue [here](https://github.com/opentofu/opentofu/issues/1030).
 
 Initially, we’ll add support for user-provided keys and a couple of widely-used key management services. Long-term, depending on the usage we see and how the community responds, we might be introducing a plugin system so you can bring arbitrary key management services to it.
 
