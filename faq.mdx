@@ -16,7 +16,9 @@ We firmly believe that Terraform should remain open-source because it is a proje
 
 <AccordionItem id="opentofu-terraform-differences" summary="What are the differences between OpenTofu and Terraform?" highlight>
 
-There will be no differences between Terraform (1.5.x versions) and OpenTofu. As new versions are released, this will change.
+On the technical level, OpenTofu 1.6.x is very similar feature-wise to Terraform 1.6.x. In the future, the projects feature sets will diverge.
+
+The other main difference is that OpenTofu is open-source, and it's goal is to be driven in a collaborative way with no single company being able to dictate the roadmap.
 
 </AccordionItem>
 
@@ -40,14 +42,17 @@ Companies will encounter more difficulties with the situation. Switching to a ne
 
 The community will decide what features OpenTofu will have. Some long-awaited Terraform features will be publicly available soon.
 
-Some companies have pledged to pay for full-time engineers to work on OpenTofu. We have 19 such engineers involved already — and many other individuals, companies, projects, and foundations are prepared to contribute.
+If you're missing a feature in OpenTofu that's available in Terraform, feel free to create an issue.
 
 </AccordionItem>
 
 <AccordionItem id="terraform-replacement" summary="Can I use OpenTofu as a drop-in replacement for Terraform?  Is OpenTofu suitable for production use?" highlight>
 
-Initially, OpenTofu will be a drop-in replacement for Terraform, as it will be compatible with Terraform versions 1.5.x. You won’t need to make any changes to your code to ensure compatibility.
+Right now, OpenTofu is a drop-in replacement for Terraform, as it's compatible with Terraform versions 1.5.x and most of 1.6.x. You don’t need to make any changes to your code to ensure compatibility.
+
 OpenTofu is suitable for production use cases without any exception.
+
+Please see [our migration guide](/docs/intro/migration) for more information.
 
 </AccordionItem>
 
@@ -59,13 +64,15 @@ OpenTofu will work with existing state files up to those created with Terraform 
 
 <AccordionItem id="providers" summary="Does OpenTofu work with all the providers Terraform works with?">
 
-OpenTofu will not have its own providers. Terraform providers have not altered their licenses, and the potential for such a change is virtually zero. OpenTofu will work with the current Terraform providers, but it will use a separate registry.
+OpenTofu will not have its own providers. Terraform providers have not altered their licenses, and the potential for such a change is virtually zero. OpenTofu works with the current Terraform providers, but it uses a separate registry.
 
 </AccordionItem>
 
 <AccordionItem id="decisions" summary="How are new features, bug fixes, and other development decisions made in OpenTofu?">
 
-The steering committee and the community determine the most important features and bug fixes. The large number of developers pledging their resources to help develop OpenTofu will speed up the development of features and enable faster releases than Terraform managed previously.
+The core team with its technical lead determine the most important features and bug fixes to work on, while the steering committee makes decisions on big changes.
+
+All those decisions are guided by community feedback and public discussion.
 
 </AccordionItem>
 
@@ -76,16 +83,5 @@ The best way to show practical support for the OpenTofu initiative is to contrib
 All major changes to OpenTofu Core undergo the public RFC process, and we also welcome feedback on existing RFCs. As we're still in the cleanup phase and want to avoid conflicts, please wait until the first alpha release to contribute code.
 
 This [contribution guide](https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md) explains OpenTofu contribution recommended practices, including how to submit issues, how to get involved in the discussion, how to work on the code, and how to contribute code changes.
-
-</AccordionItem>
-
-<AccordionItem id="pledge" summary="How can I pledge support?">
-
-The pledge is open to all individuals and companies who care about the future of Terraform. You can also support this initiative by starring the manifesto repository on GitHub and spreading the word via share buttons.
-
-Here are the most important things you can do to show your support:
-
-- Sign the manifesto and pledge your time to help develop this project. This can be done [here](https://github.com/opentofu/manifesto), by forking the repository, adding your pledge at the end of the table, and creating a pull request.
-- Follow OpenTofu on [Twitter](https://twitter.com/opentofuorg).
 
 </AccordionItem>
