@@ -4,9 +4,8 @@ import Hero from "../Hero";
 import Goals from "../Goals";
 import Supporters from "../Supporters";
 import FAQ from "../FAQ";
-import HowToSupport from "../HowToSupport";
 import HowToContribute from "../HowToContribute";
-import LatestNews, { RecentPost } from "../LatestNews";
+import { RecentPost } from "../LatestNews";
 
 type HomeProps = {
   recentPosts: RecentPost[];
@@ -20,8 +19,6 @@ export default function Home({ recentPosts }: HomeProps) {
       <HowToContribute />
       <FAQ />
       <Supporters />
-      <HowToSupport />
-      <LatestNews recentPosts={recentPosts} />
     </Layout>
   );
 }
