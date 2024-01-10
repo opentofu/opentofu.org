@@ -5,11 +5,6 @@ import Goals from "../Goals";
 import Supporters from "../Supporters";
 import FAQ from "../FAQ";
 import HowToContribute from "../HowToContribute";
-import { RecentPost } from "../LatestNews";
-
-type HomeProps = {
-  recentPosts: RecentPost[];
-};
 
 export default function Home() {
   return (
