@@ -1,0 +1,4 @@
+[submodule "opentofu-repo"]
+	path = opentofu-repo
+	url = https://github.com/opentofu/opentofu
+	branch = v1.6
