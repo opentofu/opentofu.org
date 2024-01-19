@@ -81,6 +81,8 @@ const config: Config = {
   ],
 
   baseUrl: "/",
+  // For GitHub Pages, this value must be defined.
+  trailingSlash: false,
 
   // TODO: Once we clean up links we can switch to "throw"
   onBrokenLinks: "warn",
