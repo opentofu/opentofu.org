@@ -209,11 +209,11 @@ export default function HowToSupport() {
             </Link>{" "}
             &amp;{" "}
             <Link
-              href="https://twitter.com/opentofuorg"
+              href="https://x.com/opentofuorg"
               className="underline"
               target="_blank"
             >
-              following us on Twitter.
+              following us on X.
             </Link>
           </Step>
         </div>

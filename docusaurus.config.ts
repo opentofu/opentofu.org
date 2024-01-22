@@ -311,10 +311,10 @@ const config: Config = {
         },
         {
           type: "custom-social-icon-link-navbar-item",
-          href: "https://twitter.com/opentofuorg",
+          href: "https://x.com/opentofuorg",
           position: "right",
-          name: "twitter",
-          label: "Follow us on Twitter",
+          name: "x",
+          label: "Follow us on X",
         },
         {
           type: "custom-social-icon-link-navbar-item",
