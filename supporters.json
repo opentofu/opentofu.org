@@ -861,7 +861,7 @@
     "name": "Strike",
     "url": "https://strike.sh",
     "type": "Company",
-    "pledge": "Cibesecurity; open-source community efforts"
+    "pledge": "Cybersecurity; open-source community efforts"
   },
   {
     "name": "Refactor",
@@ -904,6 +904,18 @@
     "url": "https://smesh.jp",
     "type": "Company",
     "pledge": "Development; open-source community efforts"
+  },
+  {
+    "name": "junktext",
+    "url": "https://junktext.com",
+    "type": "Company",
+    "pledge": "Teaching; consulting services; open-source community efforts"
+  },
+  {
+    "name": "Mydex Data Services Community Interest Company",
+    "url": "https://mydex.org",
+    "type": "Company",
+    "pledge": "Minor Development; Testing; open-source community efforts"
   },
   {
     "name": "OTF",
@@ -1000,6 +1012,12 @@
     "url": "https://lostnewbs.org",
     "type": "Foundation",
     "pledge": "Teaching Newbs"
+  },
+  {
+    "name": "Paul Becker",
+    "url": "https://www.linkedin.com/in/paulbecker/",
+    "type": "Individual",
+    "pledge": "DevOps; Cloud; Helping organizations adopt modern IaC practices and principles"
   },
   {
     "name": "Connor Finnell",
@@ -2460,12 +2478,6 @@
     "pledge": "Development; Documentation; open-source community efforts"
   },
   {
-    "name": "Adelin Niculae",
-    "url": "https://github.com/adelinn",
-    "type": "Individual",
-    "pledge": "DevOps; Cybersecurity"
-  },
-  {
     "name": "Camilo Santana",
     "url": "https://github.com/camilosantana",
     "type": "Individual",
@@ -3337,7 +3349,7 @@
   },
   {
     "name": "Prateek Jain",
-    "url": "https://x.com/PrateekJainDev",
+    "url": "https://twitter.com/PrateekJainDev",
     "type": "Individual",
     "pledge": "DevSecOps Lead; open-source community efforts"
   },
@@ -5472,6 +5484,12 @@
     "pledge": "Education; Integration; Open-Source Community Efforts; Documentation"
   },
   {
+    "name": "Aarna Networks",
+    "url": "https://aarnanetworks.com",
+    "type": "Company",
+    "pledge": "Development; open-source community efforts"
+  },
+  {
     "name": "Anubhav Vats",
     "url": "https://github.com/onbit-uchenik",
     "type": "Individual",
@@ -5704,5 +5722,71 @@
     "url": "https://www.linkedin.com/in/jntupal/",
     "type": "Individual",
     "pledge": "Development; open-source community efforts"
+  },
+  {
+    "name": "Jose Manuel Valente",
+    "url": "https://www.linkedin.com/in/josemanuelvalente/",
+    "type": "Individual",
+    "pledge": "DevSecOps; Cloud Solutions Architecture"
+  },
+  {
+    "name": "Robert McKenney",
+    "url": "https://www.linkedin.com/in/robertmckenney/",
+    "type": "Individual",
+    "pledge": "Education; open-source community efforts"
+  },
+  {
+    "name": "Dejan Gregor",
+    "url": "https://www.linkedin.com/in/dgregor/",
+    "type": "Individual",
+    "pledge": "DevOps; Development; Testing; Open Source Evangelism"
+  },
+  {
+    "name": "Jerome Guibert",
+    "url": "https://github.com/geronimo-iia",
+    "type": "Individual",
+    "pledge": "Architect, SRE, Cloud Engineer, open-source community efforts"
+  },
+  {
+    "name": "Hannes Lange",
+    "url": "https://github.com/hlange4",
+    "type": "Individual",
+    "pledge": "Customer Success Engineer, open source community efforts, Developer"
+  },
+  {
+    "name": "Balachandran Sivakumar",
+    "url": "https://blogs.balachandran.org",
+    "type": "Individual",
+    "pledge": "Development; Testing; Open Source Evangelism"
+  },
+  {
+    "name": "Rossen Karpuzov",
+    "url": "www.linkedin.com/in/karpuzov",
+    "type": "Individual",
+    "pledge": "Open-source community efforts; DevOps; System Administrator"
+  },
+  {
+    "name": "Frank Bernhardt",
+    "url": "https://www.linkedin.com/in/frank-bernhardt/",
+    "type": "Individual",
+    "pledge": "Open-source and DevOps enthusiast"
+  },
+  {
+    "name": "Philip Davies",
+    "url": "https://github.com/wonderphil",
+    "type": "Individual",
+    "pledge": "Platform Engineer; DevOps Architect; Cloud Architect; open-source community efforts"
+  },
+  {
+    "name": "Nathan Stephenson",
+    "url": "https://www.linkedin.com/in/nathanjstephenson/",
+    "type": "Individual",
+    "pledge": "DevOps; Platform Engineering; Development"
+  },
+  {
+    "name": "Rob Ericsson",
+    "url": "https://github.com/rericsson/",
+    "type": "Individual",
+    "pledge": "DevOps; open-source community efforts"
   }
 ]
