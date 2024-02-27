@@ -137,13 +137,11 @@ const config: Config = {
             return `https://github.com/opentofu/opentofu/edit/${version}/website/docs/${docPath}`;
           },
         },
-        blog: false,
       } satisfies Preset.Options,
     ],
   ],
 
   plugins: [
-    "./plugins/blog-plugin",
     function tailwindPlugin() {
       return {
         name: "tailwindcss",
