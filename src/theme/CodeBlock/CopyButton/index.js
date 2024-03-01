@@ -1,3 +1,5 @@
+// This file has been swizzled form Docusaurus
+
 import React, { useCallback, useState, useRef, useEffect } from "react";
 import clsx from "clsx";
 import copy from "copy-text-to-clipboard";

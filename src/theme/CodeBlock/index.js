@@ -1,3 +1,5 @@
+// This file has been swizzled form Docusaurus
+
 import React, { isValidElement } from "react";
 import useIsBrowser from "@docusaurus/useIsBrowser";
 import ElementContent from "@theme/CodeBlock/Content/Element";

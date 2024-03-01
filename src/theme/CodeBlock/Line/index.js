@@ -1,3 +1,5 @@
+// This file has been swizzled form Docusaurus
+
 import React from "react";
 import clsx from "clsx";
 import styles from "./styles.module.css";
