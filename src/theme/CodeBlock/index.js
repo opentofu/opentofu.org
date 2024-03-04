@@ -27,11 +27,8 @@ export default function CodeBlock({ children: rawChildren, ...props }) {
   const CodeBlockComp =
     typeof children === "string" ? StringContent : ElementContent;
   return (
-    <figure aria-roledescription="Code block" tabIndex={0}>
-      <figcaption className="sr-only">Following is a code block</figcaption>
-      <CodeBlockComp key={String(isBrowser)} {...props}>
-        {children}
-      </CodeBlockComp>
-    </figure>
+    <CodeBlockComp key={String(isBrowser)} {...props}>
+      {children}
+    </CodeBlockComp>
   );
 }
