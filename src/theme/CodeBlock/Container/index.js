@@ -1,4 +1,4 @@
-// This file has been swizzled form Docusaurus
+// This file has been swizzled from Docusaurus
 
 import React from "react";
 import clsx from "clsx";

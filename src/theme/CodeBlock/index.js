@@ -1,4 +1,4 @@
-// This file has been swizzled form Docusaurus
+// This file has been swizzled from Docusaurus
 
 import React, { isValidElement } from "react";
 import useIsBrowser from "@docusaurus/useIsBrowser";
