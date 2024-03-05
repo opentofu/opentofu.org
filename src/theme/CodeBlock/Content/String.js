@@ -61,7 +61,16 @@ export default function CodeBlockString({
     >
       {title && <div className={styles.codeBlockTitle}>{title}</div>}
       <div className={styles.codeBlockContent}>
-        {/* <figure role="Code Block" tabIndex={0}> */}
+        <div className={styles.buttonGroup}>
+          {(wordWrap.isEnabled || wordWrap.isCodeScrollable) && (
+            <WordWrapButton
+              className={styles.codeButton}
+              onClick={() => wordWrap.toggle()}
+              isEnabled={wordWrap.isEnabled}
+            />
+          )}
+          <CopyButton className={styles.codeButton} code={code} />
+        </div>
         <Highlight theme={prismTheme} code={code} language={language ?? "text"}>
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
             <pre
@@ -70,7 +79,8 @@ export default function CodeBlockString({
               ref={wordWrap.codeBlockRef}
               className={clsx(className, styles.codeBlock, "thin-scrollbar")}
               style={style}
-              role="Code Block"
+              role="code"
+              aria-label="Code Block"
             >
               <code
                 className={clsx(
@@ -92,17 +102,6 @@ export default function CodeBlockString({
             </pre>
           )}
         </Highlight>
-        {/* </figure> */}
-        <div className={styles.buttonGroup}>
-          {(wordWrap.isEnabled || wordWrap.isCodeScrollable) && (
-            <WordWrapButton
-              className={styles.codeButton}
-              onClick={() => wordWrap.toggle()}
-              isEnabled={wordWrap.isEnabled}
-            />
-          )}
-          <CopyButton className={styles.codeButton} code={code} />
-        </div>
       </div>
     </Container>
   );
