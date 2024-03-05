@@ -61,47 +61,54 @@ export default function CodeBlockString({
     >
       {title && <div className={styles.codeBlockTitle}>{title}</div>}
       <div className={styles.codeBlockContent}>
-        <div className={styles.buttonGroup}>
-          {(wordWrap.isEnabled || wordWrap.isCodeScrollable) && (
-            <WordWrapButton
-              className={styles.codeButton}
-              onClick={() => wordWrap.toggle()}
-              isEnabled={wordWrap.isEnabled}
-            />
-          )}
-          <CopyButton className={styles.codeButton} code={code} />
-        </div>
-        <Highlight theme={prismTheme} code={code} language={language ?? "text"}>
-          {({ className, style, tokens, getLineProps, getTokenProps }) => (
-            <pre
-              /* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */
-              tabIndex={0}
-              ref={wordWrap.codeBlockRef}
-              className={clsx(className, styles.codeBlock, "thin-scrollbar")}
-              style={style}
-              role="code"
-              aria-label="Code Block"
-            >
-              <code
-                className={clsx(
-                  styles.codeBlockLines,
-                  showLineNumbers && styles.codeBlockLinesWithNumbering,
-                )}
+        <figure>
+          <figcaption className="sr-only">Code Block</figcaption>
+          <div className={styles.buttonGroup}>
+            {(wordWrap.isEnabled || wordWrap.isCodeScrollable) && (
+              <WordWrapButton
+                className={styles.codeButton}
+                onClick={() => wordWrap.toggle()}
+                isEnabled={wordWrap.isEnabled}
+              />
+            )}
+            <CopyButton className={styles.codeButton} code={code} />
+          </div>
+          <Highlight
+            theme={prismTheme}
+            code={code}
+            language={language ?? "text"}
+          >
+            {({ className, style, tokens, getLineProps, getTokenProps }) => (
+              <pre
+                /* eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex */
+                tabIndex={0}
+                ref={wordWrap.codeBlockRef}
+                className={clsx(className, styles.codeBlock, "thin-scrollbar")}
+                style={style}
+                role="code"
+                aria-label="Code Block"
               >
-                {tokens.map((line, i) => (
-                  <Line
-                    key={i}
-                    line={line}
-                    getLineProps={getLineProps}
-                    getTokenProps={getTokenProps}
-                    classNames={lineClassNames[i]}
-                    showLineNumbers={showLineNumbers}
-                  />
-                ))}
-              </code>
-            </pre>
-          )}
-        </Highlight>
+                <code
+                  className={clsx(
+                    styles.codeBlockLines,
+                    showLineNumbers && styles.codeBlockLinesWithNumbering,
+                  )}
+                >
+                  {tokens.map((line, i) => (
+                    <Line
+                      key={i}
+                      line={line}
+                      getLineProps={getLineProps}
+                      getTokenProps={getTokenProps}
+                      classNames={lineClassNames[i]}
+                      showLineNumbers={showLineNumbers}
+                    />
+                  ))}
+                </code>
+              </pre>
+            )}
+          </Highlight>
+        </figure>
       </div>
     </Container>
   );
