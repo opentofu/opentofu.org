@@ -1,10 +1,10 @@
 import React from "react";
 import Layout from "@theme/Layout";
-import Hero from "../Hero";
-import Goals from "../Goals";
-import Supporters from "../Supporters";
-import FAQ from "../FAQ";
-import HowToContribute from "../HowToContribute";
+import Hero from "../components/Hero";
+import Goals from "../components/Goals";
+import Supporters from "../components/Supporters";
+import FAQ from "../components/FAQ";
+import HowToContribute from "../components/HowToContribute";
 
 export default function Home() {
   return (

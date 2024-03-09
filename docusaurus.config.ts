@@ -114,7 +114,6 @@ const config: Config = {
             return `https://github.com/opentofu/opentofu/edit/main/website/docs/${docPath}`;
           },
         },
-        blog: false,
         gtag: {
           trackingID: "G-NKLFR0FNQZ",
         },
@@ -123,7 +122,6 @@ const config: Config = {
   ],
 
   plugins: [
-    "./plugins/blog-plugin",
     function tailwindPlugin() {
       return {
         name: "tailwindcss",
