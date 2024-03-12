@@ -39,7 +39,7 @@ export default function LatestNews({ recentPosts }: LatestNewsProps) {
             <h3 className="text-3xl font-bold leading-snug mt-2">
               <Link
                 href={permalink}
-                className="text-gray-900 dark:text-gray-50 hover:text-brand-700 dark:hover:text-brand-500"
+                className="text-gray-900 dark:text-gray-50 hover:text-brand-650 dark:hover:text-brand-500"
               >
                 {title}
               </Link>

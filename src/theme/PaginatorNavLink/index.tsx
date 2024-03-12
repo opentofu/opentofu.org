@@ -9,11 +9,11 @@ type PaginatorNavLink = Props & {
 
 export default function PaginatorNavLink(props: PaginatorNavLink) {
   const { permalink, title, subLabel, isNext, className } = props;
-  
+
   return (
     <Link
       className={clsx(
-        "border-gray-900 dark:border-gray-50 rounded-md border p-4 text-gray-900 dark:text-gray-50 hover:text-brand-700 dark:hover:text-brand-500",
+        "border-gray-900 dark:border-gray-50 rounded-md border p-4 text-gray-900 dark:text-gray-50 hover:text-brand-650 dark:hover:text-brand-500",
         isNext && "text-right",
         className,
       )}

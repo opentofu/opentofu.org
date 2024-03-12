@@ -20,7 +20,7 @@ function CardLayout({ href, label, description }: CardLayoutProps) {
       <h2>
         <Link
           href={href}
-          className="text-gray-900 dark:text-gray-50 hover:text-brand-700 dark:hover:text-brand-500 font-bold"
+          className="text-gray-900 dark:text-gray-50 hover:text-brand-650 dark:hover:text-brand-500 font-bold"
         >
           <span aria-hidden className="absolute inset-0"></span>
           {label}

@@ -14,7 +14,7 @@ function DefaultNavbarItemDesktop({
   const element = (
     <NavbarNavLink
       className={clsx(
-        "flex items-center font-bold text-gray-900 dark:text-gray-50 hover:text-brand-700 dark:hover:text-brand-500",
+        "flex items-center font-bold text-gray-900 dark:text-gray-50 hover:text-brand-650 dark:hover:text-brand-500",
         className,
       )}
       isDropdownLink={isDropdownItem}

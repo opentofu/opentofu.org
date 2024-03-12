@@ -28,7 +28,7 @@ function BreadcrumbsItemLink({
   return href ? (
     <Link
       href={href}
-      className="text-gray-900 dark:text-gray-50 hover:text-brand-700 dark:hover:text-brand-500"
+      className="text-gray-900 dark:text-gray-50 hover:text-brand-650 dark:hover:text-brand-500"
       itemProp="item"
     >
       <span itemProp="name">{children}</span>

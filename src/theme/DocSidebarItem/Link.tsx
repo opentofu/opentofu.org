@@ -21,7 +21,7 @@ export default function DocSidebarItemLink({
         className={clsx("flex py-2 px-4 ", {
           "bg-brand-500 dark:bg-brand-800 text-gray-900 hover:text-gray-900 dark:text-brand-600 dark:hover:text-brand-600":
             isActive,
-          "hover:text-brand-700 dark:hover:text-brand-600": !isActive,
+          "hover:text-brand-650 dark:hover:text-brand-600": !isActive,
         })}
         autoAddBaseUrl={autoAddBaseUrl}
         aria-current={isActive ? "page" : undefined}

@@ -30,7 +30,7 @@ function DropdownNavbarItemDesktop({
         role="button"
         href={props.to ? undefined : "#"}
         className={clsx(
-          "peer flex items-center font-bold text-gray-900 dark:text-gray-50 group-hover:text-brand-700 dark:group-hover:text-brand-500 group-hover:underline",
+          "peer flex items-center font-bold text-gray-900 dark:text-gray-50 group-hover:text-brand-650 dark:group-hover:text-brand-500 group-hover:underline",
           className,
         )}
         {...props}
@@ -80,7 +80,7 @@ function DropdownNavbarItemMobile({
       <NavbarNavLink
         role="button"
         className={clsx(
-          "font-bold text-gray-900 hover:text-brand-700 dark:text-gray-50 dark:hover:text-brand-500",
+          "font-bold text-gray-900 hover:text-brand-650 dark:text-gray-50 dark:hover:text-brand-500",
           className,
         )}
         {...props}
