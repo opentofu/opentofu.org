@@ -21,7 +21,7 @@ function SupporterType({ type, withSeparator, count }: SupporterTypeProps) {
       </span>
       {count && (
         <sup
-          className="ml-1 mt-2 text-brand-700 dark:text-brand-600 text-base font-bold"
+          className="ml-1 mt-2 text-brand-650 dark:text-brand-600 text-base font-bold"
           aria-hidden
         >
           {count}
