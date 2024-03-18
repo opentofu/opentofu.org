@@ -190,7 +190,7 @@ const config: Config = {
     announcementBar: {
       id: "opentofu-ga",
       content:
-        '<a target="_blank" rel="noopener noreferrer" href="https://opentofu.org/blog/opentofu-is-going-ga/">OpenTofu is going GA</a> – we\'ve released the first stable release of OpenTofu, a community-driven open source fork of Terraform.',
+        '<a target="_blank" rel="noopener noreferrer" href="/blog/help-us-test-opentofu-1-7-0-alpha1/">OpenTofu 1.7.0-alpha1 is here</a> – try out coming features such as <strong>state encryption</strong>, the <strong>removed block</strong>, and much more.',
       backgroundColor: "#ffda18",
       textColor: "#1b1d20",
       isCloseable: false,
