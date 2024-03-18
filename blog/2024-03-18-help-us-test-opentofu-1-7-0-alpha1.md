@@ -79,6 +79,8 @@ terraform {
 }
 ```
 
+If you have access to an AWS account, you can also test the [AWS Key-Management Service](https://1-7-0-alpha1.opentofu.pages.dev/docs/language/state/encryption/#aws-kms) key provider. (Please note the [AWS KMS pricing](https://aws.amazon.com/kms/pricing/).)
+
 :::note
 The OpenTofu core developers would like to thank Stephan Bartels (Interhyp) and Alex Scheel for their extensive work on this feature.
 :::
