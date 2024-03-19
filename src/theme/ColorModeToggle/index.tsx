@@ -4,7 +4,6 @@ import useIsBrowser from "@docusaurus/useIsBrowser";
 import IconLightMode from "@theme/Icon/LightMode";
 import IconDarkMode from "@theme/Icon/DarkMode";
 import type { Props } from "@theme/ColorModeToggle";
-import "../../css/custom.css";
 
 function ColorModeToggle({ value, onChange }: Props) {
   const isBrowser = useIsBrowser();
