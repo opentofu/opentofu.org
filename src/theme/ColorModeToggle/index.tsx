@@ -4,6 +4,7 @@ import useIsBrowser from "@docusaurus/useIsBrowser";
 import IconLightMode from "@theme/Icon/LightMode";
 import IconDarkMode from "@theme/Icon/DarkMode";
 import type { Props } from "@theme/ColorModeToggle";
+import "../../css/custom.css";
 
 function ColorModeToggle({ value, onChange }: Props) {
   const isBrowser = useIsBrowser();
@@ -14,7 +15,7 @@ function ColorModeToggle({ value, onChange }: Props) {
 
   return (
     <button
-      className="transition-colors text-gray-900 hover:text-brand-650 dark:text-gray-50 dark:hover:text-brand-500"
+      className="transition-colors text-gray-900 hover:text-brand-500 dark:text-gray-50 dark:hover:text-brand-500 link"
       type="button"
       onClick={() => onChange(value === "dark" ? "light" : "dark")}
       disabled={!isBrowser}

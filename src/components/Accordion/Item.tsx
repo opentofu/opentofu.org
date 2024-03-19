@@ -34,7 +34,7 @@ const classNames = [
   "font-normal",
 
   "prose-a:text-inherit",
-  "hover:prose-a:text-brand-700",
+  "hover:prose-a:text-brand-650",
   "dark:prose-a:text-inherit",
   "dark:hover:prose-a:text-brand-500",
 ];

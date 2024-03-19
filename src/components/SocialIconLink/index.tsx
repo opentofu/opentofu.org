@@ -28,7 +28,7 @@ export default function SocialIconLink({
   return (
     <Link
       href={href}
-      className="flex items-center gap-3 text-gray-900 hover:text-brand-500 dark:text-gray-50 dark:hover:text-brand-500"
+      className="flex items-center gap-3 text-gray-900 hover:text-brand-500 dark:text-gray-50 dark:hover:text-brand-500 link"
       aria-label={label}
       target="_blank"
     >

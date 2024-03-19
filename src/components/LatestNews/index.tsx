@@ -32,7 +32,7 @@ export default function LatestNews({ recentPosts }: LatestNewsProps) {
             <time
               dateTime={date}
               itemProp="datePublished"
-              className="text-brand-700 dark:text-brand-500 font-bold uppercase"
+              className="text-brand-650 dark:text-brand-500 font-bold uppercase"
             >
               {formattedDate}
             </time>
