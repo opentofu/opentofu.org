@@ -29,7 +29,7 @@ export default function BlogLastPost({ item }: BlogLastPostProps) {
               <time
                 dateTime={date}
                 itemProp="datePublished"
-                className="text-brand-700 dark:text-brand-500 uppercase font-bold"
+                className="text-brand-650 dark:text-brand-500 uppercase font-bold"
               >
                 {formattedDate}
               </time>
@@ -37,7 +37,7 @@ export default function BlogLastPost({ item }: BlogLastPostProps) {
               <h3 className="leading-snug text-3xl font-bold my-2 line-clamp-5">
                 <Link
                   to={permalink}
-                  className="text-gray-900 dark:text-gray-50 hover:text-brand-700 dark:hover:text-brand-500"
+                  className="text-gray-900 dark:text-gray-50 hover:text-brand-650 dark:hover:text-brand-500"
                 >
                   {title}
                 </Link>

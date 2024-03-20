@@ -14,7 +14,7 @@ function ColorModeToggle({ value, onChange }: Props) {
 
   return (
     <button
-      className="transition-colors text-gray-900 hover:text-brand-700 dark:text-gray-50 dark:hover:text-brand-500"
+      className="transition-colors text-gray-900 hover:text-brand-500 dark:text-gray-50 dark:hover:text-brand-500 link"
       type="button"
       onClick={() => onChange(value === "dark" ? "light" : "dark")}
       disabled={!isBrowser}

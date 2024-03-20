@@ -15,7 +15,7 @@ export default function HowToContribute() {
           to contribute. This{" "}
           <Link
             href="https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md"
-            className="underline text-gray-900 hover:text-brand-700 dark:text-gray-50 dark:hover:text-brand-500"
+            className="underline text-gray-900 hover:text-brand-650 dark:text-gray-50 dark:hover:text-brand-500"
           >
             contribution guide
           </Link>{" "}

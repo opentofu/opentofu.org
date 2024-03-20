@@ -116,7 +116,7 @@ export default function DocSidebarItemCategory({
         className={clsx("flex justify-between items-center py-2 px-4", {
           "bg-brand-500 dark:bg-brand-800 text-gray-900 hover:text-gray-900 dark:text-brand-600 dark:hover:text-brand-600":
             isActive,
-          "hover:text-brand-700 dark:hover:text-brand-600": !isActive,
+          "hover:text-brand-650 dark:hover:text-brand-600": !isActive,
         })}
         onClick={
           collapsible

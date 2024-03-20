@@ -45,7 +45,7 @@ export default function SupportersPage() {
             >
               {type}
               <sup
-                className="text-brand-700 dark:text-brand-600 font-bold text-base ml-2 mt-2"
+                className="text-brand-650 dark:text-brand-600 font-bold text-base ml-2 mt-2"
                 aria-hidden
               >
                 {supporters.length}

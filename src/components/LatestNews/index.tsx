@@ -32,14 +32,14 @@ export default function LatestNews({ recentPosts }: LatestNewsProps) {
             <time
               dateTime={date}
               itemProp="datePublished"
-              className="text-brand-700 dark:text-brand-500 font-bold uppercase"
+              className="text-brand-650 dark:text-brand-500 font-bold uppercase"
             >
               {formattedDate}
             </time>
             <h3 className="text-3xl font-bold leading-snug mt-2">
               <Link
                 href={permalink}
-                className="text-gray-900 dark:text-gray-50 hover:text-brand-700 dark:hover:text-brand-500"
+                className="text-gray-900 dark:text-gray-50 hover:text-brand-650 dark:hover:text-brand-500"
               >
                 {title}
               </Link>
