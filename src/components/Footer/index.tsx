@@ -22,7 +22,7 @@ function LinkItem({ item }: LinkItemProps) {
         : {
             to: toUrl,
           })}
-      className="font-bold text-gray-900 dark:text-gray-50 hover:text-brand-650 dark:hover:text-brand-500 "
+      className="font-bold text-gray-900 dark:text-gray-50 hover:text-brand-650 dark:hover:text-brand-500 menu-text "
       target="_blank"
       {...props}
     >
