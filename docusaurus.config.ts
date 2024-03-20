@@ -245,13 +245,13 @@ const config: Config = {
       hideOnScroll: true,
       items: [
         {
-          to: "/manifesto",
-          label: "Manifesto",
+          to: "/getting-started",
+          label: "Getting started",
           position: "left",
         },
         {
-          to: "/supporters",
-          label: "Supporters",
+          to: "/download",
+          label: "Download",
           position: "left",
         },
         {
