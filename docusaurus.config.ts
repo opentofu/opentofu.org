@@ -101,17 +101,19 @@ const config: Config = {
           customCss: [require.resolve("./src/css/custom.css")],
         },
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          path: "opentofu-repo/website/docs",
           routeBasePath: "/docs",
-          editUrl: ({ docPath }) => {
-            // Remove the edit link from the documentation index page
-            // TODO: remove after moving the page to the main OpenTofu repo
-            if (docPath === "index.mdx") {
-              return `https://github.com/opentofu/opentofu.org/edit/main/docs/${docPath}`;
-            }
-
-            return `https://github.com/opentofu/opentofu/edit/main/website/docs/${docPath}`;
+          lastVersion: "current",
+          docVersionRootComponent: "@theme/DocVersionRoot",
+          // TODO: move index.mdx to main opentofu repo. dont let james merge without doing this for 1.16 and new versions
+          versions: {
+            current: {
+              label: "v1.16",
+              path: "v1.16",
+            },
+            "v1.17-alpha": {
+              label: "v1.17-alpha",
+              path: "v1.17-alpha",
+            },
           },
         },
         blog: false,
@@ -183,6 +185,7 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     docs: {
+      versionPersistence: "localStorage",
       sidebar: {
         autoCollapseCategories: true,
       },
@@ -283,6 +286,10 @@ const config: Config = {
               docId: "internals/index",
             },
           ],
+        },
+        {
+          type: "docsVersionDropdown",
+          position: "right",
         },
         // TODO: This link is important but there's no design for it yet
         // {
