@@ -37,38 +37,47 @@ type FooterProps = {
 
 export default function Footer({ links }: FooterProps) {
   return (
-    <footer className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6 py-6 px-4">
-      <Logo />
-      <div className="flex gap-6 align-center flex-wrap justify-center">
-        {links.map((link) => (
-          <LinkItem key={link.href ?? link.to} item={link} />
-        ))}
+    <footer className="container mx-auto flex flex-col items-center gap-6 py-6 px-4">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6 w-full">
+        <Logo />
+        <div className="flex gap-6 align-center flex-wrap justify-center">
+          {links.map((link) => (
+            <LinkItem key={link.href ?? link.to} item={link} />
+          ))}
+        </div>
+        <div className="flex gap-6">
+          <SocialIconLink
+            name="youtube"
+            href="https://www.youtube.com/channel/UCgIzfj9QuWL9HHXIXq2A0Ig"
+            label="Go to the OpenTofu's Youtube page"
+            hiddenLabel
+          />
+          <SocialIconLink
+            name="github"
+            href="https://github.com/opentofu/opentofu"
+            label="Go to the OpenTofu's GitHub repository"
+            hiddenLabel
+          />
+          <SocialIconLink
+            name="x"
+            href="https://x.com/opentofuorg"
+            label="Follow us on X"
+            hiddenLabel
+          />
+          <SocialIconLink
+            name="slack"
+            href="/slack"
+            label="Join us on Slack"
+            hiddenLabel
+          />
+        </div>
       </div>
-      <div className="flex gap-6">
-        <SocialIconLink
-          name="youtube"
-          href="https://www.youtube.com/channel/UCgIzfj9QuWL9HHXIXq2A0Ig"
-          label="Go to the OpenTofu's Youtube page"
-          hiddenLabel
-        />
-        <SocialIconLink
-          name="github"
-          href="https://github.com/opentofu/opentofu"
-          label="Go to the OpenTofu's GitHub repository"
-          hiddenLabel
-        />
-        <SocialIconLink
-          name="x"
-          href="https://x.com/opentofuorg"
-          label="Follow us on X"
-          hiddenLabel
-        />
-        <SocialIconLink
-          name="slack"
-          href="/slack"
-          label="Join us on Slack"
-          hiddenLabel
-        />
+      <div className="text-center text-gray-600 text-sm w-6/12">
+        Copyright © OpenTofu a Series of LF Projects, LLC and its contributors.
+        Documentation materials incorporate content licensed under the MPL-2.0
+        license from other authors. For web site terms of use, trademark policy,
+        privacy policy and other project policies please see
+        https://lfprojects.org/policies.
       </div>
     </footer>
   );
