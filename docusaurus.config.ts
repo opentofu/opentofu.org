@@ -222,10 +222,6 @@ const config: Config = {
           label: "Docs",
           href: "/docs",
         },
-        {
-          label: "Privacy",
-          href: "/privacy",
-        },
       ],
     },
     navbar: {
