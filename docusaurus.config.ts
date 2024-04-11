@@ -190,7 +190,7 @@ const config: Config = {
     announcementBar: {
       id: "opentofu-ga",
       content:
-        '<a target="_blank" rel="noopener noreferrer" href="/blog/help-us-test-opentofu-1-7-0-alpha1/">OpenTofu 1.7.0-alpha1 is here</a> – try out upcoming features such as <strong>state encryption</strong>, the <strong>removed block</strong>, and much more.',
+        '<a target="_blank" rel="noopener noreferrer" href="/blog/our-response-to-hashicorps-cease-and-desist/">Our Response to Hashicorp\'s Cease and Desist Letter</a>',
       backgroundColor: "#ffda18",
       textColor: "#1b1d20",
       isCloseable: false,
