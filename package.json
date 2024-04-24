@@ -10,7 +10,7 @@
     "clear": "docusaurus clear",
     "typecheck": "tsc",
     "sync-supporters": "node ./sync-supporters.js",
-
+    "prepare": "husky install",
     "lint": "eslint --cache \"**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
@@ -57,6 +57,7 @@
     "node": ">=18.17.1"
   },
   "devDependencies": {
+    "husky": "^8.0.3",
     "lint-staged": "^15.2.0"
   },
   "lint-staged": {
