@@ -101,23 +101,33 @@ const config: Config = {
           customCss: [require.resolve("./src/css/custom.css")],
         },
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          path: "opentofu-repo/website/docs",
+          includeCurrentVersion: false,
+          lastVersion: 'v1.6',
+          docVersionRootComponent: "@theme/DocVersionRoot",
+          versions: {
+            "v1.6": {
+              label: "1.6.x",
+              path: ""
+            },
+            "main": {
+              label: "1.7.x",
+              path: "next",
+              banner: "unreleased",
+              noIndex: true
+            }
+          },
           routeBasePath: "/docs",
-          editUrl: ({ docPath }) => {
+          editUrl: ({ version, docPath }) => {
             // Remove the edit link from the documentation index page
             // TODO: remove after moving the page to the main OpenTofu repo
             if (docPath === "index.mdx") {
-              return `https://github.com/opentofu/opentofu.org/edit/main/docs/${docPath}`;
+              return `https://github.com/opentofu/opentofu.org/edit/${version}/docs/${docPath}`;
             }
 
-            return `https://github.com/opentofu/opentofu/edit/main/website/docs/${docPath}`;
+            return `https://github.com/opentofu/opentofu/edit/${version}/website/docs/${docPath}`;
           },
         },
         blog: false,
-        gtag: {
-          trackingID: "G-NKLFR0FNQZ",
-        },
       } satisfies Preset.Options,
     ],
   ],
@@ -183,6 +193,7 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     docs: {
+      versionPersistence: "none",
       sidebar: {
         autoCollapseCategories: true,
       },
@@ -259,27 +270,16 @@ const config: Config = {
           position: "left",
           items: [
             {
-              type: "doc",
-              label: "Introduction",
-              docId: "intro/index",
+              label: "v1.6.x (current)",
+              href: "/docs"
             },
             {
-              type: "doc",
-              label: "CLI",
-              docId: "cli/index",
-            },
-            {
-              type: "doc",
-              label: "Language",
-              docId: "language/index",
-            },
-            {
-              type: "doc",
-              label: "Internals",
-              docId: "internals/index",
+              label: "v1.7.x (next)",
+              href: "/docs/next"
             },
           ],
         },
+
         // TODO: This link is important but there's no design for it yet
         // {
         //   type: "dropdown",
