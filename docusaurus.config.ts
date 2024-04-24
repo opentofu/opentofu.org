@@ -109,12 +109,18 @@ const config: Config = {
               label: "1.6.x",
               path: ""
             },
-            "main": {
+            "v1.7": {
               label: "1.7.x",
               path: "next",
               banner: "unreleased",
               noIndex: true
-            }
+            }/*,
+            "main": {
+              label: "1.8.x",
+              path: "next",
+              banner: "unreleased",
+              noIndex: true
+            }*/
           },
           routeBasePath: "/docs",
           editUrl: ({ version, docPath }) => {

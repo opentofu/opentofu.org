@@ -6,3 +6,7 @@
 	path = opentofu-repo/v1.6
 	url = https://github.com/opentofu/opentofu
 	branch = v1.6
+[submodule "opentofu-repo/v1.7"]
+	path = opentofu-repo/v1.7
+	url = https://github.com/opentofu/opentofu
+	branch = v1.7
