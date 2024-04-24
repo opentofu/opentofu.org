@@ -29,7 +29,6 @@ export default function DocItemLayout({ children }: Props) {
 
         <article className="flex flex-col gap-4 mb-10">
           <DocBreadcrumbs />
-          <DocVersionBadge />
           {canRenderTOC && <DocItemTOCMobile />}
           <DocItemContent>{children}</DocItemContent>
           <DocItemFooter />
