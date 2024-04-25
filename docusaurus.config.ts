@@ -114,13 +114,13 @@ const config: Config = {
               path: "next",
               banner: "unreleased",
               noIndex: true
-            }/*,
+            },
             "main": {
-              label: "1.8.x",
-              path: "next",
+              label: "Development",
+              path: "main",
               banner: "unreleased",
               noIndex: true
-            }*/
+            }
           },
           routeBasePath: "/docs",
           editUrl: ({ version, docPath }) => {
@@ -282,6 +282,10 @@ const config: Config = {
             {
               label: "v1.7.x (next)",
               href: "/docs/next"
+            },
+            {
+              label: "Development",
+              href: "/docs/main"
             },
           ],
         },
