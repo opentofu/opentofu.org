@@ -102,18 +102,17 @@ const config: Config = {
         },
         docs: {
           includeCurrentVersion: false,
-          lastVersion: 'v1.6',
+          lastVersion: 'v1.7',
           docVersionRootComponent: "@theme/DocVersionRoot",
           versions: {
             "v1.6": {
               label: "1.6.x",
-              path: ""
+              path: "v1.6",
+              banner: "none",
             },
             "v1.7": {
               label: "1.7.x",
-              path: "next",
-              banner: "unreleased",
-              noIndex: true
+              path: "",
             },
             "main": {
               label: "Development",
@@ -207,7 +206,7 @@ const config: Config = {
     announcementBar: {
       id: "opentofu-ga",
       content:
-        'OpenTofu 1.7.0-rc1 is now availabe &mdash; <a target="_blank" rel="noopener noreferrer" href="https://github.com/opentofu/opentofu/releases/tag/v1.7.0-rc1">learn more</a>.',
+        '<a target="_blank" rel="noopener noreferrer" href="/blog/opentofu-1-7-0/">OpenTofu 1.7.0 is now available</a> with full state encryption, dynamic provider-defined functions, and much more. <a href="/blog/opentofu-1-7-0/">Read the blog post &raquo;</a>',
       backgroundColor: "#ffda18",
       textColor: "#1b1d20",
       isCloseable: false,
@@ -276,16 +275,16 @@ const config: Config = {
           position: "left",
           items: [
             {
-              label: "v1.6.x (current)",
-              href: "/docs"
+              label: "v1.7.x (current)",
+              href: "/docs/"
             },
             {
-              label: "v1.7.x (next)",
-              href: "/docs/next"
+              label: "v1.6.x",
+              href: "/docs/v1.6/"
             },
             {
               label: "Development",
-              href: "/docs/main"
+              href: "/docs/main/"
             },
           ],
         },
