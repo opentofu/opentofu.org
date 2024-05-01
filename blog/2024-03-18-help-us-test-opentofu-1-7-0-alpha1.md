@@ -33,7 +33,7 @@ For the releases above, please unpack the archive and you should find the `tofu`
 
 ## State encryption
 
-State encryption is one of the flagship features of this release. We have prepared a [full documentation](https://1-7-0-alpha1.opentofu.pages.dev/docs/language/state/encryption/) for this feature.
+State encryption is one of the flagship features of this release. We have prepared a [full documentation](/docs/language/state/encryption/) for this feature.
 
 To test this feature, please make a backup of your state file and then add the following configuration:
 
@@ -79,7 +79,7 @@ terraform {
 }
 ```
 
-If you have access to an AWS account, you can also test the [AWS Key-Management Service](https://1-7-0-alpha1.opentofu.pages.dev/docs/language/state/encryption/#aws-kms) key provider. (Please note the [AWS KMS pricing](https://aws.amazon.com/kms/pricing/).)
+If you have access to an AWS account, you can also test the [AWS Key-Management Service](/docs/language/state/encryption/#aws-kms) key provider. (Please note the [AWS KMS pricing](https://aws.amazon.com/kms/pricing/).)
 
 :::note
 The OpenTofu core developers would like to thank Stephan Bartels (Interhyp) and Alex Scheel for their extensive work on this feature.
@@ -87,7 +87,7 @@ The OpenTofu core developers would like to thank Stephan Bartels (Interhyp) and 
 
 ## Removed block
 
-The removed block lets you remove a resource from the state file but keep it on the infrastructure. We have prepared a [full documentation](https://1-7-0-alpha1.opentofu.pages.dev/docs/language/resources/syntax/#removing-resources) for this feature. You can test it by creating a resource first:
+The removed block lets you remove a resource from the state file but keep it on the infrastructure. We have prepared a [full documentation](/docs/language/resources/syntax/#removing-resources) for this feature. You can test it by creating a resource first:
 
 ```hcl
 resource "local_file" "test" {
@@ -110,13 +110,13 @@ After the next apply, you will see that the local_file.test resource no longer e
 
 This release also contains several new functions and changes to existing functions:
 
-- New function: [templatestring](https://1-7-0-alpha1.opentofu.pages.dev/docs/language/functions/templatestring/)
-- New function: [base64gunzip](https://1-7-0-alpha1.opentofu.pages.dev/docs/language/functions/base64gunzip/)
-- New function: [cidrcontains](https://1-7-0-alpha1.opentofu.pages.dev/docs/language/functions/cidrcontains/)
-- New function: [urldecode](https://1-7-0-alpha1.opentofu.pages.dev/docs/language/functions/urldecode/)
-- New function: [issensitive](https://1-7-0-alpha1.opentofu.pages.dev/docs/language/functions/issensitive/)
-- [nonsensitive](https://1-7-0-alpha1.opentofu.pages.dev/docs/language/functions/nonsensitive/) no longer returns an error when the applied values are not sensitive.
-- [templatefile](https://1-7-0-alpha1.opentofu.pages.dev/docs/language/functions/templatefile/) now supports recursion up to a depth of 1024.
+- New function: [templatestring](/docs/language/functions/templatestring/)
+- New function: [base64gunzip](/docs/language/functions/base64gunzip/)
+- New function: [cidrcontains](/docs/language/functions/cidrcontains/)
+- New function: [urldecode](/docs/language/functions/urldecode/)
+- New function: [issensitive](/docs/language/functions/issensitive/)
+- [nonsensitive](/docs/language/functions/nonsensitive/) no longer returns an error when the applied values are not sensitive.
+- [templatefile](/docs/language/functions/templatefile/) now supports recursion up to a depth of 1024.
 
 ## CLI changes
 
