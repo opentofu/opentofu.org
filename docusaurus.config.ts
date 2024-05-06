@@ -139,6 +139,24 @@ const config: Config = {
   ],
 
   plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'getting-started',
+        path: 'getting-started',
+        routeBasePath: 'getting-started',
+        sidebarPath: './getting-started/sidebars.json',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'download',
+        path: 'download',
+        routeBasePath: 'download',
+        sidebarPath: './download/sidebars.json',
+      },
+    ],
     "./plugins/blog-plugin",
     function tailwindPlugin() {
       return {
