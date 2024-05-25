@@ -95,7 +95,7 @@ const AccordionItem = ({
         }
       });
     }
-  }, []);
+  }, [id, isHashEnabled, location.hash]);
 
   return (
     <details
