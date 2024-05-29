@@ -2,7 +2,6 @@ import React from "react";
 import { useDoc } from "@docusaurus/theme-common/internal";
 import DocItemPaginator from "@theme/DocItem/Paginator";
 import DocVersionBanner from "@theme/DocVersionBanner";
-import DocVersionBadge from "@theme/DocVersionBadge";
 import DocItemFooter from "@theme/DocItem/Footer";
 import DocItemTOCMobile from "@theme/DocItem/TOC/Mobile";
 import DocItemTOCDesktop from "@theme/DocItem/TOC/Desktop";
