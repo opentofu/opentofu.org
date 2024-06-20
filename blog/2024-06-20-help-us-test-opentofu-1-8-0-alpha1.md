@@ -35,7 +35,7 @@ For the releases above, please unpack the archive and you should find the `tofu`
 
 This feature lets you use variables and locals for **backends**, **module sources** and **encryption configuration** as long as they are not dependent on resources, data sources or module outputs. This works even if a local is referencing a variable, for example. This is only the first in a series of improvements that will make the .tf code more flexible with more improvements coming in future releases.
 
-The `tofu init` command will now consume your `.tfvars` file and let you specify variables using the `-var` and `-var-file` options. Please note that this alpha release will *not* prompt you for missing variables, which is a feature we will add later.
+The `tofu init` command will now consume your `.tfvars` file and let you specify variables using the `-var` and `-var-file` options. Please note that this alpha release will *not* prompt you for missing variables, which is a feature we will add later. Note, that `tofu init` will fail if it is missing variables needed for static evaluation.
 
 For example, if you wanted to use the same configuration for your S3 backend and your AWS provider, you can now do this:
 
