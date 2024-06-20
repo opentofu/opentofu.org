@@ -6,7 +6,7 @@ image: /img/blog/help-us-test-opentofu-1-7-0-alpha1.png
 
 Hey there, OpenTofu community! Over the last few months we've been hard at work to bring new features, such as the **state encryption** and the **removed block**, as well as compatibility improvements to you. A few days ago we released the first preview version of these improvements as [OpenTofu 1.7.0-alpha1](https://github.com/opentofu/opentofu/releases/tag/v1.7.0-alpha1).
 
-We have done everything we could to make sure that the new alpha release doesn't break anything, and we need your help to get this release tested. If you have a **non-production** setup that you would be willing to test any of the new features on, please give it a try and give us [feedback using a github issue](https://github.com/opentofu/opentofu/issues/new/choose), even if it's just telling us that everything went well.
+We have done everything we could to make sure that the new alpha release doesn't break anything, and we need your help to get this release tested. If you have a **non-production** setup that you would be willing to test any of the new features on, please give it a try and give us [feedback using a GitHub issue](https://github.com/opentofu/opentofu/issues/new/choose), even if it's just telling us that everything went well.
 
 This blog post will go over how to download the new preview release and detail how each of the new features works.
 
@@ -129,4 +129,4 @@ There are also several changes to the CLI:
 
 ## Providing feedback
 
-Thank you for taking the time to test this preview release. If you have any feedback, please use [a github issue](https://github.com/opentofu/opentofu/issues/new/choose) or chat with us on the [OpenTofu Slack](https://opentofu.org/slack/).
+Thank you for taking the time to test this preview release. If you have any feedback, please use [a GitHub issue](https://github.com/opentofu/opentofu/issues/new/choose) or chat with us on the [OpenTofu Slack](https://opentofu.org/slack/).
