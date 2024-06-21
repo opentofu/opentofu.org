@@ -108,7 +108,7 @@ Since we are now adding features to OpenTofu that are not present in Terraform, 
 
 ## Resource overrides in `tofu test`
 
-This version also brings an improvement for the `tofu test` command. You can now override resources and data sources from your tests, allowing you to create similar behavior to mocks in traditional software testing. As an example, consider the following code that spins up an `m6i.2xlarge` instance on AWS:
+This version also brings an improvement for the `tofu test` command. You can now override resources, data sources and entire modules from your tests, allowing you to create similar behavior to mocks in traditional software testing. As an example, consider the following code that spins up an `m6i.2xlarge` instance on AWS:
 
 ```hcl
 provider "aws" {
