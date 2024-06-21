@@ -4,7 +4,9 @@ slug: help-us-test-opentofu-1-8-0-alpha1
 image: /img/blog/help-us-test-opentofu-1-8-0-alpha1.png
 ---
 
-Hey there, OpenTofu community! Since the last OpenTofu release we've been hard at work bringing you a much-needed improvement to the .tf language: the ability to **use variables in backends, module sources, and the encryption configuration** (*early variable/locals evaluation*). This is currently the [top-voted issue on the OpenTofu GitHub](https://github.com/opentofu/opentofu/issues/1496) and has, in various forms, been requested for years with OpenTofu's predecessor. Additionally, we are bringing you an experimental feature that lets you use new OpenTofu features while still keeping compatibility with Terraform.
+Hey there, OpenTofu community! Since the last OpenTofu release we've been hard at work bringing you a much-needed improvement to the .tf language: the ability to **use variables in backends, module sources, and the encryption configuration** (*early variable/locals evaluation*). This is currently the [top-voted issue on the OpenTofu GitHub](https://github.com/opentofu/opentofu/issues/1496) and has, in various forms, been requested for years with OpenTofu's predecessor.
+
+Additionally, we are bringing you an experimental feature that lets you use new OpenTofu features while still keeping compatibility with Terraform as well as the ability to override resources and data sources in `tofu test`. The release also includes a host of smaller improvements and bugfixes to various parts of OpenTofu [listed in the changelog](https://github.com/opentofu/opentofu/blob/main/CHANGELOG.md). 
 
 Now we'd like to ask you for help: we have done everything we could to make sure that the new alpha release doesn't break anything, and we need your help to get this release tested. If you have a **non-production** setup that you would be willing to test any of the new features on, please give it a try and give us [feedback using a GitHub issue](https://github.com/opentofu/opentofu/issues/new/choose), even if it's just telling us that everything went well.
 
@@ -104,6 +106,71 @@ terraform {
 
 Since we are now adding features to OpenTofu that are not present in Terraform, we want to give module authors the ability to write code for both OpenTofu and Terraform without needing to maintain two copies of their modules. You can now create files named `.tofu` that are exclusive to OpenTofu. If you create a file named `foo.tofu`, OpenTofu will ignore the similarly-named `foo.tf` file. You can use this functionality to put your Terraform-specific code in the `.tf` file and then override it for OpenTofu in the `.tofu` file.
 
+## Resource overrides in `tofu test`
+
+This version also brings an improvement for the `tofu test` command. You can now override resources and data sources from your tests, allowing you to create similar behavior to mocks in traditional software testing. As an example, consider the following code that spins up an `m6i.2xlarge` instance on AWS:
+
+```hcl
+provider "aws" {
+    region = "us-east-1"
+}
+
+data "aws_ami" "ubuntu" {
+    most_recent = true
+    filter {
+      name   = "name"
+      values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-24.04-amd64-server-*"]
+    }
+    owners = ["099720109477"]
+}
+
+resource "aws_instance" "web" {
+    ami           = data.aws_ami.ubuntu.id
+    instance_type = "m6i.2xlarge"
+}
+```
+
+Instead of querying the AMI ID and spinning up the instance, we can write test code as follows:
+
+```hcl
+provider "aws" {
+  access_key = "foo"
+  secret_key = "bar"
+
+  skip_credentials_validation = true
+  skip_region_validation      = true
+  skip_metadata_api_check     = true
+  skip_requesting_account_id  = true
+}
+
+# This block disables refreshing the aws_ami.ubuntu data source
+# and lets you manually specify the values:
+override_data {
+  target = data.aws_ami.ubuntu
+  values = {
+    id = "ami-12345"
+  }
+}
+
+run "test" {
+  # This block disables provisioning the aws_instance.web resource:
+  override_resource {
+    target = aws_instance.web
+    values = {
+      # You can add values here.
+    }
+  }
+
+  assert {
+    condition     = aws_instance.web.ami == "ami-12345"
+    error_message = "Incorrect AMI ID passed to aws_instance.web: ${aws_instance.web.ami}"
+  }
+}
+```
+
+While this will not fully test the entire provisioning, it will highlight errors that may be caused by incorrectly connecting resources together without the need for an actual AWS account. Similarly, you can use `override_module` to override an entire module.
+
 ## Providing feedback
 
 Thank you for taking the time to test this preview release. If you have any feedback, please use [a GitHub issue](https://github.com/opentofu/opentofu/issues/new/choose) or chat with us on the [OpenTofu Slack](https://opentofu.org/slack/).
+
