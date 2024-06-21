@@ -2,7 +2,6 @@
 
 import React, { useCallback, useState, useRef, useEffect } from "react";
 import clsx from "clsx";
-import copy from "copy-text-to-clipboard";
 import { translate } from "@docusaurus/Translate";
 import IconCopy from "@theme/Icon/Copy";
 import IconSuccess from "@theme/Icon/Success";
@@ -10,12 +9,16 @@ import styles from "./styles.module.css";
 export default function CopyButton({ code, className }) {
   const [isCopied, setIsCopied] = useState(false);
   const copyTimeout = useRef(undefined);
-  const handleCopyCode = useCallback(() => {
-    copy(code);
-    setIsCopied(true);
-    copyTimeout.current = window.setTimeout(() => {
-      setIsCopied(false);
-    }, 1000);
+  const handleCopyCode = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(code);
+      setIsCopied(true);
+      copyTimeout.current = window.setTimeout(() => {
+        setIsCopied(false);
+      }, 1000);
+    } catch (error) {
+      console.error(error.message);
+    }
   }, [code]);
   useEffect(() => () => window.clearTimeout(copyTimeout.current), []);
   return (
