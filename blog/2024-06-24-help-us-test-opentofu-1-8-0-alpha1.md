@@ -25,11 +25,11 @@ The alpha release is available exclusively from the [GitHub Releases page](https
 
 | Platform/Device                                                                 | Download link                                                                                                                                       |
 |---------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Desktop Windows computer**<br />(64-bit)                                      | [tofu_1.8.0-alpha1_windows_amd64.zip](https://github.com/opentofu/opentofu/releases/download/v1.7.0-alpha1/tofu_1.7.0-alpha1_windows_amd64.zip)     |
-| **MacOS**<br />(Macbook M1 or higher; ARM64)                                    | [tofu_1.8.0-alpha1_darwin_arm64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.7.0-alpha1/tofu_1.7.0-alpha1_darwin_arm64.tar.gz) |
-| **MacOS**<br />(Macbook pre-M1; AMD64)                                          | [tofu_1.8.0-alpha1_darwin_amd64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.7.0-alpha1/tofu_1.7.0-alpha1_darwin_amd64.tar.gz) |
-| **Intel/AMD Linux computer or server**<br />(AMD64)                             | [tofu_1.8.0-alpha1_linux_amd64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.7.0-alpha1/tofu_1.7.0-alpha1_linux_amd64.tar.gz)   |
-| **ARM-based Linux computer<br />or<br />Raspberry Pi 3 or higher**<br />(ARM64) | [tofu_1.8.0-alpha1_linux_arm64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.7.0-alpha1/tofu_1.7.0-alpha1_linux_arm64.tar.gz)   |
+| **Desktop Windows computer**<br />(64-bit)                                      | [tofu_1.8.0-alpha1_windows_amd64.zip](https://github.com/opentofu/opentofu/releases/download/v1.8.0-alpha1/tofu_1.8.0-alpha1_windows_amd64.zip)     |
+| **MacOS**<br />(Macbook M1 or higher; ARM64)                                    | [tofu_1.8.0-alpha1_darwin_arm64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.8.0-alpha1/tofu_1.8.0-alpha1_darwin_arm64.tar.gz) |
+| **MacOS**<br />(Macbook pre-M1; AMD64)                                          | [tofu_1.8.0-alpha1_darwin_amd64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.8.0-alpha1/tofu_1.8.0-alpha1_darwin_amd64.tar.gz) |
+| **Intel/AMD Linux computer or server**<br />(AMD64)                             | [tofu_1.8.0-alpha1_linux_amd64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.8.0-alpha1/tofu_1.8.0-alpha1_linux_amd64.tar.gz)   |
+| **ARM-based Linux computer<br />or<br />Raspberry Pi 3 or higher**<br />(ARM64) | [tofu_1.8.0-alpha1_linux_arm64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.8.0-alpha1/tofu_1.8.0-alpha1_linux_arm64.tar.gz)   |
 
 For the releases above, please unpack the archive and you should find the `tofu` binary inside. You can also use the [standalone installer](https://opentofu.org/docs/intro/install/standalone/) to download the release with signature verification.
 
