@@ -102,7 +102,7 @@ const config: Config = {
         },
         docs: {
           includeCurrentVersion: false,
-          lastVersion: 'v1.7',
+          lastVersion: 'v1.8',
           docVersionRootComponent: "@theme/DocVersionRoot",
           versions: {
             "v1.6": {
@@ -112,6 +112,11 @@ const config: Config = {
             },
             "v1.7": {
               label: "1.7.x",
+              path: "v1.7",
+              banner: "none",
+            },
+            "v1.8": {
+              label: "1.8.x",
               path: "",
             },
             "main": {
@@ -206,7 +211,7 @@ const config: Config = {
     announcementBar: {
       id: "opentofu-ga",
       content:
-        '<a target="_blank" rel="noopener noreferrer" href="/blog/opentofu-1-7-0/">OpenTofu 1.7.0 is now available</a> with full state encryption, dynamic provider-defined functions, and much more. <a href="/blog/opentofu-1-7-0/">Read the blog post &raquo;</a>',
+        '<a target="_blank" rel="noopener noreferrer" href="/blog/opentofu-1-8-0/">OpenTofu 1.8.0 is out</a> with early variables/locals evaluation, .tofu file support and provider mocking. <a href="/blog/opentofu-1-8-0/">Read the blog post &raquo;</a>',
       backgroundColor: "#ffda18",
       textColor: "#1b1d20",
       isCloseable: false,
@@ -275,8 +280,12 @@ const config: Config = {
           position: "left",
           items: [
             {
-              label: "v1.7.x (current)",
+              label: "v1.8.x (current)",
               href: "/docs/"
+            },
+            {
+              label: "v1.7.x",
+              href: "/docs/v1.7/"
             },
             {
               label: "v1.6.x",
