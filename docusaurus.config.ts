@@ -340,7 +340,8 @@ const config: Config = {
       ],
     },
     prism: {
-      theme: prismThemes.dracula,
+      theme: prismThemes.oneLight,
+      darkTheme: prismThemes.dracula,
       additionalLanguages: ["hcl", "powershell"],
     },
     image: "/img/og.png",
