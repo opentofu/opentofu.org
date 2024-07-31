@@ -4,7 +4,6 @@
   position: relative;
   /* rtl:ignore */
   direction: ltr;
-  border-radius: inherit;
 }
 
 .codeBlockTitle {
@@ -65,7 +64,6 @@
   background: var(--prism-background-color);
   color: var(--prism-color);
   border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: var(--ifm-global-radius);
   padding: 0.4rem;
   line-height: 0;
   transition: opacity var(--ifm-transition-fast) ease-in-out;

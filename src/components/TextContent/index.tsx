@@ -8,7 +8,7 @@ const classNames = [
   "dark:prose-invert",
   "lg:prose-lg",
 
-  "max-w-full md:max-w-prose",
+  "max-w-full",
 
   "text-gray-900",
   "dark:text-gray-100",
@@ -23,7 +23,12 @@ const classNames = [
   "dark:prose-hr:border-gray-800",
 
   // <pre>
-  "prose-pre:bg-blue-900",
+  "dark:prose-pre:bg-blue-900",
+  "dark:prose-pre:border-none",
+  "prose-pre:bg-gray-50",
+  "prose-pre:border",
+  "prose-pre:border-gray-200",
+  "prose-pre:rounded-none",
 
   // <code>
   "prose-code:px-1.5",

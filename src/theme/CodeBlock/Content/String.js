@@ -84,7 +84,6 @@ export default function CodeBlockString({
                 tabIndex={0}
                 ref={wordWrap.codeBlockRef}
                 className={clsx(className, styles.codeBlock, "thin-scrollbar")}
-                style={style}
                 role="code"
                 aria-label="Code Block"
               >

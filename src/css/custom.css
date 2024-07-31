@@ -58,12 +58,14 @@ html[data-theme="dark"] {
   --ifm-color-primary: theme("colors.brand.500");
   --ifm-background-color: theme("colors.blue.950");
   --ifm-font-color-base: theme("colors.gray.50");
+  --prism-background-color: theme("colors.gray.900");
 }
 
 html[data-theme="light"] {
   --ifm-color-primary: theme("colors.brand.700");
   --ifm-background-color: theme("colors.gray.50");
   --ifm-font-color-base: theme("colors.gray.900");
+  --prism-background-color: theme("colors.gray.100");
 }
 
 body {
