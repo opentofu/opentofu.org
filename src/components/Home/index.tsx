@@ -1,18 +1,14 @@
 import React from "react";
 import Layout from "@theme/Layout";
 import Hero from "../Hero";
-import Goals from "../Goals";
 import Supporters from "../Supporters";
-import FAQ from "../FAQ";
-import HowToContribute from "../HowToContribute";
+import GetStarted from "../GetStarted";
 
 export default function Home() {
   return (
     <Layout description="The open source infrastructure as code tool.">
       <Hero />
-      <Goals />
-      <HowToContribute />
-      <FAQ />
+      <GetStarted />
       <Supporters />
     </Layout>
   );

@@ -143,6 +143,24 @@ const config: Config = {
   ],
 
   plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'getting-started',
+        path: 'getting-started',
+        routeBasePath: 'getting-started',
+        sidebarPath: './getting-started/sidebars.json',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'download',
+        path: 'download',
+        routeBasePath: 'download',
+        sidebarPath: './download/sidebars.json',
+      },
+    ],
     "./plugins/blog-plugin",
     function tailwindPlugin() {
       return {
@@ -249,13 +267,13 @@ const config: Config = {
       hideOnScroll: true,
       items: [
         {
-          to: "/manifesto",
-          label: "Manifesto",
+          to: "/getting-started",
+          label: "Getting started",
           position: "left",
         },
         {
-          to: "/supporters",
-          label: "Supporters",
+          to: "/download",
+          label: "Download",
           position: "left",
         },
         {
