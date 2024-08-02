@@ -81,7 +81,7 @@ We’re currently exploring a dedicated UI for package and documentation browsin
 
 With the holidays in full swing, we decided to roll out a release candidate first and schedule the GA for January 10th. Meanwhile, you can already start testing OpenTofu by simply following the [directions provided here](https://opentofu.org/docs/intro/install/). It is a drop-in replacement so Terraform users will feel right at home, which is the whole idea.
 
-If you are interested in contributing to the project, please check out these [contribution guidelines](https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md), and don’t forget to join our [Slack community](/slack/).
+If you are interested in contributing to the project, please check out these [contribution guidelines](https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md), and don’t forget to join our [Slack community](https://opentofu.org/slack/).
 
 Happy holidays!
 
