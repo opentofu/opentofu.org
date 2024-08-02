@@ -15,7 +15,7 @@ This release includes bug fixes, stability improvements, and updates to document
 
 ## From Idea to Release Candidate in 4 Months
 
-The OpenTofu journey has been a whirlwind, spanning from a proposition to a release candidate in just four months. 
+The OpenTofu journey has been a whirlwind, spanning from a proposition to a release candidate in just four months.
 
 This is a major milestone for us, but also a bittersweet moment. Looking back on the beginning of our journey, there was hope that HashiCorp [would hear our appeal](https://opentofu.org/manifesto), reverse its decision and restore balance to the ecosystem.
 
@@ -71,11 +71,11 @@ Outside of our own tests, the four most requested files were:
 - `/v1/providers/hashicorp/template/versions`
 - `/v1/providers/hashicorp/aws/versions`
 
-With the registry live, we set up a [GitHub Action](https://github.com/opentofu/registry/actions/workflows/bump-versions.yml) to scan for updates to indexed resources. We also introduced an [IssueOps process](https://github.com/opentofu/registry/commit/74bfbcf9435433c70c9f923a36aa9d0b16ec2f5a) for adding new providers. With it in place, new submissions would be auto-processed and auto-validated when they go into the registry, with Issues providing context and transparency. 
+With the registry live, we set up a [GitHub Action](https://github.com/opentofu/registry/actions/workflows/bump-versions.yml) to scan for updates to indexed resources. We also introduced an [IssueOps process](https://github.com/opentofu/registry/commit/74bfbcf9435433c70c9f923a36aa9d0b16ec2f5a) for adding new providers. With it in place, new submissions would be auto-processed and auto-validated when they go into the registry, with Issues providing context and transparency.
 
 ![A screenshot of the form allowing the addition of a new provider to the OpenTofu registry. The form fields are the provider name and DCO checkbox.](/img/blog/opentofu-release-candidate-is-out-issueops.png)
 
-We’re currently exploring a dedicated UI for package and documentation browsing. 
+We’re currently exploring a dedicated UI for package and documentation browsing.
 
 ## Next Stop: Jan 10th
 
@@ -92,5 +92,3 @@ While concluding the work on this post, and the upcoming release, we learned tha
 Mitchell’s work on projects such as Vagrant, Consul, Vault, and of course Terraform is a source of inspiration for us and many others within the Open Source community.
 
 The entire OpenTofu team extends its heartfelt gratitude to Mitchell for all of his numerous contributions, as we eagerly anticipate learning about the next steps in his already remarkable journey.
-
-

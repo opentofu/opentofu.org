@@ -16,13 +16,12 @@ Do not test this release on a production project! It is not a stable release!
 
 :::
 
-
 ## Downloading the alpha release
 
 The alpha release is available exclusively from the [GitHub Releases page](https://github.com/opentofu/opentofu/releases/tag/v1.7.0-alpha1). Please select the appropriate file for your platform. Here are some quick links:
 
 | Platform/Device                                                                 | Download link                                                                                                                                       |
-|---------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Desktop Windows computer**<br />(64-bit)                                      | [tofu_1.7.0-alpha1_windows_amd64.zip](https://github.com/opentofu/opentofu/releases/download/v1.7.0-alpha1/tofu_1.7.0-alpha1_windows_amd64.zip)     |
 | **MacOS**<br />(Macbook M1 or higher; ARM64)                                    | [tofu_1.7.0-alpha1_darwin_arm64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.7.0-alpha1/tofu_1.7.0-alpha1_darwin_arm64.tar.gz) |
 | **MacOS**<br />(Macbook pre-M1 or lower; AMD64)                                 | [tofu_1.7.0-alpha1_darwin_amd64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.7.0-alpha1/tofu_1.7.0-alpha1_darwin_amd64.tar.gz) |
