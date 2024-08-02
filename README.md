@@ -54,3 +54,7 @@ You can also run the dev server in a container with the following command:
 ```bash
 docker compose up --build
 ```
+
+## Contributing
+
+When you contribute code to OpenTofu, do not forget to sign off your commits as [described here](https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md#signing-off-your-commits).
