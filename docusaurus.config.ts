@@ -330,7 +330,7 @@ const config: Config = {
         },
         {
           type: "custom-social-icon-link-navbar-item",
-          href: "/slack",
+          href: "https://opentofu.org/slack/",
           position: "right",
           name: "slack",
           label: "Join us on Slack",
