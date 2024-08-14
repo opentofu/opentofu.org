@@ -84,9 +84,8 @@ const config: Config = {
   // For GitHub Pages, this value must be defined.
   trailingSlash: true,
 
-  // TODO: Once we clean up links we can switch to "throw"
-  onBrokenLinks: "warn",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "throw",
 
   i18n: {
     defaultLocale: "en",
