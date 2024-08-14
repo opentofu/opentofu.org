@@ -4,9 +4,9 @@ slug: help-us-test-opentofu-1-8-0-alpha1
 image: /img/blog/help-us-test-opentofu-1-8-0-alpha1.png
 ---
 
-Hey there, OpenTofu community! Since the last OpenTofu release we've been hard at work bringing you a much-needed improvement to the .tf language: the ability to **use variables in backends, module sources, and the encryption configuration** (*early variable/locals evaluation*). This is currently the [top-voted issue on the OpenTofu GitHub](https://github.com/opentofu/opentofu/issues/1496) and has, in various forms, been requested for years with OpenTofu's predecessor.
+Hey there, OpenTofu community! Since the last OpenTofu release we've been hard at work bringing you a much-needed improvement to the .tf language: the ability to **use variables in backends, module sources, and the encryption configuration** (_early variable/locals evaluation_). This is currently the [top-voted issue on the OpenTofu GitHub](https://github.com/opentofu/opentofu/issues/1496) and has, in various forms, been requested for years with OpenTofu's predecessor.
 
-Additionally, we are bringing you a feature that lets you use new OpenTofu features while still keeping compatibility with Terraform as well as the ability to override resources and data sources in `tofu test`. The release also includes a host of smaller improvements and bugfixes to various parts of OpenTofu [listed in the changelog](https://github.com/opentofu/opentofu/blob/main/CHANGELOG.md). 
+Additionally, we are bringing you a feature that lets you use new OpenTofu features while still keeping compatibility with Terraform as well as the ability to override resources and data sources in `tofu test`. The release also includes a host of smaller improvements and bugfixes to various parts of OpenTofu [listed in the changelog](https://github.com/opentofu/opentofu/blob/main/CHANGELOG.md).
 
 Now we'd like to ask you for help: we have done everything we could to make sure that the new alpha release doesn't break anything, and we need your help to get this release tested. If you have a **non-production** setup that you would be willing to test any of the new features on, please give it a try and give us [feedback using a GitHub issue](https://github.com/opentofu/opentofu/issues/new/choose), even if it's just telling us that everything went well.
 
@@ -18,13 +18,12 @@ Do not test this release on a production project! It is not a stable release!
 
 :::
 
-
 ## Downloading the alpha release
 
 The alpha release is available exclusively from the [GitHub Releases page](https://github.com/opentofu/opentofu/releases/tag/v1.8.0-alpha1). Please select the appropriate file for your platform. Here are some quick links:
 
 | Platform/Device                                                                 | Download link                                                                                                                                       |
-|---------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Desktop Windows computer**<br />(64-bit)                                      | [tofu_1.8.0-alpha1_windows_amd64.zip](https://github.com/opentofu/opentofu/releases/download/v1.8.0-alpha1/tofu_1.8.0-alpha1_windows_amd64.zip)     |
 | **MacOS**<br />(Macbook M1 or higher; ARM64)                                    | [tofu_1.8.0-alpha1_darwin_arm64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.8.0-alpha1/tofu_1.8.0-alpha1_darwin_arm64.tar.gz) |
 | **MacOS**<br />(Macbook pre-M1; AMD64)                                          | [tofu_1.8.0-alpha1_darwin_amd64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.8.0-alpha1/tofu_1.8.0-alpha1_darwin_amd64.tar.gz) |
@@ -37,7 +36,7 @@ For the releases above, please unpack the archive and you should find the `tofu`
 
 This feature lets you use variables and locals for **backends**, **module sources** and **encryption configuration** as long as they are not dependent on resources, data sources or module outputs. This works even if a local is referencing a variable, for example. This is only the first in a series of improvements that will make the .tf code more flexible with more improvements coming in future releases.
 
-The `tofu init` command will now consume your `.tfvars` file and let you specify variables using the `-var` and `-var-file` options. Please note that this alpha release will *not* prompt you for missing variables, which is a feature we will add later. Note, that `tofu init` will fail if it is missing variables needed for static evaluation.
+The `tofu init` command will now consume your `.tfvars` file and let you specify variables using the `-var` and `-var-file` options. Please note that this alpha release will _not_ prompt you for missing variables, which is a feature we will add later. Note, that `tofu init` will fail if it is missing variables needed for static evaluation.
 
 For example, if you wanted to use the same configuration for your S3 backend and your AWS provider, you can now do this:
 
@@ -173,4 +172,3 @@ While this will not fully test the entire provisioning, it will highlight errors
 ## Providing feedback
 
 Thank you for taking the time to test this preview release. If you have any feedback, please use [a GitHub issue](https://github.com/opentofu/opentofu/issues/new/choose) or chat with us on the [OpenTofu Slack](https://opentofu.org/slack/).
-
