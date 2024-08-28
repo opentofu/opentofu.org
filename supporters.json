@@ -36,6 +36,18 @@
     "pledge": "Development; open-source community efforts"
   },
   {
+    "name": "Buildkite",
+    "url": "https://buildkite.com/",
+    "type": "Company",
+    "pledge": "RPM/DEB Package hosting via Packagecloud"
+  },
+  {
+    "name": "Cloudflare",
+    "url": "https://cloudflare.com/",
+    "type": "Company",
+    "pledge": "Hosting and additional services"
+  },
+  {
     "name": "Massdriver",
     "url": "https://massdriver.cloud",
     "type": "Company",
