@@ -13,7 +13,7 @@ export default function FAQ() {
       </Jumbotron>
       <TextContent className="mb-4 md:mb-10 mx-auto px-4">
         The OpenTofu Registry contains providers and modules to be used with OpenTofu. In order to view the catalogue of providers / modules, or
-        if you’d like to submit new providers / modules, please head to <Link href="https://github.com/opentofu/registry/">https://github.com/opentofu/registry/</Link>.
+        if you’d like to submit new providers / modules, please head to <Link href="https://search.opentofu.org/">https://search.opentofu.org/</Link>.
       </TextContent>
     </Layout>
   );
