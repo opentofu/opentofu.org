@@ -208,7 +208,7 @@ const config: Config = {
     announcementBar: {
       id: "opentofu-ga",
       content:
-        'The all-new <a target="_blank" rel="noopener noreferrer" href="https://search.opentofu.org">OpenTofu Registry Search</a> beta is out! Give it a spin and <a href="https://github.com/opentofu/registry-ui/issues/new">let us know what you think</a>!',
+        'The all-new <a target="_blank" rel="noopener noreferrer" href="https://search.opentofu.org">OpenTofu Registry Search</a> beta is out! Give it a spin and <a href="https://github.com/opentofu/registry-ui/issues/new">let us know what you think</a> or <a href="/blog/building-the-opentofu-registry/">read more about how we built it</a>!',
       backgroundColor: "#ffda18",
       textColor: "#1b1d20",
       isCloseable: false,

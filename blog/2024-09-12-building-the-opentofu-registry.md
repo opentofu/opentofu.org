@@ -5,7 +5,7 @@ description: With the Registry Search now in beta it is time to take a technical
 image: /img/blog/building-the-opentofu-registry.png
 ---
 
-Recently, we published the beta version of the [OpenTofu Registry Search](https://search.opentofu.org), a user interface that lets you search for and view the documentation of providers and modules in the OpenTofu Registry. With this important milestone reached, it is finally time to talk about how the OpenTofu Registry works under the hood and the pitfalls of running a public registry.
+Recently, we published the beta version of the [OpenTofu Registry Search](https://search.opentofu.org), a user interface that lets you search for and view the documentation of providers and modules in the OpenTofu Registry. With this important milestone reached, it is finally time to talk about how the OpenTofu Registry and Search work under the hood and the pitfalls of running a public registry.
 
 ## The registry API
 
@@ -62,6 +62,20 @@ While anyone could submit a provider or a module, we still needed provider autho
 
 Having the submission process being as simple as opening a GitHub issue turned out to be quite popular. To date, the community has opened almost 1,000 pull requests and issues on the registry repository.
 
+:::tip Learn more
+
+Do you want to learn more about the early days of the OpenTofu Registry? James and Arel from the OpenTofu team [held a talk about this topic at the OpenTofu Day at Kubecon 2024](https://www.youtube.com/watch?v=iJUcOBwPxVU).
+
+:::
+
 ## Building a user interface
 
-https://www.youtube.com/watch?v=iJUcOBwPxVU
+After working on the registry and taking a few months pause for some much-needed work on OpenTofu itself, we returned to building a search and documentation reading interface. As we would soon learn, this was a larger task, at least in terms of lines of code, than the original registry. 
+
+## Search
+
+### Lunr.js
+
+### D1
+
+### Neon
