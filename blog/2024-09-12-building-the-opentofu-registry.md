@@ -110,7 +110,7 @@ It would have been possible to work around it and still perform atomic search in
 
 To query the database hosted at Neon, we [created a Cloudflare worker](https://github.com/opentofu/registry-ui/tree/main/search). This worker ended up handling all requests to `api.opentofu.org`, forwarding the static requests to R2 and handling the search queries itself.
 
-The backend would prepare a line-delimited JSON (ndjson) file with a data feed at https://api.opentofu.org/registry/docs/search.ndjson, containing all recent updates to the search index that the worker could ingest and fill into the database. This feed would contain all entries in the search database, as well as recent deletions.
+The backend would prepare a line-delimited JSON (ndjson) file with a data feed at https://api.opentofu.org/registry/docs/search.ndjson, containing all recent updates to the search index that the worker could ingest and fill into the database.
 
 ## Where do we go from here?
 
