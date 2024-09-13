@@ -86,9 +86,9 @@ Having made this decision we set out to build a backend and a frontend component
 
 While the Registry always regenerates all API responses from the raw metadata, this approach was not feasible for the documentation due to the sheer volume of data we needed to process. Not only would we have to produce documentation responses for tens of thousands of providers and modules, some of them also had several hundred versions, each of which needed their own copy of the documentation stored.
 
-We decided that we would process the data from the source repositories directly into an R2 bucket without storing any intermediate data. This approach came with its own problems. While the Registry could make use of git to track changes in the intermediate data, we needed to make sure that our uploads to the R2 bucket were as close to atomic as possible so no partial uploads are left behind. While we have implemented a [partial solution that can continue an upload](https://github.com/opentofu/registry-ui/tree/main/backend/internal/indexstorage/bufferedstorage), this still remains one of the unsolved issues with the Registry.
+We decided that we would process the data from the source repositories directly into an R2 bucket without storing any intermediate data. This approach came with its own problems. While the Registry could make use of git to track changes in the intermediate data, we needed to make sure that our uploads to the R2 bucket were as close to atomic as possible so no partial uploads are left behind. While we have implemented a [partial solution that can continue an upload](https://github.com/opentofu/registry-ui/tree/4adefb41539f14e78e84479e45c69e3f8a505b89/backend/internal/indexstorage/bufferedstorage), this still remains one of the unsolved issues with the Registry.
 
-In order to simplify the necessary frontend logic for displaying the documentation, the backends main job is to rename and move each of the documentation files into their standardized place. There is no formalized description on how providers can store their documentation, so the logic for extracting this information is [only empirically known](https://github.com/opentofu/registry-ui/blob/main/backend/internal/providerindex/providerdocsource/scrape.go#L159-L190). We needed several iterations to work around various bugs as we expanded the number of repositories we ingested and discovered newer and newer edge cases.
+In order to simplify the necessary frontend logic for displaying the documentation, the backends main job is to rename and move each of the documentation files into their standardized place. There is no formalized description on how providers can store their documentation, so the logic for extracting this information is [only empirically known](https://github.com/opentofu/registry-ui/blob/4adefb41539f14e78e84479e45c69e3f8a505b89/backend/internal/providerindex/providerdocsource/scrape.go#L159-L190). We needed several iterations to work around various bugs as we expanded the number of repositories we ingested and discovered newer and newer edge cases.
 
 ### Module schemas
 
@@ -98,7 +98,7 @@ HashiCorp published [terraform-schema](https://github.com/hashicorp/terraform-sc
 
 ### Licenses
 
-During the ingestion process we also needed to concern ourselves with licenses: as we were unsure under what legal standard such a documentation dataset would fall, we deliberately chose a [restricted set of licenses](https://github.com/opentofu/registry-ui/blob/main/licenses.json) that we would accept into the Registry documentation. We performed automatic license detection on each provider and module repository to avoid ingesting content under potentially problematic licenses.
+During the ingestion process we also needed to concern ourselves with licenses: as we were unsure under what legal standard such a documentation dataset would fall, we deliberately chose a [restricted set of licenses](https://github.com/opentofu/registry-ui/blob/4adefb41539f14e78e84479e45c69e3f8a505b89/licenses.json) that we would accept into the Registry documentation. We performed automatic license detection on each provider and module repository to avoid ingesting content under potentially problematic licenses.
 
 ### The OpenTofu Docs API (and how you can use it)
 
@@ -114,7 +114,7 @@ Not wanting to run our own database server or involve any more service dependenc
 
 It would have been possible to work around it and still perform atomic search index updates, but we ended up using [Neon](https://neon.tech), a database-as-a-service offering, instead. They don't explicitly sponsor OpenTofu, but their free tier was comfortably enough for our search index and the next tier was also quite affordable. Their tight integration with Cloudflare was also a very welcome addition.
 
-To query the database hosted at Neon, we [created a Cloudflare worker](https://github.com/opentofu/registry-ui/tree/main/search). This worker ended up handling all requests to `api.opentofu.org`, forwarding the static requests to R2 and handling the search queries itself.
+To query the database hosted at Neon, we [created a Cloudflare worker](https://github.com/opentofu/registry-ui/tree/4adefb41539f14e78e84479e45c69e3f8a505b89/search). This worker ended up handling all requests to `api.opentofu.org`, forwarding the static requests to R2 and handling the search queries itself.
 
 The backend would prepare a line-delimited JSON (ndjson) file with a data feed at https://api.opentofu.org/registry/docs/search.ndjson, containing all recent updates to the search index that the worker could ingest and fill into the database.
 
