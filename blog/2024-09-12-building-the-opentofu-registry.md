@@ -78,6 +78,8 @@ Do you want to learn more about the early days of the OpenTofu Registry? James a
 
 After working on the Registry and taking a few months pause for some much-needed work on OpenTofu itself, we returned to building a search and documentation reading interface. As we would soon learn, this was a larger task and resulted in three times the amount of code needing to be written.
 
+![A screenshot of the OpenTofu Registry Search](/img/blog/registry-ui.png)
+
 As before, we chose an architecture that would generate static files. Early on we had to make a decision between simply generating static HTML files or using a Single Page Application and load the data from an API. We chose the latter because we were concerned that a layout change would require a complete regeneration of all files, which would be cost-prohibitive to upload again and again.
 
 Having made this decision we set out to build a backend and a frontend component, the former being responsible for producing the data the latter would consume. We built [libregistry](https://github.com/opentofu/libregistry), a standardized Go library that would make it easier to access the metadata stored in the Registry repository and provide a useful abstraction layer on top of GitHub and the various creative API integrations we built to fetch the data.
