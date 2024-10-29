@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "bierner.markdown-preview-github-styles",
+    "bradlc.vscode-tailwindcss",
+    "davidanson.vscode-markdownlint",
+    "fcrespo82.markdown-table-formatter",
+    "howardzuo.vscode-npm-dependency",
+    "karanba.npm-helper",
+    "mistermunchkin.simple-markdown-snippets",
+    "mskelton.npm-outdated",
+    "unifiedjs.vscode-mdx"
+  ]
+}
