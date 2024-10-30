@@ -1,0 +1,15 @@
+{
+  // ===========================================================================
+  // For VS Code users, this will disable AI extensions for every VS Code user
+  // who works on this project. We should probably add the appropriate settings
+  // for all other AI tools as well.
+  //
+  // Unlike JetBrains IDEs, this directory and its files are *meant* to be
+  // committed to repositories so that recommended settings and extensions can
+  // be shared project-wide.
+  //
+  // This is a JSONC file. <https://code.visualstudio.com/Docs/languages/json>
+  // ===========================================================================
+  "github.copilot.toggleCopilot": "off",
+  "tabnine.codeLensEnabled": false
+}

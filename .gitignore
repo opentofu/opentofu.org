@@ -20,3 +20,13 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Linting and related tooling that we don't want to push onto everybody
+# https://editorconfig.org
+.editorconfig
+# Git hooks
+.githooks
+# https://github.com/antham/gommit
+.gommit.toml
+# https://github.com/DavidAnson/markdownlint
+.markdownlint.*
