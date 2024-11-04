@@ -141,6 +141,17 @@ const config: Config = {
   ],
 
   plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'guides',
+        path: 'guides',
+        routeBasePath: 'guides',
+        sidebarPath: false,
+        disableVersioning: false,
+        breadcrumbs: true
+      },
+    ],
     function tailwindPlugin() {
       return {
         name: "tailwindcss",
@@ -258,6 +269,11 @@ const config: Config = {
         {
           to: "/faq",
           label: "FAQs",
+          position: "left",
+        },
+        {
+          label: "Guides",
+          href: "/guides",
           position: "left",
         },
         {
