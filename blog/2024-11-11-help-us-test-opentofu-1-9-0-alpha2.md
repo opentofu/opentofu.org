@@ -80,20 +80,10 @@ variable "regions" {
   type        = set(string)
 }
 
-variable "decommission_regions" {
-  description = "A list of AZs that should be decommissioned."
+variable "disabled_regions" {
+  description = "A list of AZs that should be disabled and all resources removed."
   type        = set(string)
   default     = []
-}
-
-locals {
-  // Creating a separate local enables you to decommission a
-  // region and remove all resources in it before removing the
-  // region itself.
-  resource_regions = toset([
-    for region in var.regions:
-      region if !contains(var.decommission_regions, region)
-    ])
 }
 
 provider "aws" {
@@ -107,7 +97,10 @@ module "deploy" {
   providers = {
     aws = aws.by_region[each.key]
   }
-  for_each = local.resource_regions
+  // Here we make sure that all resources from a region are removed
+  // if the region is disabled. This must be done before removing
+  // a region entirely.
+  for_each = setsubtract(var.regions,var.disabled_regions)
 }
 ```
 
@@ -116,7 +109,7 @@ As you can see, you can pass in the set of regions using a variable and then cal
 However, there are some important considerations to remember when using `for_each` in this manner:
 
 1. You can only use `for_each` on variables and locals that can be obtained statically. Expressions that rely on data sources or resources are currently not usable.
-2. If you have an already-deployed infrastructure, don't simply remove a provider from the list as this will make it impossible for OpenTofu to destroy the infrastructure in this region. Instead, you will need to implement removing that infrastructure first and then remove the provider from the list. See the `decommission_regions` variable for an example above.
+2. If you have an already-deployed infrastructure, don't simply remove a provider from the list as this will make it impossible for OpenTofu to destroy the infrastructure in this region. Instead, you will need to implement removing that infrastructure first and then remove the provider from the list. See the `disabled_regions` variable for an example above.
 3. Currently, each provider used in a `for_each` **must** have an alias. Providers without aliases are not supported for now due to internal technical reasons.
 4. There is currently no way to pass a set of providers to a module, you can only pass individual providers.
 
