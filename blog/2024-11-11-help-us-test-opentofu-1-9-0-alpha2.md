@@ -32,7 +32,7 @@ For the releases above, please unpack the archive and you should find the `tofu`
 
 ## Provider `for_each`
 
-Imagine you have to deploy an infrastructure that involves multiple availability zones using your cloud provider. In order to minimize code duplication, you created a module that you can use for each availability zone. However, your main module still looks like this:
+Imagine you have to deploy an infrastructure that involves multiple regions using your cloud provider. In order to minimize code duplication, you created a module that you can use for each region. However, your main module still looks like this:
 
 ```hcl
 provider "aws" {
@@ -76,12 +76,12 @@ Starting OpenTofu 1.9, you can now use a `for_each` instead:
 
 ```hcl
 variable "regions" {
-  description = "A list of AZs that should have a deployment."
+  description = "A list of regions that should have a deployment."
   type        = set(string)
 }
 
 variable "disabled_regions" {
-  description = "A list of AZs that should be disabled and all resources removed."
+  description = "A list of regions that should be disabled and all resources removed."
   type        = set(string)
   default     = []
 }
