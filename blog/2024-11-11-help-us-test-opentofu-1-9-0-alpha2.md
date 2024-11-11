@@ -100,7 +100,7 @@ module "deploy" {
   // Here we make sure that all resources from a region are removed
   // if the region is disabled. This must be done before removing
   // a region entirely.
-  for_each = setsubtract(var.regions,var.disabled_regions)
+  for_each = setsubtract(var.regions, var.disabled_regions)
 }
 ```
 
