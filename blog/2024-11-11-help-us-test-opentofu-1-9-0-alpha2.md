@@ -4,7 +4,7 @@ slug: help-us-test-opentofu-1-8-0-alpha2
 image: /img/blog/help-us-test-opentofu-1-8-0-alpha2.png
 ---
 
-Hello everyone! As we have taken on one of the most difficult tasks since the inception of OpenTofu, it's been a while since we last released a feature version. Today, we are very proud to ask for your help in testing OpenTofu 1.9.0-alpha2, coming with a much-requested feature: provider iteration using `for_each`.
+Hello everyone! As we have taken on one of the most difficult tasks since the inception of OpenTofu, it's been a while since we last released a feature version. Today, we are very proud to ask for your help in testing OpenTofu 1.9.0-alpha2, coming with a much-requested feature: provider iteration using `for_each`. Additionally, this release includes the new `-exclude` flag for plan and apply.
 
 We have done everything we could to make sure that the new alpha release doesn't break anything, and we need your help to get this release tested. If you have a **non-production** setup that you would be willing to test any of the new features on, please give it a try and give us [feedback using a GitHub issue](https://github.com/opentofu/opentofu/issues/new/choose), even if it's just telling us that everything went well.
 
