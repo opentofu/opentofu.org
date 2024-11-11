@@ -45,6 +45,11 @@ provider "aws" {
   region = "us-west-1"
 }
 
+provider "aws" {
+  alias  = "eucentral"
+  region = "eu-central-1"
+}
+
 module "deploy-useast" {
   source    = "./deploy"
   providers = {
@@ -58,27 +63,51 @@ module "deploy-uswest" {
     aws = aws.uswest
   }
 }
+
+module "deploy-eucentral" {
+  source    = "./deploy"
+  providers = {
+    aws = aws.eucentral
+  }
+}
 ```
 
 Starting OpenTofu 1.9, you can now use a `for_each` instead:
 
 ```terraform
-variable "azs" {
-  type = set(string)
+variable "regions" {
+  description = "A list of AZs that should have a deployment."
+  type        = set(string)
+}
+
+variable "decommission_regions" {
+  description = "A list of AZs that should be decommissioned."
+  type        = set(string)
+  default     = []
+}
+
+locals {
+  // Creating a separate local enables you to decommission a
+  // region and remove all resources in it before removing the
+  // region itself.
+  resource_regions = toset([
+    for region in var.regions:
+      region if !contains(var.decommission_regions, region)
+    ])
 }
 
 provider "aws" {
-  alias    = "somealias"
+  alias    = "by_region"
   region   = each.value
-  for_each = var.azs
+  for_each = var.regions
 }
 
 module "deploy" {
   source    = "./deploy"
   providers = {
-    aws = aws.somealias[each.key]
+    aws = aws.by_region[each.key]
   }
-  for_each = var.azs
+  for_each = local.resource_regions
 }
 ```
 
@@ -87,7 +116,7 @@ As you can see, you can pass in the set of regions using a variable and then cal
 However, there are some important considerations to remember when using `for_each` in this manner:
 
 1. You can only use `for_each` on variables and locals that can be obtained statically. Expressions that rely on data sources or resources are currently not usable.
-2. If you have an already-deployed infrastructure, don't simply remove a provider from the list as this will make it impossible for OpenTofu to destroy the infrastructure in this region. Instead, you will need to implement removing that infrastructure first and then remove the provider from the list.
+2. If you have an already-deployed infrastructure, don't simply remove a provider from the list as this will make it impossible for OpenTofu to destroy the infrastructure in this region. Instead, you will need to implement removing that infrastructure first and then remove the provider from the list. See the `decommission_regions` variable for an example above.
 3. Currently, each provider used in a `for_each` **must** have an alias. Providers without aliases are not supported for now due to internal technical reasons.
 4. There is currently no way to pass a set of providers to a module, you can only pass individual providers.
 
