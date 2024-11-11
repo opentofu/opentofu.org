@@ -86,9 +86,10 @@ As you can see, you can pass in the set of regions using a variable and then cal
 
 However, there are some important considerations to remember when using `for_each` in this manner:
 
-1. If you have an already-deployed infrastructure, don't simply remove a provider from the list as this will make it impossible for OpenTofu to destroy the infrastructure in this region. Instead, you will need to implement removing that infrastructure first and then remove the provider from the list.
-2. Currently, each provider used in a `for_each` **must** have an alias. Providers without aliases are not supported for now due to internal technical reasons.
-3. There is currently no way to pass a set of providers to a module, you can only pass individual providers.
+1. You can only use `for_each` on variables and locals that can be obtained statically. Expressions that rely on data sources or resources are currently not usable.
+2. If you have an already-deployed infrastructure, don't simply remove a provider from the list as this will make it impossible for OpenTofu to destroy the infrastructure in this region. Instead, you will need to implement removing that infrastructure first and then remove the provider from the list.
+3. Currently, each provider used in a `for_each` **must** have an alias. Providers without aliases are not supported for now due to internal technical reasons.
+4. There is currently no way to pass a set of providers to a module, you can only pass individual providers.
 
 We are actively working on resolving these limitations and future OpenTofu versions will see this capability improved.
 
