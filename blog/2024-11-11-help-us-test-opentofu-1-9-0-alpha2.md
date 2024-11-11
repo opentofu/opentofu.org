@@ -34,7 +34,7 @@ For the releases above, please unpack the archive and you should find the `tofu`
 
 Imagine you have to deploy an infrastructure that involves multiple availability zones using your cloud provider. In order to minimize code duplication, you created a module that you can use for each availability zone. However, your main module still looks like this:
 
-```terraform
+```hcl
 provider "aws" {
   alias  = "useast"
   region = "us-east-1"
@@ -74,7 +74,7 @@ module "deploy-eucentral" {
 
 Starting OpenTofu 1.9, you can now use a `for_each` instead:
 
-```terraform
+```hcl
 variable "regions" {
   description = "A list of AZs that should have a deployment."
   type        = set(string)
