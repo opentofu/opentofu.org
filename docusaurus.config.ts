@@ -209,14 +209,6 @@ const config: Config = {
         autoCollapseCategories: true,
       },
     },
-    announcementBar: {
-      id: "opentofu-ga",
-      content:
-        'OpenTofu 1.9.0 is released! <a href="/blog/opentofu-1-9-0/">Check it out here.</a>',
-      backgroundColor: "#ffda18",
-      textColor: "#1b1d20",
-      isCloseable: false,
-    },
     algolia: {
       appId: "0AUNALFPJF",
       apiKey: "5a83e1af5126db1360bdc84bfefb20b8",
