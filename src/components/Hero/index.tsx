@@ -33,7 +33,7 @@ export default function Hero() {
         The open source infrastructure as code tool.
       </Headline>
       <p className="my-6 text-xl sm:max-w-lg md:max-w-xl lg:max-w-2xl text-center text-gray-600 dark:text-gray-500">
-        Previously named OpenTF, OpenTofu is a fork of Terraform that is
+        OpenTofu is a fork of Terraform that is
         open-source, community-driven, and managed by the Linux Foundation.
       </p>
 
