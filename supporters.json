@@ -929,6 +929,12 @@
     "type": "Company",
     "pledge": "Minor Development; Testing; open-source community efforts"
   },
+    {
+    "name": "IAC Gradle Plugin Suite",
+    "url": "https://iac-gradle.ysb33r.org/",
+    "type": "Project",
+    "pledge": "Development; Testing; open-source community efforts"
+  },
   {
     "name": "OTF",
     "url": "https://github.com/leg100/otf",
