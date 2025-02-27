@@ -34,7 +34,20 @@ For the releases above, please unpack the archive and you should find the `tofu`
 
 
 ## S3 Backend Locking
+With the recent addition of conditional writes on AWS S3 buckets, OpenTofu is introducing S3 based state locking! 
 
+By adding `use_lockfile` in the `backend "s3"`, now you can benefit from locking on the state file without having to provision a DynamoDB table for it.
+```hcl
+backend "s3" {
+  bucket       = "state-bucket"
+  key          = "state-file"
+  use_lockfile = true
+  ...
+}
+```
+
+Note that this can be used together `dynamodb_table` to ensure a stable migration.
+For more details, refer to the S3 backend official documentation.
 
 ## Providing feedback
 
