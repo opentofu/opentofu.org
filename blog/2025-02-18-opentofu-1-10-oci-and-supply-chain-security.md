@@ -74,7 +74,7 @@ Not all is lost, though. The security industry has steadily been moving towards 
 
 So all that's left to do is tie SBOMs into the OpenTofu ecosystem, which is what the [SBOM RFC](https://github.com/opentofu/opentofu/pull/2494) attempts to address. As a first step, provider authors should be able to integrate an SBOM generator like [Syft](https://github.com/anchore/syft) into their release workflow. The OpenTofu Registry will then pick up the SBOM artifacts and expose them in the registry API.
 
-When mirroring a provider or module to an OCI registry, the mirroring tool will pick up these artifacts and attach them to the OCI artifacts, allowing security scanners to their works.
+When mirroring a provider or module to an OCI registry, the mirroring tool will pick up these artifacts and attach them to the OCI artifacts, allowing security scanners to do their work.
 
 ## Read more
 
