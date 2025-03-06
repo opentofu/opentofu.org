@@ -13,7 +13,7 @@ Unexpectedly, our OCI work also led us to explore enabling Software Bill of Mate
 
 Issue [308](https://github.com/opentofu/opentofu/issues/308) dates back to the early days of OpenTofu. Our former tech lead, Kuba Martin—who continues to support OpenTofu from Spacelift—created a prototype that leveraged OCI registries (commonly known as Docker registries) to retrieve provider images instead of using the niche Terraform/OpenTofu Provider Registry Protocol. This approach garnered significant interest across social media.
 
-However, other features gathered more upvotes. As such, we added [state encryption in 1.7](/blog/2024-04-30-opentofu-1-7-0), [early evaluation in 1.8](/blog/2024-07-29-opentofu-1-8-0) and [provider `for_each` in 1.9](/blog/2025-01-10-opentofu-1-9-0). With OCI now the highest priority item on our agenda, we set out to answer one key question: _Why?_
+However, other features gathered more upvotes. As such, we added [state encryption in 1.7](/blog/opentofu-1-7-0), [early evaluation in 1.8](/blog/opentofu-1-8-0) and [provider `for_each` in 1.9](/blog/opentofu-1-9-0). With OCI now the highest priority item on our agenda, we set out to answer one key question: _Why?_
 
 While we had theories on why users might prefer OCI over existing registry protocols, opinions were split even within the core team. After developing several prototypes to assess feasibility, we turned to our community with a survey asking: Why do you want to use OCI, and what would you use it for?
 
