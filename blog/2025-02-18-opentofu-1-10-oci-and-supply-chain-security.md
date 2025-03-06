@@ -72,9 +72,7 @@ In our survey 85% of respondents indicated that they would be interested in usin
 
 Not all is lost, though. The security industry has steadily been moving towards supporting Software Bill of Materials artifacts (SBOM). These SBOMs allow a software author to publish an artifact containing a list of all dependencies and their versions. Security scanners like Trivy can use these SBOMs to perform the same license and security scans they would by inspecting the binaries. Since OCI supports attaching extra files to their artifacts, security scanners can automatically pick up these artifacts and perform the security scan that way.
 
-So all that's left to do is tie SBOMs into the OpenTofu ecosystem, which is what the [SBOM RFC](https://github.com/opentofu/opentofu/pull/2494) attempts to address. As a first step, provider authors should be able to integrate an SBOM generator like [Syft](https://github.com/anchore/syft) into their release workflow. The OpenTofu Registry will then pick up the SBOM artifacts and expose them in the registry API.
-
-When mirroring a provider or module to an OCI registry, the mirroring tool will pick up these artifacts and attach them to the OCI artifacts, allowing security scanners to do their work.
+To address this an RFC was created to introduce SBOMs into the OpenTofu ecosystem [here](https://github.com/opentofu/opentofu/pull/2494). The RFC proposes that providers and modules should be able to publish SBOMs alongside their ZIP artifacts.
 
 ## Read more
 
