@@ -5,7 +5,7 @@ description: OpenTofu 1.10 will bring native OCI registry support and supply cha
 image: /img/blog/opentofu-1-10-preview.png
 ---
 
-It's been about a month since our [recent 1.9 release](/blog/2025-01-10-opentofu-1-9-0) and as promised, we’ve been hard at work implementing the top upvoted feature on our list — OCI registries. This blog post is a very early preview of our OCI plans and how you will be able to use the new functionality.
+It's been about a month since our [recent 1.9 release](/blog/opentofu-1-9-0) and as promised, we’ve been hard at work implementing the top upvoted feature on our list — OCI registries. This blog post is a very early preview of our OCI plans and how you will be able to use the new functionality.
 
 Unexpectedly, our OCI work also led us to explore enabling Software Bill of Materials (SBOM) artifacts in the provider ecosystem—a topic we’ll discuss further in this post.
 
