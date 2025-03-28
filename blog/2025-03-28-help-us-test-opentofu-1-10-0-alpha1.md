@@ -4,7 +4,7 @@ slug: help-us-test-opentofu-1-10-0-alpha1
 image: /img/blog/help-us-test-opentofu-1-10-0-alpha1.png
 ---
 
-Hello, OpenTofu community! Today we are proud to announce the first preprelease version of 1.10.0 version. The new version comes with a few highly anticipated features: provider distribution through OCI registries, native state locking support for `s3` backend and many more! We are kindly asking for your help in testing OpenTofu 1.10.0-alpha1.
+Hello, OpenTofu community! Today we are proud to announce the first preprelease version of 1.10.0. The new version comes with a few highly anticipated features: provider distribution through OCI registries, native state locking support for `s3` backend and many more! We are kindly asking for your help in testing OpenTofu 1.10.0-alpha1.
 
 We have done everything we could to make sure that the new alpha release doesn't break anything, and we need your help to get this release tested. If you have a **non-production** setup that you would be willing to test any of the new features on, please give it a try and give us [feedback using a GitHub issue](https://github.com/opentofu/opentofu/issues/new/choose), even if it's just telling us that everything went well.
 
@@ -48,6 +48,8 @@ provider_installation {
 ```
 
 The above example specifies that any provider that belongs to the primary OpenTofu Registry should instead be installed from a repository in an OCI registry, constructing the repository address dynamically using the components of the provider source address.
+
+We also prepared [a full-featured guide](https://github.com/opentofu-v1-10-alpha-testing) on how to test OCI Registry Provider Mirrors.
 
 For more information, please refer to [the documentation](https://opentofu.org/docs/main/cli/oci_registries/provider-mirror/). Also, you can check out our progress via the [Provider and module packages from OCI registries RFC Tracker](https://github.com/opentofu/opentofu/issues/2540).
 
