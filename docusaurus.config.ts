@@ -212,7 +212,7 @@ const config: Config = {
     announcementBar: {
       id: "opentofu-ga",
       content:
-        'OpenTofu 1.9.0 is released! <a href="/blog/opentofu-1-9-0/">Check it out here.</a>',
+        'OpenTofu 1.10.0-alpha1 is released! <a href="/blog/help-us-test-opentofu-1-10-0-alpha1/">Check it out here.</a>',
       backgroundColor: "#ffda18",
       textColor: "#1b1d20",
       isCloseable: false,
