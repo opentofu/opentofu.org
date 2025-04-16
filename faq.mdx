@@ -1,26 +1,32 @@
 <AccordionItem id="what-is-opentofu" summary="What is OpenTofu?" open highlight>
 
-OpenTofu is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. OpenTofu can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.
+OpenTofu is a software platform built to address _Infrastructure as Code_ (IaC), _Monitoring as Code_ (MaC), and _Security as Code_ (SaC) challenges.
+
+You can define both cloud-based and on-prem resources in human-readable configuration files that you can version, audit, reuse, and share. You have a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. OpenTofu can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.
+
+Having started life as a fork of [Terraform](https://github.com/hashicorp/terraform) v1.5, it has _exceptional_ compatibility with the existing ecosystem of Terraform providers and modules. The project is open-source and community-driven, meaning that no single company can dictate its direction.
+
+The _Technical Steering Committee_ (TSC) is responsible for the project’s direction, and is hosted by the [Linux Foundation](https://www.linuxfoundation.org). Current TSC members include [Gruntwork](https://www.gruntwork.io), [Spacelift](https://spacelift.io), [Harness](https://www.harness.io), [Env0](https://www.env0.com), [Scalr](https://www.scalr.com), and others. The [initiative has many supporters](/supporters).
 
 </AccordionItem>
 
 <AccordionItem id="why-was-opentofu-created" summary="Why was OpenTofu created?" highlight>
 
-OpenTofu is a Terraform fork, created as an initiative of Gruntwork, Spacelift, Harness, Env0, Scalr, and others, in response to HashiCorp’s switch from an open-source license to the BUSL. The initiative has many supporters, all of whom are listed [here](/supporters).
+OpenTofu was created in response to HashiCorp’s switch from an open-source license to the [Business Source License](https://spdx.org/licenses/BUSL-1.1.html) (BUSL). We believe that the BUSL and the additional-use grant outlined by HashiCorp are ambiguous, which makes it challenging for companies, vendors, and developers using Terraform to determine whether or not their actions could be interpreted as being outside the permitted scope of use.
 
-The BUSL and the additional use grant outlined by the HashiCorp team are ambiguous, which makes it challenging for companies, vendors, and developers using Terraform to decide whether their actions could be interpreted as being outside the permitted scope of use.
+[Hashicorp’s Licensing FAQ](https://www.hashicorp.com/license-faq) give some peace-of-mind to end users and system integrators for now, but the implications for future usage are unclear. The possibility that HashiCorp’s definition of “competitive” or “embedding” could change, or that the license could be further modified to restrict use prompts uncertainty for Terraform users.
 
-Hashicorp’s FAQs give some peace of mind to end users and system integrators for now, but the licensing terms’ implications for future usage are unclear. The possibility that the company’s definition of _“competitive”_ or _“embedding”_ could change or the license could be further modified to make it closed source prompts uncertainty for Terraform users.
-
-We firmly believe that Terraform should remain open-source because it is a project many companies use, and many contributors have made Terraform what it is today. Terraform’s success would not have been possible without the community’s work to build many supporting projects around it.
+We believe that this ecosystem should remain open-source because it is a project many companies use, and many contributors have made Terraform what it is today. Terraform’s success would not have been possible without the community’s work to build many supporting projects around it.
 
 </AccordionItem>
 
 <AccordionItem id="opentofu-terraform-differences" summary="What are the differences between OpenTofu and Terraform?" highlight>
 
-On the technical level, OpenTofu 1.6.x is very similar feature-wise to Terraform 1.6.x. In the future, the projects feature sets will diverge.
+On the technical level, OpenTofu 1.6.x is very similar feature-wise to Terraform 1.6.x. In the future, the feature sets will diverge. OpenTofu will have features not found in Terraform, and vice versa. As a matter of fact, this is already beginning to happen.
 
-The other main difference is that OpenTofu is open-source, and its goal is to be driven in a collaborative way with no single company being able to dictate the roadmap.
+The other primary difference is that OpenTofu is available under the [Mozilla Public License 2.0](https://spdx.org/licenses/MPL-2.0.html) (MPL-2.0), an [open-source license](https://opensource.org/licenses?ls=MPL-2.0) ([definition](https://opensource.org/osd)). Its goal is to be driven collaboratively by the community, with no single company being able to dictate the roadmap.
+
+If there are features that you would like to see in OpenTofu, please open an issue on the [OpenTofu GitHub repository](https://github.com/opentofu/opentofu/issues).
 
 </AccordionItem>
 
@@ -28,33 +34,35 @@ The other main difference is that OpenTofu is open-source, and its goal is to be
 
 #### Personal use
 
-Initial impressions suggest you could use either OpenTofu or Terraform for personal use, as the BUSL license has no restrictions for non-commercial use cases. That may change as the Terraform ecosystem becomes increasingly unstable, and a switch to another license may happen. Those familiar with Terraform will have no issues adopting OpenTofu for personal use, so there will be no knowledge gaps, at least at the start.
+Initial impressions suggest you could use either OpenTofu or Terraform for personal use, as the [Business Source License](https://spdx.org/licenses/BUSL-1.1.html) (BUSL) has no restrictions for non-commercial use cases. That may change as the Terraform ecosystem becomes increasingly unstable, and a switch to another license may happen. Those familiar with Terraform should have very issues adopting OpenTofu for personal use, as long as they are not using features that are _exclusive_ to Terraform.
 
 #### Consultants
 
-A consultant should offer their clients the best possible solution that aligns with their budget. OpenTofu will be on par with Terraform, and one of the project’s central objectives is to listen to the community’s issues, so it makes sense to recommend a project that will always stay open-source. Anyone who has used Terraform in the last eight years has probably come across issues that took some time to be resolved. The large community involved in developing OpenTofu means this will no longer be the case.
+A consultant should offer their clients the best possible solution that aligns with their budget. OpenTofu will be on par with Terraform, and one of the project’s central objectives is to listen to the community’s issues, so it makes sense to recommend a project that will always remain open-source. The large community involved in developing OpenTofu means that issues will be triaged, scheduled, and implemented in a timely manner.
 
 #### Companies
 
-Companies will encounter more difficulties with the situation. Switching to a new project carries risks, but staying with a project that changes its license without warning is far riskier. This risk is minimized by giving OpenTofu to the Linux Foundation, and OpenTofu’s aim of maintaining feature parity with Terraform for future releases reduces the technical risks.
+Companies _may_ encounter more difficulties with the situation. Switching to a new project carries risks, but staying with a project that changes its license without warning is far riskier. This risk is minimized by granting OpenTofu to the Linux Foundation, and OpenTofu’s aim of maintaining feature parity with Terraform for future releases reduces the technical risks.
 
 </AccordionItem>
 
 <AccordionItem id="opentofu-compatibility" summary="Will OpenTofu be compatible with future Terraform releases?" highlight>
 
-The community will decide what features OpenTofu will have. Some long-awaited Terraform features will be publicly available soon.
+OpenTofu will remain compatible with Terraform versions 1.5.x and most of 1.6.x.
 
-If you're missing a feature in OpenTofu that's available in Terraform, feel free to create an issue.
+Core functionality with regard to the Terraform HCL language will remain compatible with future Terraform releases. OpenTofu remains compatible with the underlying gRPC-based [Provider Protocol](https://developer.hashicorp.com/terraform/plugin/how-terraform-works) upon which all current providers are built.
+
+Outside of those areas, the community will decide which features OpenTofu will have. In some cases, we've already shipped features in OpenTofu that spent years languishing in the Terraform backlog. There are even features which are exclusive to OpenTofu, such as [State and Plan Encryption](https://opentofu.org/docs/language/state/encryption/), and even writing custom provider functions in [Go](https://github.com/opentofu/terraform-provider-go) or [Lua](https://github.com/opentofu/terraform-provider-lua).
+
+If there are features that you would like to see in OpenTofu, please open an issue on the [OpenTofu GitHub repository](https://github.com/opentofu/opentofu/issues).
 
 </AccordionItem>
 
 <AccordionItem id="terraform-replacement" summary="Can I use OpenTofu as a drop-in replacement for Terraform?  Is OpenTofu suitable for production use?" highlight>
 
-Right now, OpenTofu is a drop-in replacement for Terraform, as it's compatible with Terraform versions 1.5.x and most of 1.6.x. You don’t need to make any changes to your code to ensure compatibility.
+OpenTofu will remain compatible with Terraform versions 1.5.x and most of 1.6.x. In these cases, it is a drop-in replacement for Terraform. You don’t need to make any changes to your code to ensure compatibility.
 
-OpenTofu is suitable for production use cases without any exception.
-
-Please see [our migration guide](/docs/intro/migration) for more information.
+OpenTofu is suitable for production use cases without any exception. Please see [our migration guide](/docs/intro/migration) for more information.
 
 </AccordionItem>
 
@@ -66,15 +74,17 @@ OpenTofu will work with existing state files up to those created with Terraform 
 
 <AccordionItem id="providers" summary="Does OpenTofu work with all the providers Terraform works with?">
 
-OpenTofu will not have its own providers. Terraform providers have not altered their licenses, and the potential for such a change is virtually zero. OpenTofu works with the current Terraform providers, but it uses a separate registry.
+The [Terraform Plugin SDK v2](https://github.com/hashicorp/terraform-plugin-sdk) and the newer [Terraform Plugin Framework](https://github.com/hashicorp/terraform-plugin-framework) are both available under the [Mozilla Public License 2.0](https://spdx.org/licenses/MPL-2.0.html) (MPL-2.0), an [open-source license](https://opensource.org/licenses?ls=MPL-2.0) ([definition](https://opensource.org/osd)). This means that we can continue leveraging the existing providers and modules in OpenTofu without having to fork them.
+
+Terraform providers have not altered their licenses, and the potential for such a change is virtually zero. OpenTofu works with the current Terraform providers, but it uses a [separate registry](https://search.opentofu.org). If those circumstances change, we will have to adapt. But we are confident that the OpenTofu and its community will be able to resolve any issues that arise.
 
 </AccordionItem>
 
 <AccordionItem id="decisions" summary="How are new features, bug fixes, and other development decisions made in OpenTofu?">
 
-The core team with its technical lead determine the most important features and bug fixes to work on, while the steering committee makes decisions on big changes.
+The Core team with its Technical Lead determine the most important features and bug fixes to work on, while the _Technical Steering Committee_ (TSC) makes decisions on big changes.
 
-All those decisions are guided by community feedback and public discussion.
+All of those decisions are guided by community feedback and public discussion.
 
 </AccordionItem>
 
@@ -82,7 +92,7 @@ All those decisions are guided by community feedback and public discussion.
 
 The best way to show practical support for the OpenTofu initiative is to contribute. We recommend you start by [opening an issue](https://github.com/opentofu/opentofu/issues) for bug reports, broken compatibility reports, feature requests, old issue reposts, and quality RFCs.
 
-All major changes to OpenTofu Core undergo the public RFC process, and we also welcome feedback on existing RFCs. As we're still in the cleanup phase and want to avoid conflicts, please wait until the first alpha release to contribute code.
+All major changes to OpenTofu Core undergo the [public RFC process](https://github.com/opentofu/opentofu/tree/main/rfc), and we also welcome feedback on existing RFCs.
 
 This [contribution guide](https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md) explains OpenTofu contribution recommended practices, including how to submit issues, how to get involved in the discussion, how to work on the code, and how to contribute code changes.
 
