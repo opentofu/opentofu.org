@@ -1,35 +1,80 @@
 import React from "react";
-import Link from "@docusaurus/Link";
 import Button from "../Button";
 
-// TODO enter final links once ready
 export default function HowToContribute() {
   return (
-    <section className="flex flex-col justify-center w-full py-5 md:py-10 px-4">
+    <section className="relative py-20 md:py-28 px-4">
       <div className="w-full max-w-4xl mx-auto leading-snug">
-        <h2 className="text-center text-3xl md:text-5xl mb-3 md:mb-6 font-bold">
-          How to contribute to OpenTofu?
-        </h2>
-        <p className="text-gray-600 dark:text-gray-500 text-center text-base md:text-xl mb-3 md:mb-6 md:leading-relaxed">
-          The best way to show practical support for the OpenTofu initiative is
-          to contribute. This{" "}
-          <Link
-            href="https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md"
-            className="underline text-gray-900 hover:text-brand-650 dark:text-gray-50 dark:hover:text-brand-500"
-          >
-            contribution guide
-          </Link>{" "}
-          explains OpenTofu contribution recommended practices, including how to
-          submit issues, how to get involved in the discussion, how to work on
-          the code, and how to contribute code changes.
-        </p>
-        <Button
-          className="mx-auto max-w-fit"
-          variant="primary"
-          href="https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md"
-        >
-          Contribute
-        </Button>
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          {/* Content */}
+          <div className="md:w-1/2">
+            <h2 className="text-3xl md:text-4xl mb-6 font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
+              Join Our Community
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 text-lg mb-8 leading-relaxed">
+              OpenTofu thrives on community contributions. Whether you're fixing
+              bugs, adding features, improving docs, or providing feedback, your
+              input makes a difference.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Button
+                variant="primary"
+                href="https://opentofu.org/slack"
+                className="px-6 py-3"
+              >
+                Join Slack
+              </Button>
+              <Button
+                variant="secondary"
+                href="https://github.com/opentofu/opentofu/blob/main/CONTRIBUTING.md"
+                className="px-6 py-3"
+              >
+                Contribute
+              </Button>
+            </div>
+          </div>
+
+          {/* Card */}
+          <div className="md:w-1/2">
+            <div className="bg-white dark:bg-blue-900/40 p-6 rounded-xl shadow-md border border-gray-100 dark:border-blue-800/50">
+              <h3 className="font-semibold text-xl mb-4">Get Involved</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <span className="inline-flex items-center justify-center w-6 h-6 mr-2 rounded-full bg-blue-100 dark:bg-blue-800/50 text-blue-600 dark:text-blue-300 text-sm">
+                    1
+                  </span>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Join GitHub discussions to share ideas
+                  </p>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-flex items-center justify-center w-6 h-6 mr-2 rounded-full bg-blue-100 dark:bg-blue-800/50 text-blue-600 dark:text-blue-300 text-sm">
+                    2
+                  </span>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Open issues for bugs or feature suggestions
+                  </p>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-flex items-center justify-center w-6 h-6 mr-2 rounded-full bg-blue-100 dark:bg-blue-800/50 text-blue-600 dark:text-blue-300 text-sm">
+                    3
+                  </span>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Participate in RFC discussions and reviews
+                  </p>
+                </li>
+                <li className="flex items-start">
+                  <span className="inline-flex items-center justify-center w-6 h-6 mr-2 rounded-full bg-blue-100 dark:bg-blue-800/50 text-blue-600 dark:text-blue-300 text-sm">
+                    4
+                  </span>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Contribute code after community discussion
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

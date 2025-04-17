@@ -14,7 +14,7 @@ export default function GitHubStartNavbarItem({
   buttonLabel,
 }: GitHubStartNavbarItemProps) {
   const { colorMode } = useColorMode();
-  
+
   return (
     <div className="flex items-center [&_span]:flex">
       <GitHubButton

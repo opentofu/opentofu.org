@@ -101,7 +101,7 @@ const config: Config = {
         },
         docs: {
           includeCurrentVersion: false,
-          lastVersion: 'v1.9',
+          lastVersion: "v1.9",
           docVersionRootComponent: "@theme/DocVersionRoot",
           versions: {
             "v1.6": {
@@ -122,12 +122,12 @@ const config: Config = {
               label: "1.9.x",
               path: "",
             },
-            "main": {
+            main: {
               label: "Development",
               path: "main",
               banner: "unreleased",
-              noIndex: true
-            }
+              noIndex: true,
+            },
           },
           routeBasePath: "/docs",
           editUrl: ({ version, docPath }) => {
@@ -212,9 +212,8 @@ const config: Config = {
     announcementBar: {
       id: "opentofu-ga",
       content:
-        'Help us test OpenTofu 1.10.0-alpha2! <a href="/blog/help-us-test-opentofu-1-10-0-alpha2/">Check it out here.</a>',
-      backgroundColor: "#ffda18",
-      textColor: "#1b1d20",
+        '<a href="/blog/help-us-test-opentofu-1-10-0-alpha2/" class="announcement-bar-link"><div class="announcement-bar-content">🚀 OpenTofu 1.10.0-alpha2 is released! <span class="announcement-arrow">→</span></div></a>',
+      backgroundColor: "#00000000",
       isCloseable: false,
     },
     algolia: {
@@ -224,14 +223,6 @@ const config: Config = {
     },
     footer: {
       links: [
-        {
-          label: "Manifesto",
-          href: "/manifesto",
-        },
-        {
-          label: "Supporters",
-          href: "/supporters",
-        },
         {
           label: "FAQs",
           href: "/faq",
@@ -250,16 +241,6 @@ const config: Config = {
       hideOnScroll: true,
       items: [
         {
-          to: "/manifesto",
-          label: "Manifesto",
-          position: "left",
-        },
-        {
-          to: "/supporters",
-          label: "Supporters",
-          position: "left",
-        },
-        {
           to: "/faq",
           label: "FAQs",
           position: "left",
@@ -267,6 +248,11 @@ const config: Config = {
         {
           to: "/blog",
           label: "Blog",
+          position: "left",
+        },
+        {
+          label: "Registry",
+          href: "https://search.opentofu.org",
           position: "left",
         },
         {
@@ -282,27 +268,26 @@ const config: Config = {
           items: [
             {
               label: "v1.9.x (current)",
-              href: "/docs/"
+              href: "/docs/",
             },
             {
               label: "v1.8.x",
-              href: "/docs/v1.8/"
+              href: "/docs/v1.8/",
             },
             {
               label: "v1.7.x",
-              href: "/docs/v1.7/"
+              href: "/docs/v1.7/",
             },
             {
               label: "v1.6.x",
-              href: "/docs/v1.6/"
+              href: "/docs/v1.6/",
             },
             {
               label: "Development",
-              href: "/docs/main/"
+              href: "/docs/main/",
             },
           ],
         },
-
         // TODO: This link is important but there's no design for it yet
         // {
         //   type: "dropdown",
