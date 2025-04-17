@@ -37,7 +37,15 @@ export default function Hero() {
             <Headline>Open-Source Infrastructure as Code</Headline>
             <p className="my-8 text-xl text-gray-600 dark:text-gray-400">
               OpenTofu is a reliable, flexible, community-driven infrastructure
-              as code tool managed by the Linux Foundation.
+              as code tool under the Linux Foundation's stewardship. It serves
+              as a <strong>drop-in replacement for Terraform</strong>,
+              preserving your existing workflows and configurations.
+            </p>
+            <p className="mb-8 text-xl text-gray-600 dark:text-gray-400">
+              With a thriving ecosystem of <strong>3,900+ providers</strong> and{" "}
+              <strong>23,600+ modules</strong>, OpenTofu empowers you to build
+              and manage infrastructure across any cloud platform with
+              confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button variant="primary" href="/docs/intro">

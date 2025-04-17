@@ -85,11 +85,11 @@ export default function Features() {
           id="features-header"
           className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent"
         >
-          Powerful Features
+          Features Unique to OpenTofu
         </h2>
         <p className="text-xl text-gray-600 dark:text-gray-400">
-          OpenTofu includes unique capabilities to enhance your infrastructure
-          management experience
+          Powerful capabilities — built by the community to solve real-world
+          challenges in infrastructure management
         </p>
       </div>
 

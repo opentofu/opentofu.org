@@ -20,8 +20,8 @@ export const ENGINEERING_CONTRIBUTORS = [
   {
     name: "env0",
     // TODO: Get good env0 logos
-    logoLight: "/img/supporters/env0.svg",
-    logoDark: "/img/supporters/env0.svg",
+    logoLight: "/img/supporters/env0-light.svg",
+    logoDark: "/img/supporters/env0-dark.svg",
     url: "https://www.env0.com/",
   },
   {
@@ -38,7 +38,7 @@ export const SERVICE_SPONSORS = [
     logoLight: "/img/supporters/buildkite-light.svg",
     logoDark: "/img/supporters/buildkite-dark.svg",
     url: "https://buildkite.com/",
-    contribution: "Package hosting via Package Cloud",
+    contribution: "Package hosting",
   },
   {
     name: "Cloudflare",

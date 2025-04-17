@@ -10,7 +10,7 @@ interface Example {
 
 const examples: Example[] = [
   {
-    title: "Launch Your First Cloud Storage",
+    title: "Create an S3 Bucket",
     description:
       "Define your infrastructure as code with OpenTofu. A few lines of configuration is all you need to create and manage cloud resources with confidence.",
     code: `terraform {
@@ -31,7 +31,7 @@ resource "aws_s3_bucket" "example" {
 }`,
   },
   {
-    title: "Manage Your DNS Records",
+    title: "Configure DNS Records",
     description:
       "Version control your infrastructure with OpenTofu. Track changes, collaborate with your team, and deploy DNS configurations with a single command.",
     code: `terraform {
@@ -57,7 +57,7 @@ resource "cloudflare_record" "example" {
 }`,
   },
   {
-    title: "Create a GitHub Repository",
+    title: "Set Up GitHub Repositories",
     description:
       "Automate your development workflow with OpenTofu. Create repositories, set up branch protection, and manage team access in code.",
     code: `terraform {

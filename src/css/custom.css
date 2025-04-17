@@ -139,6 +139,7 @@ h1 {
 div[class*="announcementBar"] {
   position: relative !important;
   top: 6px !important;
+  border-bottom: none !important;
 }
 
 .announcement-bar {
@@ -147,8 +148,6 @@ div[class*="announcementBar"] {
   align-items: center;
   justify-content: center;
   font-weight: 500;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 html[data-theme="dark"] .announcement-bar-link {

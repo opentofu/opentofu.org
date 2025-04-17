@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./Carousel.css";
+import { useColorMode } from "@docusaurus/theme-common";
 
 export interface CarouselItem {
   id: string;
@@ -17,8 +18,14 @@ interface CarouselProps {
 }
 
 export default function Carousel({ items }: CarouselProps) {
+  const { colorMode } = useColorMode();
+
   return (
-    <div className="relative w-full h-[calc(100vh-12rem)] flex">
+    <div
+      className={`relative w-full h-[calc(100vh-12rem)] flex ${
+        colorMode === "dark" ? "dark" : ""
+      }`}
+    >
       <div className="flex-1">
         <Swiper
           autoplay={{

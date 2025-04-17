@@ -10,6 +10,7 @@
     "clear": "docusaurus clear",
     "typecheck": "tsc",
     "sync-supporters": "node ./sync-supporters.js",
+    "sync-contributor-stats": "node ./scripts/fetch-contributor-stats.js",
     "prepare": "husky install",
     "lint": "eslint --cache \"**/*.{js,jsx,ts,tsx}\""
   },
