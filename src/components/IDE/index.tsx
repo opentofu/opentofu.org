@@ -51,9 +51,9 @@ export function IDE({ code, language = "hcl", filename }: IDEProps) {
   };
 
   return (
-    <div className="w-full rounded-lg overflow-hidden shadow-xl">
+    <div className="w-full rounded-lg overflow-hidden shadow-xl box-border">
       <IDEHeader filename={filename} />
-      <div className="relative overflow-x-auto">
+      <div className="relative overflow-x-auto box-border">
         <button
           onClick={copyToClipboard}
           className={`absolute right-2 top-2 z-10 p-1.5 ${
@@ -72,13 +72,15 @@ export function IDE({ code, language = "hcl", filename }: IDEProps) {
         >
           {({ style, tokens, getLineProps, getTokenProps }) => (
             <pre
-              className="px-4 py-3 text-sm"
+              className="px-2 sm:px-4 py-3 text-sm"
               style={{
                 ...style,
                 margin: 0,
                 maxWidth: "100%",
-                overflowX: "auto",
+                overflowX: "hidden",
                 borderRadius: "0",
+                boxSizing: "border-box",
+                width: "100%",
               }}
             >
               <code
@@ -86,7 +88,9 @@ export function IDE({ code, language = "hcl", filename }: IDEProps) {
                   display: "block",
                   whiteSpace: "pre-wrap",
                   wordBreak: "break-word",
+                  fontSize: "0.8rem",
                 }}
+                className="text-xs sm:text-sm"
               >
                 {tokens.map((line, i) => (
                   <div key={i} {...getLineProps({ line })}>

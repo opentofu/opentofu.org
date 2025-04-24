@@ -93,20 +93,22 @@ export function Examples() {
     id: `example-${index}`,
     title: example.title,
     content: (
-      <div className="p-4 h-full">
+      <div className="h-full w-[95%] mx-auto sm:w-full sm:p-4">
         <div className="text-left sm:text-center mb-6">
           <h3 className="text-2xl font-bold mb-2">{example.title}</h3>
           <p className="text-gray-600 dark:text-gray-300 mb-6">
             {example.description}
           </p>
         </div>
-        <IDE code={example.code} />
+        <div className="w-full overflow-hidden">
+          <IDE code={example.code} />
+        </div>
       </div>
     ),
   }));
 
   return (
-    <div className="w-full max-w-4xl mx-auto">
+    <div className="w-full max-w-full sm:max-w-4xl mx-auto">
       <Carousel items={carouselItems} />
     </div>
   );

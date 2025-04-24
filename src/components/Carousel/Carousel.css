@@ -16,3 +16,19 @@
   justify-content: center !important;
   height: 100% !important;
 }
+
+/* Mobile-specific styles */
+@media (max-width: 640px) {
+  .carousel-container .swiper {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .carousel-container .swiper-wrapper {
+    width: 100% !important;
+  }
+
+  .carousel-container .swiper-slide {
+    width: 100% !important;
+  }
+}

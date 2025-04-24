@@ -49,19 +49,19 @@ export default function Carousel({ items }: CarouselProps) {
           delay: 60000,
           disableOnInteraction: false,
         }}
-        allowTouchMove={false}
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+        slidesPerView={1}
+        spaceBetween={0}
+        centeredSlides={true}
+        loop={false}
+        resistance={false}
       >
         {items.map((item) => (
-          <SwiperSlide key={item.id}>
-            <div className="flex align-center justify-center h-full w-full">
-              {item.content}
-            </div>
-          </SwiperSlide>
+          <SwiperSlide key={item.id}>{item.content}</SwiperSlide>
         ))}
       </Swiper>
 
-      <div className="absolute flex justify-center z-10 left-0 right-0 -bottom-6">
+      <div className="absolute flex justify-center z-10 left-0 right-0 -bottom-6 sm:-bottom-6">
         <CustomPagination
           totalSlides={items.length}
           activeIndex={activeIndex}
