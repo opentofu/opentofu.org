@@ -47,12 +47,17 @@ export default function Hero() {
               infrastructure across every cloud platform with confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button variant="primary" href="/docs/intro">
+              <Button
+                variant="primary"
+                href="/docs/intro"
+                className="w-full sm:w-auto"
+              >
                 Get Started
               </Button>
               <Button
                 variant="secondary"
                 href="https://github.com/opentofu/opentofu"
+                className="w-full sm:w-auto"
               >
                 View on GitHub
               </Button>

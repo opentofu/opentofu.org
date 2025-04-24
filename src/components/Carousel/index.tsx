@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -32,7 +32,7 @@ export default function Carousel({ items }: CarouselProps) {
             delay: 6000,
             disableOnInteraction: false,
           }}
-          modules={[Navigation, Pagination]}
+          modules={[Navigation, Pagination, Autoplay]}
           slidesPerView={1}
           direction="vertical"
           allowTouchMove={false}
@@ -40,7 +40,7 @@ export default function Carousel({ items }: CarouselProps) {
             clickable: true,
             type: "bullets",
             el: ".swiper-pagination",
-            renderBullet: (index, className) => {
+            renderBullet: (_, className) => {
               return `<span class="${className}"></span>`;
             },
           }}
