@@ -43,9 +43,8 @@ export default function Hero() {
             </p>
             <p className="mb-8 text-xl text-gray-600 dark:text-gray-400">
               With a thriving ecosystem of <strong>3,900+ providers</strong> and{" "}
-              <strong>23,600+ modules</strong>, OpenTofu empowers you to build
-              and manage infrastructure across any cloud platform with
-              confidence.
+              <strong>23,600+ modules</strong>, you can build and manage
+              infrastructure across every cloud platform with confidence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button variant="primary" href="/docs/intro">

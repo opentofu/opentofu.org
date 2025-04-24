@@ -22,7 +22,7 @@ export default function HowToContribute() {
                 href="https://opentofu.org/slack"
                 className="px-6 py-3"
               >
-                Join Slack
+                Join Us on Slack
               </Button>
               <Button
                 variant="secondary"
