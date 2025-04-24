@@ -1,12 +1,12 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "./Carousel.css";
 import { useColorMode } from "@docusaurus/theme-common";
-import clsx from "clsx";
+import React, { useState } from "react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
+
+import CustomPagination from "./CustomPagination";
+
+import "swiper/css";
+import "./carousel.css";
 
 export interface CarouselItem {
   id: string;
@@ -20,35 +20,56 @@ interface CarouselProps {
 
 export default function Carousel({ items }: CarouselProps) {
   const { colorMode } = useColorMode();
+  const [activeIndex, setActiveIndex] = React.useState(0);
+  const [swiper, setSwiper] = useState<SwiperClass>(null);
 
-  const className = clsx([
-    "w-full h-full",
-    colorMode === "dark" ? "dark" : "light",
-  ]);
+  const handleBulletClick = (index: number) => {
+    swiper && swiper.slideTo(index);
+  };
+
+  const goToNextSlide = () => {
+    swiper && swiper.slideNext();
+  };
+
+  const goToPrevSlide = () => {
+    swiper && swiper.slidePrev();
+  };
 
   return (
-    <div className={className}>
+    <div
+      id="carousel"
+      className={`${
+        colorMode === "dark" ? "dark" : "light"
+      } carousel-container w-full h-full relative`}
+    >
       <Swiper
+        onSwiper={setSwiper}
+        modules={[Navigation, Pagination, Autoplay]}
         autoplay={{
-          delay: 6000,
+          delay: 60000,
           disableOnInteraction: false,
         }}
-        modules={[Navigation, Pagination, Autoplay]}
-        slidesPerView={1}
-        direction="horizontal"
-        allowTouchMove={true}
-        pagination={{
-          clickable: true,
-          type: "bullets",
-          el: ".swiper-pagination",
-        }}
+        allowTouchMove={false}
+        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       >
         {items.map((item) => (
-          <SwiperSlide key={item.id}>{item.content}</SwiperSlide>
+          <SwiperSlide key={item.id}>
+            <div className="flex align-center justify-center h-full w-full">
+              {item.content}
+            </div>
+          </SwiperSlide>
         ))}
       </Swiper>
 
-      <div className="swiper-pagination w-full py-4" />
+      <div className="absolute flex justify-center z-10 left-0 right-0 -bottom-6">
+        <CustomPagination
+          totalSlides={items.length}
+          activeIndex={activeIndex}
+          onBulletClick={handleBulletClick}
+          onPrev={goToPrevSlide}
+          onNext={goToNextSlide}
+        />
+      </div>
     </div>
   );
 }

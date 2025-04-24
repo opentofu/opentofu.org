@@ -1,20 +1,18 @@
-swiper-pagination-bullet-active {
-  background: #4b5563 !important;
-  scale: 1.2 !important;
+/* Swiper core styles with !important to override Swiper's defaults */
+.carousel-container .swiper {
+  width: 100% !important;
+  height: calc(100% - 60px) !important;
 }
 
-.dark .swiper-pagination-bullet-active {
-  background: #d1d5db !important;
-  scale: 1.2 !important;
+.carousel-container .swiper-wrapper {
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
-/* Dark mode styles */
-.dark .swiper-pagination-bullet {
-  background: #4b5563 !important;
-  width: 2rem;
-  height: 2rem;
-}
-
-.swiper-pagination-bullets {
-  position: relative !important;
+.carousel-container .swiper-slide {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
 }
