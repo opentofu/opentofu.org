@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./Carousel.css";
 import { useColorMode } from "@docusaurus/theme-common";
+import clsx from "clsx";
 
 export interface CarouselItem {
   id: string;
@@ -20,42 +21,34 @@ interface CarouselProps {
 export default function Carousel({ items }: CarouselProps) {
   const { colorMode } = useColorMode();
 
+  const className = clsx([
+    "w-full h-full",
+    colorMode === "dark" ? "dark" : "light",
+  ]);
+
   return (
-    <div
-      className={`relative w-full h-[calc(100vh-12rem)] flex ${
-        colorMode === "dark" ? "dark" : ""
-      }`}
-    >
-      <div className="flex-1">
-        <Swiper
-          autoplay={{
-            delay: 6000,
-            disableOnInteraction: false,
-          }}
-          modules={[Navigation, Pagination, Autoplay]}
-          slidesPerView={1}
-          direction="vertical"
-          allowTouchMove={false}
-          pagination={{
-            clickable: true,
-            type: "bullets",
-            el: ".swiper-pagination",
-            renderBullet: (_, className) => {
-              return `<span class="${className}"></span>`;
-            },
-          }}
-          className="h-full"
-        >
-          {items.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div className="flex flex-col h-full items-start sm:items-center justify-center">
-                <div className="w-full max-w-2xl">{item.content}</div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
-      <div className="swiper-pagination" />
+    <div className={className}>
+      <Swiper
+        autoplay={{
+          delay: 6000,
+          disableOnInteraction: false,
+        }}
+        modules={[Navigation, Pagination, Autoplay]}
+        slidesPerView={1}
+        direction="horizontal"
+        allowTouchMove={true}
+        pagination={{
+          clickable: true,
+          type: "bullets",
+          el: ".swiper-pagination",
+        }}
+      >
+        {items.map((item) => (
+          <SwiperSlide key={item.id}>{item.content}</SwiperSlide>
+        ))}
+      </Swiper>
+
+      <div className="swiper-pagination w-full py-4" />
     </div>
   );
 }
