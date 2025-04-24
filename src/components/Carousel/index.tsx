@@ -48,7 +48,7 @@ export default function Carousel({ items }: CarouselProps) {
         >
           {items.map((item) => (
             <SwiperSlide key={item.id}>
-              <div className="flex flex-col h-full items-center justify-center">
+              <div className="flex flex-col h-full items-start sm:items-center justify-center">
                 <div className="w-full max-w-2xl">{item.content}</div>
               </div>
             </SwiperSlide>

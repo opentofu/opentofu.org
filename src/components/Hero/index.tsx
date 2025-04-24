@@ -30,10 +30,10 @@ export default function Hero() {
 
       <div className="container mx-auto px-4 md:px-8 py-16 min-h-[calc(100vh-8rem)] flex flex-col lg:flex-row items-center justify-center">
         <div className="lg:w-1/2 lg:pr-16">
-          <div className="flex justify-center lg:justify-start mb-8">
+          <div className="flex justify-start mb-8">
             <LFLogo />
           </div>
-          <div className="text-center lg:text-left">
+          <div className="text-left">
             <Headline>Open-Source Infrastructure as Code</Headline>
             <p className="my-8 text-xl text-gray-600 dark:text-gray-400">
               OpenTofu is a reliable, flexible, community-driven infrastructure
@@ -46,7 +46,7 @@ export default function Hero() {
               <strong>23,600+ modules</strong>, you can build and manage
               infrastructure across every cloud platform with confidence.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-start">
               <Button
                 variant="primary"
                 href="/docs/intro"

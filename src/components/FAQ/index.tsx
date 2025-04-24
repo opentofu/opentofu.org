@@ -10,7 +10,7 @@ export default function FAQ() {
   return (
     <section className="relative py-20 md:py-32 px-4">
       <div className="w-full max-w-4xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-left sm:text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
             Frequently Asked Questions
           </h2>
@@ -46,11 +46,11 @@ export default function FAQ() {
             </MDXProvider>
           </Accordion>
 
-          <div className="flex justify-center mt-10">
+          <div className="flex justify-start sm:justify-center mt-10">
             <Button
               variant="secondary"
               href="/faq"
-              className="px-6 py-3 flex items-center gap-2"
+              className="w-full sm:w-auto px-6 py-3 flex items-center gap-2"
             >
               <span>View All Questions</span>
               <svg

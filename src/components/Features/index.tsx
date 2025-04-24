@@ -1,5 +1,6 @@
 import React from "react";
 import { IDE } from "../IDE";
+import versions from "../../../versions.json";
 
 type FeatureShowcaseProps = {
   title: string;
@@ -24,6 +25,16 @@ function FeatureShowcase({
 }: FeatureShowcaseProps) {
   const isRight = align === "right";
 
+  // Read the latest version, this is needed because of how versioned documentation works.
+  // If the version referenced is actually the latest version, we link to the "What's New" page
+  // otherwise we link to the versioned "What's New" page.
+  // This is a bit of a hack, but it works for now.
+  const latestVersion = versions[0].replace("v", "");
+  const versionHref =
+    version === latestVersion
+      ? "/docs/intro/whats-new/"
+      : `/docs/v${version}/intro/whats-new/`;
+
   return (
     <div className="flex flex-col lg:flex-row gap-8 mb-20 items-center">
       {/* Code example side */}
@@ -41,12 +52,15 @@ function FeatureShowcase({
           isRight ? "lg:order-1" : "lg:order-2"
         }`}
       >
-        <div
-          className={`inline-flex px-3 py-1 text-sm font-medium mb-2 rounded-full ${color}`}
-        >
-          {`Available since v${version}`}
+        <div className="flex flex-wrap items-center gap-3 mb-3">
+          <h3 className="text-2xl font-bold">{title}</h3>
+          <a
+            href={versionHref}
+            className={`inline-flex px-3 py-1 text-sm font-medium rounded-full hover:opacity-90 transition-opacity ${color}`}
+          >
+            {`v${version}`}
+          </a>
         </div>
-        <h3 className="text-2xl font-bold mb-3">{title}</h3>
         <p className="text-gray-600 dark:text-gray-400 text-lg mb-4">
           {description}
         </p>
@@ -80,7 +94,7 @@ function FeatureShowcase({
 export default function Features() {
   return (
     <section id="features" className="py-16 md:py-24 mx-auto container px-4">
-      <div className="text-center max-w-3xl mx-auto mb-16">
+      <div className="text-left sm:text-center max-w-3xl mx-auto mb-16">
         <h2
           id="features-header"
           className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent"

@@ -14,10 +14,10 @@ function SupporterLogo({ supporter }) {
       href={supporter.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="transition-transform hover:scale-105 focus:scale-105"
+      className="transition-transform hover:scale-105 focus:scale-105 w-full"
       aria-label={`Visit ${supporter.name} website`}
     >
-      <div className="bg-white dark:bg-blue-900/30 shadow-md rounded-xl p-6 border border-gray-100 dark:border-blue-800/50 flex items-center justify-center h-24 w-48">
+      <div className="bg-white dark:bg-blue-900/30 shadow-md rounded-xl p-6 border border-gray-100 dark:border-blue-800/50 flex items-center justify-center h-24 w-full sm:w-48 mx-auto">
         {logoSrc ? (
           <img
             src={logoSrc}
@@ -36,7 +36,7 @@ function SupporterLogo({ supporter }) {
 
 function CommunityContributorsTile() {
   return (
-    <div className="bg-white dark:bg-blue-900/30 shadow-md rounded-xl p-6 border border-gray-100 dark:border-blue-800/50 flex items-center justify-center h-24 w-48">
+    <div className="bg-white dark:bg-blue-900/30 shadow-md rounded-xl p-6 border border-gray-100 dark:border-blue-800/50 flex items-center justify-center h-24 w-full sm:w-48">
       <div className="text-center">
         <span className="text-3xl font-bold text-gray-800 dark:text-gray-200">
           {Math.floor(contributorStats.stats.contributors.total / 10) * 10}+
@@ -52,37 +52,40 @@ function CommunityContributorsTile() {
 export default function Supporters() {
   return (
     <section className="py-20 md:py-28 mx-auto container px-4">
-      <div className="text-center mb-16">
+      <div className="text-left sm:text-center mb-16">
         <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent">
           Our Supporters
         </h2>
       </div>
 
       <div className="mb-20">
-        <h3 className="text-2xl font-semibold text-center mb-8">
+        <h3 className="text-2xl font-semibold text-left sm:text-center mb-8">
           Engineering Contributors
         </h3>
-        <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-6 max-w-5xl mx-auto">
           {ENGINEERING_CONTRIBUTORS.map((supporter) => (
-            <div key={supporter.name} className="w-48">
+            <div key={supporter.name} className="w-full sm:w-48">
               <SupporterLogo supporter={supporter} />
             </div>
           ))}
-          <div className="w-48">
+          <div className="w-full sm:w-48">
             <CommunityContributorsTile />
           </div>
         </div>
       </div>
 
       <div>
-        <h3 className="text-2xl font-semibold text-center mb-8">
+        <h3 className="text-2xl font-semibold text-left sm:text-center mb-8">
           Service Sponsors
         </h3>
-        <div className="flex justify-center gap-8 md:gap-12 max-w-4xl mx-auto">
+        <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 md:gap-12 max-w-4xl mx-auto">
           {SERVICE_SPONSORS.map((sponsor) => (
-            <div key={sponsor.name} className="flex flex-col items-center">
+            <div
+              key={sponsor.name}
+              className="flex flex-col items-center w-full mb-6 sm:mb-0 sm:w-auto"
+            >
               <SupporterLogo supporter={sponsor} />
-              <p className="mt-3 text-sm text-gray-600 dark:text-gray-400 text-center max-w-[200px]">
+              <p className="mt-3 text-sm text-gray-600 dark:text-gray-400 text-center w-full">
                 {sponsor.contribution}
               </p>
             </div>
