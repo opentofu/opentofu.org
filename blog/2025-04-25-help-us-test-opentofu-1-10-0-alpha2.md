@@ -239,8 +239,6 @@ Alpha 2 packs numerous other quality-of-life improvements:
 
 - The `element` function now accepts negative indices, with `-1` selecting the last element
 - Test `run` outputs can now be referenced in test `provider` blocks
-- Provider instance keys are automatically converted to string
-- The `tofu show` command offers a new explicit style with `-state` and `-plan=PLANFILE` options, while maintaining backward compatibility with the positional argument style
 - Force-unlock capability now extends to the HTTP backend
 - Plan outputs now show forgotten resources count, improving visibility into state changes
 
