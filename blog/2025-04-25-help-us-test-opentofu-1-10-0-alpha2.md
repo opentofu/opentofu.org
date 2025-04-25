@@ -1,14 +1,12 @@
 ---
 title: Help us test OpenTofu 1.10.0-alpha2
 slug: help-us-test-opentofu-1-10-0-alpha2
-image: /img/blog/help-us-test-opentofu-1-10-0-alpha2.png
+image: /img/blog/help-us-test-opentofu-1-10-0-alpha1.png
 ---
 
-Hello, OpenTofu community! We're thrilled to announce the second alpha release of OpenTofu 1.10.0 – a version that's shaping up to be one of our most feature-rich releases yet. Building on the foundation laid in alpha1, this release delivers several innovative enhancements and critical fixes that push OpenTofu forward in significant ways.
+Hello, OpenTofu community! We're thrilled to announce the second alpha release of OpenTofu 1.10.0! We have been hard at work adding new features, fixing bugs, and iterating with community feedback. This alpha delivers several long awaited features that we know you have been rooting for.
 
 Your involvement is crucial as we refine these features. If you have a **non-production** environment where you could test any of these new capabilities, we'd be grateful for your help. Even if everything works perfectly (which we hope it does!), your [feedback via GitHub issues](https://github.com/opentofu/opentofu/issues/new/choose) is invaluable to ensuring 1.10.0 becomes the rock-solid release our community deserves.
-
-Let's dive into what makes this alpha release worth your attention.
 
 :::warning
 
@@ -32,13 +30,13 @@ For the releases above, simply unpack the archive to find your `tofu` binary. Fo
 
 ## The Building Blocks of 1.10.0
 
-If you're just joining us for alpha2, OpenTofu 1.10.0 is bringing several groundbreaking features to the table:
+If you're just joining us for alpha 2, OpenTofu 1.10.0 is bringing several groundbreaking features to the table:
 
 ### OCI Registry Integration
 
-Enterprise teams rejoice! OpenTofu now seamlessly integrates with OCI registries for both provider distribution and module installation. This is a game-changer for private, air-gapped environments and teams looking for more flexible ways to distribute their infrastructure components.
+OpenTofu now seamlessly integrates with OCI registries for both provider distribution and module installation (new for alpha 2). This is a game-changer for private, air-gapped environments and teams looking for more flexible ways to distribute their infrastructure components.
 
-Configure provider installation from OCI Registries with a sleek `oci_mirror` block:
+Configure provider installation from OCI Registries with a `oci_mirror` block:
 
 ```hcl
 provider_installation {
@@ -49,13 +47,15 @@ provider_installation {
 }
 ```
 
-Or install modules directly using the elegant new `oci:` source scheme:
+Or install modules directly using the new `oci:` source scheme:
 
 ```hcl
 module "vpc" {
   source = "oci://example.com/modules/vpc/aws"
 }
 ```
+
+For more information, see our [alpha 1 blog post](https://opentofu.org/blog/help-us-test-opentofu-1-10-0-alpha1/#provider-distribution-through-oci-registries) for provider instructions and [our latest docs](https://opentofu.org/docs/main/cli/oci_registries/module-package/) for module instructions.
 
 ### Simplified State Management with Native S3 Locking
 
@@ -72,23 +72,13 @@ terraform {
 }
 ```
 
-### Powerful Built-in Provider Functions
-
-Automation enthusiasts will appreciate these elegant new functions in the built-in provider:
-
-- `provider::terraform::decode_tfvars` - Decode a TFVars file content into an object
-- `provider::terraform::encode_tfvars` - Encode an object into a string with the same format as a TFVars file
-- `provider::terraform::encode_expr` - Encode an arbitrary expression into a string with valid OpenTofu syntax
-
-These functions unlock new possibilities for sophisticated integration workflows and custom tooling.
-
-## What's New in Alpha2
-
-Alpha2 elevates 1.10.0 with some impressive refinements and additions:
-
 ### Peek Behind the Curtain with OpenTelemetry Tracing
 
-Ever wondered what's happening under the hood during those long provider installations? Alpha2 introduces experimental OpenTelemetry (OTel) tracing that gives you unprecedented visibility into OpenTofu's operations.
+Ever wondered what's happening under the hood during those long provider installations? Alpha 2 introduces experimental OpenTelemetry (OTel) tracing that gives you unprecedented visibility into OpenTofu's operations.
+
+:::note
+Although this builds on a project named Open*Telemetry*, we are adding this support explicitly for you to trace *your application* using *your tooling* on *your infrastructure*. To be absolutely clear: we are *not* adding telemetry that will phone home to us or anyone else.
+:::
 
 Getting started with tracing takes just two simple steps. First, launch a tracing backend like Jaeger:
 
@@ -116,109 +106,7 @@ Now you can watch your OpenTofu operations unfold in real-time through the Jaege
 - Provider installation and downloads
 - Lock file operations
 
-This is just the beginning – future releases will expand tracing to cover even more of your OpenTofu workflow.
-
-### Multi-Project PostgreSQL State Management
-
-The `pg` backend gets a significant upgrade with the ability to specify custom table and index names, unlocking elegant multi-project state management within a single database schema:
-
-```hcl
-terraform {
-  backend "pg" {
-    conn_str    = "postgres://user:pass@db.example.com/database"
-    schema_name = "opentofu"
-    table_name  = "project_a_state"  # Default is "terraform_state"
-    index_name  = "project_a_index"  # Default is "terraform_state_idx"
-  }
-}
-```
-
-We've also solved an issue that could cause state corruption when sharing a database between different OpenTofu versions, making your state storage more robust than ever.
-
-### Resource Migration Reimagined with `moved`
-
-The `moved` block evolves from useful to indispensable, now supporting migration between entirely different resource types:
-
-```hcl
-moved {
-  from = aws_instance.old
-  to   = aws_spot_instance_request.new
-}
-```
-
-It even facilitates smooth transitions from the legacy `null_resource` to the modern `terraform_data` resource:
-
-```hcl
-moved {
-  from = null_resource.example
-  to   = terraform_data.example
-}
-```
-
-### Fine-Grained Resource Removal with `removed`
-
-Taking control of your infrastructure removal process has never been more elegant. The `removed` block now supports sophisticated `lifecycle` and `provisioner` configurations:
-
-```hcl
-removed {
-  from = aws_instance.example
-
-  lifecycle {
-    destroy = true  # Destroys the resource (default is false which just forgets it)
-  }
-
-  # Provisioners will run before destruction when destroy = true
-  provisioner "local-exec" {
-    when    = destroy
-    command = "echo 'Cleaning up before destroying resource'"
-  }
-}
-```
-
-Choose between gracefully removing resources from state or properly destroying them, complete with pre-destruction cleanup – the choice is yours.
-
-### Flexible State Encryption with External Key Providers
-
-Security-conscious teams will appreciate the new external key providers for state encryption, bringing unprecedented flexibility to your secret management approach:
-
-```hcl
-terraform {
-  encryption {
-    key_provider "external" "password_manager" {
-      command = ["./get_password.sh", "some_parameter"]
-    }
-  }
-}
-```
-
-The PBKDF2 key provider now supports elegant chaining, allowing you to compose multiple key providers into sophisticated encryption solutions:
-
-```hcl
-terraform {
-  encryption {
-    key_provider "external" "password_manager" {
-      command = ["./get_password.sh", "some_parameter"]
-    }
-    key_provider "pbkdf2" "passphrase" {
-      chain = key_provider.external.password_manager
-    }
-  }
-}
-```
-
-### Streamlined Resource Planning
-
-The new `-target-file` and `-exclude-file` options transform how you manage complex deployments, allowing you to maintain consistent target and exclusion patterns across your team:
-
-```bash
-# Target specific resources listed in targets.txt
-tofu plan -target-file=targets.txt
-
-# Exclude specific resources listed in excludes.txt
-tofu apply -exclude-file=excludes.txt
-```
-
-No more copy-pasting long resource addresses – just reference your carefully maintained resource lists.
+This is just the beginning – future releases will expand tracing to cover even more of your OpenTofu workflow. Let us know what areas you want more insight into!
 
 ### Deprecation for module variables and outputs
 
@@ -239,9 +127,115 @@ output "examle" {
 }
 ```
 
+### Global Provider Cache Locking
+
+The [Global Provider Plugin Cache](https://opentofu.org/docs/cli/config/config-file/#provider-plugin-cache) allows OpenTofu to download providers into a shared cache directory. Prior to this release, it was not safe to use this with multiple instances of OpenTofu running in parallel as they could clobber each other. We now have added support for filesystem level locking to this cache!
+
+```sh
+export TF_PLUGIN_CACHE_DIR=/storage/tofu/cache
+```
+
+This now means the global provider plugin cache is safe for tofu to use concurrently:
+* With your CI system that runs dozens of `tofu init`s in parallel
+* With your orchestration tool that runs multiple pipelines at the same time
+* With all of your Terragrunt projects and stacks
+
+
+### Multi-Project PostgreSQL State Management
+
+The `pg` backend gets a significant upgrade with the ability to specify custom table and index names, unlocking multi-project state management within a single database schema:
+
+```hcl
+terraform {
+  backend "pg" {
+    conn_str    = "postgres://user:pass@db.example.com/database"
+    schema_name = "opentofu"
+    table_name  = "project_a_state"  # Default is "terraform_state"
+    index_name  = "project_a_index"  # Default is "terraform_state_idx"
+  }
+}
+```
+
+We've also solved an issue that could cause state corruption when sharing a database between different OpenTofu versions, making your state storage more robust than ever.
+
+### Resource Migration with `moved`
+
+The `moved` block now supports migration between entirely different resource types:
+
+```hcl
+moved {
+    from=gpg_key.this
+    to=gpg_key_pair.this
+}
+```
+
+### Fine-Grained Resource Removal with `removed`
+
+The `removed` block now supports `lifecycle` and `provisioner` configurations:
+
+```hcl
+removed {
+  from = aws_instance.example
+
+  lifecycle {
+    destroy = true  # Destroys the resource (default is false which just forgets it)
+  }
+
+  # Provisioners will run before destruction when destroy = true
+  provisioner "local-exec" {
+    when    = destroy
+    command = "echo 'Cleaning up before destroying resource'"
+  }
+}
+```
+
+### Streamlined Resource Planning
+
+The new `-target-file` and `-exclude-file` options transform how you manage complex deployments, allowing you to maintain consistent target and exclusion patterns across your team:
+
+```bash
+# Target specific resources listed in targets.txt
+tofu plan -target-file=targets.txt
+
+# Exclude specific resources listed in excludes.txt
+tofu apply -exclude-file=excludes.txt
+```
+
+No more copy-pasting long resource addresses – just reference your carefully maintained resource lists.
+
+### Flexible State Encryption with External Key Providers
+
+Security-conscious teams will appreciate the new external key providers for state encryption, bringing unprecedented flexibility to your secret management approach:
+
+```hcl
+terraform {
+  encryption {
+    key_provider "external" "password_manager" {
+      command = ["./state_encryption_key.sh", "some_parameter"]
+    }
+  }
+}
+```
+
+The PBKDF2 key provider now supports chaining, allowing you to compose multiple key providers:
+
+```hcl
+terraform {
+  encryption {
+    key_provider "external" "password_manager" {
+      command = ["./get_password.sh", "some_parameter"]
+    }
+    key_provider "pbkdf2" "passphrase" {
+      chain = key_provider.external.password_manager
+    }
+  }
+}
+```
+
+
 ### And That's Not All
 
-Alpha2 packs numerous other quality-of-life improvements:
+Alpha 2 packs numerous other quality-of-life improvements:
 
 - The `element` function now accepts negative indices, with `-1` cleverly selecting the final element
 - Test `run` outputs can now be referenced in test `provider` blocks
@@ -260,7 +254,7 @@ As with any significant release, there are some key compatibility points to cons
 - The `ghcr.io/opentofu/opentofu` image is no longer supported as a base image
 - On Windows, symbolic links and junctions are now handled differently
 
-For complete details, please review the [full changelog](https://github.com/opentofu/opentofu/blob/main/CHANGELOG.md).
+For complete details, please review the [full changelog](https://github.com/opentofu/opentofu/blob/v1-10-0-alpha2/CHANGELOG.md).
 
 ## Join the Testing Effort
 
@@ -268,4 +262,4 @@ OpenTofu 1.10.0 is shaping up to be a landmark release, and your input can help 
 
 Share your testing experiences through [GitHub issues](https://github.com/opentofu/opentofu/issues/new/choose) or join the conversation in the [OpenTofu Slack](https://opentofu.org/slack/). Every bit of feedback brings us closer to a rock-solid 1.10.0 release.
 
-Thank you for being part of this journey!
+Thank you!
