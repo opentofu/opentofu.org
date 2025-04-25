@@ -112,7 +112,7 @@ This is just the beginning – future releases will expand tracing to cover even
 
 It is now possible to communicate variables and outputs deprecation via `deprecated` attribute! Module
 authors are able to mark variable or output as deprecated and provide a suggestion on how to migrate 
-away. Module callers will receive a warning, if their configuration is affected. Here is an example of 
+away. Module callers will receive a warning if their configuration is affected. Here is an example of 
 configuration:
 
 ```hcl
