@@ -80,7 +80,7 @@ Ever wondered what's happening under the hood during those long provider install
 Although this builds on a project named Open*Telemetry*, we are adding this support explicitly for you to trace *your application* using *your tooling* on *your infrastructure*. To be absolutely clear: we are *not* adding telemetry that will phone home to us or anyone else.
 :::
 
-Getting started with tracing takes just two simple steps. First, launch a tracing backend like Jaeger:
+Getting started with tracing takes two steps. First, launch a tracing backend like Jaeger:
 
 ```bash
 docker run -d --rm --name jaeger \
