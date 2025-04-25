@@ -220,6 +220,25 @@ tofu apply -exclude-file=excludes.txt
 
 No more copy-pasting long resource addresses – just reference your carefully maintained resource lists.
 
+### Deprecation for module variables and outputs
+
+It is now possible to communicate variables and outputs deprecation via `deprecated` attribute! Module
+authors are able to mark variable or output as deprecated and provide a suggestion on how to migrate 
+away. Module callers will receive a warning, if their configuration is affected. Here is an example of 
+configuration:
+
+```hcl
+variable "examle" {
+  type       = string
+  deprecated = "'examle' variable must no longer be used due to a typo, use 'example' instead"
+}
+
+output "examle" {
+  value      = "someval"
+  deprecated = "'examle' output must no longer be used due to a typo, use 'example' instead"
+}
+```
+
 ### And That's Not All
 
 Alpha2 packs numerous other quality-of-life improvements:
