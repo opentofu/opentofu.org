@@ -26,7 +26,7 @@ The alpha release is available exclusively from the [GitHub Releases page](https
 | **Intel/AMD Linux computer or server**<br />(AMD64)                             | [tofu_1.10.0-alpha2_linux_amd64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.10.0-alpha2/tofu_1.10.0-alpha2_linux_amd64.tar.gz)   |
 | **ARM-based Linux computer<br />or<br />Raspberry Pi 3 or higher**<br />(ARM64) | [tofu_1.10.0-alpha2_linux_arm64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.10.0-alpha2/tofu_1.10.0-alpha2_linux_arm64.tar.gz)   |
 
-For the releases above, simply unpack the archive to find your `tofu` binary. For those who prefer verified downloads, you can also use the [standalone installer](https://opentofu.org/docs/intro/install/standalone/) with signature verification.
+After downloading one of the releases above, unpack the archive to find your `tofu` binary. For those who prefer verified downloads, you can also use the [standalone installer](https://opentofu.org/docs/intro/install/standalone/) with signature verification.
 
 ## The Building Blocks of 1.10.0
 
