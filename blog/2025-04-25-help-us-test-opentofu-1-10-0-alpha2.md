@@ -101,7 +101,7 @@ export OTEL_EXPORTER_OTLP_ENDPOINT=http://localhost:4317
 export OTEL_EXPORTER_OTLP_INSECURE=true
 ```
 
-Now you can watch your OpenTofu operations unfold in real-time through the Jaeger UI at http://localhost:16686. Currently, tracing illuminates:
+Now you can watch your OpenTofu operations unfold in real-time through the Jaeger UI at http://localhost:16686. Currently, tracing describes:
 
 - Provider installation and downloads
 - Lock file operations
