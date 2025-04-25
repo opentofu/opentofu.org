@@ -110,10 +110,8 @@ This is just the beginning – future releases will expand tracing to cover even
 
 ### Deprecation for module variables and outputs
 
-It is now possible to communicate variables and outputs deprecation via `deprecated` attribute! Module
-authors are able to mark variable or output as deprecated and provide a suggestion on how to migrate 
-away. Module callers will receive a warning if their configuration is affected. Here is an example of 
-configuration:
+It is now possible to communicate variable and output deprecation via the `deprecated` attribute! Module
+authors are able to mark variables and outputs as deprecated by including a suggestion on how to migrate. Module callers will receive a warning if their configuration is affected. Here is an example of configuration:
 
 ```hcl
 variable "examle" {
@@ -126,6 +124,8 @@ output "examle" {
   deprecated = "'examle' output must no longer be used due to a typo, use 'example' instead"
 }
 ```
+
+For more information, see [marking variable as deprecated](https://1-10-0-alpha2-blog.opentofu.pages.dev/docs/main/language/values/variables/#marking-variable-as-deprecated) and [marking output as deprecated](https://1-10-0-alpha2-blog.opentofu.pages.dev/docs/main/language/values/outputs/#deprecated--marking-output-as-deprecated)
 
 ### Global Provider Cache Locking
 
