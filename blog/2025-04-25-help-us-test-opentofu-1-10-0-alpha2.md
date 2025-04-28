@@ -125,7 +125,7 @@ output "examle" {
 }
 ```
 
-For more information, see [marking variable as deprecated](https://1-10-0-alpha2-blog.opentofu.pages.dev/docs/main/language/values/variables/#marking-variable-as-deprecated) and [marking output as deprecated](https://1-10-0-alpha2-blog.opentofu.pages.dev/docs/main/language/values/outputs/#deprecated--marking-output-as-deprecated)
+For more information, see [marking variable as deprecated](https://opentofu.org/docs/main/language/values/variables/#marking-variable-as-deprecated) and [marking output as deprecated](https://opentofu.org/docs/main/language/values/outputs/#deprecated--marking-output-as-deprecated)
 
 ### Global Provider Cache Locking
 
