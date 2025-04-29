@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Highlight, themes } from "prism-react-renderer";
 import OpenTofuLogo from "./OpenTofuLogo";
-import { useColorMode } from "@docusaurus/theme-common";
 import CopyIcon from "./CopyIcon";
 import CheckIcon from "./CheckIcon";
 import DefaultFileIcon from "./DefaultFileIcon";
@@ -13,17 +12,10 @@ interface IDEHeaderProps {
 const tfFileExtensions = [".tf", ".tfvars", ".tofu"];
 
 function IDEHeader({ filename = "main.tf" }: IDEHeaderProps) {
-  const { colorMode } = useColorMode();
   const isTofuFile = tfFileExtensions.some((ext) => filename.endsWith(ext));
 
   return (
-    <div
-      className={`flex items-center px-4 py-2 ${
-        colorMode === "dark"
-          ? "bg-gray-800 text-white"
-          : "bg-gray-100 text-gray-800"
-      }`}
-    >
+    <div className="flex items-center px-4 py-2 bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-white transition-colors">
       <div className="flex items-center space-x-2">
         <div className="w-4 h-4">
           {isTofuFile ? <OpenTofuLogo /> : <DefaultFileIcon />}
@@ -42,7 +34,28 @@ interface IDEProps {
 
 export function IDE({ code, language = "hcl", filename }: IDEProps) {
   const [copied, setCopied] = useState(false);
-  const { colorMode } = useColorMode();
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+  // Use effect to safely check if the theme is dark after hydration
+  useEffect(() => {
+    const isDark =
+      document.documentElement.getAttribute("data-theme") === "dark";
+    setIsDarkTheme(isDark);
+
+    // Optional: add listener for theme changes
+    const observer = new MutationObserver(() => {
+      const newIsDark =
+        document.documentElement.getAttribute("data-theme") === "dark";
+      setIsDarkTheme(newIsDark);
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(code);
@@ -56,17 +69,13 @@ export function IDE({ code, language = "hcl", filename }: IDEProps) {
       <div className="relative overflow-x-auto box-border">
         <button
           onClick={copyToClipboard}
-          className={`absolute right-2 top-2 z-10 p-1.5 ${
-            colorMode === "dark"
-              ? "text-gray-400 hover:text-white"
-              : "text-gray-500 hover:text-gray-800"
-          } transition-colors`}
+          className="absolute right-2 top-2 z-10 p-1.5 text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white transition-colors"
           title={copied ? "Copied!" : "Copy to clipboard"}
         >
           {copied ? <CheckIcon /> : <CopyIcon />}
         </button>
         <Highlight
-          theme={colorMode === "dark" ? themes.oneDark : themes.oneLight}
+          theme={isDarkTheme ? themes.oneDark : themes.oneLight}
           code={code}
           language={language}
         >
