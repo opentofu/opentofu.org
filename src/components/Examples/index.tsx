@@ -100,7 +100,7 @@ export function Examples() {
             {example.description}
           </p>
         </div>
-        <div className="w-full overflow-hidden">
+        <div className="w-full overflow-hidden shadow-xl">
           <IDE code={example.code} />
         </div>
       </div>
