@@ -65,7 +65,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="lg:w-1/2 mt-16 lg:mt-0 lg:pl-16">
+        <div className="lg:w-1/2 mt-16 lg:mt-0 lg:pl-16 w-full">
           <Examples />
         </div>
       </div>
