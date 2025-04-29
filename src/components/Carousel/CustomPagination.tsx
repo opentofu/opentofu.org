@@ -1,6 +1,4 @@
 import React from "react";
-import { useColorMode } from "@docusaurus/theme-common";
-import clsx from "clsx";
 import PaginationBullet from "./PaginationBullet";
 
 interface CustomPaginationProps {
@@ -18,13 +16,8 @@ export const CustomPagination = ({
   onPrev,
   onNext,
 }: CustomPaginationProps) => {
-  const { colorMode } = useColorMode();
-  const isDark = colorMode === "dark";
-
-  const arrowClassName = clsx(
-    "p-1.5 rounded-full transition-colors",
-    isDark ? "text-gray-300" : "text-gray-700",
-  );
+  const arrowClassName =
+    "p-1.5 rounded-full transition-colors text-gray-700 dark:text-gray-300";
 
   return (
     <div className="flex items-center justify-center gap-4">

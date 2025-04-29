@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Highlight, themes } from "prism-react-renderer";
 import OpenTofuLogo from "./OpenTofuLogo";
 import CopyIcon from "./CopyIcon";
 import CheckIcon from "./CheckIcon";
 import DefaultFileIcon from "./DefaultFileIcon";
+import { useTheme } from "../../utils/useTheme";
 
 interface IDEHeaderProps {
   filename?: string;
@@ -34,28 +35,7 @@ interface IDEProps {
 
 export function IDE({ code, language = "hcl", filename }: IDEProps) {
   const [copied, setCopied] = useState(false);
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
-
-  // Use effect to safely check if the theme is dark after hydration
-  useEffect(() => {
-    const isDark =
-      document.documentElement.getAttribute("data-theme") === "dark";
-    setIsDarkTheme(isDark);
-
-    // Optional: add listener for theme changes
-    const observer = new MutationObserver(() => {
-      const newIsDark =
-        document.documentElement.getAttribute("data-theme") === "dark";
-      setIsDarkTheme(newIsDark);
-    });
-
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["data-theme"],
-    });
-
-    return () => observer.disconnect();
-  }, []);
+  const isDarkTheme = useTheme();
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(code);
@@ -79,28 +59,9 @@ export function IDE({ code, language = "hcl", filename }: IDEProps) {
           code={code}
           language={language}
         >
-          {({ style, tokens, getLineProps, getTokenProps }) => (
-            <pre
-              className="px-2 sm:px-4 py-3 text-sm"
-              style={{
-                ...style,
-                margin: 0,
-                maxWidth: "100%",
-                overflowX: "hidden",
-                borderRadius: "0",
-                boxSizing: "border-box",
-                width: "100%",
-              }}
-            >
-              <code
-                style={{
-                  display: "block",
-                  whiteSpace: "pre-wrap",
-                  wordBreak: "break-word",
-                  fontSize: "0.8rem",
-                }}
-                className="text-xs sm:text-sm"
-              >
+          {({ tokens, getLineProps, getTokenProps }) => (
+            <pre className="px-2 sm:px-4 py-3 text-sm m-0 max-w-full overflow-x-hidden w-full rounded-none box-border">
+              <code className="text-xs sm:text-sm block whitespace-pre-wrap">
                 {tokens.map((line, i) => (
                   <div key={i} {...getLineProps({ line })}>
                     {line.map((token, key) => (

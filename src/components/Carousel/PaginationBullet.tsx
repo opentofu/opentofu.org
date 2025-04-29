@@ -1,5 +1,4 @@
 import React from "react";
-import { useColorMode } from "@docusaurus/theme-common";
 import clsx from "clsx";
 
 interface PaginationBulletProps {
@@ -13,17 +12,9 @@ export const PaginationBullet = ({
   onClick,
   slideNumber,
 }: PaginationBulletProps) => {
-  const { colorMode } = useColorMode();
-  const isDark = colorMode === "dark";
   const className = clsx(
     "w-2.5 h-2.5 rounded-full transition-colors",
-    isActive
-      ? isDark
-        ? "bg-gray-300"
-        : "bg-gray-700"
-      : isDark
-        ? "bg-gray-700"
-        : "bg-gray-400",
+    isActive ? "bg-gray-700 dark:bg-gray-300" : "bg-gray-400 dark:bg-gray-700",
   );
 
   return (

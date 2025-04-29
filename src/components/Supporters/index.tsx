@@ -1,14 +1,17 @@
 import React from "react";
-import { useColorMode } from "@docusaurus/theme-common";
 import { ENGINEERING_CONTRIBUTORS, SERVICE_SPONSORS } from "./supporters";
 import contributorStats from "../../data/contributor-stats.json";
 
-function SupporterLogo({ supporter }) {
-  const { colorMode } = useColorMode();
+interface SupporterLogoProps {
+  supporter: {
+    name: string;
+    url: string;
+    logoDark: string;
+    logoLight: string;
+  };
+}
 
-  const logoSrc =
-    colorMode === "dark" ? supporter.logoLight : supporter.logoDark;
-
+function SupporterLogo({ supporter }: SupporterLogoProps) {
   return (
     <a
       href={supporter.url}
@@ -17,18 +20,19 @@ function SupporterLogo({ supporter }) {
       className="transition-transform hover:scale-105 focus:scale-105 w-full"
       aria-label={`Visit ${supporter.name} website`}
     >
-      <div className="bg-white dark:bg-blue-900/30 shadow-md rounded-xl p-6 border border-gray-100 dark:border-blue-800/50 flex items-center justify-center h-24 w-full sm:w-48 mx-auto">
-        {logoSrc ? (
+      <div className="bg-white dark:bg-blue-900/30 shadow-md rounded-xl p-6 border border-gray-100 dark:border-blue-800/50 flex items-center justify-center h-24 w-full sm:w-48 mx-auto transition-colors">
+        <>
           <img
-            src={logoSrc}
+            src={supporter.logoDark}
             alt={`${supporter.name} logo`}
-            className="max-w-full max-h-full"
+            className="dark:hidden max-w-full max-h-full"
           />
-        ) : (
-          <span className="text-xl font-bold text-gray-800 dark:text-gray-200">
-            {supporter.name}
-          </span>
-        )}
+          <img
+            src={supporter.logoLight}
+            alt={`${supporter.name} logo`}
+            className="hidden dark:block max-w-full max-h-full"
+          />
+        </>
       </div>
     </a>
   );

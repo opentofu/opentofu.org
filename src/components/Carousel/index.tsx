@@ -1,4 +1,3 @@
-import { useColorMode } from "@docusaurus/theme-common";
 import React, { useState } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
@@ -19,7 +18,6 @@ interface CarouselProps {
 }
 
 export default function Carousel({ items }: CarouselProps) {
-  const { colorMode } = useColorMode();
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [swiper, setSwiper] = useState<SwiperClass>(null);
 
@@ -36,12 +34,7 @@ export default function Carousel({ items }: CarouselProps) {
   };
 
   return (
-    <div
-      id="carousel"
-      className={`${
-        colorMode === "dark" ? "dark" : "light"
-      } carousel-container w-full h-full relative`}
-    >
+    <div id="carousel" className="carousel-container w-full h-full relative">
       <Swiper
         onSwiper={setSwiper}
         modules={[Navigation, Pagination, Autoplay]}
