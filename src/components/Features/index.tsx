@@ -56,7 +56,7 @@ function FeatureShowcase({
           <h3 className="text-2xl font-bold">{title}</h3>
           <a
             href={versionHref}
-            className={`inline-flex px-3 py-1 text-sm font-medium rounded-full hover:opacity-90 transition-opacity ${color}`}
+            className={`inline-flex px-3 py-1 text-sm font-medium rounded-full hover:opacity-90 transition-opacity ${color} hover:text-white`}
           >
             {`v${version}`}
           </a>
