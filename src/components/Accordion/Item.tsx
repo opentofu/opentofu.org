@@ -23,8 +23,8 @@ const classNames = [
   "max-w-none",
   "text-gray-900",
   "dark:text-gray-100",
-  "pb-6",
-  "px-6",
+  "pb-4 sm:pb-6",
+  "px-3 sm:px-6",
   "leading-6",
   "mt-2",
   "text-base",
@@ -105,7 +105,7 @@ const AccordionItem = ({
     >
       <summary
         onClick={handleItemClick}
-        className="list-none py-6 px-6 group-open:pb-0 text-xl flex gap-2 cursor-pointer flex-row items-center justify-between font-bold marker:[font-size:0px]"
+        className="list-none py-4 px-3 sm:py-6 sm:px-6 group-open:pb-0 text-xl flex gap-2 cursor-pointer flex-row items-center justify-between font-bold marker:[font-size:0px]"
       >
         {summary}
         <svg

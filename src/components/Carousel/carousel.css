@@ -1,0 +1,34 @@
+/* Swiper core styles with !important to override Swiper's defaults */
+.carousel-container .swiper {
+  width: 100% !important;
+  height: calc(100% - 60px) !important;
+}
+
+.carousel-container .swiper-wrapper {
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.carousel-container .swiper-slide {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 640px) {
+  .carousel-container .swiper {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .carousel-container .swiper-wrapper {
+    width: 100% !important;
+  }
+
+  .carousel-container .swiper-slide {
+    width: 100% !important;
+  }
+}

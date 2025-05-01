@@ -96,12 +96,28 @@ body {
   display: none;
 }
 
-.DocSearch .DocSearch-Hit[aria-selected="true"] a {
-  background-color: var(--docsearch-highlight-background-selected);
+.DocSearch-Button {
+  border-radius: 4px !important;
+  height: 32px !important;
+  padding: 0 12px !important;
+  margin: 0 !important;
+  border: 1px solid transparent !important;
+  transition: all 0.2s ease !important;
 }
 
-.DocSearch .DocSearch-Hits mark {
-  color: var(--docsearch-highlight-mark-color);
+.DocSearch-Button:hover {
+  background: var(--docsearch-searchbox-background) !important;
+  box-shadow: 0 0 0 0 !important;
+  border: 1px solid rgba(125, 125, 125, 0.2) !important;
+}
+
+.DocSearch-Button-Placeholder {
+  font-size: 14px !important;
+  padding: 0 8px 0 6px !important;
+}
+
+.DocSearch .DocSearch-Hit[aria-selected="true"] a {
+  background-color: var(--docsearch-highlight-background-selected);
 }
 
 .link:hover {
@@ -118,4 +134,64 @@ body {
 
 h1 {
   text-wrap: balance;
+}
+
+div[class*="announcementBar"] {
+  position: relative !important;
+  top: 6px !important;
+  border-bottom: none !important;
+}
+
+.announcement-bar {
+  min-height: 48px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+html[data-theme="dark"] .announcement-bar-link {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+html[data-theme="dark"] .announcement-bar-link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+html[data-theme="light"] .announcement-bar-link {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+html[data-theme="light"] .announcement-bar-link:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.announcement-bar-link {
+  display: block;
+  width: 100%;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+
+.announcement-bar-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 15px;
+  padding: 6px 0;
+}
+
+.announcement-arrow {
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  margin-left: 4px;
+  transition: transform 0.2s ease;
+}
+
+.announcement-bar-link:hover .announcement-arrow {
+  transform: translateX(0.25rem);
 }

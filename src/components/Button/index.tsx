@@ -13,7 +13,7 @@ export default function Button({
   ...rest
 }: ButtonProps) {
   const computedClassName = clsx(
-    "border font-bold h-12 px-6 flex items-center hover:no-underline transition-colors",
+    "border font-bold h-12 px-6 flex items-center justify-center hover:no-underline transition-colors",
     variant === "primary" &&
       "bg-brand-500 text-gray-900 hover:bg-brand-600 border-brand-500 hover:border-brand-600 hover:text-gray-900",
     variant === "secondary" &&

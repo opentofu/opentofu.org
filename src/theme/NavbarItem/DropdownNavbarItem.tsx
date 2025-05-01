@@ -57,7 +57,7 @@ function DropdownNavbarItemDesktop({
         }
       />
       <nav
-        className="absolute shadow-2xl bg-gray-150 dark:bg-gray-700 p-3 gap-3 hidden group-hover:flex peer-aria-expanded:flex flex-col w-36"
+        className="absolute shadow-2xl bg-gray-150 dark:bg-gray-700 p-3 gap-3 hidden group-hover:flex peer-aria-expanded:flex flex-col w-36 z-50"
         role="navigation"
         aria-labelledby={id}
       >

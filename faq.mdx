@@ -1,26 +1,12 @@
-<AccordionItem id="what-is-opentofu" summary="What is OpenTofu?" open highlight>
+<AccordionItem id="why-was-opentofu-created" summary="Why was OpenTofu created?" open highlight>
 
-OpenTofu is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. OpenTofu can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features.
-
-</AccordionItem>
-
-<AccordionItem id="why-was-opentofu-created" summary="Why was OpenTofu created?" highlight>
-
-OpenTofu is a Terraform fork, created as an initiative of Gruntwork, Spacelift, Harness, Env0, Scalr, and others, in response to HashiCorp’s switch from an open-source license to the BUSL. The initiative has many supporters, all of whom are listed [here](/supporters).
+OpenTofu is a Terraform fork, created as an initiative of Gruntwork, Spacelift, Harness, Env0, Scalr, and others, in response to HashiCorp's switch from an open-source license to the BUSL. The initiative has many supporters, all of whom are listed [here](/supporters).
 
 The BUSL and the additional use grant outlined by the HashiCorp team are ambiguous, which makes it challenging for companies, vendors, and developers using Terraform to decide whether their actions could be interpreted as being outside the permitted scope of use.
 
-Hashicorp’s FAQs give some peace of mind to end users and system integrators for now, but the licensing terms’ implications for future usage are unclear. The possibility that the company’s definition of _“competitive”_ or _“embedding”_ could change or the license could be further modified to make it closed source prompts uncertainty for Terraform users.
+HashiCorp's FAQs give some peace of mind to end users and system integrators for now, but the licensing terms' implications for future usage are unclear. The possibility that the company's definition of _"competitive"_ or _"embedding"_ could change or the license could be further modified to make it closed source prompts uncertainty for Terraform users.
 
-We firmly believe that Terraform should remain open-source because it is a project many companies use, and many contributors have made Terraform what it is today. Terraform’s success would not have been possible without the community’s work to build many supporting projects around it.
-
-</AccordionItem>
-
-<AccordionItem id="opentofu-terraform-differences" summary="What are the differences between OpenTofu and Terraform?" highlight>
-
-On the technical level, OpenTofu 1.6.x is very similar feature-wise to Terraform 1.6.x. In the future, the projects feature sets will diverge.
-
-The other main difference is that OpenTofu is open-source, and its goal is to be driven in a collaborative way with no single company being able to dictate the roadmap.
+We firmly believe that Terraform should remain open-source because it is a project many companies use, and many contributors have made Terraform what it is today. Terraform's success would not have been possible without the community's work to build many supporting projects around it.
 
 </AccordionItem>
 
@@ -32,11 +18,11 @@ Initial impressions suggest you could use either OpenTofu or Terraform for perso
 
 #### Consultants
 
-A consultant should offer their clients the best possible solution that aligns with their budget. OpenTofu will be on par with Terraform, and one of the project’s central objectives is to listen to the community’s issues, so it makes sense to recommend a project that will always stay open-source. Anyone who has used Terraform in the last eight years has probably come across issues that took some time to be resolved. The large community involved in developing OpenTofu means this will no longer be the case.
+A consultant should offer their clients the best possible solution that aligns with their budget. OpenTofu will be on par with Terraform, and one of the project's central objectives is to listen to the community's issues, so it makes sense to recommend a project that will always stay open-source. Anyone who has used Terraform in the last eight years has probably come across issues that took some time to be resolved. The large community involved in developing OpenTofu means this will no longer be the case.
 
 #### Companies
 
-Companies will encounter more difficulties with the situation. Switching to a new project carries risks, but staying with a project that changes its license without warning is far riskier. This risk is minimized by giving OpenTofu to the Linux Foundation, and OpenTofu’s aim of maintaining feature parity with Terraform for future releases reduces the technical risks.
+Companies will encounter more difficulties with the situation. Switching to a new project carries risks, but staying with a project that changes its license without warning is far riskier. This risk is minimized by giving OpenTofu to the Linux Foundation, and OpenTofu's aim of maintaining feature parity with Terraform for future releases reduces the technical risks.
 
 </AccordionItem>
 
@@ -48,19 +34,17 @@ If you're missing a feature in OpenTofu that's available in Terraform, feel free
 
 </AccordionItem>
 
-<AccordionItem id="terraform-replacement" summary="Can I use OpenTofu as a drop-in replacement for Terraform?  Is OpenTofu suitable for production use?" highlight>
-
-Right now, OpenTofu is a drop-in replacement for Terraform, as it's compatible with Terraform versions 1.5.x and most of 1.6.x. You don’t need to make any changes to your code to ensure compatibility.
-
-OpenTofu is suitable for production use cases without any exception.
-
-Please see [our migration guide](/docs/intro/migration) for more information.
-
-</AccordionItem>
-
 <AccordionItem id="state-file" summary="Will OpenTofu work with my existing state file?">
 
 OpenTofu will work with existing state files up to those created with Terraform versions 1.5.x.
+
+</AccordionItem>
+
+<AccordionItem id="registry" summary="Where can I find providers and modules for OpenTofu?" highlight>
+
+The OpenTofu Registry hosts thousands of providers and modules that are compatible with OpenTofu. These include all the popular cloud providers, third-party services, and community-maintained resources you might need for your infrastructure.
+
+You can search for providers, modules, and their documentation at [search.opentofu.org](https://search.opentofu.org). The registry provides seamless access to the same ecosystem of providers and modules that you're familiar with, ensuring you have all the tools needed to build and manage your infrastructure.
 
 </AccordionItem>
 
