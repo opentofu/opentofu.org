@@ -332,7 +332,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.oneLight,
       darkTheme: prismThemes.oneDark,
-      additionalLanguages: ["hcl", "powershell"],
+      additionalLanguages: ["hcl", "powershell", "bash"],
     },
     image: "/img/og.png",
   } satisfies Preset.ThemeConfig,
