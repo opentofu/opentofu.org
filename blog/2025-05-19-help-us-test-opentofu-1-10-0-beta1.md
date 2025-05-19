@@ -14,6 +14,20 @@ Do not test this release on production projects! This is not a stable release.
 
 This post focuses primarily on what's new and improved since the [1.10.0-alpha2 release](/blog/help-us-test-opentofu-1-10-0-alpha2/). If you're new to the 1.10.0 release cycle, we recommend checking out our previous posts about [alpha1](/blog/help-us-test-opentofu-1-10-0-alpha1/) and [alpha2](/blog/help-us-test-opentofu-1-10-0-alpha2/) to learn about major features like OCI Registry integration, native S3 locking, and OpenTelemetry tracing.
 
+## Download and Installation
+
+The beta release is available from the [GitHub Releases page](https://github.com/opentofu/opentofu/releases/tag/v1.10.0-beta1). Select the appropriate file for your platform:
+
+| Platform              | Download link                                                                                                                                       |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Windows (64-bit)      | [tofu_1.10.0-beta1_windows_amd64.zip](https://github.com/opentofu/opentofu/releases/download/v1.10.0-beta1/tofu_1.10.0-beta1_windows_amd64.zip)     |
+| macOS (Apple Silicon) | [tofu_1.10.0-beta1_darwin_arm64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.10.0-beta1/tofu_1.10.0-beta1_darwin_arm64.tar.gz) |
+| macOS (Intel)         | [tofu_1.10.0-beta1_darwin_amd64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.10.0-beta1/tofu_1.10.0-beta1_darwin_amd64.tar.gz) |
+| Linux (AMD64)         | [tofu_1.10.0-beta1_linux_amd64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.10.0-beta1/tofu_1.10.0-beta1_linux_amd64.tar.gz)   |
+| Linux (ARM64)         | [tofu_1.10.0-beta1_linux_arm64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.10.0-beta1/tofu_1.10.0-beta1_linux_arm64.tar.gz)   |
+
+After downloading, unpack the archive to find your `tofu` binary. For verified downloads, you can also use the [standalone installer](https://opentofu.org/docs/intro/install/standalone/) with signature verification.
+
 ## What's New in 1.10.0-beta1
 
 ### OCI Registry Enhancements
@@ -200,20 +214,6 @@ removed {
 ```
 
 For more details, see our [alpha1](/blog/help-us-test-opentofu-1-10-0-alpha1/) and [alpha2](/blog/help-us-test-opentofu-1-10-0-alpha2/) blog posts.
-
-## Download and Installation
-
-The beta release is available from the [GitHub Releases page](https://github.com/opentofu/opentofu/releases/tag/v1.10.0-beta1). Select the appropriate file for your platform:
-
-| Platform              | Download link                                                                                                                                       |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Windows (64-bit)      | [tofu_1.10.0-beta1_windows_amd64.zip](https://github.com/opentofu/opentofu/releases/download/v1.10.0-beta1/tofu_1.10.0-beta1_windows_amd64.zip)     |
-| macOS (Apple Silicon) | [tofu_1.10.0-beta1_darwin_arm64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.10.0-beta1/tofu_1.10.0-beta1_darwin_arm64.tar.gz) |
-| macOS (Intel)         | [tofu_1.10.0-beta1_darwin_amd64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.10.0-beta1/tofu_1.10.0-beta1_darwin_amd64.tar.gz) |
-| Linux (AMD64)         | [tofu_1.10.0-beta1_linux_amd64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.10.0-beta1/tofu_1.10.0-beta1_linux_amd64.tar.gz)   |
-| Linux (ARM64)         | [tofu_1.10.0-beta1_linux_arm64.tar.gz](https://github.com/opentofu/opentofu/releases/download/v1.10.0-beta1/tofu_1.10.0-beta1_linux_arm64.tar.gz)   |
-
-After downloading, unpack the archive to find your `tofu` binary. For verified downloads, you can also use the [standalone installer](https://opentofu.org/docs/intro/install/standalone/) with signature verification.
 
 ## Compatibility Notes
 
