@@ -72,20 +72,26 @@ If this is your first look at OpenTofu 1.10.0, here's a concise overview of the 
 
 Full integration with OCI registries for both provider and module distribution, valuable for organizations with private infrastructure-as-code components, air-gapped environments, or enhanced security requirements.
 
+Use module packages from OCI registries directly as a new [module source type](/docs/language/modules/sources/):
+
 ```hcl
-# Configure OCI registry mirrors in your CLI configuration:
+module "vpc" {
+  source = "oci://example.com/modules/vpc/aws"
+}
+```
+
+Configure OCI registry provider mirrors in your [CLI configuration](/docs/cli/config/config-file):
+
+```hcl
 provider_installation {
   oci_mirror {
     repository_template = "example.com/opentofu-providers/${namespace}/${type}"
     include             = ["registry.opentofu.org/*/*"]
   }
 }
-
-# Use OCI modules directly in your configuration:
-module "vpc" {
-  source = "oci://example.com/modules/vpc/aws"
-}
 ```
+
+You can find more information on OpenTofu's OCI artifact formats, and instructions for building your own artifacts, in [OCI Registry Integrations](/docs/main/cli/oci_registries/).
 
 ### Native S3 Locking
 
