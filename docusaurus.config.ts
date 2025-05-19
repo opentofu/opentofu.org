@@ -212,7 +212,7 @@ const config: Config = {
     announcementBar: {
       id: "opentofu-ga",
       content:
-        '<a href="/blog/help-us-test-opentofu-1-10-0-alpha2/" class="announcement-bar-link"><div class="announcement-bar-content">🚀 OpenTofu 1.10.0-alpha2 is released! <span class="announcement-arrow">→</span></div></a>',
+        '<a href="/blog/help-us-test-opentofu-1-10-0-beta1/" class="announcement-bar-link"><div class="announcement-bar-content">🚀 OpenTofu 1.10.0 Beta1 is released! <span class="announcement-arrow">→</span></div></a>',
       backgroundColor: "#00000000",
       isCloseable: false,
     },
@@ -332,7 +332,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.oneLight,
       darkTheme: prismThemes.oneDark,
-      additionalLanguages: ["hcl", "powershell"],
+      additionalLanguages: ["hcl", "powershell", "bash"],
     },
     image: "/img/og.png",
   } satisfies Preset.ThemeConfig,
