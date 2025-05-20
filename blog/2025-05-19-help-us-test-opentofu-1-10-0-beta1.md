@@ -146,6 +146,64 @@ tofu apply -target-file=targets.txt
 tofu plan -exclude-file=excludes.txt
 ```
 
+### Support for marking variables and outputs as deprecated
+:::warning
+This feature is considered experimental and the final UX may change in the future.
+:::
+
+Module authors can now mark variables and outputs as deprecated which will raise a warning to the users of the module.
+
+This can be easily done by applying the newly supported `deprecated` attribute to the `variable` and `output` blocks.
+
+A `variable` block marked as `deprecated`:
+```hcl
+variable "input" {
+  type       = string
+  default    = "input value"
+  deprecated = "This variable is deprecated. This will be removed entirely in a future version of the module."
+}
+
+```
+will generate a warning like the following:
+```
+│ Warning: Variable marked as deprecated by the module author
+│ 
+│   on main.tf line 14, in module "call":
+│   14:   input = "input value from call"
+│ 
+│ Variable "input" is marked as deprecated with the following message:
+│ This variable is deprecated. This will be removed entirely in a future version of the module.
+│ 
+│ (and one more similar warning elsewhere)
+```
+
+An `output` block marked as `deprecated`:
+```hcl
+output "out" {
+  value      = "out value"
+  deprecated = "This output is deprecated and will be removed in a future version"
+}
+```
+will generate a warning like the following:
+```
+│ Warning: Value derived from a deprecated source
+│
+│   on main.tf line 32, in locals:
+│   32:   string = module.call.out
+│
+│ This value is derived from module.call.out, which is deprecated with the following message:
+│
+│ This output is deprecated and will be removed in a future version
+│
+│ (and one more similar warning elsewhere)
+```
+
+For more details regarding this feature, check the official docs on this topic:
+* [variables](https://opentofu.org/docs/main/language/values/variables/#marking-variable-as-deprecated)
+* [outputs](https://opentofu.org/docs/main/language/values/outputs/#deprecated--marking-output-as-deprecated)
+* [module calls](https://opentofu.org/docs/main/language/modules/develop/refactoring/#module-variables-and-outputs)
+
+
 ### Other Major Features
 
 #### External Key Providers for State Encryption
