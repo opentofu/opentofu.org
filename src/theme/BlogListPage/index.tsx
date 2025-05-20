@@ -10,16 +10,18 @@ import { Props } from "@theme/BlogListPage";
 
 export default function BlogListPage(props: Props) {
   const { metadata, items } = props;
-
   const { blogDescription, blogTitle } = metadata;
+
+  const lastPost = items[0];
+  const otherPosts = items.slice(1);
 
   return (
     <>
       <PageMetadata title={blogTitle} description={blogDescription} />
       <SearchMetadata tag="blog_posts_list" />
       <BlogLayout>
-        <BlogLastPost item={items[0]} />
-        <BlogListItems items={items} />
+        <BlogLastPost item={lastPost} />
+        <BlogListItems items={otherPosts} />
         <BlogListPaginator metadata={metadata} />
       </BlogLayout>
     </>
