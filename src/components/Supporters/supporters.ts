@@ -28,7 +28,7 @@ export const ENGINEERING_CONTRIBUTORS = [
     name: "Scalr",
     logoLight: "/img/supporters/scalr-light.svg",
     logoDark: "/img/supporters/scalr-dark.svg",
-    url: "https://www.scalr.com/",
+    url: "https://scalr.com/",
   },
 ];
 
