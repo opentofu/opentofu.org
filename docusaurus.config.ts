@@ -101,7 +101,7 @@ const config: Config = {
         },
         docs: {
           includeCurrentVersion: false,
-          lastVersion: "v1.9",
+          lastVersion: "v1.10",
           docVersionRootComponent: "@theme/DocVersionRoot",
           versions: {
             "v1.6": {
@@ -120,6 +120,11 @@ const config: Config = {
             },
             "v1.9": {
               label: "1.9.x",
+              path: "v1.9",
+              banner: "none",
+            },
+            "v1.10": {
+              label: "1.10.x",
               path: "",
             },
             main: {
@@ -210,9 +215,9 @@ const config: Config = {
       },
     },
     announcementBar: {
-      id: "opentofu-ga",
+      id: "opentofu-1-10-ga",
       content:
-        '<a href="/blog/help-us-test-opentofu-1-10-0-beta1/" class="announcement-bar-link"><div class="announcement-bar-content">🚀 OpenTofu 1.10.0 Beta1 is released! <span class="announcement-arrow">→</span></div></a>',
+        '<a href="/blog/opentofu-1-10-0/" class="announcement-bar-link"><div class="announcement-bar-content">🎉 OpenTofu 1.10.0 is here! A Well-Seasoned Release <span class="announcement-arrow">→</span></div></a>',
       backgroundColor: "#00000000",
       isCloseable: false,
     },
@@ -267,8 +272,12 @@ const config: Config = {
           position: "left",
           items: [
             {
-              label: "v1.9.x (current)",
+              label: "v1.10.x (current)",
               href: "/docs/",
+            },
+            {
+              label: "v1.9.x",
+              href: "/docs/v1.9/",
             },
             {
               label: "v1.8.x",
