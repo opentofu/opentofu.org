@@ -18,3 +18,7 @@
 	path = opentofu-repo/v1.9
 	url = https://github.com/opentofu/opentofu
 	branch = v1.9
+[submodule "opentofu-repo/v1.10"]
+	path = opentofu-repo/v1.10
+	url = https://github.com/opentofu/opentofu
+	branch = v1.10
