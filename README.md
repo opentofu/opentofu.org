@@ -5,6 +5,8 @@
 </picture>
 
 ## Stack
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fopentofu%2Fopentofu.org.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fopentofu%2Fopentofu.org?ref=badge_shield)
+
 
 - [Docusaurus]
 - [React]
@@ -76,3 +78,7 @@ When you contribute code to OpenTofu, do not forget to sign off your commits as 
 [react]: https://react.dev
 [tailwind css]: https://tailwindcss.com
 [typescript]: https://www.typescriptlang.org
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fopentofu%2Fopentofu.org.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fopentofu%2Fopentofu.org?ref=badge_large)
