@@ -180,11 +180,6 @@ const config: Config = {
             from: "/docs/cli/install/yum",
             to: "/docs/intro/install/rpm",
           },
-          // TODO: This will be possible after upgrading to Docusaurus 3
-          // {
-          //   to: "https://join.slack.com/t/opentofucommunity/shared_invite/zt-24ma55j2u-a2DlPHCoMqlJkCEHL5DX_w",
-          //   from: "/slack",
-          // },
         ],
       },
     ],
@@ -331,7 +326,7 @@ const config: Config = {
         },
         {
           type: "custom-social-icon-link-navbar-item",
-          href: "https://opentofu.org/slack/",
+          href: "/slack/",
           position: "right",
           name: "slack",
           label: "Join us on Slack",
