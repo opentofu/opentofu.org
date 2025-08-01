@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Headline from "../Headline";
-import LFLogo from "../LFLogo";
+import CNCFLogo from "../CNCFLogo";
 import { Examples } from "../Examples";
 import PatternBg from "../PatternBg";
 import Button from "../Button";
@@ -31,7 +31,7 @@ export default function Hero() {
       <div className="container mx-auto px-4 md:px-8 py-16 min-h-[calc(100vh-8rem)] flex flex-col lg:flex-row items-center justify-center">
         <div className="lg:w-1/2 lg:pr-16">
           <div className="flex justify-start mb-8">
-            <LFLogo />
+            <CNCFLogo />
           </div>
           <div className="text-left">
             <Headline>Open-Source Infrastructure as Code</Headline>

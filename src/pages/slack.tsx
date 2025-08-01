@@ -3,7 +3,7 @@ import Layout from "@theme/Layout";
 import Headline from "../components/Headline";
 import PatternBg from "../components/PatternBg";
 import Button from "../components/Button";
-import LFLogo from "../components/LFLogo";
+import CNCFLogo from "../components/CNCFLogo";
 import Link from "@docusaurus/Link";
 
 export default function Slack() {
@@ -15,7 +15,7 @@ export default function Slack() {
         <div className="container mx-auto px-4 md:px-8 py-16 min-h-[calc(100vh-8rem)] flex flex-col lg:flex-row items-center justify-center">
           <div className="lg:w-1/2 lg:pr-16">
             <div className="flex justify-start mb-8">
-              <LFLogo />
+              <CNCFLogo />
             </div>
             <div className="text-left">
               <Headline>Join the OpenTofu Community on Slack</Headline>
