@@ -15,11 +15,13 @@ export default function BlogListItem({ item }: BlogListItemProps) {
 
   return (
     <div className="flex flex-col gap-6">
+      {false &&
       <div className="flex-1">
         <Link to={permalink}>
           <img src={item.content.frontMatter.image} alt={title} />
         </Link>
       </div>
+      }
       <div className="flex-1 flex flex-col justify-center items-start">
         <time
           dateTime={date}

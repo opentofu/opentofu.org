@@ -20,11 +20,13 @@ export default function BlogLastPost({ item }: BlogLastPostProps) {
       <div className="max-w-7xl mx-auto px-4">
         <article>
           <div className="flex flex-col md:flex-row gap-6">
+	    { false &&
             <div className="flex-1">
               <Link to={permalink}>
                 <img src={item.content.frontMatter.image} alt={title} />
               </Link>
             </div>
+	    }
             <div className="flex-1 flex flex-col justify-center items-start">
               <time
                 dateTime={date}
