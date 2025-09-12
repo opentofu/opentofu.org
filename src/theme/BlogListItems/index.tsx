@@ -16,7 +16,7 @@ export default function BlogListItems({ items }: BlogListItemsProps) {
         <BlogListItem
           item={item}
           key={item.content.metadata.permalink}
-          isLatest={index === 0}
+          isLatestPost={index === 0}
         />
       ))}
     </div>
