@@ -42,7 +42,7 @@ This is geared toward sending ephemeral data, such as passwords and keys, into r
 
 ### Further Reading
 
-This blog post barely scratches the surface of what is now possible with Ephemeral and Write-Only, peruse our latest docs for a more [complete overview and in-depth examples](/docs/main/language/ephemerality/)!
+This blog post barely scratches the surface of what is now possible with Ephemeral and Write-Only.  Peruse our latest docs for a more [complete overview and in-depth examples](/docs/main/language/ephemerality/)!
 
 ## Providing feedback
 
