@@ -19,6 +19,7 @@ module.exports = {
     "react/no-unescaped-entities": ["error", { forbid: [">", "}"] }],
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/no-static-element-interactions": "off",
+    "max-len": ["error", { code: 200 }],
   },
   overrides: [
     {
