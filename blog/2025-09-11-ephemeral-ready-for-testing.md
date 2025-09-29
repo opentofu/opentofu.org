@@ -19,7 +19,7 @@ The nightly builds are available exclusively from the [OpenTofu Nightly Reposito
 
 ## Ephemeral Overview
 
-A long standing issue with OpenTofu and it's predecessor has been the storage of sensitive data within the state. Prior to Ephemeral, this data contained everything that OpenTofu knows about the resources it manages. This includes sensitive values, keys, and other secrets that could lead to security incidents if leaked. The introduction of Ephemeral and Write-Only allows careful configuration to prevent storing this secret data and ensures that these values only exist within the duration of a single execution of the `tofu` binary. It also allows for transient resources, like network tunnels to be made available during portions of the OpenTofu Plan/Apply flow.
+A long-standing issue with OpenTofu and its predecessor has been the storage of sensitive data within the state. Prior to Ephemeral, this data contained everything that OpenTofu knows about the resources it manages. This includes sensitive values, keys, and other secrets that could lead to security incidents if leaked. The introduction of Ephemeral and Write-Only allows for careful configuration to prevent storing this secret data, ensuring that these values only exist within the duration of a single execution of the `tofu` binary. It also allows for transient resources, such as network tunnels, to be made available during specific portions of the OpenTofu Plan/Apply flow.
 
 ### Prior Solutions
 
