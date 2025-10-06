@@ -1,6 +1,13 @@
 ---
 title: Fidelity Investments Shares Its Migration Story from Terraform to OpenTofu
 slug: fidelity-investment-migration
+authors:
+  - name: James Humphries
+    title: Maintainer @ OpenTofu /  Head Of OpenSource @ Spacelift
+    socials:
+      email: jamesh@spacelift.io
+  - name: David Jackson
+    title: Vice President, Cloud Automation and Tooling @ Fidelity Investments
 tags:
   - migration
 ---
@@ -12,8 +19,6 @@ One of the most common questions I get — whether on forums, in Slack, or at ev
 David Jackson, VP of Cloud Automation and Tooling at Fidelity Investments, took the stage to share how one of the world’s largest financial services companies navigated a full-scale migration from Terraform to OpenTofu. [The session](https://www.youtube.com/watch?v=2FQQOIEgZmU&list=PLj6h78yzYM2P1WUOx9Ny6Q3JJxiAs1A3M&index=10) sparked instant interest for its transparency, practicality, and relevance to real-world teams managing complex infrastructure.
 
 I followed up with David to explore his OpenTofu experience in greater detail. If you're exploring OpenTofu for your organization, I hope you will find this conversation essential reading.
-
----
 
 **Q: David, let’s start with scale. How big is the footprint of Terraform and OpenTofu at Fidelity today?**
 
