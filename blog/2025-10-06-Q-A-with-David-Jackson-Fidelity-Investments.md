@@ -63,3 +63,6 @@ I followed up with David to explore his OpenTofu experience in greater detail. I
 ---
 
 At the scale Fidelity operates, migrations like this don’t happen without intention. What stands out most in David’s approach is not just the technical execution, but the trust-building, the clear-eyed assessment of what really matters, and the willingness to go deep with both tooling and teams. For those navigating similar decisions, it’s a reminder that success often comes less from the tooling itself and more from the way it’s introduced, supported, and led.
+
+_Disclaimer: OpenTofu and Fidelity Investments are separate companies.  Unless otherwise noted, the opinions provided are those of the speakers, not necessarily those of Fidelity Investments or its affiliates._
+
