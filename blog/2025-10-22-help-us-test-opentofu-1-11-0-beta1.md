@@ -54,7 +54,7 @@ ephemeral "aws_secretsmanager_random_password" "password" {
 }
 
 resource "kubernetes_secret_v1" "credentials" {
-  metadata = {
+  metadata {
     name = "admin"
     namespace = "my-app"
   }
@@ -72,7 +72,7 @@ In this case, we're using the `aws_secretsmanager_random_password` ephemeral res
 
 The value of this password will never be stored in the plan or the state by OpenTofu. Because OpenTofu does not store the value in the state the resource will only update it's password value when the revision number is incremented.
 
-You can find more in our documentation for [Ephemerality](/docs/main/language/ephemerality/ephemeral-resources/) or [Write-Only Attributes](/docs/main/language/ephemerality/write-only-attributes/)
+You can find more in our documentation for [Ephemerality](/docs/main/language/ephemerality/ephemeral-resources/) and [Write-Only Attributes](/docs/main/language/ephemerality/write-only-attributes/)
 
 ### The `enabled` Meta-Argument
 
@@ -231,7 +231,7 @@ Before upgrading, please note these important compatibility points and breaking 
   - SHA-1 signatures are no longer accepted for TLS or SSH connections
   - SSH certificates must comply with the `draft-miller-ssh-cert-03` specification
 
-For complete details, review the [full changelog](https://github.com/opentofu/opentofu/blob/v1.11.0-beta1/CHANGELOG.md) (link to be added once branch is created).
+For complete details, review the [full changelog](https://github.com/opentofu/opentofu/blob/v1.11.0-beta1/CHANGELOG.md).
 
 ## Join the Testing Effort
 
