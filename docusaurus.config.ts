@@ -215,9 +215,9 @@ const config: Config = {
       },
     },
     announcementBar: {
-      id: "opentofu-1-10-ga",
+      id: "opentofu-1-11-ga",
       content:
-        '<a href="/blog/opentofu-1-10-0/" class="announcement-bar-link"><div class="announcement-bar-content">🎉 OpenTofu 1.10.0 is here! A Well-Seasoned Release <span class="announcement-arrow">→</span></div></a>',
+        '<a href="/blog/help-us-test-opentofu-1-11-0-beta1/" class="announcement-bar-link"><div class="announcement-bar-content">🎉 OpenTofu 1.11.0 Beta1 is here! <span class="announcement-arrow">→</span></div></a>',
       backgroundColor: "#00000000",
       isCloseable: false,
     },
