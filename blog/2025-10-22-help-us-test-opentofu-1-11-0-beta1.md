@@ -198,7 +198,7 @@ OpenTofu introduced experimental support for external encryption methods and key
 
 <!-- Similar to above, do we wanna gather feedback this way, or a different way? Maybe a discussion is better? I dunno -->
 
-If you're using or considering using state encryption with external key management, please share your feedback through this GitHub Discussion : <https://github.com/orgs/opentofu/discussions/3416>
+If you're using or considering using state encryption with external key management, please share your feedback through [this GitHub Discussion](https://github.com/orgs/opentofu/discussions/3416)
 
 Your input will directly influence whether these features move to stable in OpenTofu 1.11 or need more development time.
 
