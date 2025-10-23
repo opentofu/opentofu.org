@@ -29,7 +29,7 @@ After downloading, unpack the archive to find your `tofu` binary. For verified d
 
 ## What's New in 1.11.0-beta1
 
-### Ephemeral Resources - Beta Release
+### Ephemeral Resources / Write-Only Attributes - Beta Release
 
 Ephemeral resources allow you to work with sensitive data, temporary credentials, and transient infrastructure without persisting them to your state.
 
@@ -72,7 +72,7 @@ In this case, we're using the `aws_secretsmanager_random_password` ephemeral res
 
 The value of this password will never be stored in the plan or the state by OpenTofu. Because OpenTofu does not store the value in the state the resource will only update it's password value when the revision number is incremented.
 
-You can find more in our documentation for [Ephemerality](/docs/main/language/ephemerality/ephemeral-resources/)
+You can find more in our documentation for [Ephemerality](/docs/main/language/ephemerality/ephemeral-resources/) or [Write-Only Attributes](/docs/main/language/ephemerality/write-only-attributes/)
 
 ### The `enabled` Meta-Argument
 
@@ -154,7 +154,7 @@ output "old_endpoint" {
 
 Users will see clear warnings when using deprecated variables or outputs, helping them prepare for future module updates.
 
-For more information, see [marking variable as deprecated](https://opentofu.org/docs/main/language/values/variables/#marking-variable-as-deprecated) and [marking output as deprecated](https://opentofu.org/docs/main/language/values/outputs/#deprecated--marking-output-as-deprecated)
+For more information, see [marking variable as deprecated](/docs/main/language/values/variables/#marking-variable-as-deprecated) and [marking output as deprecated](/docs/main/language/values/outputs/#deprecated--marking-output-as-deprecated)
 
 ### Performance Improvements
 
@@ -200,7 +200,7 @@ OpenTofu introduced experimental support for external encryption methods and key
 
 If you're using or considering using state encryption with external key management, please share your feedback through [this GitHub Discussion](https://github.com/orgs/opentofu/discussions/3416)
 
-Your input will directly influence whether these features move to stable in OpenTofu 1.11 or need more development time.
+Your input will directly influence whether these features move to stable in OpenTofu 1.12 or need more development time.
 
 ## Compatibility Notes
 
