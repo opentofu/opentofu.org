@@ -5,7 +5,7 @@ slug: help-us-test-opentofu-1-11-0-beta1
 
 ## OpenTofu 1.11.0-beta1 is Now Available
 
-We're excited to announce the beta release of OpenTofu 1.11.0! This release brings two highly anticipated features to beta: **Ephemeral Resources** for handling sensitive data without persisting it to state, and the **enabled meta-argument** for conditional resource provisioning.
+We're excited to announce the beta release of OpenTofu 1.11.0! This release brings two highly anticipated features to beta: **Ephemeral Resources** for handling confidential data without persisting it to state, and the **enabled meta-argument** for conditional resource provisioning.
 
 If you've been following along, you may have seen our [announcement about ephemeral support](/blog/ephemeral-ready-for-testing/) when these features became available in nightly builds. This beta release marks the first official preview of these capabilities, along with stabilized module deprecation features and important performance improvements.
 
@@ -31,15 +31,15 @@ After downloading, unpack the archive to find your `tofu` binary. For verified d
 
 ### Ephemeral Resources / Write-Only Attributes - Beta Release
 
-Ephemeral resources allow you to work with sensitive data, temporary credentials, and transient infrastructure without persisting them to your state.
+Ephemeral resources allow you to work with confidential data, temporary credentials, and transient infrastructure without persisting them to your state.
 
-A long-standing challenge with infrastructure-as-code has been the storage of sensitive data within state. This includes passwords, API keys, certificates, and other secrets that could lead to security incidents if leaked. Ephemeral resources solve this problem by ensuring these values only exist during the execution of a single OpenTofu command.
+A long-standing challenge with infrastructure-as-code has been the storage of confidential data within state. This includes passwords, API keys, certificates, and other secrets that could lead to security incidents if leaked. Ephemeral resources solve this problem by ensuring these values only exist during the execution of a single OpenTofu command.
 
 #### Key Benefits
 
-- **Enhanced Security**: Sensitive values never touch your state files
+- **Enhanced Security**: Confidential values never touch your state files
 - **Transient Resources**: Create temporary network tunnels, SSH proxies, or time-limited credentials
-- **Cleaner State Management**: Reduce the amount of sensitive data requiring encryption and protection
+- **Cleaner State Management**: Reduce the amount of confidential data requiring encryption and protection
 
 #### How It Works
 
@@ -181,6 +181,11 @@ terraform {
       Environment = "production"
       Team        = "platform"
     }
+
+    lock_tags = {
+      Environment = "production"
+      Team        = "platform"
+    }
   }
 }
 ```
@@ -191,12 +196,10 @@ OpenTofu introduced experimental support for external encryption methods and key
 
 **We need your feedback!** We're planning to stabilize these features and would love to hear about your experiences:
 
-- Are the `external` method and `key_provider` meeting your needs?
+- Are the `external` method and `external` key_provider meeting your needs?
 - What use cases are you solving with these features?
 - What improvements would make them more useful?
 - Are there any issues or limitations you've encountered?
-
-<!-- Similar to above, do we wanna gather feedback this way, or a different way? Maybe a discussion is better? I dunno -->
 
 If you're using or considering using state encryption with external key management, please share your feedback through [this GitHub Discussion](https://github.com/orgs/opentofu/discussions/3416)
 
@@ -228,9 +231,7 @@ Before upgrading, please note these important compatibility points and breaking 
   - SHA-1 signatures are no longer accepted for TLS or SSH connections
   - SSH certificates must comply with the `draft-miller-ssh-cert-03` specification
 
-<!-- TODO: Update this link once the 1.11.0-beta1 tag/branch is created -->
-
-For complete details, review the full changelog (link to be added once branch is created).
+For complete details, review the [full changelog](https://github.com/opentofu/opentofu/blob/v1.11.0-beta1/CHANGELOG.md) (link to be added once branch is created).
 
 ## Join the Testing Effort
 
@@ -240,6 +241,6 @@ Your testing and feedback are crucial to ensuring that these new capabilities wo
 - **The `enabled` meta-argument**: Is this pattern more intuitive than `count`? Are there edge cases we should consider?
 - **Encryption features**: Are the experimental external encryption features ready for stabilization?
 
-If you have a **non-production** environment where you could test any of these capabilities, we'd appreciate your help. Even if everything works perfectly, please share your testing experiences through [GitHub issues](https://github.com/opentofu/opentofu/issues/new/choose) or join the conversation in the [OpenTofu Slack](https://opentofu.org/slack/).
+If you have a **non-production** environment where you could test any of these capabilities, we'd appreciate your help. Even if everything works perfectly, please share your testing experiences through [this GitHub Discussion](https://github.com/orgs/opentofu/discussions/3419) or join the conversation in the [#opentofu channel in the CNCF slack workspace](https://opentofu.org/slack/).
 
 Thank you for your continued support of the OpenTofu project!
