@@ -72,7 +72,7 @@ In this case, we're using the `aws_secretsmanager_random_password` ephemeral res
 
 The value of this password will never be stored in the plan or the state by OpenTofu. Because OpenTofu does not store the value in the state the resource will only update it's password value when the revision number is incremented.
 
-You can find more in our documentation for [Ephemerality](/docs/main/language/ephemerality/ephemeral-resources/) and [Write-Only Attributes](/docs/main/language/ephemerality/write-only-attributes/)
+You can find more in our documentation for [Ephemerality](/docs/v1.11/language/ephemerality/ephemeral-resources/) and [Write-Only Attributes](/docs/v1.11/language/ephemerality/write-only-attributes/)
 
 ### The `enabled` Meta-Argument
 
@@ -125,7 +125,7 @@ resource "aws_cloudwatch_metric_alarm" "high_cpu" {
 
 The `enabled` argument is nested inside the `lifecycle` block rather than at the resource level. This design choice prevents conflicts with existing input variables or resource arguments that might already be named `enabled`.
 
-For more information, refer to the enabled meta-argument documentation [here](/docs/main/language/meta-arguments/enabled/).
+For more information, refer to the enabled meta-argument documentation [here](/docs/v1.11/language/meta-arguments/enabled/).
 
 ## Additional Features and Improvements
 
@@ -154,7 +154,7 @@ output "old_endpoint" {
 
 Users will see clear warnings when using deprecated variables or outputs, helping them prepare for future module updates.
 
-For more information, see [marking variable as deprecated](/docs/main/language/values/variables/#marking-variable-as-deprecated) and [marking output as deprecated](/docs/main/language/values/outputs/#deprecated--marking-output-as-deprecated)
+For more information, see [marking variable as deprecated](/docs/v1.11/language/values/variables/#marking-variable-as-deprecated) and [marking output as deprecated](/docs/v1.11/language/values/outputs/#deprecated--marking-output-as-deprecated)
 
 ### Performance Improvements
 
