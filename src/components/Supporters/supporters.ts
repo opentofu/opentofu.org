@@ -47,4 +47,11 @@ export const SERVICE_SPONSORS = [
     url: "https://www.cloudflare.com/",
     contribution: "Website hosting & additional services",
   },
+  {
+    name: "Datadog",
+    logoLight: "/img/supporters/datadog-light.svg",
+    logoDark: "/img/supporters/datadog-dark.svg",
+    url: "https://www.datadoghq.com/",
+    contribution: "Monitoring & alerting",
+  },
 ];
