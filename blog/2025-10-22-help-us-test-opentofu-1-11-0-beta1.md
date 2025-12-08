@@ -104,19 +104,18 @@ resource "aws_instance" "web" {
 This is especially useful in modules where you want to make resources optional:
 
 ```hcl
-variable "enable_monitoring" {
+variable "create_cluster" {
   type    = bool
   default = true
 }
 
-resource "aws_cloudwatch_metric_alarm" "high_cpu" {
-  alarm_name          = "high-cpu-usage"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = 2
-  metric_name         = "CPUUtilization"
+module "servers" {
+  source = "./app-cluster"
+
+  servers = 5
 
   lifecycle {
-    enabled = var.enable_monitoring
+    enabled = var.create_cluster # Can make whole modules optional
   }
 }
 ```
