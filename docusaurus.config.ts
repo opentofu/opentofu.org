@@ -101,7 +101,7 @@ const config: Config = {
         },
         docs: {
           includeCurrentVersion: false,
-          lastVersion: "v1.10",
+          lastVersion: "v1.11",
           docVersionRootComponent: "@theme/DocVersionRoot",
           versions: {
             "v1.6": {
@@ -125,12 +125,12 @@ const config: Config = {
             },
             "v1.10": {
               label: "1.10.x",
-              path: "",
+              path: "v1.10",
+              banner: "none",
             },
             "v1.11": {
-              label: "1.11.x (beta)",
-              path: "v1.11",
-              banner: "none",
+              label: "1.11.x",
+              path: "",
             },
             main: {
               label: "Development",
@@ -272,12 +272,12 @@ const config: Config = {
           position: "left",
           items: [
             {
-              label: "v1.11.x (beta)",
-              href: "/docs/v1.11/",
+              label: "v1.11.x",
+              href: "/docs/",
             },
             {
-              label: "v1.10.x (current)",
-              href: "/docs/",
+              label: "v1.10.x",
+              href: "/docs/v1.10/",
             },
             {
               label: "v1.9.x",
