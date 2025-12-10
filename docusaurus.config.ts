@@ -100,23 +100,23 @@ const config: Config = {
           customCss: [require.resolve("./src/css/custom.css")],
         },
         docs: {
-          includeCurrentVersion: false,
-          lastVersion: "v1.11",
+          includeCurrentVersion: true,
           docVersionRootComponent: "@theme/DocVersionRoot",
           versions: {
             "v1.6": {
               label: "1.6.x",
               path: "v1.6",
+	      banner: "unmaintained",
             },
             "v1.7": {
               label: "1.7.x",
               path: "v1.7",
-              banner: "none",
+              banner: "unmaintained",
             },
             "v1.8": {
               label: "1.8.x",
               path: "v1.8",
-              banner: "none",
+              banner: "unmaintained",
             },
             "v1.9": {
               label: "1.9.x",
@@ -130,8 +130,14 @@ const config: Config = {
             },
             "v1.11": {
               label: "1.11.x",
-              path: "",
+              path: "v1.11",
+	      banner: "none",
             },
+	    current: {
+	      label: "1.11.x",
+	      path: "",
+	      banner: "none",
+	    },
             main: {
               label: "Development",
               path: "main",
@@ -273,7 +279,7 @@ const config: Config = {
           items: [
             {
               label: "v1.11.x",
-              href: "/docs/",
+              href: "/docs/v1.11/",
             },
             {
               label: "v1.10.x",
