@@ -72,7 +72,7 @@ In this case, we're using the `aws_secretsmanager_random_password` ephemeral res
 
 The value of this password will never be stored in the plan or the state by OpenTofu. Because OpenTofu does not store the value in the state the resource will only update it's password value when the revision number is incremented.
 
-You can find more in our documentation for [Ephemerality](/docs/v1.11/language/ephemerality/ephemeral-resources/) and [Write-Only Attributes](/docs/v1.11/language/ephemerality/write-only-attributes/)
+You can find more in our documentation for [Ephemerality](/docs/language/ephemerality/ephemeral-resources/) and [Write-Only Attributes](/docs/language/ephemerality/write-only-attributes/)
 
 ### The `enabled` Meta-Argument
 
