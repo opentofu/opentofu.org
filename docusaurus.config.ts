@@ -100,23 +100,23 @@ const config: Config = {
           customCss: [require.resolve("./src/css/custom.css")],
         },
         docs: {
-          includeCurrentVersion: false,
-          lastVersion: "v1.11",
+          includeCurrentVersion: true,
           docVersionRootComponent: "@theme/DocVersionRoot",
           versions: {
             "v1.6": {
               label: "1.6.x",
               path: "v1.6",
+              banner: "unmaintained",
             },
             "v1.7": {
               label: "1.7.x",
               path: "v1.7",
-              banner: "none",
+              banner: "unmaintained",
             },
             "v1.8": {
               label: "1.8.x",
               path: "v1.8",
-              banner: "none",
+              banner: "unmaintained",
             },
             "v1.9": {
               label: "1.9.x",
@@ -130,7 +130,13 @@ const config: Config = {
             },
             "v1.11": {
               label: "1.11.x",
+              path: "v1.11",
+              banner: "none",
+            },
+            current: {
+              label: "1.11.x",
               path: "",
+              banner: "none",
             },
             main: {
               label: "Development",
@@ -217,7 +223,7 @@ const config: Config = {
     announcementBar: {
       id: "opentofu-1-11-ga",
       content:
-        '<a href="/blog/opentofu-1-11/" class="announcement-bar-link"><div class="announcement-bar-content">🎉 OpenTofu 1.11.0 has arrived! <span class="announcement-arrow">→</span></div></a>',
+      '<a href="/blog/opentofu-1-11/" class="announcement-bar-link"><div class="announcement-bar-content">🎉 OpenTofu 1.11.0 has arrived! <span class="announcement-arrow">→</span></div></a>',
       backgroundColor: "#00000000",
       isCloseable: false,
     },
@@ -273,7 +279,7 @@ const config: Config = {
           items: [
             {
               label: "v1.11.x",
-              href: "/docs/",
+              href: "/docs/v1.11/",
             },
             {
               label: "v1.10.x",
