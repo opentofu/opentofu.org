@@ -3,7 +3,7 @@ title: Machine and Human readable command output streams
 slug: dual-command-output-streams
 ---
 
-With the [latest nightly build](https://meet.google.com/xkw-idre-xqz) of OpenTofu, we have included support for producing both the human readable and [machine readable](https://opentofu.org/docs/internals/machine-readable-ui/) outputs simultaneously.
+With the [latest nightly build](https://nightlies.opentofu.org/nightlies/) of OpenTofu, we have included support for producing both the human readable and [machine readable](https://opentofu.org/docs/internals/machine-readable-ui/) outputs simultaneously.
 
 ## Background
 
