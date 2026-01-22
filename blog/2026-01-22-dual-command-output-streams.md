@@ -7,7 +7,7 @@ With the [latest nightly build](https://nightlies.opentofu.org/nightlies/) of Op
 
 ## Background
 
-Many of OpenTofu's long running commands support the `-json` flag.  This flag switches the output mode from human readable colorized logs into a [documented json format](https://opentofu.org/docs/internals/machine-readable-ui/). The main downside of using the `-json` argument is that it completely disables the human readable output.  Existing tooling on top of OpenTofu therefore had two options, both with their own drawbacks.
+Many of OpenTofu's long running commands support the `-json` flag.  This flag switches the output mode from human readable colorized logs into a [documented json format](https://opentofu.org/docs/internals/machine-readable-ui/). The main downside of using the `-json` argument is that it completely disables the human readable output. Existing tooling on top of OpenTofu therefore had two options, both with their own drawbacks.
 
 On one hand, you could attempt to parse the human readable output and work based on that fuzzy parsing. This would allow you to keep the exact output that the user is used to relying on and manipulating it as you see fit. The main downsides being a output that changes between versions and a complex and error prone text parser.
 
