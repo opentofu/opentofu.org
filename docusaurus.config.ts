@@ -4,6 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 import tailwind from "tailwindcss";
 import autoprefixer from "autoprefixer";
 
+
 const config: Config = {
   title: "OpenTofu",
   url: "https://opentofu.org",
@@ -351,7 +352,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.oneLight,
       darkTheme: prismThemes.oneDark,
-      additionalLanguages: ["hcl", "powershell", "bash"],
+      additionalLanguages: ["hcl", "powershell", "bash", "json", "diff", "docker", "shell-session"],
     },
     image: "/img/og.png",
   } satisfies Preset.ThemeConfig,
