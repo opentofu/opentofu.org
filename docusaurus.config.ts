@@ -220,7 +220,7 @@ const config: Config = {
     announcementBar: {
       id: "opentofu-1-11-ga",
       content:
-      '<a href="/blog/opentofu-1-11-0/" class="announcement-bar-link"><div class="announcement-bar-content">🎉 OpenTofu 1.11.0 has arrived! <span class="announcement-arrow">→</span></div></a>',
+      '<a href="/blog/opentofu-1-12-0/" class="announcement-bar-link"><div class="announcement-bar-content">🎉 OpenTofu 1.12.0 is released! <span class="announcement-arrow">→</span></div></a>',
       backgroundColor: "#00000000",
       isCloseable: false,
     },
