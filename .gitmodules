@@ -25,3 +25,7 @@
 [submodule "opentofu-repo/v1.11"]
 	path = opentofu-repo/v1.11
 	url = https://github.com/opentofu/opentofu
+[submodule "opentofu-repo/v1.12"]
+	path = opentofu-repo/v1.12
+	url = https://github.com/opentofu/opentofu
+	branch = v1.12
