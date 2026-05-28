@@ -27,6 +27,7 @@ function DefaultNavbarItemDesktop({
 
 function DefaultNavbarItemMobile({
   className,
+  isDropdownItem: _isDropdownItem,
   ...props
 }: DesktopOrMobileNavBarItemProps) {
   return (

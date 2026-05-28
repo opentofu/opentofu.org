@@ -1,6 +1,7 @@
 import Link from "@docusaurus/Link";
 import React from "react";
 import { PropBlogPostContent } from "@docusaurus/plugin-content-blog";
+import { useDateTimeFormat } from "@docusaurus/theme-common/internal";
 
 type BlogListItemProps = {
   item: {
@@ -13,8 +14,14 @@ export default function BlogListItem({
   item,
   isLatestPost: isLatest = false,
 }: BlogListItemProps) {
-  const { permalink, title, date, formattedDate, description } =
-    item.content.metadata;
+  const { permalink, title, date, description } = item.content.metadata;
+  const dateTimeFormat = useDateTimeFormat({
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+  const formattedDate = dateTimeFormat.format(new Date(date));
 
   return (
     <div className="flex gap-6">

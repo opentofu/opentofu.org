@@ -1,12 +1,20 @@
 import React from "react";
 // import BlogPostItemHeaderAuthors from "@theme/BlogPostItem/Header/Authors";
 import Jumbotron from "@site/src/components/Jumbotron";
-import { useBlogPost } from "@docusaurus/theme-common/internal";
+import { useBlogPost } from "@docusaurus/plugin-content-blog/client";
+import { useDateTimeFormat } from "@docusaurus/theme-common/internal";
 import Headline from "@site/src/components/Headline";
 
 export default function BlogPostItemHeader() {
   const { metadata } = useBlogPost();
-  const { date, formattedDate, title } = metadata;
+  const { date, title } = metadata;
+  const dateTimeFormat = useDateTimeFormat({
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+  const formattedDate = dateTimeFormat.format(new Date(date));
 
   return (
     <Jumbotron>
