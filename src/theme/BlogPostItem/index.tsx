@@ -1,5 +1,5 @@
 import React from "react";
-import { useBlogPost } from "@docusaurus/theme-common/internal";
+import { useBlogPost } from "@docusaurus/plugin-content-blog/client";
 import BlogPostItemContainer from "@theme/BlogPostItem/Container";
 import BlogPostItemHeader from "@theme/BlogPostItem/Header";
 import BlogPostItemContent from "@theme/BlogPostItem/Content";

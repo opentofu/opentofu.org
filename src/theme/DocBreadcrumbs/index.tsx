@@ -1,8 +1,6 @@
 import React, { type ReactNode } from "react";
-import {
-  useSidebarBreadcrumbs,
-  useHomePageRoute,
-} from "@docusaurus/theme-common/internal";
+import { useSidebarBreadcrumbs } from "@docusaurus/plugin-content-docs/client";
+import { useHomePageRoute } from "@docusaurus/theme-common/internal";
 import Link from "@docusaurus/Link";
 
 import HomeBreadcrumbItem from "@theme/DocBreadcrumbs/Items/Home";

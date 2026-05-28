@@ -10,8 +10,8 @@ import {
   isActiveSidebarItem,
   findFirstSidebarItemLink,
   useDocSidebarItemsExpandedState,
-  isSamePath,
-} from "@docusaurus/theme-common/internal";
+} from "@docusaurus/plugin-content-docs/client";
+import { isSamePath } from "@docusaurus/theme-common/internal";
 import Link from "@docusaurus/Link";
 import useIsBrowser from "@docusaurus/useIsBrowser";
 import DocSidebarItems from "@theme/DocSidebarItems";

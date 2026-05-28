@@ -15,34 +15,34 @@
     "lint": "eslint --cache \"**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
-    "@docusaurus/core": "3.1.0",
-    "@docusaurus/module-type-aliases": "3.1.0",
-    "@docusaurus/plugin-client-redirects": "3.1.0",
-    "@docusaurus/preset-classic": "3.1.0",
-    "@docusaurus/tsconfig": "3.1.0",
-    "@docusaurus/types": "^3.1.0",
-    "@mdx-js/react": "^3.0.0",
-    "@tailwindcss/typography": "^0.5.10",
+    "@docusaurus/core": "^3.10.1",
+    "@docusaurus/module-type-aliases": "^3.10.1",
+    "@docusaurus/plugin-client-redirects": "^3.10.1",
+    "@docusaurus/preset-classic": "^3.10.1",
+    "@docusaurus/tsconfig": "^3.10.1",
+    "@docusaurus/types": "^3.10.1",
+    "@mdx-js/react": "^3.1.1",
+    "@tailwindcss/typography": "^0.5.19",
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
-    "autoprefixer": "^10.4.16",
+    "autoprefixer": "^10.5.0",
     "cheerio": "^1.0.0-rc.12",
-    "clsx": "^2.1.0",
+    "clsx": "^2.1.1",
     "eslint": "^8.56.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "framer-motion": "^12.7.4",
-    "postcss": "^8.4.33",
+    "postcss": "^8.5.15",
     "prettier": "^3.1.1",
-    "prism-react-renderer": "^2.3.1",
+    "prism-react-renderer": "^2.4.1",
     "raw-loader": "^4.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-github-btn": "^1.4.0",
     "swiper": "^11.2.6",
     "tailwindcss": "^3.4.1",
-    "typescript": "~5.3.3"
+    "typescript": "~5.8.0"
   },
   "browserslist": {
     "production": [
@@ -57,7 +57,7 @@
     ]
   },
   "engines": {
-    "node": ">=18.17.1"
+    "node": ">=24.0.0"
   },
   "devDependencies": {
     "husky": "^8.0.3",
