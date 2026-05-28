@@ -98,6 +98,26 @@ const config: Config = {
     locales: ["en"],
   },
 
+  future: {
+    v4: {
+      // Required for ssgWorkerThreads.
+      removeLegacyPostBuildHeadAttribute: true,
+    },
+    faster: {
+      ssgWorkerThreads: true,
+      // rspackBundler / rspackPersistentCache disabled: Rspack auto-parses
+      // .json files as JSON, which trips on the !!raw-loader!*.json imports
+      // used in the MDX docs. For now we can stick with webpack
+      rspackBundler: false,
+      rspackPersistentCache: false,
+      swcJsLoader: true,
+      swcJsMinimizer: true,
+      swcHtmlMinimizer: true,
+      lightningCssMinimizer: true,
+      mdxCrossCompilerCache: true,
+    },
+  },
+
   presets: [
     [
       "classic",
