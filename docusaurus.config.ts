@@ -152,16 +152,21 @@ const config: Config = {
             "v1.10": {
               label: "1.10.x",
               path: "v1.10",
-              banner: "none",
+              banner: "unmaintained",
             },
             "v1.11": {
               label: "1.11.x",
               path: "v1.11",
-              banner: "none",
+              banner: "unmaintained",
             },
             "v1.12": {
               label: "1.12.x",
               path: "v1.12",
+              banner: "none",
+            },
+            "v1.13": {
+              label: "1.13.x (beta)",
+              path: "v1.13",
               banner: "none",
             },
             current: {
@@ -335,6 +340,10 @@ const config: Config = {
             {
               label: "v1.6.x",
               href: "/docs/v1.6/",
+            },
+            {
+              label: "v1.13.x (beta)",
+              href: "/docs/v1.13/",
             },
             {
               label: "Development",
