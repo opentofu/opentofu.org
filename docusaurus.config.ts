@@ -318,30 +318,6 @@ const config: Config = {
               href: "/docs/v1.12/",
             },
             {
-              label: "v1.11.x",
-              href: "/docs/v1.11/",
-            },
-            {
-              label: "v1.10.x",
-              href: "/docs/v1.10/",
-            },
-            {
-              label: "v1.9.x",
-              href: "/docs/v1.9/",
-            },
-            {
-              label: "v1.8.x",
-              href: "/docs/v1.8/",
-            },
-            {
-              label: "v1.7.x",
-              href: "/docs/v1.7/",
-            },
-            {
-              label: "v1.6.x",
-              href: "/docs/v1.6/",
-            },
-            {
               label: "v1.13.x (beta)",
               href: "/docs/v1.13/",
             },
