@@ -167,7 +167,7 @@ const config: Config = {
             "v1.13": {
               label: "1.13.x (beta)",
               path: "v1.13",
-              banner: "none",
+              banner: "unreleased",
             },
             current: {
               label: "1.12.x",
