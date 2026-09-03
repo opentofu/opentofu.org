@@ -3,9 +3,7 @@ services:
   website:
     build: .
     volumes:
-      - source: ./
-        target: /work
-        type: bind
+      - ./:/work
       - /work/node_modules
     ports:
       - "3000:3000"
