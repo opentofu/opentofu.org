@@ -128,6 +128,7 @@ const config: Config = {
         docs: {
           includeCurrentVersion: true,
           docVersionRootComponent: "@theme/DocVersionRoot",
+          lastVersion: 'v1.12',
           versions: {
             "v1.6": {
               label: "1.6.x",
