@@ -34,12 +34,12 @@ function "hello" {
   
   # Locals are local to a call of the function and can be used
   # to prepare the return value in multiple steps for clarity
-  locals {s
+  locals {
     str = "Hello ${param.name}!"
   }
   
   # The final value of the function is specified by the return attribute
-  return = locals.str
+  return = local.str
 }
 # Called internally as symbols::hello(value)
 # Called externally as symbols::<libname>::hello(value)
@@ -52,17 +52,17 @@ values {
 # Referenced externally as symbols.<libname>.hello_world
 
 # Define a type
-typedef "vec3" {
-  # Any standard hcl type definition is supported in `type`, including optional()
+typedef "dns_recordset" {
   type = object({
-    x = number
-    y = number
-    z = number
+    name    = string
+    type    = string
+    ttl     = number
+    records = list(string)
   })
 }
 # Due to restrictions in HCL, types are referenced using the `::` namespaced function syntax.
-# Referenced internally as symbols::vec3()
-# Referenced externally as symbols::<libname>::vec3()
+# Referenced internally as symbols::dns_recordset()
+# Referenced externally as symbols::<libname>::dns_recordset()
 ```
 
 This somewhat contrived example shows the basics of defining functions, constant values, and types within symbol libraries.
@@ -80,9 +80,8 @@ symbols "lib" {
   source = "./example-lib"
 }
 
-variable "location" {
-  type = symbols::lib::vec3()
-  default = {x = 0, y = 0, z = 0}
+variable "dns" {
+  type = symbols::lib::dns_recordset()
 }
 
 output "hello_world" {
@@ -90,7 +89,7 @@ output "hello_world" {
 }
 
 output "hello_location" {
-  value = symbols::lib::hello(var.location)
+  value = symbols::lib::hello(var.dns.name)
 }
 
 ```
