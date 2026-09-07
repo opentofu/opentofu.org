@@ -41,15 +41,15 @@ function "hello" {
   # The final value of the function is specified by the return attribute
   return = local.str
 }
-# Called internally as symbols::hello(value)
-# Called externally as symbols::<libname>::hello(value)
+# Called within the library as symbols::hello(value)
+# Called outside the symbol library as symbols::<libname>::hello(value)
 
 # Values are exported constants
 values {
   hello_world = symbols::hello("World")
 }
-# Referenced internally as symbols.hello_world
-# Referenced externally as symbols.<libname>.hello_world
+# Referenced within the library as symbols.hello_world
+# Referenced outside the symbol library as symbols.<libname>.hello_world
 
 # Define a type
 typedef "dns_recordset" {
@@ -61,8 +61,8 @@ typedef "dns_recordset" {
   })
 }
 # Due to restrictions in HCL, types are referenced using the `::` namespaced function syntax.
-# Referenced internally as symbols::dns_recordset()
-# Referenced externally as symbols::<libname>::dns_recordset()
+# Referenced within the library as symbols::dns_recordset()
+# Referenced outside the symbol library as symbols::<libname>::dns_recordset()
 ```
 
 This somewhat contrived example shows the basics of defining functions, constant values, and types within symbol libraries.
