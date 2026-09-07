@@ -17,40 +17,6 @@ language {
   edition = experimental2026
 }
 
-# Define a function 
-function "hello" {
-  # Optional specification of the expected return type
-  type = string
-  
-  # Optional
-  description = "Formats the first parameter (name) as a kind greeting"
-  
-  # Named parameters with a given type, these are similar to the "variable" concept within OpenTofu modules and have many of the same options
-  parameter "name" {
-    type = string
-    # variadic = true may be specified to capture all subsequent arguments into the parameter as a list
-    # validation blocks may be also be defined here
-  }
-  
-  # Locals are local to a call of the function and can be used
-  # to prepare the return value in multiple steps for clarity
-  locals {
-    str = "Hello ${param.name}!"
-  }
-  
-  # The final value of the function is specified by the return attribute
-  return = local.str
-}
-# Called within the library as symbols::hello(value)
-# Called outside the symbol library as symbols::<libname>::hello(value)
-
-# Values are exported constants
-values {
-  hello_world = symbols::hello("World")
-}
-# Referenced within the library as symbols.hello_world
-# Referenced outside the symbol library as symbols.<libname>.hello_world
-
 # Define a type
 typedef "dns_recordset" {
   type = object({
@@ -63,6 +29,48 @@ typedef "dns_recordset" {
 # Due to restrictions in HCL, types are referenced using the `::` namespaced function syntax.
 # Referenced within the library as symbols::dns_recordset()
 # Referenced outside the symbol library as symbols::<libname>::dns_recordset()
+
+
+# Define a function 
+function "format_dns_recordset" {
+  # Optional specification of the expected return type
+  type = string
+  
+  # Optional
+  description = "Formats the dns record as plain text"
+  
+  # Named parameters with a given type, these are similar to the "variable" concept within OpenTofu modules and have many of the same options
+  parameter "in" {
+    type = symbols::dns_recordset()
+    # variadic = true may be specified to capture all subsequent arguments into the parameter as a list
+    # Optional validation block
+    validation {
+      condition = length(param.in.records) != 0
+      error_message = "Expected at least one record"
+    }
+  }
+  
+  # Locals are local to a call of the function and can be used
+  # to prepare the return value in multiple steps for clarity
+  locals {
+    entries = [for record in param.in.records : "record_set ${param.in.name} is a ${param.in.type} with a ttl of ${param.in.ttl} and entry \"${record}\""]
+    str = join("\n", local.entries)
+  }
+  
+  # The final value of the function is specified by the return attribute
+  return = local.str
+}
+# Called within the library as symbols::format_dns_recordset(value)
+# Called outside the symbol library as symbols::<libname>::format_dns_recordset(value)
+
+
+# Values are exported constants
+values {
+  example_recordset = { name = "Example", type = "A", ttl = 500, records = ["example.com. 600 IN A 10.10.10.10"]}
+}
+# Referenced within the library as symbols.example_recordset
+# Referenced outside the symbol library as symbols.<libname>.example_recordset
+
 ```
 
 This somewhat contrived example shows the basics of defining functions, constant values, and types within symbol libraries.
@@ -84,12 +92,12 @@ variable "dns" {
   type = symbols::lib::dns_recordset()
 }
 
-output "hello_world" {
-  value = symbols.lib.hello_world
+output "example" {
+  value = symbols.lib.example_recordset
 }
 
-output "hello_location" {
-  value = symbols::lib::hello(var.dns.name)
+output "formatted" {
+  value = symbols::lib::format_dns_recordset(var.dns)
 }
 
 ```
