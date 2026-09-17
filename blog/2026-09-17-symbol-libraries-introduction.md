@@ -110,7 +110,7 @@ This is an intentional design feature. You may pass resource values into symbol 
 
 ## What is the status of Symbol Libraries?
 
-As this is a whole new HCL based language and fundamental way of working with OpenTofu, we have released this feature as an "Experiment". This means that we are counting on *your* feedback to stabilize this feature for general use. It is included in the OpenTofu v1.13 release series and can be opted-into by adding `language { experiments = [symbol_libraries] } ` to your OpenTofu project configuration.
+As this is a whole new HCL based language and fundamental way of working with OpenTofu, we have released this feature as an "Experiment". This means that we are counting on *your* feedback to stabilize this feature for general use. It is included in the OpenTofu v1.13 release series and can be opted-into by adding `language { experiments = [symbol_libraries] } ` to your OpenTofu project configuration. At the time this post is published, it can be tested via the [v1.13.0-rc1 release](https://github.com/opentofu/opentofu/releases/tag/v1.13.0-rc1).
 
 If you like so many others have been frustrated by the inability to share your complex logic and types between parts of your project, please give this feature an in-depth look! We have an [open discussion](https://github.com/orgs/opentofu/discussions/4521) on GitHub for gathering feedback and are hoping that enough passionate people like you leave a comment that we can stabilize this feature for v1.14!
 
