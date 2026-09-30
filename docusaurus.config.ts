@@ -128,7 +128,7 @@ const config: Config = {
         docs: {
           includeCurrentVersion: true,
           docVersionRootComponent: "@theme/DocVersionRoot",
-          lastVersion: 'v1.12',
+          lastVersion: 'v1.13',
           versions: {
             "v1.6": {
               label: "1.6.x",
@@ -171,7 +171,7 @@ const config: Config = {
               banner: "none",
             },
             current: {
-              label: "1.12.x",
+              label: "1.13.x",
               path: "",
               banner: "none",
             },
