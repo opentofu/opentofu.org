@@ -166,9 +166,9 @@ const config: Config = {
               banner: "none",
             },
             "v1.13": {
-              label: "1.13.x (beta)",
+              label: "1.13.x",
               path: "v1.13",
-              banner: "unreleased",
+              banner: "none",
             },
             current: {
               label: "1.12.x",
@@ -315,12 +315,12 @@ const config: Config = {
           position: "left",
           items: [
             {
-              label: "v1.12.x",
-              href: "/docs/v1.12/",
+              label: "v1.13.x",
+              href: "/docs/v1.13/",
             },
             {
-              label: "v1.13.x (beta)",
-              href: "/docs/v1.13/",
+              label: "v1.12.x",
+              href: "/docs/v1.12/",
             },
             {
               label: "Development",
