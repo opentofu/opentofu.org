@@ -128,7 +128,7 @@ const config: Config = {
         docs: {
           includeCurrentVersion: true,
           docVersionRootComponent: "@theme/DocVersionRoot",
-          lastVersion: 'v1.12',
+          lastVersion: 'v1.13',
           versions: {
             "v1.6": {
               label: "1.6.x",
@@ -166,12 +166,12 @@ const config: Config = {
               banner: "none",
             },
             "v1.13": {
-              label: "1.13.x (beta)",
+              label: "1.13.x",
               path: "v1.13",
-              banner: "unreleased",
+              banner: "none",
             },
             current: {
-              label: "1.12.x",
+              label: "1.13.x",
               path: "",
               banner: "none",
             },
@@ -258,9 +258,9 @@ const config: Config = {
       },
     },
     announcementBar: {
-      id: "opentofu-1-11-ga",
+      id: "opentofu-1-13-ga",
       content:
-        '<a href="/blog/opentofu-1-12-0/" class="announcement-bar-link"><div class="announcement-bar-content">🎉 OpenTofu 1.12.0 is released! <span class="announcement-arrow">→</span></div></a>',
+        '<a href="/blog/opentofu-1-13-0/" class="announcement-bar-link"><div class="announcement-bar-content">🎉 OpenTofu 1.13.0 is released! <span class="announcement-arrow">→</span></div></a>',
       backgroundColor: "#00000000",
       isCloseable: false,
     },
@@ -315,12 +315,12 @@ const config: Config = {
           position: "left",
           items: [
             {
-              label: "v1.12.x",
-              href: "/docs/v1.12/",
+              label: "v1.13.x",
+              href: "/docs/v1.13/",
             },
             {
-              label: "v1.13.x (beta)",
-              href: "/docs/v1.13/",
+              label: "v1.12.x",
+              href: "/docs/v1.12/",
             },
             {
               label: "Development",
