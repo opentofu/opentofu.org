@@ -13,6 +13,7 @@ import {
 } from "@docusaurus/plugin-content-docs/client";
 import { isSamePath } from "@docusaurus/theme-common/internal";
 import Link from "@docusaurus/Link";
+import { translate } from "@docusaurus/Translate";
 import useIsBrowser from "@docusaurus/useIsBrowser";
 import DocSidebarItems from "@theme/DocSidebarItems";
 import type { Props } from "@theme/DocSidebarItem/Category";
@@ -112,47 +113,82 @@ export default function DocSidebarItemCategory({
 
   return (
     <li>
-      <Link
-        className={clsx("flex justify-between items-center py-2 px-4", {
+      <div
+        className={clsx("flex justify-between items-center", {
           "bg-brand-500 dark:bg-brand-800 text-gray-900 hover:text-gray-900 dark:text-brand-600 dark:hover:text-brand-600":
             isActive,
           "hover:text-brand-650 dark:hover:text-brand-600": !isActive,
         })}
-        onClick={
-          collapsible
-            ? (e) => {
-                onItemClick?.(item);
-                if (href) {
-                  updateCollapsed(false);
-                } else {
-                  e.preventDefault();
-                  updateCollapsed();
-                }
-              }
-            : () => {
-                onItemClick?.(item);
-              }
-        }
-        aria-current={isCurrentPage ? "page" : undefined}
-        aria-expanded={collapsible ? !collapsed : undefined}
-        href={collapsible ? hrefWithSSRFallback ?? "#" : hrefWithSSRFallback}
-        {...props}
       >
-        {label}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          aria-hidden
-          className={clsx(
-            "w-5 h-5 fill-current transition-transform transform",
-            {
-              " rotate-90": !collapsed,
-            },
-          )}
+        <Link
+          className="flex-1 py-2 px-4 text-inherit hover:text-inherit"
+          onClick={
+            collapsible
+              ? (e) => {
+                  onItemClick?.(item);
+                  if (href) {
+                    updateCollapsed(false);
+                  } else {
+                    e.preventDefault();
+                    updateCollapsed();
+                  }
+                }
+              : () => {
+                  onItemClick?.(item);
+                }
+          }
+          aria-current={isCurrentPage ? "page" : undefined}
+          aria-expanded={collapsible && !href ? !collapsed : undefined}
+          href={collapsible ? hrefWithSSRFallback ?? "#" : hrefWithSSRFallback}
+          {...props}
         >
-          <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-        </svg>
-      </Link>
+          {label}
+        </Link>
+        {collapsible && (
+          <button
+            type="button"
+            className="shrink-0 py-2 px-4"
+            aria-label={
+              collapsed
+                ? translate(
+                    {
+                      id: "theme.DocSidebarItem.expandCategoryAriaLabel",
+                      message: "Expand sidebar category '{label}'",
+                      description:
+                        "The ARIA label to expand the sidebar category",
+                    },
+                    { label },
+                  )
+                : translate(
+                    {
+                      id: "theme.DocSidebarItem.collapseCategoryAriaLabel",
+                      message: "Collapse sidebar category '{label}'",
+                      description:
+                        "The ARIA label to collapse the sidebar category",
+                    },
+                    { label },
+                  )
+            }
+            aria-expanded={!collapsed}
+            tabIndex={props.tabIndex}
+            onClick={() => updateCollapsed()}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              aria-hidden
+              className={clsx(
+                "w-5 h-5 fill-current transition-transform transform",
+                {
+                  " rotate-90": !collapsed,
+                },
+              )}
+            >
+              <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+            </svg>
+          </button>
+        )}
+      </div>
 
       <Collapsible
         lazy
