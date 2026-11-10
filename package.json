@@ -27,6 +27,7 @@
     "@typescript-eslint/eslint-plugin": "^6.18.1",
     "@typescript-eslint/parser": "^6.18.1",
     "autoprefixer": "^10.5.0",
+    "brace-expansion": "^1.1.21",
     "cheerio": "^1.0.0-rc.12",
     "clsx": "^2.1.1",
     "eslint": "^8.56.0",
